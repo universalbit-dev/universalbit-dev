@@ -13,4 +13,4 @@ Web Development and Web Application
 
 Blockchain Node and Dapps
 
-Digital Making and Making using CNC machines
+Digital Making and Making
