@@ -1,0 +1,43 @@
+# UniversalBit
+<VirtualHost *:80>
+  ServerName universalbit.it
+  # Redirect any HTTP request to HTTPS
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
+  Redirect permanent / https://universalbit.it/
+  # Logging
+  LogLevel warn
+  ErrorLog logs/universalbit.it-error_log
+  CustomLog logs/universalbit.it-access_log combined
+</VirtualHost>
+
+<VirtualHost *:80>
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule .* https://%{HTTP:Host}%{REQUEST_URI} [L,R=permanent]
+Redirect permanent / https://universalbit.it:4433
+</VirtualHost>
+# UniversalBit Git Service
+<VirtualHost *:80>
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule .* https://%{HTTP:Host}%{REQUEST_URI} [L,R=permanent]
+Redirect permanent / https://universalbit.it:3000
+</VirtualHost>
+
+#BlockChain
+<VirtualHost *:80>
+        ServerName universalbit.it
+        ServerAlias www.universalbit.it
+        ServerAdmin infouniversalbits@gmail.com
+        #Include /etc/apache2/sites-available/
+        DocumentRoot /var/www/html/universalbit/web/blockchain
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+CustomLog ${APACHE_LOG_DIR}/access.log combined
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =www.universalbit.it/blockchain [OR]
+RewriteCond %{SERVER_NAME} =universalbit.it/blockchain
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+Redirect permanent / https://universalbit.it/blockchain
+</VirtualHost>
