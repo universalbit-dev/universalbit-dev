@@ -1,0 +1,30 @@
+Status: active
+
+To                         Action      From
+--                         ------      ----   
+2332                       ALLOW       Anywhere
+3000                       ALLOW       Anywhere                  
+Anywhere                   DENY        128.199.48.208            
+Anywhere                   DENY        167.172.35.89             
+Anywhere                   DENY        128.199.71.242            
+Anywhere                   DENY        159.223.115.243           
+Anywhere                   DENY        128.199.191.156           
+Anywhere                   DENY        46.101.253.43             
+Anywhere                   DENY        143.244.167.68            
+Anywhere                   DENY        54.174.20.193             
+Anywhere                   DENY        159.65.40.149             
+Anywhere                   DENY        165.22.89.37              
+Anywhere                   DENY        188.166.101.151           
+Anywhere                   DENY        157.245.145.1             
+Anywhere                   DENY        192.241.213.68            
+Anywhere                   DENY        159.89.161.113            
+Anywhere                   DENY        128.199.60.84             
+Anywhere                   DENY        13.107.21.200             
+3128/tcp                   ALLOW       Anywhere
+443/tcp                    ALLOW       Anywhere
+80                         DENY        Anywhere
+3000 (v6)                  ALLOW       Anywhere (v6)             
+3128/tcp (v6)              ALLOW       Anywhere (v6)             
+443/tcp (v6)               ALLOW       Anywhere (v6)
+2332 (v6)                  ALLOW       Anywhere (v6)
+80 (v6)                    DENY        Anywhere (v6) 
