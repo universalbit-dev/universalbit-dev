@@ -1,0 +1,68 @@
+#Public DNS            
+allow 208.67.222.222;
+allow 8.8.8.8; 
+allow 4.2.2.2;
+allow 8.8.4.4;
+allow 208.67.220.220;
+allow 9.9.9.9;
+allow 1.1.1.1;
+allow 185.228.168.9;
+allow 76.76.19.19;
+allow 94.140.14.14;
+allow 76.76.2.0;
+
+server {
+    server_name universalbit.it;
+    listen 8020;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 4433 ssl;
+    server_name universalbit.it;
+    ssl_certificate /etc/letsencrypt/live/universalbit.it/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/universalbit.it/privkey.pem;
+    #ssl on;
+    ssl_session_cache  builtin:1000  shared:SSL:10m;
+    ssl_protocols  TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers HIGH:!aNULL:!eNULL:!EXPORT:!CAMELLIA:!DES:!MD5:!PSK:!RC4;
+    ssl_prefer_server_ciphers on;
+    access_log            /var/log/nginx/access.log;
+    location / {
+
+      proxy_set_header        Host $host;
+      proxy_set_header        X-Real-IP $remote_addr;
+      proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header        X-Forwarded-Proto $scheme;
+
+      # Fix the “It appears that your reverse proxy set up is broken" error.
+      proxy_pass          http://127.0.0.1:8020;
+      proxy_read_timeout  90;
+      proxy_redirect      http://127.0.0.1:8020 https://universalbit.it/project-cityblend;
+    }
+  }
+
+server {
+        listen 8022 default_server;
+        listen [::]:8022 default_server;
+        root /var/www/html;
+        return 301 https://universalbit.it:4433;
+        index index.html index.htm index.nginx-debian.html;
+        server_name universalbit.it;
+        location ^~ /assets/ {
+                gzip_static on;
+                expires 12h;
+                add_header Cache-Control public;
+        }
+        location / {
+                proxy_http_version 1.1;
+                proxy_cache_bypass $http_upgrade;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection 'upgrade';
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Forwarded-Proto $scheme;
+                proxy_pass http://127.0.0.1:8022;
+        }
+}
