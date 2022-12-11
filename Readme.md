@@ -7,10 +7,10 @@ Twitter : @BitUniversal
 
 
 
-DigitalOcean Droplet Development
+DigitalOcean Droplet Development from scratch
 
 Web Development and Web Application
 
 Blockchain Node and Dapps
 
-Digital Making and Making
+Digital Making and Making using CNC machines
