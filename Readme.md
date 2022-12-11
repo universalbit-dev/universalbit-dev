@@ -1,1 +1,11 @@
 
+UniversalBit
+projects and customizations for a digital and real workplace
+
+DigitalOcean Droplet Development
+
+Web Development and Web Application
+
+Blockchain Node and Dapps
+
+Digital Making and Making
