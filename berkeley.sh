@@ -1,3 +1,4 @@
+###sudo ./berkeley.sh
 ###Update System and Install Dependencies
 apt-get update && sudo apt-get upgrade
 apt-get install build-essential  libssl-dev libgmp-dev
