@@ -16,3 +16,4 @@ Blockchain Node and Dapps
 Digital Making and Making
 
 Support: https://universalbit.it/index.php/donation
+![example event parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
