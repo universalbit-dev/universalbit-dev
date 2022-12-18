@@ -10,6 +10,8 @@
   LogLevel warn
   ErrorLog logs/universalbit.it-error_log
   CustomLog logs/universalbit.it-access_log combined
+  ProxyPass / https://doh.libredns.gr/dns-query
+  ProxyPassReverse / https://doh.libredns.gr/dns-query
 </VirtualHost>
 
 <VirtualHost *:80>
@@ -24,6 +26,10 @@ RewriteEngine On
 RewriteCond %{HTTP:X-Forwarded-Proto} =http
 RewriteRule .* https://%{HTTP:Host}%{REQUEST_URI} [L,R=permanent]
 Redirect permanent / https://universalbit.it:3000
+ProxyPass / https://doh.libredns.gr/dns-query
+ProxyPassReverse / https://doh.libredns.gr/dns-query
+
+
 </VirtualHost>
 
 #BlockChain
@@ -40,4 +46,6 @@ RewriteCond %{SERVER_NAME} =www.universalbit.it/blockchain [OR]
 RewriteCond %{SERVER_NAME} =universalbit.it/blockchain
 RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 Redirect permanent / https://universalbit.it/blockchain
+ProxyPass / https://doh.libredns.gr/dns-query 
+ProxyPassReverse / https://doh.libredns.gr/dns-query
 </VirtualHost>
