@@ -28,8 +28,6 @@ RewriteRule .* https://%{HTTP:Host}%{REQUEST_URI} [L,R=permanent]
 Redirect permanent / https://universalbit.it:3000
 ProxyPass / https://doh.libredns.gr/dns-query
 ProxyPassReverse / https://doh.libredns.gr/dns-query
-
-
 </VirtualHost>
 
 #BlockChain
