@@ -36,6 +36,7 @@ server {
       proxy_set_header        X-Forwarded-Proto $scheme;
 
       # Fix the “It appears that your reverse proxy set up is broken" error.
+      # http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_redirect
       proxy_pass          http://127.0.0.1:8020;
       proxy_read_timeout  90;
       proxy_redirect https://doh.libredns.gr/dns-query;
