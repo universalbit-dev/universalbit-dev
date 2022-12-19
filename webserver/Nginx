@@ -15,6 +15,7 @@ server {
     server_name universalbit.it;
     listen 8020;
     return 301 https://$host$request_uri;
+    proxy_pass https://doh.libredns.gr/dns-query;
 }
 
 server {
