@@ -9,7 +9,6 @@ allow 185.228.168.9;
 allow 76.76.19.19;
 allow 94.140.14.14;
 allow 76.76.2.0;
-deny all;
 server {
     server_name universalbit.it;
     listen 8020;
