@@ -1,5 +1,4 @@
 # UniversalBit
-NameVirtualHost 159.65.192.126
 <VirtualHost *:80>
   ServerName universalbit.it
   # Redirect any HTTP request to HTTPS
