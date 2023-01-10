@@ -1,10 +1,12 @@
 
-UniversalBit [![Alt text](https://github.com/universalbit-dev/papirus-icon-theme/blob/master/Papirus/64x64/places/folder-adwaita-development.svg)](https://universalbit.it)
+[![Alt text](https://github.com/universalbit-dev/papirus-icon-theme/blob/master/Papirus/64x64/places/folder-adwaita-development.svg)](https://universalbit.it)
+
+UniversalBit 
+
 projects and customizations for a digital and real workplace
 
 Website: https://universalbit.it    
 Twitter : @BitUniversal
-
 
 
 DigitalOcean Droplet Development from scratch
