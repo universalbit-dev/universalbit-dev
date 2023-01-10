@@ -1,5 +1,5 @@
 
-UniversalBit
+UniversalBit [![Alt text](https://github.com/universalbit-dev/papirus-icon-theme/blob/master/Papirus/64x64/places/folder-adwaita-development.svg)](https://universalbit.it)
 projects and customizations for a digital and real workplace
 
 Website: https://universalbit.it    
