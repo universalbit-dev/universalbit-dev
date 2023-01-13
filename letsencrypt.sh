@@ -7,7 +7,7 @@
 sudo apt-get install git
 
 #Debian11
-sudo apt -y install certbot python3-certbot-apache
+apt install certbot python3-certbot-apache -y
 
 git clone https://github.com/letsencrypt/letsencrypt
 cd letsencrypt
