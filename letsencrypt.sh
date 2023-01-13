@@ -15,4 +15,4 @@ cd letsencrypt
 
 ###Usage:
 ./letsencrypt-auto --apache -d universalbit.it 
-###./letsencrypt-auto certonly --standalone --email admin@youremail.com -d yourdomain.com -d www.yourdomain.com -d otherdomain.net
+###./letsencrypt-auto certonly --standalone --email infouniversalbits@gmail.com -d universalbit.it 
