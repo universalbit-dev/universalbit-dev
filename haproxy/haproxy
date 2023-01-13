@@ -1,3 +1,13 @@
+listen load_balancer_cluster
+   mode tcp
+   bind :8020
+   option tcplog
+   balance roundrobin
+   #server server_name ip-address:port check
+   server armadillium01 192.168.1.144:8001 check
+   server armadillium02 192.168.1.145:8001 check
+   server armadillium03 192.168.1.146:8003 check
+   server armadillium04 192.168.1.147:8004 check
 global
         log /dev/log    local0
         log /dev/log    local1 notice
