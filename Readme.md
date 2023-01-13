@@ -18,4 +18,5 @@ Digital Making and Making
 Support: https://universalbit.it/index.php/donation
 
 BTC: bc1q5wf26dq4wrq0d47nkvplnmarf8tl0hkmqf9elm
+
 LTC: LWgAMAXEbcMienXHqzmSn8Gg4A6Q6RywWt
