@@ -23,4 +23,4 @@ BTC: bc1q5wf26dq4wrq0d47nkvplnmarf8tl0hkmqf9elm![Alt text](https://github.com/un
 
 LTC: LWgAMAXEbcMienXHqzmSn8Gg4A6Q6RywWt![Alt text](https://github.com/universalbit-dev/papirus-icon-theme/blob/master/Papirus/24x24/apps/litecoin-qt.svg "litecoin-indicator")
 
-![RockHopper](){:width=”50%” height=”auto”}
+![RockHopper](https://github.com/universalbit-dev/universalbit-dev/blob/main/Rockhopper_Pnguin_Header.png){:width=”50%” height=”auto”}
