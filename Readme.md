@@ -19,8 +19,8 @@ Digital Making and Making
 
 Support: https://universalbit.it/index.php/donation
 
-BTC: bc1q5wf26dq4wrq0d47nkvplnmarf8tl0hkmqf9elm![Alt text](https://github.com/universalbit-dev/papirus-icon-theme/blob/master/Papirus/24x24/crypto_icon/bitcoin-indicator.svg "bitcoin-indicator")
+BTC: bc1q5wf26dq4wrq0d47nkvplnmarf8tl0hkmqf9elm![Alt text](https://github.com/universalbit-dev/armadillium-gridbot/blob/main/cryptocurrency_icon/btc.svg "bitcoin-indicator")
 
-LTC: LWgAMAXEbcMienXHqzmSn8Gg4A6Q6RywWt![Alt text](https://github.com/universalbit-dev/papirus-icon-theme/blob/master/Papirus/24x24/crypto_icon/litecoin-qt.svg "litecoin-indicator")
+LTC: LWgAMAXEbcMienXHqzmSn8Gg4A6Q6RywWt![Alt text](https://github.com/universalbit-dev/armadillium-gridbot/blob/main/cryptocurrency_icon/ltc.svg "litecoin-indicator")
 
 ![RockHopper](https://github.com/universalbit-dev/universalbit-dev/blob/main/Rockhopper_Pnguin_Header.png)
