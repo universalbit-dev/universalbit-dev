@@ -1,9 +1,7 @@
 /*
-
 UniversalBit ... once again
 about some copy and paste code
 the idea is to make a webserver neuralnet data generator ("pyserial")
-
 */
 
 /*
@@ -323,6 +321,6 @@ void loop()
     delay(10);
     // close the connection:
     client.stop();
-    Serial.println("client disonnected");
+    Serial.println("client disconnected");
   }
 }
