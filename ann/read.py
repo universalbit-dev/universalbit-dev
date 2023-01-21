@@ -1,7 +1,7 @@
 #Github: https://github.com/universalbit-dev
-#
-#Read serial Data
-#... once again
+#UniversalBit ... once again
+#Read Arduino ANN Serial Data
+
 #21-01-2023 https://universalbit.it
 #License: CC0 1.0 Universal (CC0 1.0)
 #https://creativecommons.org/share-your-work/public-domain/cc0/
