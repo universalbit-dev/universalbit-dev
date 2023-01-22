@@ -3,6 +3,8 @@
 
 NetNode:
 [GitHub Repository](https://github.com/ryo-currency)
+
+---
 [RyoWallet](https://github.com/ryo-currency/ryo-wallet)
 
 
