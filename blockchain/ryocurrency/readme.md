@@ -8,6 +8,6 @@ NetNode:
 [RyoWallet](https://github.com/ryo-currency/ryo-wallet)
 
 
-RYO Donation Address: ![RYO Currency!]((https://github.com/ryo-currency/ryo-wallet) "RYO Currency")
+Donation Address: ![RYO Currency!](https://github.com/ryo-currency/ryo-wallet/blob/master/src-electron/icons/icon_64x64.png?raw=true)
 
 RYoNsBiFU6iYi8rqkmyE9c4SftzYzWPCGA3XvcXbGuBYcqDQJWe8wp8NEwNicFyzZgKTSjCjnpuXTitwn6VdBcFZEFXLcV5Z7BjMWkkPzSzdRp
