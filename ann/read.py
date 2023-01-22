@@ -1,14 +1,15 @@
 #Github: https://github.com/universalbit-dev
-#UniversalBit ... once again
-#Read Arduino ANN Serial Data
-
-#21-01-2023 https://universalbit.it
+#
+#Read serial Data
+#... once again
+#22-01-2023 https://universalbit.it
 #License: CC0 1.0 Universal (CC0 1.0)
 #https://creativecommons.org/share-your-work/public-domain/cc0/
-#  
+#
 import time
 import serial
 import pandas as pd
+import asyncio
 #READ
 r = serial.Serial(
 port='/dev/ttyUSB0',baudrate = 9600,
@@ -18,10 +19,15 @@ bytesize=serial.EIGHTBITS,
 timeout=0.1
 )
 
-while 1:
+async def read():
+    await asyncio.sleep(0.1)
     read = r.readline()
     for i in read:
         r_df=read.split()
-        # <===
+        #print(read)
         df = pd.DataFrame(r_df)
         print(r_df)
+
+while 1:
+    asyncio.run(read())
+    time.sleep(0.2)
