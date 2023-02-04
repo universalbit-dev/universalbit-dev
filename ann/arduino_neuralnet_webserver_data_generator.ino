@@ -26,6 +26,7 @@ IPAddress ip(192,168,1,143);
 EthernetServer server(8020);
 void setup()
 {
+ Ethernet.init(10);
  // Open serial communications and wait for port to open:
   Serial.begin(9600);
   while (!Serial) {
