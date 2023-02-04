@@ -22,10 +22,7 @@ Arduino Nano :( Old Boot_Loader )
 // The IP address will be dependent on your local network:
 byte mac[] = { 0xDE, 0xAB, 0xBF, 0xFE, 0xFA, 0xCD };
 IPAddress ip(192,168,1,143);
-
-// Initialize the Ethernet server library
-// with the IP address and port you want to use
-// (port 8020 is default for HTTP):
+// (port 8020)
 EthernetServer server(8020);
 void setup()
 {
