@@ -1,7 +1,7 @@
 /*
 UniversalBit ... once again
 about some copy and paste code
-the idea is to make a webserver neuralnet data generator ("pyserial")
+NN Webserver
 */
 
 /*
