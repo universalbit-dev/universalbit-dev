@@ -15,13 +15,13 @@ Note: Upload Tested on Arduino Uno  : ATmega328P      ( Arduino Uno + Ethernet S
  * section.
  * See robotics.hobbizine.com/arduinoann.html for details.
  ******************************************************************/
-#include "SPI.h"
-#include "Ethernet.h"
-#include "math.h"
+#include <SPI.h>
+#include <Ethernet.h>
+#include <math.h>
 // Enter a MAC address and IP address for your controller below.
 // The IP address will be dependent on your local network:
 byte mac[] = { 0xDE, 0xAB, 0xBF, 0xFE, 0xFA, 0xCD };
-IPAddress ip(0,0,0,0);
+IPAddress ip(192,168,1,143);
 
 // Initialize the Ethernet server library
 // with the IP address and port you want to use
