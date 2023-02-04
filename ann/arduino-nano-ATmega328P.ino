@@ -1,10 +1,9 @@
 /*
 UniversalBit ... once again
 about some copy and paste code
-
 Arduino NN
-Board:      Arduino Nano 
-Processor:  ATmega328P (Old Boot_Loader )
+Board:      Arduino Uno
+Processor:  ATmega328P
 */
 
 /*******************************************************************
@@ -13,19 +12,32 @@ Processor:  ATmega328P (Old Boot_Loader )
  * section.
  * See robotics.hobbizine.com/arduinoann.html for details.
  ******************************************************************/
+#include <SPI.h>
+#include <Ethernet.h>
 #include <math.h>
+// Enter a MAC address and IP address for your controller below.
+// The IP address will be dependent on your local network:
+byte mac[] = { 0xDE, 0xAB, 0xBF, 0xFE, 0xFA, 0xCD };
+IPAddress ip(10,0,2,143);
 
+// Initialize the Ethernet server library
+// with the IP address and port you want to use
+// (port 8020 is default for HTTP):
+EthernetServer server(8020);
 void setup()
 {
- 
  // Open serial communications and wait for port to open:
   Serial.begin(9600);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
+  Ethernet.init(10);
+  Ethernet.begin(mac, ip);
+  server.begin();
+  Serial.print("NN WebServer");
+  Serial.println(Ethernet.localIP());
+   while (!Serial) {
+    ;
   }
-  
-}
 
+}
 /******************************************************************
  * Network Configuration - customized per network
  ******************************************************************/
@@ -264,5 +276,49 @@ void loop()
   Serial.println ();
   Serial.println ();
   ReportEvery1000 = 1;
-  
+  //
+  // listen for incoming clients
+  EthernetClient client = server.available();
+  if (client) {
+    Serial.println("new client");
+    // an http request ends with a blank line
+    boolean currentLineIsBlank = true;
+    while (client.connected()) {
+      if (client.available()) {
+        char c = client.read();
+        Serial.write(c);
+        // if you've gotten to the end of the line (received a newline
+        // character) and the line is blank, the http request has ended,
+        // so you can send a reply
+        if (c == 'n' && currentLineIsBlank)
+        {
+          // send a standard http response header
+          client.println("HTTP/1.1 200 OK");
+          client.println("Content-Type: text/html");
+          client.println("Connection: close");  // the connection will be closed after completion of the response
+    client.println("Refresh: 30");  // refresh the page automatically every 30 sec
+          client.println();
+          client.println("<!DOCTYPE HTML>");
+          client.println("<html>");
+          // from here we can enter our own HTML code to create the web page
+          client.print("<head><title>Title</title></head><body></h1> - ");
+          client.print("<p><em>Page refreshes every 30 seconds<<em></p></body></html>.");
+          break;
+        }
+        if (c == 'n') {
+          // you're starting a new line
+          currentLineIsBlank = true;
+        }
+        else if (c != 'r') {
+          // you've gotten a character on the current line
+          currentLineIsBlank = false;
+        }
+      }
+    }
+    // delay to receive the data
+    delay(10);
+    // close the connection:
+    client.stop();
+    Serial.println("client disconnected");
   }
+}
