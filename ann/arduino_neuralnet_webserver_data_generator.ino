@@ -5,8 +5,8 @@ the idea is to make a webserver neuralnet data generator ("pyserial")
 */
 
 /*
-Note: Upload Tested on Arduino Uno  : ATmega328P      ( Arduino Uno + Ethernet Shield ) 
-                       Arduino Nano : ATmega328P      ( Old Boot_Loader )
+Arduino Uno  : ATmega328P      ( Arduino Uno + Ethernet Shield ) 
+Arduino Nano :( Old Boot_Loader )
 */
 
 /*******************************************************************
@@ -33,7 +33,7 @@ void setup()
   Serial.begin(9600);
   Ethernet.begin(mac, ip);
   server.begin();
-  Serial.print("server is at ");
+  Serial.print("NN WebServer");
   Serial.println(Ethernet.localIP());
    while (!Serial) {
     ; 
