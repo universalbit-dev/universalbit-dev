@@ -1,5 +1,5 @@
 
-[![Alt text](https://github.com/universalbit-dev/papirus-icon-theme/blob/master/Papirus/64x64/places/folder-white-development.svg)](https://universalbit.it)
+[![Alt text](https://github.com/universalbit-dev/papirus-icon-theme/blob/master/Papirus/64x64/places/folder-white-development.svg)](https://github.com/universalbit-dev/universalbit-dev)
 
 ### UniversalBit 
 
