@@ -12,20 +12,6 @@ Processor:  ATmega328P (Old Boot_Loader )
  * section.
  * See robotics.hobbizine.com/arduinoann.html for details.
  ******************************************************************/
-/*
-UniversalBit ... once again
-about some copy and paste code
-Arduino NN
-Board:      Arduino Nano 
-Processor:  ATmega328P (Old Boot_Loader )
-*/
-
-/*******************************************************************
- * ArduinoANN - An artificial neural network for the Arduino
- * All basic settings can be controlled via the Network Configuration
- * section.
- * See robotics.hobbizine.com/arduinoann.html for details.
- ******************************************************************/
 #include <math.h>
 
 /******************************************************************
