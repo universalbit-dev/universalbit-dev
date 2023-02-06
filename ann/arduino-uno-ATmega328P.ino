@@ -2,7 +2,7 @@
 UniversalBit ... once again
 about some copy and paste code
 Arduino NN
-Board:      Arduino Uno + Ethernet Shield
+Board:      Arduino Uno + Ethernet Shield (W5100)
 Processor:  ATmega328P
 */
 
