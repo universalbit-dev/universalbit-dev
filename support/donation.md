@@ -1,6 +1,6 @@
-#### Support the UniversalBit project by making a donation
+### Support the UniversalBit project by making a donation
 
-
+#### Creating a digital and real work environment requires a lot of effort and many hours of study and application.
 
 BTC: bc1qjvs87zn8mwt37aat3jm7vmqp9lt56rnxkh3ey8![Alt text](https://github.com/universalbit-dev/armadillium-gridbot/blob/main/cryptocurrency_icon/btc.svg "bitcoin-indicator")
 
