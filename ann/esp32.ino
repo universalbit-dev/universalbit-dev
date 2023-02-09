@@ -7,7 +7,13 @@ Board:  ESP32 (Chip is ESP32D0WDQ5 (revision 3))
 ESP32 DevModule,Enabled,Huge APP(3MB no OTA/1MB SPIFFS),
 240Mhz(Wifi/BT),DIO,80Mhz,4MB(32MB),115200,Verbose on dev/tty/USB1
 Hash of data verified.
-Compressed 3072 bytes to 119...
+...
+Writing at 0x00008000... (100 %)
+
+ESP32 DevModule,Disabled,Default 4MB with spiffs(1.2MB APP/1.5MB SPIFFS),
+240Mhz(Wifi/BT),QIO,80Mhz,4MB(32MB),921600,None on dev/tty/USB1
+Hash of data verified.
+...
 Writing at 0x00008000... (100 %)
 
 */
