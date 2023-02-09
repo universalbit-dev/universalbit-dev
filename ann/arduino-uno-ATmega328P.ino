@@ -20,12 +20,11 @@ https://docs.arduino.cc/retired/shields/arduino-ethernet-shield-without-poe-modu
 #include <SPI.h>
 #include <Ethernet.h>
 byte mac[] = { 0xDE, 0xAB, 0xBF, 0xFE, 0xFA, 0xCD };
-IPAddress ip(192, 168, 1, 120);
+byte ip[] = { 192, 168, 1, 143 }; 
+byte gateway[] = { 192, 168, 1, 1 }; 
+byte subnet[] = { 255, 255, 255, 0 };
+byte dns[] = { 192,168, 1, 1 };
 EthernetServer server(80);
-// Set your Gateway IP address
-IPAddress gateway(192, 168, 1, 1);
-IPAddress subnet(255, 255, 255, 0);
-IPAddress dns(192, 168, 1, 1);
 
 /******************************************************************
  * Network Configuration - customized per network 
@@ -92,11 +91,12 @@ float ChangeOutputWeights[HiddenNodes+1][OutputNodes];
 void setup(){
   Serial.begin(9600);
   Ethernet.init(10);
-  Ethernet.begin(mac, ip, dns,gateway,subnet);
+  Ethernet.begin(mac ,ip ,gateway ,subnet ,dns);
   server.begin();
   Serial.print("Server IP:");
   Serial.print("");
   Serial.println(Ethernet.localIP());
+  
   randomSeed(analogRead(3));
   ReportEvery1000 = 1;
   for( p = 0 ; p < PatternCount ; p++ ) {    
