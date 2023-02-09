@@ -8,8 +8,7 @@ Processor:  ATmega328P
 
 /* 
 [Some Issue : Working in progress] 
-https://docs.arduino.cc/hardware/ethernet-shield-rev2#tutorials
-*/
+https://docs.arduino.cc/retired/shields/arduino-ethernet-shield-without-poe-module*/
 
 /*******************************************************************
  * ArduinoANN - An artificial neural network for the Arduino
