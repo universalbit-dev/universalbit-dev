@@ -16,8 +16,13 @@ Processor:  ATmega328P
 #include <SPI.h>
 #include <Ethernet.h>
 byte mac[] = { 0xDE, 0xAB, 0xBF, 0xFE, 0xFA, 0xCD };
-IPAddress ip(192,168,1,143);
-EthernetServer server(8020);
+byte ip[]= {10,0,2,143};
+EthernetServer server(80);
+// Set your Gateway IP address
+IPAddress gateway(10, 0, 2, 1);
+IPAddress subnet(255, 255, 255, 0);
+IPAddress primaryDNS(192, 168, 1, 1);
+IPAddress secondaryDNS(8, 8, 8, 8);
 /******************************************************************
  * Network Configuration - customized per network 
  ******************************************************************/
@@ -85,7 +90,8 @@ void setup(){
   Ethernet.init(10);
   Ethernet.begin(mac, ip);
   server.begin();
-  Serial.print("NN WebServer");
+  Serial.print("Server IP:");
+  Serial.print("");
   Serial.println(Ethernet.localIP());
   randomSeed(analogRead(3));
   ReportEvery1000 = 1;
