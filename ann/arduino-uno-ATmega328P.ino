@@ -16,10 +16,10 @@ Processor:  ATmega328P
 #include <SPI.h>
 #include <Ethernet.h>
 byte mac[] = { 0xDE, 0xAB, 0xBF, 0xFE, 0xFA, 0xCD };
-byte ip[]= {10,0,2,143};
+byte ip[]= {192,168,1,143};
 EthernetServer server(80);
 // Set your Gateway IP address
-IPAddress gateway(10, 0, 2, 1);
+IPAddress gateway(192, 168, 1, 1);
 IPAddress subnet(255, 255, 255, 0);
 IPAddress primaryDNS(192, 168, 1, 1);
 IPAddress secondaryDNS(8, 8, 8, 8);
