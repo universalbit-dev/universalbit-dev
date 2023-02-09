@@ -6,6 +6,11 @@ Board:      Arduino Uno + Ethernet Shield (W5100)
 Processor:  ATmega328P
 */
 
+/* 
+[Some Issue : Working in progress] 
+https://docs.arduino.cc/hardware/ethernet-shield-rev2
+*/
+
 /*******************************************************************
  * ArduinoANN - An artificial neural network for the Arduino
  * All basic settings can be controlled via the Network Configuration
@@ -16,7 +21,7 @@ Processor:  ATmega328P
 #include <SPI.h>
 #include <Ethernet.h>
 byte mac[] = { 0xDE, 0xAB, 0xBF, 0xFE, 0xFA, 0xCD };
-byte ip[]= {192,168,1,143};
+IPAddress ip(192, 168, 1, 120);
 EthernetServer server(80);
 // Set your Gateway IP address
 IPAddress gateway(192, 168, 1, 1);
@@ -101,49 +106,46 @@ void setup(){
 }  
 
 void loop (){
-  // listen for incoming clients
-  EthernetClient client = server.available();
-  if (client) {
-    Serial.println("new client");
-    // an http request ends with a blank line
-    boolean currentLineIsBlank = true;
-    while (client.connected()) {
-      if (client.available()) {
-        char c = client.read();
-        Serial.write(c);
-        // if you've gotten to the end of the line (received a newline
-        // character) and the line is blank, the http request has ended,
-        // so you can send a reply
-        if (c == 'n' && currentLineIsBlank)
+  EthernetClient webpage = server.available();
+  if (webpage) 
+    {
+      Serial.println("new webpage");
+      boolean currentLineIsBlank = true;
+      while (webpage.connected ( ) ) 
         {
-          // send a standard http response header
-          client.println("HTTP/1.1 200 OK");
-          client.println("Content-Type: text/html");
-          client.println("Connection: close");  // the connection will be closed after completion of the response
-    client.println("Refresh: 30");  // refresh the page automatically every 30 sec
-          client.println();
-          client.println("<!DOCTYPE HTML>");
-          client.println("<html>");
-          // from here we can enter our own HTML code to create the web page
-          client.print("<head><title>Title</title></head><body></h1> - ");
-          client.print("<p><em>Page refreshes every 30 seconds<<em></p></body></html>.");
-          break;
+          if (webpage.available ( ) ) 
+            {
+              char character = webpage.read ( );
+              Serial.write(character);
+              if (character == '\n' && currentLineIsBlank) 
+                {
+                  webpage.println ("HTTP/1.1 200 OK");
+                  webpage.println ("Content-Type: text/html");
+                  webpage.println ("Connection: close");
+                  webpage.println ("Refresh: 5");
+                  webpage.println ("");
+                  webpage.println ("<!DOCTYPE HTML>");
+                  webpage.println ("<html>");
+                  webpage.print ("<Title>Arduino NN Ethernet Webserver </Title>");
+                  webpage.print ("<h4>NN: ");
+                  webpage.println ("<br />");
+                  webpage.println ("</html>");
+                  break;
+                }
+                 
+                if ( character == '\n') 
+                  {
+                    currentLineIsBlank = true;
+                  } 
+                else if (character != '\r') 
+                  {
+                    currentLineIsBlank = false;
+            }
         }
-        if (c == 'n') {
-          // you're starting a new line
-          currentLineIsBlank = true;
-        }
-        else if (c != 'r') {
-          // you've gotten a character on the current line
-          currentLineIsBlank = false;
-        }
-      }
     }
-    // delay to receive the data
-    delay(10);
-    // close the connection:
-    client.stop();
-    Serial.println("client disconnected");
+    delay(1);
+    webpage.stop();
+    Serial.println("webpage disconnected");
   }
 
 
@@ -360,5 +362,3 @@ void toTerminal()
 
 
 }
-
-
