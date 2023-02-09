@@ -92,7 +92,7 @@ float ChangeOutputWeights[HiddenNodes+1][OutputNodes];
 void setup(){
   Serial.begin(9600);
   Ethernet.init(10);
-  Ethernet.begin(mac, ip, dns);
+  Ethernet.begin(mac, ip, dns,gateway,subnet);
   server.begin();
   Serial.print("Server IP:");
   Serial.print("");
