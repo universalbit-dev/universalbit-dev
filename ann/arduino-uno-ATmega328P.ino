@@ -25,8 +25,8 @@ EthernetServer server(80);
 // Set your Gateway IP address
 IPAddress gateway(192, 168, 1, 1);
 IPAddress subnet(255, 255, 255, 0);
-IPAddress primaryDNS(192, 168, 1, 1);
-IPAddress secondaryDNS(8, 8, 8, 8);
+IPAddress dns(192, 168, 1, 1);
+
 /******************************************************************
  * Network Configuration - customized per network 
  ******************************************************************/
@@ -92,7 +92,7 @@ float ChangeOutputWeights[HiddenNodes+1][OutputNodes];
 void setup(){
   Serial.begin(9600);
   Ethernet.init(10);
-  Ethernet.begin(mac, ip);
+  Ethernet.begin(mac, ip, dns);
   server.begin();
   Serial.print("Server IP:");
   Serial.print("");
