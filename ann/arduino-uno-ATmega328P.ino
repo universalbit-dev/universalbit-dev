@@ -7,7 +7,7 @@ Processor:  ATmega328P
 */
 
 /* 
-[Some Issue : Working in progress] 
+[Documentation] 
 https://docs.arduino.cc/retired/shields/arduino-ethernet-shield-without-poe-module*/
 
 /*******************************************************************
@@ -105,48 +105,11 @@ void setup(){
 }  
 
 void loop (){
-  EthernetClient webpage = server.available();
-  if (webpage) 
-    {
-      Serial.println("new webpage");
-      boolean currentLineIsBlank = true;
-      while (webpage.connected ( ) ) 
-        {
-          if (webpage.available ( ) ) 
-            {
-              char character = webpage.read ( );
-              Serial.write(character);
-              if (character == '\n' && currentLineIsBlank) 
-                {
-                  webpage.println ("HTTP/1.1 200 OK");
-                  webpage.println ("Content-Type: text/html");
-                  webpage.println ("Connection: close");
-                  webpage.println ("Refresh: 5");
-                  webpage.println ("");
-                  webpage.println ("<!DOCTYPE HTML>");
-                  webpage.println ("<html>");
-                  webpage.print ("<Title>Arduino NN Ethernet Webserver </Title>");
-                  webpage.print ("<h4>NN: ");
-                  webpage.println ("<br />");
-                  webpage.println ("</html>");
-                  break;
-                }
-                 
-                if ( character == '\n') 
-                  {
-                    currentLineIsBlank = true;
-                  } 
-                else if (character != '\r') 
-                  {
-                    currentLineIsBlank = false;
-            }
-        }
-    }
-    delay(1);
-    webpage.stop();
-    Serial.println("webpage disconnected");
-  }
-
+  EthernetClient client = server.available();
+  client.println("HTTP/1.1 200 OK");
+  client.println("Content-Type: text/html");
+  client.println("Connnection: close");
+  client.println();
 
 /******************************************************************
 * Initialize HiddenWeights and ChangeHiddenWeights 
