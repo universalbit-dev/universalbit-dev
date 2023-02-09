@@ -12,7 +12,7 @@ import pandas as pd
 import asyncio
 #READ
 r = serial.Serial(
-port='/dev/ttyUSB0',baudrate = 9600, #<=== USB
+port='/dev/ttyUSB0',baudrate = 9600, #<===USB Port: /dev/ttyUSB1
 parity=serial.PARITY_NONE,
 stopbits=serial.STOPBITS_ONE,
 bytesize=serial.EIGHTBITS,
