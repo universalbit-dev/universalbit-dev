@@ -35,7 +35,7 @@ const int OutputNodes = 4;
 const float LearningRate = 0.3;
 const float Momentum = 0.9;
 const float InitialWeightMax = 0.5;
-const float Success = 0.04;
+const float Success = 0.0004;;
 const byte Input[PatternCount][InputNodes] = {
   { 1, 1, 1, 1, 1, 1, 0 },  // 0
   { 0, 1, 1, 0, 0, 0, 0 },  // 1
