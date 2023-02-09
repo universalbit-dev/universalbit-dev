@@ -8,7 +8,7 @@ Processor:  ATmega328P
 
 /* 
 [Some Issue : Working in progress] 
-https://docs.arduino.cc/hardware/ethernet-shield-rev2
+https://docs.arduino.cc/hardware/ethernet-shield-rev2#tutorials
 */
 
 /*******************************************************************
