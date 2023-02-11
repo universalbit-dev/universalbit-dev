@@ -191,7 +191,7 @@ void loop (){
       }
     }
 /******************************************************************
-* Every 1000 cycles send data to terminal for display
+* Every cycles send data to terminal for display
 ******************************************************************/
     ReportEvery1000 = ReportEvery1000 - 1;
     {
