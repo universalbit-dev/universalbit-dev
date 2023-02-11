@@ -2,7 +2,6 @@
 UniversalBit ... once again
 about some copy and paste code
 Arduino NN
-
 Board:ESP8266 LOLIN WEMOS D1 mini(clone)
 */
 #include <ESP8266WiFi.h>
@@ -10,11 +9,10 @@ Board:ESP8266 LOLIN WEMOS D1 mini(clone)
 #include <math.h>
 const char* ssid = "Wifi-Name";
 const char* password = "Wifi-Password";
-ESP8266WebServer webserver(80);
+WiFiServer server(80);
 /******************************************************************
  * Wi-Fi Network 
  ******************************************************************/
-WiFiServer server(80);
 IPAddress ip(192, 168, 1, 22);
 IPAddress gateway(192, 168, 1, 1);
 IPAddress subnet(255, 255, 255, 0);
@@ -61,7 +59,6 @@ const byte Target[PatternCount][OutputNodes] = {
  * End Network Configuration
  ******************************************************************/
 int i, j, p, q, r;
-int ReportEvery1000;
 int RandomizedIndex[PatternCount];
 long  TrainingCycle;
 float Rando;
@@ -81,7 +78,7 @@ void setup(){
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
   randomSeed(analogRead(3));
-  ReportEvery1000 = 1;
+  server.begin();
   for( p = 0 ; p < PatternCount ; p++ ) {    
     RandomizedIndex[p] = p ;
   }
@@ -191,8 +188,6 @@ WiFiClient client = server.available();
 /******************************************************************
 * Every cycles send data to terminal for display
 ******************************************************************/
-    ReportEvery1000 = ReportEvery1000 - 1;
-    {
       Serial.println(); 
       Serial.println(); 
       Serial.print ("TrainingCycle: ");
@@ -200,20 +195,9 @@ WiFiClient client = server.available();
       Serial.print ("  Error = ");
       Serial.println (Error, 5);
       toTerminal();
-      if (TrainingCycle==1)
-      {
-        ReportEvery1000 = 999;
-      }
-      else
-      {
-        ReportEvery1000 = 1000;
-      }
-    }    
-/******************************************************************
-* If error rate is less than pre-determined threshold then end
-******************************************************************/
     if( Error < Success ) break ;  
   }
+              
   Serial.println ();
   Serial.println(); 
   Serial.print ("TrainingCycle: ");
@@ -226,8 +210,7 @@ WiFiClient client = server.available();
   Serial.println ("Training Set Solved! ");
   Serial.println ("--------"); 
   Serial.println ();
-  Serial.println ();  
-  ReportEvery1000 = 1;
+  Serial.println ();
 }
 
 void toTerminal()
