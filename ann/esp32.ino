@@ -31,12 +31,9 @@ const char* password = "PASSWORD WIFI";
 WiFiServer server(80);
 // Set your Static IP address
 IPAddress local_IP(192, 168, 1, 20);
-// Set your Gateway IP address
 IPAddress gateway(192, 168, 1, 1);
-
 IPAddress subnet(255, 255, 255, 0);
-IPAddress primaryDNS(192,168,1,1);  //primary dns
-IPAddress secondaryDNS(8,8,8,8);    //secondary dns
+IPAddress dns(192,168,1,1);
 
 /*******************************************************************
  * ArduinoANN - An artificial neural network for the Arduino
