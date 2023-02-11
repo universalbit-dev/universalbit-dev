@@ -5,7 +5,6 @@ Arduino NN
 
 Board:ESP8266 LOLIN WEMOS D1 mini(clone)
 */
-
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
 #include <math.h>
@@ -17,7 +16,6 @@ ESP8266WebServer webserver(80);
  ******************************************************************/
 WiFiServer server(80);
 IPAddress ip(192, 168, 1, 22);
-// Set your Gateway IP address
 IPAddress gateway(192, 168, 1, 1);
 IPAddress subnet(255, 255, 255, 0);
 IPAddress dns(192, 168, 1, 1);
@@ -33,7 +31,7 @@ const int HiddenNodes = 8;
 const int OutputNodes = 4;
 const float LearningRate = 0.3;
 const float Momentum = 0.9;
-const float InitialWeightMax = 0.5;
+const float InitialWeightMax = 0.6;
 const float Success = 0.0004;
 const byte Input[PatternCount][InputNodes] = {
   { 1, 1, 1, 1, 1, 1, 0 },  // 0
@@ -92,8 +90,8 @@ void loop (){
 /******************************************************************
 *WifiClient
 ******************************************************************/
- // Use WiFiClient class to create TCP connections
-  WiFiClient client;
+WiFiClient client = server.available();
+
 /******************************************************************
 * Initialize HiddenWeights and ChangeHiddenWeights 
 ******************************************************************/
