@@ -1,6 +1,5 @@
 #### Be careful to use only a USB data cable,some usb cables are only used to recharge and do not allow the upload of code.
 
-### welding cables:
 
 ###### D1 Mini ESP8266     - Logic Converter 3.3 | 5V   - Two Arduino Nano (Himalaya)
 
