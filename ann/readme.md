@@ -10,3 +10,4 @@
 
 Resources:
 [Projects](https://randomnerdtutorials.com/projects-esp32/)
+[MicroPython](https://randomnerdtutorials.com/getting-started-micropython-esp32-esp8266/)
