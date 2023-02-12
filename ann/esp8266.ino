@@ -5,11 +5,11 @@ Arduino NN
 Board:ESP8266 LOLIN WEMOS D1 mini(clone)
 */
 #include <ESP8266WiFi.h>
-#include <ESP8266WebServer.h>
 #include <math.h>
 const char* ssid = "Wifi-Name";
 const char* password = "Wifi-Password";
 WiFiServer server(80);
+
 /******************************************************************
  * Wi-Fi Network 
  ******************************************************************/
@@ -74,11 +74,11 @@ float ChangeHiddenWeights[InputNodes+1][HiddenNodes];
 float ChangeOutputWeights[HiddenNodes+1][OutputNodes];
 void setup(){
   Serial.begin(9600);
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
   WiFi.begin(ssid, password);
-  Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());
-  randomSeed(analogRead(3));
   server.begin();
+  randomSeed(analogRead(3));
   for( p = 0 ; p < PatternCount ; p++ ) {    
     RandomizedIndex[p] = p ;
   }
@@ -88,7 +88,6 @@ void loop (){
 *WifiClient
 ******************************************************************/
 WiFiClient client = server.available();
-
 /******************************************************************
 * Initialize HiddenWeights and ChangeHiddenWeights 
 ******************************************************************/
