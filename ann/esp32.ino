@@ -3,7 +3,6 @@ UniversalBit ... once again
 about some copy and paste code
 Arduino NN
 Board:  ESP32 (Chip is ESP32D0WDQ5 (revision 3))
-
 ------------------------------------------------------------------------
 ESP32 DevModule,Enabled,Huge APP(3MB no OTA/1MB SPIFFS),
 240Mhz(Wifi/BT),DIO,80Mhz,4MB(32MB),115200,Verbose on dev/tty/USB1
@@ -20,21 +19,19 @@ Hash of data verified.
 Writing at 0x00008000... (100 %)
 ------------------------------------------------------------------------
 */
-
 #include <WiFi.h>
 #include <math.h>
 /******************************************************************
  * Wi-Fi Network 
  ******************************************************************/
-const char* ssid = "SSID WIFI NAME";
-const char* password = "PASSWORD WIFI";
+const char* ssid = "WiFi-Name";
+const char* password = "Password";
 WiFiServer server(80);
 // Set your Static IP address
-IPAddress local_IP(192, 168, 1, 20);
+IPAddress ip(192, 168, 1,24);
 IPAddress gateway(192, 168, 1, 1);
 IPAddress subnet(255, 255, 255, 0);
 IPAddress dns(192,168,1,1);
-
 /*******************************************************************
  * ArduinoANN - An artificial neural network for the Arduino
  * All basic settings can be controlled via the Network Configuration
@@ -47,7 +44,7 @@ const int HiddenNodes = 8;
 const int OutputNodes = 4;
 const float LearningRate = 0.3;
 const float Momentum = 0.9;
-const float InitialWeightMax = 0.5;
+const float InitialWeightMax = 0.6;
 const float Success = 0.0004;
 
 const byte Input[PatternCount][InputNodes] = {
@@ -80,7 +77,6 @@ const byte Target[PatternCount][OutputNodes] = {
  * End Network Configuration
  ******************************************************************/
 int i, j, p, q, r;
-int ReportEvery1000;
 int RandomizedIndex[PatternCount];
 long  TrainingCycle;
 float Rando;
@@ -94,23 +90,23 @@ float HiddenDelta[HiddenNodes];
 float OutputDelta[OutputNodes];
 float ChangeHiddenWeights[InputNodes+1][HiddenNodes];
 float ChangeOutputWeights[HiddenNodes+1][OutputNodes];
+
 void setup(){
   Serial.begin(9600);
   WiFi.begin(ssid, password);
+  server.begin();
   Serial.println(WiFi.localIP());
   randomSeed(analogRead(3));
-  ReportEvery1000 = 1;
   for( p = 0 ; p < PatternCount ; p++ ) {    
     RandomizedIndex[p] = p ;
   }
-  
 }  
 
 void loop (){
 /******************************************************************
 *WifiClient
 ******************************************************************/
-  WiFiClient client = server.available();
+WiFiClient client = server.available();
 /******************************************************************
 * Initialize HiddenWeights and ChangeHiddenWeights 
 ******************************************************************/
@@ -124,7 +120,6 @@ void loop (){
 /******************************************************************
 * Initialize OutputWeights and ChangeOutputWeights
 ******************************************************************/
-
   for( i = 0 ; i < OutputNodes ; i ++ ) {    
     for( j = 0 ; j <= HiddenNodes ; j++ ) {
       ChangeOutputWeights[j][i] = 0.0 ;  
@@ -137,9 +132,7 @@ void loop (){
 /******************************************************************
 * Begin training 
 ******************************************************************/
-
   for( TrainingCycle = 1 ; TrainingCycle < 2147483647 ; TrainingCycle++) {    
-
 /******************************************************************
 * Randomize order of training patterns
 ******************************************************************/
@@ -201,7 +194,6 @@ void loop (){
 /******************************************************************
 * Update Hidden-->Output Weights
 ******************************************************************/
-
       for( i = 0 ; i < OutputNodes ; i ++ ) {    
         ChangeOutputWeights[HiddenNodes][i] = LearningRate * OutputDelta[i] + Momentum * ChangeOutputWeights[HiddenNodes][i] ;
         OutputWeights[HiddenNodes][i] += ChangeOutputWeights[HiddenNodes][i] ;
@@ -214,30 +206,15 @@ void loop (){
 /******************************************************************
 * Every cycles send data to terminal for display
 ******************************************************************/
-    ReportEvery1000 = ReportEvery1000 - 1;
-    {
       Serial.println(); 
       Serial.println(); 
       Serial.print ("TrainingCycle: ");
       Serial.print (TrainingCycle);
       Serial.print ("  Error = ");
-      Serial.println (Error, 5);
-
-      toTerminal();
-
-      if (TrainingCycle==1)
-      {
-        ReportEvery1000 = 999;
-      }
-      else
-      {
-        ReportEvery1000 = 1000;
-      }
-    }    
-/******************************************************************
-* If error rate is less than pre-determined threshold then end
-******************************************************************/
-    if( Error < Success ) break ;  
+      Serial.println (Error, 5); 
+      toTerminal();  
+    if( Error < Success ) break ; 
+     
   }
   Serial.println ();
   Serial.println(); 
@@ -245,16 +222,13 @@ void loop (){
   Serial.print (TrainingCycle);
   Serial.print ("  Error = ");
   Serial.println (Error, 5);
-
   toTerminal();
-
   Serial.println ();  
   Serial.println ();
   Serial.println ("Training Set Solved! ");
   Serial.println ("--------"); 
   Serial.println ();
   Serial.println ();  
-  ReportEvery1000 = 1;
 }
 
 void toTerminal()
