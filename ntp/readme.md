@@ -1,5 +1,5 @@
-#Install Ntp Server: [NTP](https://wiki.debian.org/NTP)
-#https://timetoolsltd.com/information/public-ntp-server/
+#[NTP](https://wiki.debian.org/NTP)
+#[Read More](https://timetoolsltd.com/information/public-ntp-server/)
 
 ```
 sudo apt-get install ntp
