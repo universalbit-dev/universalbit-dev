@@ -17,5 +17,5 @@ Blockchain Node and Dapps
 
 Digital Making and Making
 
-[Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/blob/main/support/donation.md) 
+[Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) 
 
