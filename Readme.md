@@ -12,8 +12,9 @@ Blockchain Node and Dapps
 Digital Making and Making
 
 Website: https://universalbit.it    [Maintenance]
-[Twitter](https://twitter.com/BitUniversal)
-[Facebook](https://www.facebook.com/universalbit/)
+
+- [Twitter](https://twitter.com/BitUniversal)
+- [Facebook](https://www.facebook.com/universalbit/)
 
 [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) 
 
