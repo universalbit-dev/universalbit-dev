@@ -13,7 +13,7 @@ Digital Making and Making
 
 Website: https://universalbit.it    [Maintenance]
 
-- [Twitter](https://twitter.com/BitUniversal)
+- [Twitter]()
 - [Facebook](https://www.facebook.com/universalbit/)
 
 [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) 
