@@ -1,7 +1,8 @@
-#### [NTP](https://wiki.debian.org/NTP)
-##### The Debian package will install a default set of time servers which 
-should be good for most typical client installations.  However you may 
-customize this for your network location.
+#### [NTP Debian Wiki](https://wiki.debian.org/NTP)
+##### The Debian package will install a default set of time servers
+
+should be good for most typical client installations.  
+However you may customize this for your network location.
 
 ---
 
