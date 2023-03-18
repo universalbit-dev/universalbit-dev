@@ -1,8 +1,7 @@
 #### [NTP](https://wiki.debian.org/NTP)
 ##### The Debian package will install a default set of time servers which 
 should be good for most typical client installations.  However you may 
-customize this for your network location.  A good source of NTP pool 
-information is the NTP Pool Project. 
+customize this for your network location.
 
 ---
 
