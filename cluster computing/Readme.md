@@ -1,7 +1,7 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 
 
-Harmadillium Project:  
+HArmadillium Project:  
 
 [WebPage](https://universalbit.it:3000/universalbit-blockchain/Armadillium/src/master/HArmadillium.md) 
 ---
