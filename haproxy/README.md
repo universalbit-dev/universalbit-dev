@@ -1,4 +1,3 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 
-########################
-[Info](https://www.haproxy.com/)
+HaProxy Documentation: https://www.haproxy.com/
