@@ -19,5 +19,3 @@ Website: https://universalbit.it    [Maintenance]
 [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 
 ![handyman](https://github.com/universalbit-dev/universalbit-dev/blob/main/img/handyman_720.jpg "HandyMan")
-
-
