@@ -1,3 +1,4 @@
+```
 listen load_balancer_cluster
    mode tcp
    bind :8020
@@ -42,3 +43,4 @@ defaults
         errorfile 502 /etc/haproxy/errors/502.http
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
+```
