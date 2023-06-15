@@ -47,7 +47,8 @@ vars:
 ##### overridden with the -l command line parameter.
 default-log-dir: /var/log/suricata/
 
-# global stats configuration stats:
+# global stats configuration
+stats:
   enabled: yes
   # The interval field (in seconds) controls at what interval
   # the loggers are invoked.
