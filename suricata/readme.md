@@ -1,14 +1,11 @@
+```
 %YAML 1.1
 ---
+#####Suricata configuration file. In addition to the comments describing all
+#####options in this file, full documentation can be found at:
+#####[configuration](https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html)
 
-# Suricata configuration file. In addition to the comments describing all
-# options in this file, full documentation can be found at:
-# https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html
-
-##
-## Step 1: inform Suricata about your network
-##
-
+####Step 1: inform Suricata about your network
 vars:
   # more specific is better for alert accuracy and performance
   address-groups:
@@ -44,18 +41,13 @@ vars:
     MODBUS_PORTS: 502
     FILE_DATA_PORTS: "[$HTTP_PORTS,110,143]"
     FTP_PORTS: 21
-
-##
-## Step 2: select outputs to enable
-##
-
-# The default logging directory.  Any log or output file will be
-# placed here if its not specified with a full path name. This can be
-# overridden with the -l command line parameter.
+#### Step 2: select outputs to enable
+##### The default logging directory.  Any log or output file will be
+##### placed here if its not specified with a full path name. This can be
+##### overridden with the -l command line parameter.
 default-log-dir: /var/log/suricata/
 
-# global stats configuration
-stats:
+# global stats configuration stats:
   enabled: yes
   # The interval field (in seconds) controls at what interval
   # the loggers are invoked.
@@ -1934,7 +1926,7 @@ reference-config-file: /etc/suricata/reference.config
 # inlined in this configuration file.
 #include: include1.yaml
 #include: include2.yaml
-
+```
 
 [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
