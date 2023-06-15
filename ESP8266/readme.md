@@ -1,4 +1,7 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
+##### [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
+
+
 
 #### ESP8266 Ntp Server
 Network Time Protocol [NTP](https://microcontrollerslab.com/current-date-time-esp8266-nodemcu-ntp-server/)
