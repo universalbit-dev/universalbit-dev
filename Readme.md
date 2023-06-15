@@ -11,7 +11,7 @@ Blockchain Node and Dapps
 
 Digital Making and Making
 
-Website: https://universalbit.it    [Maintenance]
+Website: https://universalbit.it [work in progress]
 
 - [Twitter]()
 - [Facebook](https://www.facebook.com/universalbit/)
