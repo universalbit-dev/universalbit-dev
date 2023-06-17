@@ -15,6 +15,7 @@ Repository:
 - [Twitter]()
 - [Facebook](https://www.facebook.com/universalbit/)
 - [Mastodon](https://mastodon.social/invite/8wBQnvts)
+- [Discord](https://discord.gg/WnS6HsvS)
 
 [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 
