@@ -9,7 +9,6 @@ Web Development and Web Application
 
 Blockchain Node and Dapps
 
-Digital Making and Making
 Repository:
 [UniversalBit](https://github.com/universalbit-dev) [work in progress]
 
