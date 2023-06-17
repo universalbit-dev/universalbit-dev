@@ -11,7 +11,7 @@ Blockchain Node and Dapps
 
 Digital Making and Making
 Repository:
-[UniversalBit](universalbit.it) [work in progress]
+[UniversalBit](https://github.com/universalbit-dev) [work in progress]
 
 - [Twitter]()
 - [Facebook](https://www.facebook.com/universalbit/)
