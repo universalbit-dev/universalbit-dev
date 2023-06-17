@@ -12,7 +12,6 @@ Blockchain Node and Dapps
 Repository:
 [UniversalBit](https://github.com/universalbit-dev) [work in progress]
 
-- [Twitter]()
 - [Facebook](https://www.facebook.com/universalbit/)
 - [Mastodon](https://mastodon.social/invite/8wBQnvts)
 - [Discord](https://discord.gg/gGkpMDfKW7)
