@@ -9,14 +9,17 @@ Web Development and Web Application
 
 Blockchain Node and Dapps
 
-Repository:
-[UniversalBit](https://github.com/universalbit-dev) [work in progress]
+- Repository: [UniversalBit](https://github.com/universalbit-dev) [work in progress]
 
-- [Facebook](https://www.facebook.com/universalbit/)
-- [Mastodon](https://mastodon.social/invite/8wBQnvts)
-- [Discord](https://discord.gg/gGkpMDfKW7)
+[![Alt text](https://github.com/universalbit-dev/universalbit-dev/blob/main/img/facebook.png)](https://www.facebook.com/universalbit/)
+[![Alt text](https://github.com/universalbit-dev/universalbit-dev/blob/main/img/discord.png)](https://discord.gg/gGkpMDfKW7)
+[Mastodon](https://mastodon.social/invite/8wBQnvts)
 
-[Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
+- [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
+
+
+
+
 
 [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 
