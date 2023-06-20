@@ -6,7 +6,7 @@
 #### ESP8266 Ntp Server
 Network Time Protocol [NTP](https://microcontrollerslab.com/current-date-time-esp8266-nodemcu-ntp-server/)
 
-#### Be careful to use only a USB data cable,some usb cables are only used to recharge and do not allow the upload of code.
+#### Be careful to use only a USB data cable,some usb cables are only used to recharge and do not allow upload.
 # D1 Mini ESP8266 
 
 [![Alt text](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/D1_Mini.png)](https://github.com/universalbit-dev/universalbit-dev/tree/main/ann)
