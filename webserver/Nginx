@@ -1,6 +1,0 @@
-server {
-    server_name universalbit.it;
-    listen 8001;
-    return 301 https://$host$request_uri;
-}
-
