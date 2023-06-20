@@ -1,4 +1,4 @@
-### Support the UniversalBit project by making a donation
+### [Support the UniversalBit project](https://www.buymeacoffee.com/universalbit)
 
 ![Alt text](https://github.com/universalbit-dev/universalbit-dev/blob/main/support/tools_250px.png "tools")
 
