@@ -1,18 +1,27 @@
 
-[Bitcoin Project](https://bitcoin.org/en/)
-
+#### [BitNodes](https://bitnodes.io)
 ---
-
-[Repository](https://github.com/bitcoin)
-
 ```
-#!/bin/bash
-
-###Make your system ready::
-###Install BitCoin Node 
-
 curl https://bitnodes.io/install-full-node.sh | sh
-
 ```
 
-BTC: bc1q5wf26dq4wrq0d47nkvplnmarf8tl0hkmqf9elm![Alt text](https://github.com/universalbit-dev/armadillium-gridbot/blob/main/cryptocurrency_icon/btc.svg "bitcoin-indicator")
+[ProgrammingBlockchain](https://programmingblockchain.gitbook.io/programmingblockchain)
+
+#### Pruned Node
+A pruned Bitcoin node is technically still a Bitcoin full node, however it prunes its local blockchain in order to save disk space.
+License: CC (ASA 3U)
+
+```
+prune=550
+​
+maxconnections=8
+listen=0
+maxuploadtarget=144
+​
+checkblocks=1
+checklevel=0
+​
+txindex=0
+```
+
+
