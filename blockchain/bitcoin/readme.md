@@ -24,4 +24,6 @@ checklevel=0
 txindex=0
 ```
 
+[Bitcoin Core integration](https://github.com/bitcoin/bitcoin)
+
 
