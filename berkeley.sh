@@ -1,11 +1,15 @@
-###sudo ./berkeley.sh
+###https://en.wikipedia.org/wiki/Berkeley_DB
 ###Update System and Install Dependencies
+###sudo ./berkeley.sh
+
 apt-get update && sudo apt-get upgrade
 apt-get install build-essential  libssl-dev libgmp-dev
- 
+
 ###Download and Compile SRC BerkeleyDB-4.8
 wget http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz
 tar -xzvf db-4.8.30.NC.tar.gz
+#make: *** [Makefile:2018: cxx_db.o] Error 1   one line solution
+sed -i 's/__atomic_compare_exchange/__atomic_compare_exchange_db/g' db-4.8.30.NC/dbinc/atomic.h
 cd db-4.8.30.NC/build_unix
 ../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
 make
