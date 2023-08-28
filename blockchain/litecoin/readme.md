@@ -1,14 +1,22 @@
-
-[Litecoin Project](https://litecoin.org/)
-
-Github Repository:
-[litecoin](https://github.com/litecoin-project/litecoin)
-
+### [Litecoin](https://litecoin.org/) Node 
+```
 
 ```
-###Make your system ready:      
-###Install Litecoin SuperNode 
-wget https://raw.githubusercontent.com/litecoin-association/LitecoinNode/master/linux.sh -P /root/ ; bash /root/linux.sh 2>&1 | tee /root/install.log#!/bin/bash
+
+### Pruned Node
 ```
-LTC: LWgAMAXEbcMienXHqzmSn8Gg4A6Q6RywWt![Alt text](https://github.com/universalbit-dev/armadillium-gridbot/blob/main/cryptocurrency_icon/ltc.svg "litecoin-indicator")
+prune=550
+​
+maxconnections=8
+listen=0
+maxuploadtarget=144
+​
+checkblocks=1
+checklevel=0
+​
+txindex=0
+```
+
+[Litecoin Core integration](https://github.com/litecoin-project/litecoin)
+
 
