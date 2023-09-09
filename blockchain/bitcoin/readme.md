@@ -7,9 +7,7 @@ curl https://bitnodes.io/install-full-node.sh | sh
 
 [ProgrammingBlockchain](https://programmingblockchain.gitbook.io/programmingblockchain)
 
-#### Pruned Node
-A pruned Bitcoin node is technically still a Bitcoin full node, however it prunes its local blockchain in order to save disk space.
-License: CC (ASA 3U)
+#### [Pruned Node](https://programmingblockchain.gitbook.io/programmingblockchain/wallet/pruned-node)
 
 ```
 prune=550
