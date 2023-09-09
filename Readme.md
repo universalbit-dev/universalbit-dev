@@ -9,7 +9,7 @@ Web Development and Web Application
 
 Blockchain Node and Dapps
 
-- Repository: [UniversalBit](https://github.com/universalbit-dev) [work in progress]
+- Repository: [UniversalBit](https://github.com/universalbit-dev)
 
 - [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 
