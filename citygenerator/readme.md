@@ -1,1 +1,1 @@
-[CirtyGenerator](https://universalbit-dev.github.io/CityGenerator)
+[CityGenerator](https://universalbit-dev.github.io/CityGenerator)
