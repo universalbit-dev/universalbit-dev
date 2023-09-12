@@ -2,7 +2,7 @@
 #
 #Read serial Data
 #... once again
-#22-01-2023 https://universalbit.it
+#universalbit.it
 #License: CC0 1.0 Universal (CC0 1.0)
 #https://creativecommons.org/share-your-work/public-domain/cc0/
 #
