@@ -1,6 +1,4 @@
 ### [UniversalBit](https://github.com/universalbit-dev)
-[![Alt text](https://github.com/universalbit-dev/papirus-icon-theme/blob/master/Papirus/64x64/places/folder-white-development.svg)](https://github.com/universalbit-dev/universalbit-dev)
-
 
 ### projects and customizations for a digital and real workplace
 
