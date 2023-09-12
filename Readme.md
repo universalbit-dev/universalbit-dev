@@ -1,15 +1,19 @@
-
+### [UniversalBit](https://github.com/universalbit-dev)
 [![Alt text](https://github.com/universalbit-dev/papirus-icon-theme/blob/master/Papirus/64x64/places/folder-white-development.svg)](https://github.com/universalbit-dev/universalbit-dev)
 
-### UniversalBit 
 
-#### projects and customizations for a digital and real workplace
+### projects and customizations for a digital and real workplace
 
-Web Development and Web Application
+* [CityGenerator](https://universalbit-dev.github.io/CityGenerator/)
+* [Blockchain Node and Dapps]
+* [Gekko-M4 and Gekko-M4-ui]
+* [Cnc Router Machines](https://universalbit-dev.github.io/cnc-router-machines/)
+* [Arduino Nano]
+* [ESP32]
+* [Web Development]
+* [Web Application]
 
-Blockchain Node and Dapps
 
-- Repository: [UniversalBit](https://github.com/universalbit-dev)
 
 - [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 
