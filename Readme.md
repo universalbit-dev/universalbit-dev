@@ -13,7 +13,7 @@
 * [OpenStreetMap editor in JavaScript](https://oyster-app-c5dox.ondigitalocean.app)
 
 
-- [Blog](https://shark-app-gse6h.ondigitalocean.app)
+
 - [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 
 
