@@ -1,4 +1,5 @@
 ### [UniversalBit](https://github.com/universalbit-dev)
+![Alt text](docs/assets/images/small_logo.png "")
 
 ### projects and customizations for a digital and real workplace
 
