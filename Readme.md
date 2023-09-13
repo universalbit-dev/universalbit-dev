@@ -8,6 +8,7 @@
 * [Cnc Router Machines](https://universalbit-dev.github.io/cnc-router-machines/)
 * [NN](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/index.md)
 * [Web Development](https://shark-app-gse6h.ondigitalocean.app/)
+* [OpenStreetMap editor in JavaScript](https://oyster-app-c5dox.ondigitalocean.app)
 
 
 
