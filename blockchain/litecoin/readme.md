@@ -2,6 +2,7 @@
 ```
 
 ```
+[Repository:](https://github.com/litecoin-project/litecoin/releases)
 
 ### Pruned Node
 ```
