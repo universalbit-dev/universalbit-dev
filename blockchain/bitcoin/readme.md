@@ -11,14 +11,11 @@ curl https://bitnodes.io/install-full-node.sh | sh
 
 ```
 prune=550
-​
 maxconnections=8
 listen=0
 maxuploadtarget=144
-​
 checkblocks=1
 checklevel=0
-​
 txindex=0
 ```
 
