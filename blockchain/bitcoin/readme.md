@@ -30,7 +30,7 @@ txindex=0
 * bitcoin-core/bin/start.sh 
 * bitcoin-core/bin/stop.sh
 
-#### Pm2 Process Manager [Startup Script Generator](https://pm2.keymetrics.io/docs/usage/startup/)
+#### Pm2 Process Manager 
 ```
 var pm2 = require('pm2');
 pm2.connect(function(err) {
@@ -57,6 +57,18 @@ pm2.list((err, list) => {
 })
 
 ```
-
-
+[Startup Script Generator](https://pm2.keymetrics.io/docs/usage/startup/)
+To automatically generate and configuration a startup script just type the command (without sudo) 
+```
+pm2 startup
+```
+Then copy/paste the displayed command onto the terminal
+```
+* ### EXAMPLE:
+sudo su -c "env PATH=$PATH:/home/unitech/.nvm/versions/node/v14.3/bin pm2 startup <distribution> -u <user> --hp <home-path>
+```
+and save app list
+```
+pm2 save
+```
 
