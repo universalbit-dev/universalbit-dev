@@ -11,7 +11,7 @@ curl https://bitnodes.io/install-full-node.sh | sh
 #### [Configure Bitcoin Pruned Node]()
 
 ```
-nano bitcoin-core/.bitcoin/bitcoin.conf
+nano /home/your_username/.bitcoin/bitcoin.conf
 ```
 #### [Pruned Node](https://programmingblockchain.gitbook.io/programmingblockchain/wallet/pruned-node)
 
