@@ -1,4 +1,5 @@
-
+### Pruned Node simple explanation
+means: |storage - minimum disk space required for running a full node|
 #### [BitNodes](https://bitnodes.io)
 ---
 #### Latest Bitcoin Node 
