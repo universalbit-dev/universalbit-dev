@@ -31,7 +31,15 @@ txindex=0
 * bitcoin-core/bin/start.sh 
 * bitcoin-core/bin/stop.sh
 
-#### Pm2 Process Manager 
+* ### [Nodejs Setup](https://github.com/nvm-sh/nvm)
+
+
+#### Pm2 Process Manager
+```
+npm i pm2 -g
+```
+
+* btc_pruned.js
 ```
 var pm2 = require('pm2');
 pm2.connect(function(err) {
@@ -58,6 +66,10 @@ pm2.list((err, list) => {
 })
 
 ```
+```
+pm2 start btc_pruned.js
+```
+
 [Startup Script Generator](https://pm2.keymetrics.io/docs/usage/startup/)
 To automatically generate and configuration a startup script just type the command (without sudo) 
 ```
