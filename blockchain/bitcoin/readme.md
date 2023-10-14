@@ -1,20 +1,15 @@
 ### Pruned Node simple explanation
 means: |storage - minimum disk space required for running a full node|
 #### [BitNodes](https://bitnodes.io)
----
-#### Latest Bitcoin Node 
-```
-curl https://bitnodes.io/install-full-node.sh | sh
-```
 [ProgrammingBlockchain](https://programmingblockchain.gitbook.io/programmingblockchain)
+---
 
-#### [Configure Bitcoin Pruned Node]()
-
+* Create and Edit bitcoin configuration file
 ```
+mkdir /home/your_username/.bitcoin
 nano /home/your_username/.bitcoin/bitcoin.conf
 ```
 #### [Pruned Node](https://programmingblockchain.gitbook.io/programmingblockchain/wallet/pruned-node)
-
 ```
 prune=550
 maxconnections=8
@@ -26,47 +21,19 @@ txindex=0
 ```
 * [Bitcoin Core integration](https://github.com/bitcoin/bitcoin)
 
-
-#### Usage: Start/Stop Bitcoin Node
-* bitcoin-core/bin/start.sh 
-* bitcoin-core/bin/stop.sh
+  
+* Latest Bitcoin Node 
+```
+curl https://bitnodes.io/install-full-node.sh | sh
+```
 
 * ### [Nodejs Setup](https://github.com/nvm-sh/nvm)
 
-
-#### Pm2 Process Manager
+* Run Bitcoin-core Pruned Node
 ```
+cp btc_pruned.js home/your_username/bitcoin-core/bin
+cd home/your_username/bitcoin-core/bin
 npm i pm2 -g
-```
-
-* btc_pruned.js
-```
-var pm2 = require('pm2');
-pm2.connect(function(err) {
-  if (err) {
-    console.error(err)
-    process.exit(2)
-}
-
-pm2.start({
-  script    : './bitcoind',
-  name      : '|BITCOIN-NODE|'
-},
-
-function(err, apps) {
-  if (err) {
-    console.error(err)
-    return pm2.disconnect()
-}
-
-pm2.list((err, list) => {
-  console.log(err, list)
-})
-})
-})
-
-```
-```
 pm2 start btc_pruned.js
 ```
 
