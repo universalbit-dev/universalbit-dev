@@ -25,8 +25,36 @@ txindex=0
 ```
 wget https://github.com/litecoin-project/litecoin/releases/download/v0.21.2.2/litecoin-0.21.2.2-x86_64-linux-gnu.tar.gz
 tar xvzf litecoin-0.21.2.2-x86_64-linux-gnu.tar.gz
-cd litecoin-0.21.2.2/bin
+cp ltc_pruned.js litecoin-0.21.2.2/bin/
 ```
+
+* Install [Pm2 Process Manager](https://pm2.io/docs/runtime/guide/process-management/)
+```
+npm i
+```
+* Run Litecoin Pruned Node
+```
+cd litecoin-0.21.2.2/bin/
+pm2 start ltc_pruned.js
+```
+
+[Startup Script Generator](https://pm2.keymetrics.io/docs/usage/startup/)
+To automatically generate and configuration a startup script just type the command (without sudo) 
+```
+pm2 startup
+```
+Then copy/paste the displayed command onto the terminal
+```
+* ### EXAMPLE:
+sudo su -c "env PATH=$PATH:/home/unitech/.nvm/versions/node/v14.3/bin pm2 startup <distribution> -u <user> --hp <home-path>
+```
+and save app list
+```
+pm2 save
+```
+  
+   
+
 [Repository:](https://github.com/litecoin-project/litecoin/releases)
 [Litecoin Core integration](https://github.com/litecoin-project/litecoin)
 
