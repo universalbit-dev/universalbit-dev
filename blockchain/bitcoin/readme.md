@@ -31,9 +31,9 @@ curl https://bitnodes.io/install-full-node.sh | sh
 
 * Run Bitcoin-core Pruned Node
 ```
-cp btc_pruned.js home/your_username/bitcoin-core/bin
-cd home/your_username/bitcoin-core/bin
-npm i pm2 -g
+cp btc_pruned.js package.json home/your_username/bitcoin-core/
+cd home/your_username/bitcoin-core/
+npm i 
 pm2 start btc_pruned.js
 ```
 
