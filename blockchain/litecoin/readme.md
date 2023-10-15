@@ -26,6 +26,7 @@ txindex=0
 wget https://github.com/litecoin-project/litecoin/releases/download/v0.21.2.2/litecoin-0.21.2.2-x86_64-linux-gnu.tar.gz
 tar xvzf litecoin-0.21.2.2-x86_64-linux-gnu.tar.gz
 cp ltc_pruned.js package.json litecoin-0.21.2.2/
+cd litecoin-0.21.2.2/
 ```
 
 * Install [Pm2 Process Manager](https://pm2.io/docs/runtime/guide/process-management/)
@@ -34,7 +35,6 @@ npm i
 ```
 * Run Litecoin Pruned Node
 ```
-cd litecoin-0.21.2.2
 pm2 start ltc_pruned.js
 ```
 
