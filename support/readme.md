@@ -9,6 +9,11 @@
 - [tallycoin.app](https://tallycoin.app/@universalbit/universalbit-eRZD7THe/)
 - [buymeacoffee.com](https://www.buymeacoffee.com/universalbit)
 
-BTC: 3ERpv4siyS4XQfP7zCY5sAaQJswX7t7U6E![Alt text](https://github.com/universalbit-dev/armadillium-gridbot/blob/main/cryptocurrency_icon/btc.svg "bitcoin-indicator")
 
-LTC: ltc1qxmevaw3pwt6a6rfzy4hx7s3jyc60p575a59hky![Alt text](https://github.com/universalbit-dev/armadillium-gridbot/blob/main/cryptocurrency_icon/ltc.svg "litecoin-indicator")
+<a href="https://www.bitcoinqrcodemaker.com"><img src="https://www.bitcoinqrcodemaker.com/api/?style=litecoin&amp;prefix=off&amp;address=MDDJiGnmwcRjcvWWErbw5awn4HH2usUCyM" height="300" width="300" border="0" alt="Litecoin QR code" title="MDDJiGnmwcRjcvWWErbw5awn4HH2usUCyM"></a>
+* LTC: MDDJiGnmwcRjcvWWErbw5awn4HH2usUCyM
+
+<a href="https://www.bitcoinqrcodemaker.com"><img src="https://www.bitcoinqrcodemaker.com/api/?style=bitcoin&amp;prefix=off&amp;address=3BzG4VUnKAKVcw44r6XG3EjPqipUzi42AA" height="300" width="300" border="0" alt="Bitcoin QR code" title="3BzG4VUnKAKVcw44r6XG3EjPqipUzi42AA"></a> 
+* BTC: 3BzG4VUnKAKVcw44r6XG3EjPqipUzi42AA
+
+
