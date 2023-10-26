@@ -1,12 +1,13 @@
-#!/bin/bash
-###UniversalBit once again
+### UniversalBit once again 
+...To enable HTTPS on your website.
 
-###url:https://letsencrypt.org.
-###Documentation:https://letsencrypt.org/docs/
+##### LetsEncrypt.org
+##### https://letsencrypt.org.
+##### Documentation:https://letsencrypt.org/docs/
 ```
 sudo apt-get install git
 ```
-#Debian11
+### Debian11
 ```
 apt install certbot python3-certbot-apache -y
 git clone https://github.com/letsencrypt/letsencrypt
@@ -21,7 +22,7 @@ cd letsencrypt
 ```
 ./letsencrypt-auto certonly --standalone --email infouniversalbits@gmail.com -d universalbit.it 
 ```
-# Debian12
+### Debian12
 ```
 ```
 
