@@ -2,7 +2,7 @@
 ![Alt text](docs/assets/images/small_logo.png "")
 
 ### projects and customizations for a digital and real workplace
-
+* [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 * [CityGenerator](https://universalbit-dev.github.io/CityGenerator/)
 * [Blockchain](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)
 * [Gekko-M4](https://universalbit-dev.github.io/gekko-m4/)
@@ -15,11 +15,6 @@
 * [Making](https://en.wikipedia.org/wiki/Maker_culture#Philosophical_emphasis)
 
 
-- [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 
-
-
-
-
-[Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
+* [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 
