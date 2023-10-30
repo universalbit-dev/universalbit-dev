@@ -3,8 +3,8 @@
 means: |storage - minimum disk space required for running a full node|
 
 
-#### * [Litecoin Release](https://github.com/litecoin-project/litecoin/releases) 
-#### * [Litecoin Project](https://www.litecoin.net/)
+* #### [Litecoin Release](https://github.com/litecoin-project/litecoin/releases) 
+* #### [Litecoin Project](https://www.litecoin.net/)
 
 * Create and Edit litecoin configuration file
 ```bash
