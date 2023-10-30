@@ -15,4 +15,3 @@
 * [OpenStreetMap](https://oyster-app-c5dox.ondigitalocean.app)
 * [Making](https://en.wikipedia.org/wiki/Maker_culture#Philosophical_emphasis)
 * [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
-
