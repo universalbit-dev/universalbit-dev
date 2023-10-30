@@ -7,7 +7,7 @@
 * [Routing](https://www.ipfire.org/)
 * [Blockchain](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)
 * [Gekko-M4](https://universalbit-dev.github.io/gekko-m4/)
-* [Cnc Router Machines](https://universalbit-dev.github.io/cnc-router-machines/)
+* [CNC Router Machines](https://universalbit-dev.github.io/cnc-router-machines/)
 * [NN](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/index.md)
 * [HA Cluster](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md)
 * [Blog](https://shark-app-gse6h.ondigitalocean.app/)
