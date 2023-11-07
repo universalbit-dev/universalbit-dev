@@ -10,6 +10,7 @@ plugins:
 - jekyll-seo-tag
 - jekyll-redirect-from
 - jekyll-coffeescript
+- jekyll-analytics
 lsi: false
 safe: true
 incremental: false
