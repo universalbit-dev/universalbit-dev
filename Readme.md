@@ -4,7 +4,6 @@
 ### projects and customizations for a digital and real workplace
 * [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 * [CityGenerator](https://github.com/universalbit-dev/CityGenerator)
-* [Routing](https://www.ipfire.org/)
 * [Blockchain](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)
 * [Gekko-M4](https://universalbit-dev.github.io/gekko-m4/)
 * [CNC Router Machines](https://universalbit-dev.github.io/cnc-router-machines/)
