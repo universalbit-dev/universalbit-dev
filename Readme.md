@@ -6,7 +6,7 @@
 * [CityGenerator](https://github.com/universalbit-dev/CityGenerator)
 * [Blockchain](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)
 * [Gekko-M4](https://universalbit-dev.github.io/gekko-m4/)
-* [CNC Router Machines](https://universalbit-dev.github.io/cnc-router-machines/)
+* [CNC Router Machines ESP32](https://universalbit-dev.github.io/cnc-router-machines/)
 * [NN](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/index.md)
 * [CNCjs](https://github.com/universalbit-dev/cncjs/blob/master/README.md)
 * [HA Cluster](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md)
