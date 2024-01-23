@@ -6,7 +6,7 @@ pm2.connect(function(err) {
 }
 
 pm2.start({
-  script    : './bin/litecoind',
+  script    : './litecoind',
   name      : '|LITECOIN-NODE|'
 },
 
