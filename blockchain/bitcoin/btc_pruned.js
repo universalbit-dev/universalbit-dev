@@ -6,7 +6,7 @@ pm2.connect(function(err) {
 }
 
 pm2.start({
-  script    : './bin/bitcoind',
+  script    : './bitcoind',
   name      : '|BITCOIN-NODE|'
 },
 
