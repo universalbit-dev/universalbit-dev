@@ -1,5 +1,5 @@
 ### UniversalBit once again 
-...To enable HTTPS on your website.
+...enable HTTPS on your website.
 
 * [LetsEncrypt.org](https://letsencrypt.org)
 * [Documentation](:https://letsencrypt.org/docs/)
