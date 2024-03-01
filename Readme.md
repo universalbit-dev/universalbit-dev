@@ -13,6 +13,6 @@
 * [HA Cluster](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md)
 * [Site](https://www.universalbit.it)
 * [DNS Resolver](https://universalbit-dev.github.io/opendns-ping-multi/)
-* [OpenStreetMap](https://github.com/universalbit-dev/iD) - [App](https://oyster-app-c5dox.ondigitalocean.app)
+* [OpenStreetMap](https://github.com/universalbit-dev/iD) - [App](https://oyster-app-c5dox.ondigitalocean.app) - [Learning](https://learnosm.org/it/beginner/start-osm/)
 * [Making](https://en.wikipedia.org/wiki/Maker_culture#Philosophical_emphasis)
 * [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
