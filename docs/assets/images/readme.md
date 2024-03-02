@@ -11,3 +11,6 @@
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/armadillium.png" width="5%"></img>
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/ink.jpg" width="50%"></img>
+
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/upython-with-micro.jpg" width="20%"></img>
+
