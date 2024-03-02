@@ -7,3 +7,6 @@
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/vector-logo-2-BW.svg" width="20%"></img>
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/node-js.png" width="20%"></img>
+
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/armadillium.png" width="5%"></img>
+
