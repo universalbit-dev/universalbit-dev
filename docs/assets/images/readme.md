@@ -8,6 +8,9 @@
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/universalbit_license_plates_4222.jpg" width="50%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/vector-logo-2-BW.svg" width="20%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/btc_logo.png" width="2%"></img>
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/arrow-cdn_content_delivery_network.png" width="20%"></img>
+
+
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/node-js.png" width="20%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/armadillium.png" width="5%"></img>
