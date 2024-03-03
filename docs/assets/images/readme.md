@@ -10,6 +10,8 @@
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/btc_logo.png" width="2%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/arrow-cdn_content_delivery_network.png" width="20%"></img>
 
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/bmc_qr.png" width="20%"></img>
+
 
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/node-js.png" width="20%"></img>
