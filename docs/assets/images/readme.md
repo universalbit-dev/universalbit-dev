@@ -13,7 +13,7 @@
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/bmc_qr.png" width="20%"></img>
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/pliers.png" width="20%"></img>
-<img src="" width="5%"></img>
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/cnc_001.jpg" width="50%"></img>
 <img src="" width="50%"></img>
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/node-js.png" width="20%"></img>
