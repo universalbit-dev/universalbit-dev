@@ -18,6 +18,8 @@
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/sad_and_creative_airplane.png" width="50%"></img>
 
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/bolt_out_of_place_nut_yin_yang.png" width="50%"></img>
+
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/node-js.png" width="20%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/armadillium.png" width="5%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/ink.jpg" width="50%"></img>
