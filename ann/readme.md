@@ -14,6 +14,7 @@
 ---
 
 ### Resources:
-* [Projects](https://randomnerdtutorials.com/projects-esp32/)
+* [Arduino Projects](https://randomnerdtutorials.com/projects-esp32/)
 * [MicroPython on ESP32](https://randomnerdtutorials.com/getting-started-micropython-esp32-esp8266/)
+  
 ---
