@@ -22,6 +22,9 @@
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/bolt_out_of_place_nut_yin_yang.png" width="30%"></img>
 
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/geppo.png" width="20%"></img>
+
+
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/trisquel_sexy_logo.png" width="5%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/trisquel_custom_share_button.png" width="10%"></img>
 
