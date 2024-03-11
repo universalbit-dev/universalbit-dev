@@ -18,6 +18,8 @@
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/sad_and_creative_airplane.png" width="50%"></img>
 
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/unbt_free_pass.png" width="50%"></img>
+
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/btc_qr_unbt.png" width="30%"></img>
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/bolt_out_of_place_nut_yin_yang.png" width="30%"></img>
