@@ -16,6 +16,8 @@
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/cnc_001.jpg" width="50%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/D1_Mini_ArduinoNano_Logic_Converter.png" width="50%"></img>
 
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/unbt_logo_free_software_foundation.png" width="30%"></img>
+
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/sad_and_creative_airplane.png" width="50%"></img>
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/unbt_free_pass.png" width="50%"></img>
