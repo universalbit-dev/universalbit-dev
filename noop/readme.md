@@ -6,3 +6,11 @@
 ```bash
 npm i noop
 ```
+
+[Pm2](https://pm2.keymetrics.io/) advanced process manager:
+
+
+```bash
+npm install pm2 -g
+pm2 start noop.js
+```
