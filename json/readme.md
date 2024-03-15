@@ -5,8 +5,9 @@
 * ### [Json](https://en.wikipedia.org/wiki/JSON) 
 ---
 
-*
-*
-*
-*
-*
+* [ecosystem](https://github.com/universalbit-dev/universalbit-dev/blob/main/json/ecosystem.json)
+* [maker culture](https://github.com/universalbit-dev/universalbit-dev/blob/main/json/maker_culture.json)
+* [permaculture](https://github.com/universalbit-dev/universalbit-dev/blob/main/json/permaculture.json)
+* [amicizia](https://github.com/universalbit-dev/universalbit-dev/blob/main/json/amicizia.json)
+
+..."beware of the cuddly"
