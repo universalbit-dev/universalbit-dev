@@ -2,7 +2,6 @@
 ##### [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 
 
-* ### [ESP32](https://en.wikipedia.org/wiki/ESP32)
 * ### [ESP8266](https://en.wikipedia.org/wiki/ESP8266)
 ---
 
