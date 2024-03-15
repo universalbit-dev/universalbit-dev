@@ -1,7 +1,6 @@
 ### [Support the UniversalBit project](https://www.buymeacoffee.com/universalbit)
 
-![Alt text](https://github.com/universalbit-dev/universalbit-dev/blob/main/support/bmc_qr.png
- "tools")
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/support/bmc_qr.png" width="30%"></img>
 
 #### Creating a digital and real work environment requires a lot of effort and many hours of study and application.
 
