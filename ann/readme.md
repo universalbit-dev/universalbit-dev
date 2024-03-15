@@ -1,7 +1,10 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 ##### [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 
+* ### [ESP8266](https://en.wikipedia.org/wiki/ESP8266)
+* ### [Arduino Nano](https://en.wikipedia.org/wiki/Arduino_Nano)
 
+---
 
 #### Be careful to use only a USB data cable,some usb cables are only used to recharge and do not allow the upload of code.
 
