@@ -1,3 +1,4 @@
+* ### [Litecoin](https://en.wikipedia.org/wiki/Litecoin)
 
 ### Pruned Node simple explanation
 means: |storage - minimum disk space required for running a full node|
