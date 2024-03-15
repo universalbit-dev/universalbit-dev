@@ -10,7 +10,7 @@
 
 ## Wire ESP8266(Wifi) and Two Arduino Nano
 
-###### D1 Mini ESP8266     - Logic Converter 3.3 | 5V   - Two Arduino Nano (Himalaya)
+###### D1 Mini ESP8266     - [Logic Converter 3.3 | 5V](https://forum.arduino.cc/t/logic-level-converter/1136803/9)   - Two Arduino Nano
 
 [![D1_Mini_Arduino](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/D1_Mini_ArduinoNano_Logic_Converter.png)](https://github.com/universalbit-dev/universalbit-dev/tree/main/ann)
 
