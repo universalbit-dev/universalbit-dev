@@ -12,7 +12,7 @@ However you may customize this for your network location.
 
 ---
 
-#### [Read More](https://timetoolsltd.com/information/public-ntp-server/)
+#### [Europe — europe.pool.ntp.org](https://www.ntppool.org/zone/europe)
 
 Installation
 ```
