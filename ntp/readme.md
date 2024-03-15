@@ -2,6 +2,7 @@
 ##### [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 
 
+* #### [Network Time Protocol](https://en.wikipedia.org/wiki/Network_Time_Protocol)
 
 ---
 #### [NTP Debian Wiki](https://wiki.debian.org/NTP)
