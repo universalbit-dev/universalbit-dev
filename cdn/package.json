@@ -1,0 +1,17 @@
+{
+  "name": "cdn",
+  "version": "1.0.0",
+  "description": "cdn ",
+  "main": "cdn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cdn"
+  ],
+  "author": "universalbit-dev",
+  "license": "MIT",
+  "dependencies": {
+    "pm2": "^5.3.1"
+  }
+}
