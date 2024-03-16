@@ -1,8 +1,8 @@
-* ### [GlobalPing-Cli](https://github.com/jsdelivr/globalping-cli)
+* ## [GlobalPing-Cli](https://github.com/jsdelivr/globalping-cli)
 
 * ##### [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)
 ---
-* ### [jsDelivr Network Map](https://www.jsdelivr.com/network#map)
+* ##### [jsDelivr Network Map](https://www.jsdelivr.com/network#map)
 ```bash
 curl -s https://packagecloud.io/install/repositories/jsdelivr/globalping/script.deb.sh | sudo bash
 apt install globalping
