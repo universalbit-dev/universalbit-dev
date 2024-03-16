@@ -13,4 +13,11 @@ apt install globalping
 npm i
 pm2 start cdn.js
 ```
-
+#### United States
+```bash
+pm2 start cdn_united_states.js
+```
+#### Europe
+```bash
+pm2 start cdn_europe.js
+```
