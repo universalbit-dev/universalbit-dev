@@ -6,11 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  
   "keywords": [
     "cdn"
   ],
   "author": "universalbit-dev",
-  "license": "MIT",
+  "license": "MPL-2.0",
   "dependencies": {
     "pm2": "^5.3.1"
   }
