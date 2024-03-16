@@ -8,7 +8,7 @@
 * [Blockchain](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)
 * [Gekko-M4](https://universalbit-dev.github.io/gekko-m4/)
 * [CNC Router Machines](https://github.com/universalbit-dev/cnc-router-machines)
-* [NN](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/index.md)
+* [NN](https://github.com/universalbit-dev/universalbit-dev/tree/main/ann)
 * [CNCjs](https://github.com/universalbit-dev/cncjs/blob/master/README.md)
 * [HA Cluster](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md)
 * [Site](https://www.universalbit.it)
