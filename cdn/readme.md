@@ -38,4 +38,7 @@ pm2 status
 pm2 startup
 ```
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/systemctl_enable.png" width="80%"></img>  
-
+```bash
+systemctl enable pm2-root
+pm2 save
+```
