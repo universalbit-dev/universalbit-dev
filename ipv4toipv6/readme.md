@@ -4,4 +4,10 @@
 * ### [IPV6](https://en.wikipedia.org/wiki/IPv6)
 ---
 
-Optimize your home net for ipv6 (working in progress)
+* ### [Hurricane Electric IPv6 Tunnel Broker](https://tunnelbroker.net/)
+
+```bash
+nano /etc/network/interfaces
+```
+* available configurations:
+<img src="" width="40%"></img>
