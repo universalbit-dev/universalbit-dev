@@ -7,8 +7,8 @@ curl -s https://packagecloud.io/install/repositories/jsdelivr/globalping/script.
 apt install globalping
 ```
 
-
-GlobalPing with Pm2 advanced process manager
+[NodeJs v20.11.1 -- Npm 10.2.4]
+* GlobalPing with [Pm2](https://pm2.keymetrics.io/) advanced process manager
 ```bash
 npm i
 pm2 start cdn.js
