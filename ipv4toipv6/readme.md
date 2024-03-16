@@ -10,4 +10,4 @@
 nano /etc/network/interfaces
 ```
 * available configurations:
-<img src="" width="40%"></img>
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipv4toipv6/images/he_net_interfaces.png" width="80%"></img>
