@@ -24,3 +24,18 @@ pm2 start cdn_united_states.js
 ```bash
 pm2 start cdn_europe.js
 ```
+cdn cdn_europe cnd_united_states
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/pm2_start.png" width="80%"></img> 
+
+#### Pm2 status
+```bash
+pm2 status
+```
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/pm2_status.png" width="80%"></img> 
+
+#### Pm2 startup
+```bash
+pm2 startup
+```
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/systemctl_enable.png" width="80%"></img>  
+
