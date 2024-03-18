@@ -39,7 +39,7 @@
 
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/node-js.png" width="20%"></img>
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/armadillium.png" width="5%"></img>
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/armadillidium.png" width="5%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/ink.jpg" width="40%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/chess_players.png" width="40%"></img>
 
