@@ -4,7 +4,7 @@ first rescaling approaches
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/rescaling_fab_city_whitepaper.png" width="40%"></img>
 
 
-#### Planet - Country - Region - City
+#### Planet - Region - Country - City
 
 * ## [GlobalPing-Cli](https://github.com/jsdelivr/globalping-cli)
 
