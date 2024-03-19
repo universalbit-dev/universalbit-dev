@@ -42,7 +42,16 @@ pm2 start cdn_italy_palermo.js
 ```bash
 pm2 status
 ```
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/pm2_status.png" width="80%"></img> 
+
+```bash
+├────┼──────────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 6  │ cdn                  │ default     │ 1.0.0   │ fork    │ 44379    │ 1s     │ 344  │ online    │ 0%       │ 52.2mb   │ uni… 
+│ 7  │ cdn_europe           │ default     │ 1.0.0   │ fork    │ 44399    │ 0s     │ 328  │ online    │ 0%       │ 51.0mb   │ uni… 
+│ 4  │ cdn_italy            │ default     │ 1.0.0   │ fork    │ 44418    │ 0s     │ 554  │ online    │ 0%       │ 49.6mb   │ uni… 
+│ 5  │ cdn_italy_palermo    │ default     │ 1.0.0   │ fork    │ 44361    │ 1s     │ 349  │ online    │ 28.1%    │ 51.9mb   │ uni… 
+│ 8  │ cdn_united_states    │ default     │ 1.0.0   │ fork    │ 44328    │ 2s     │ 317  │ online    │ 1.1%     │ 52.3mb   │ uni… 
+└────┴──────────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+```
 
 #### Pm2 startup 
 ```bash
