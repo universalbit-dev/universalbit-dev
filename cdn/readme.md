@@ -30,16 +30,21 @@ pm2 start cdn_united_states.js
 ```bash
 pm2 start cdn_europe.js
 ```
-cdn(global) cdn_europe cnd_united_states
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/pm2_start.png" width="80%"></img> 
-
+#### Italy
+```bash
+pm2 start cdn_italy.js
+```
+#### Italy Palermo
+```bash
+pm2 start cdn_italy_palermo.js
+```
 #### Pm2 status
 ```bash
 pm2 status
 ```
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/pm2_status.png" width="80%"></img> 
 
-#### Pm2 startup
+#### Pm2 startup 
 ```bash
 pm2 startup
 ```
