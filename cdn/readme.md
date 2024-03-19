@@ -1,3 +1,6 @@
+#### [Rescaling Global Manufacturing](https://github.com/universalbit-dev/CityGenerator/blob/master/Fab-City_Whitepaper.pdf) 
+#### Planet - Country - Region - City
+
 * ## [GlobalPing-Cli](https://github.com/jsdelivr/globalping-cli)
 
 * ##### [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)
