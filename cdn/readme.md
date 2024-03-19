@@ -58,7 +58,8 @@ pm2 status
 │ 1  │ |BITCOIN-NODE|     │ fork     │ 1    │ online    │ 50%      │ 539.4mb  │
 └────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
 ```
-##### [blockchain net node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
+
+* [blockchain net node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
 
 
 #### Pm2 startup 
