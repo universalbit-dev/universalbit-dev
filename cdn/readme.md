@@ -1,5 +1,5 @@
 #### [Rescaling Global Manufacturing](https://github.com/universalbit-dev/CityGenerator/blob/master/Fab-City_Whitepaper.pdf) 
-<img src="" width="40%"></img>
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/rescaling_fab_city_whitepaper.png" width="40%"></img>
 
 
 #### Planet - Country - Region - City
