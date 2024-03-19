@@ -44,14 +44,20 @@ pm2 status
 ```
 
 ```bash
-├────┼──────────────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
-│ 6  │ cdn                  │ default     │ 1.0.0   │ fork    │ 44379    │ 1s     │ 344  │ online    │ 0%       │ 52.2mb   │ uni… 
-│ 7  │ cdn_europe           │ default     │ 1.0.0   │ fork    │ 44399    │ 0s     │ 328  │ online    │ 0%       │ 51.0mb   │ uni… 
-│ 4  │ cdn_italy            │ default     │ 1.0.0   │ fork    │ 44418    │ 0s     │ 554  │ online    │ 0%       │ 49.6mb   │ uni… 
-│ 5  │ cdn_italy_palermo    │ default     │ 1.0.0   │ fork    │ 44361    │ 1s     │ 349  │ online    │ 28.1%    │ 51.9mb   │ uni… 
-│ 8  │ cdn_united_states    │ default     │ 1.0.0   │ fork    │ 44328    │ 2s     │ 317  │ online    │ 1.1%     │ 52.3mb   │ uni… 
-└────┴──────────────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
+│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
+├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
+│ 0  │ btc_pruned         │ fork     │ 0    │ online    │ 0%       │ 16.9mb   │
+│ 4  │ cdn                │ fork     │ 12   │ online    │ 0%       │ 51.2mb   │
+│ 5  │ cdn_europe         │ fork     │ 9    │ online    │ 125%     │ 50.0mb   │
+│ 7  │ cdn_italy          │ fork     │ 1    │ online    │ 0%       │ 52.4mb   │
+│ 8  │ cdn_italy_palermo  │ fork     │ 0    │ online    │ 0%       │ 13.4mb   │
+│ 6  │ cdn_united_states  │ fork     │ 8    │ online    │ 0%       │ 51.2mb   │
+│ 1  │ |BITCOIN-NODE|     │ fork     │ 1    │ online    │ 50%      │ 539.4mb  │
+└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
 ```
+##### [blockchain net node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
+
 
 #### Pm2 startup 
 ```bash
