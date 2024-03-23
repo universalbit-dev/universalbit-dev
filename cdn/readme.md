@@ -24,6 +24,7 @@ apt install globalping
 npm i
 pm2 start cdn.js
 ```
+
 #### United States
 ```bash
 pm2 start cdn_united_states.js
@@ -40,11 +41,11 @@ pm2 start cdn_italy.js
 ```bash
 pm2 start cdn_italy_palermo.js
 ```
+
 #### Pm2 status
 ```bash
-pm2 status
+pm2 status (mode:fork)
 ```
-
 ```bash
 ┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
 │ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
@@ -59,8 +60,32 @@ pm2 status
 └────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
 ```
 
-* [blockchain net node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
+#### * consider run cdn.js cdn_europe.js in cluster mode
+```bash
+pm2 start cdn.js -i 1
+pm2 start cdn_europe.js -i 1
+```
 
+#### Pm2 status cluster mode
+```bash
+pm2 status (mode:cluster)
+```
+
+```bash
+┌────┬──────────────────────┬─────────────┬─────────┬─────────┬
+│ id │ name                 │ namespace   │ version │ mode    │
+├────┼──────────────────────┼─────────────┼─────────┼───────── 
+│ 5  │ btc_pruned           │ default     │ 1.0.0   │ fork    │  
+│ 7  │ cdn                  │ default     │ 1.0.0   │ cluster │  
+│ 8  │ cdn_europe           │ default     │ 1.0.0   │ cluster │  
+│ 9  │ cdn_italy            │ default     │ 1.0.0   │ fork    │ 
+│ 10 │ cdn_italy_palermo    │ default     │ 1.0.0   │ fork    │
+│ 11 │ cdn_united_states    │ default     │ 1.0.0   │ fork    │
+│ 6  │ |BITCOIN-NODE|       │ default     │ 1.0.0   │ fork    │
+└────┴──────────────────────┴─────────────┴─────────┴─────────┴
+```
+
+* [blockchain net node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
 
 #### Pm2 startup 
 ```bash
