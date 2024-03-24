@@ -44,6 +44,7 @@ pm2 start cdn_italy_palermo.js
 
 #### Pm2 status
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/cdn_and_blockchain_net_node.gif" width="auto"></img>  
+* [blockchain net node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
 
 
 #### * consider run cdn.js cdn_europe.js in cluster mode
@@ -71,7 +72,6 @@ pm2 status (mode:cluster)
 └────┴──────────────────────┴─────────────┴─────────┴─────────┴
 ```
 
-* [blockchain net node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
 
 #### Pm2 startup 
 ```bash
