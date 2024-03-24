@@ -43,22 +43,8 @@ pm2 start cdn_italy_palermo.js
 ```
 
 #### Pm2 status
-```bash
-pm2 status (mode:fork)
-```
-```bash
-┌────┬────────────────────┬──────────┬──────┬───────────┬──────────┬──────────┐
-│ id │ name               │ mode     │ ↺    │ status    │ cpu      │ memory   │
-├────┼────────────────────┼──────────┼──────┼───────────┼──────────┼──────────┤
-│ 0  │ btc_pruned         │ fork     │ 0    │ online    │ 0%       │ 16.9mb   │
-│ 4  │ cdn                │ fork     │ 12   │ online    │ 0%       │ 51.2mb   │
-│ 5  │ cdn_europe         │ fork     │ 9    │ online    │ 125%     │ 50.0mb   │
-│ 7  │ cdn_italy          │ fork     │ 1    │ online    │ 0%       │ 52.4mb   │
-│ 8  │ cdn_italy_palermo  │ fork     │ 0    │ online    │ 0%       │ 13.4mb   │
-│ 6  │ cdn_united_states  │ fork     │ 8    │ online    │ 0%       │ 51.2mb   │
-│ 1  │ |BITCOIN-NODE|     │ fork     │ 1    │ online    │ 50%      │ 539.4mb  │
-└────┴────────────────────┴──────────┴──────┴───────────┴──────────┴──────────┘
-```
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/cdn_and_blockchain_net_node.gif" width="auto"></img>  
+
 
 #### * consider run cdn.js cdn_europe.js in cluster mode
 ```bash
