@@ -1,8 +1,8 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 ##### [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 
-* pdf2json fork repository: [easy_parser.js](https://github.com/universalbit-dev/pdf2json)
-* ### [Json](https://en.wikipedia.org/wiki/JSON) 
+* ##### pdf2json fork repository: [easy_parser.js](https://github.com/universalbit-dev/pdf2json)
+* ##### [Json](https://en.wikipedia.org/wiki/JSON) 
 ---
 some encoded files: 
 * [ecosystem](https://github.com/universalbit-dev/universalbit-dev/blob/main/json/ecosystem.json)
