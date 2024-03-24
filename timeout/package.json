@@ -1,0 +1,17 @@
+{
+  "name": "timeout",
+  "version": "1.0.0",
+  "description": "old method timeout and version2 with promises ",
+  "main": "timeout.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "timeout"
+  ],
+  "author": "universalbit-dev",
+  "license": "MIT",
+  "dependencies": {
+    "humanize-duration": "^3.31.0"
+  }
+}
