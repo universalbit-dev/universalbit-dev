@@ -8,3 +8,6 @@
 npm i
 node timeout.js
 ```
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/timeout/images/gif/timeout.gif" width="auto" />
+
+
