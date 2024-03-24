@@ -1,15 +1,18 @@
-//const humanizeDuration = require("humanize-duration"); //easy milliseconds,seconds,days,months,years [work in progress]
+const ProgressBar = require('console-progress-bar');
+
+time =12000; //<== take your time (12 seconds)
 
 console.log('Function zzzsleep -- Activated --');
+const progressBar = new ProgressBar({ maxValue: 100 });
 
-time =12000; //<== take your time
+
 function zzzsleep() {
     setTimeout(() => {
         console.log('-- done --');
     }, time); 
 }
-zzzsleep();
-console.log('-- wait --');
+zzzsleep();progressBar.addValue(1);
+console.log('  -- wait --');
 
 /*
 
