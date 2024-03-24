@@ -16,7 +16,7 @@ console.log('  -- wait --');
 
 /*
 
-v2 with nodejs promises
+v2 with nodejs promise
 //https://www.linkedin.com/pulse/nodejs-16-settimeout-asyncawait-igor-gonchar
 import {setTimeout} from "timers/promises";
 console.log('Function sleep when Buy or Sell -- Activated --');
