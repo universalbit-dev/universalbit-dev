@@ -2,7 +2,7 @@
 
 console.log('Function zzzsleep -- Activated --');
 
-time =12000;
+time =12000; //<== take your time
 function zzzsleep() {
     setTimeout(() => {
         console.log('-- done --');
