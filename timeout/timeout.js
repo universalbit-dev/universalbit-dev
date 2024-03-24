@@ -23,3 +23,5 @@ async function newStyleDelay() {
 }
 newStyleDelay();
 console.log('It will be printed 2-nd');
+
+*/
