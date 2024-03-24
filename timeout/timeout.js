@@ -1,16 +1,15 @@
-const humanizeDuration = require("humanize-duration"); //easy milliseconds,seconds,days,months,years
+//const humanizeDuration = require("humanize-duration"); //easy milliseconds,seconds,days,months,years [work in progress]
 
-console.log('Function sleep when Buy or Sell -- Activated --');
+console.log('Function zzzsleep -- Activated --');
 
-time = 12000
-
+time =12000;
 function zzzsleep() {
     setTimeout(() => {
-        console.log('Buy or Sell submitted...zzz');
+        console.log('-- done --');
     }, time); 
 }
 zzzsleep();
-console.log('-- Function zzzsleep --');
+console.log('-- wait --');
 
 /*
 
@@ -24,5 +23,3 @@ async function newStyleDelay() {
 }
 newStyleDelay();
 console.log('It will be printed 2-nd');
-
-*/
