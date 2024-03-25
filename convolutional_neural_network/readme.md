@@ -1,4 +1,4 @@
-#### ConvNetJs
+#### [Convolutional Neural Network](https://en.wikipedia.org/wiki/Convolutional_neural_network)
 ```bash
 var convnetjs = require('./convnet.js');
 var deepqlearn= require('./deepqlearn');
