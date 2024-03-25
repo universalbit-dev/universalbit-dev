@@ -1,0 +1,15 @@
+#### ConvNetJs
+```bash
+var convnetjs = require('./convnet.js');
+var deepqlearn= require('./deepqlearn');
+```
+* [Trainers](https://cs.stanford.edu/people/karpathy/convnetjs/demo/trainers.html)
+* [Convnetjs](https://cs.stanford.edu/people/karpathy/convnetjs/)
+* [Documentation](https://cs.stanford.edu/people/karpathy/convnetjs/docs.html)
+
+---
+working example here
+  * [gekko-m4](https://github.com/universalbit-dev/gekko-m4/blob/master/strategies/NNSTOCH.js)
+
+
+  
