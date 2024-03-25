@@ -8,7 +8,7 @@ var deepqlearn= require('./deepqlearn');
 * [Documentation](https://cs.stanford.edu/people/karpathy/convnetjs/docs.html)
 
 ---
-working example here
+### working example here
   * [gekko-m4](https://github.com/universalbit-dev/gekko-m4/blob/master/strategies/NNSTOCH.js)
 
 
