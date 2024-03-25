@@ -9,8 +9,8 @@ var deepqlearn= require('./deepqlearn');
 
 ---
 ### working example here
-  * [gekko-m4 nn](https://github.com/universalbit-dev/gekko-m4/blob/master/strategies/NN.js)
-  * [gekko-m4 nnstoch](https://github.com/universalbit-dev/gekko-m4/blob/master/strategies/NNSTOCH.js)
+  * [nn](https://github.com/universalbit-dev/gekko-m4/blob/master/strategies/NN.js)
+  * [gekko-m4](https://github.com/universalbit-dev/gekko-m4/blob/master/strategies/NNSTOCH.js)
 
 
   
