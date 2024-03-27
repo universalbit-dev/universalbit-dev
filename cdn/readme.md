@@ -2,6 +2,13 @@
 #### [Rescaling Global Manufacturing](https://github.com/universalbit-dev/CityGenerator/blob/master/Fab-City_Whitepaper.pdf) 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/rescaling_fab_city_whitepaper.png" width="40%"></img>
 
+* [globalping repository](https://github.com/jsdelivr/globalping)
+```bash
+curl -s https://packagecloud.io/install/repositories/jsdelivr/globalping/script.deb.sh | sudo bash
+apt install globalping
+```
+[content delivery network operation](http://147.182.225.246)
+
 #### Planet - Region - Country - City
 ```bash
 npm i
