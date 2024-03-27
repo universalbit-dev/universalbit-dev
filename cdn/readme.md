@@ -1,11 +1,13 @@
 
 #### [Rescaling Global Manufacturing](https://github.com/universalbit-dev/CityGenerator/blob/master/Fab-City_Whitepaper.pdf) 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/rescaling_fab_city_whitepaper.png" width="40%"></img>
+
 #### Planet - Region - Country - City
+```bash
+npm i
+pm2 start ecosystem.config.js
+```
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/cdn_ecosystem.gif" width="auto"></img>
-
-
-
 
 
 * ## [GlobalPing-Cli](https://github.com/jsdelivr/globalping-cli)
