@@ -7,8 +7,8 @@
 curl -s https://packagecloud.io/install/repositories/jsdelivr/globalping/script.deb.sh | sudo bash
 apt install globalping
 ```
-[content delivery network operation](http://147.182.225.246)
-
+[content delivery network operation](http://147.182.225.246/spaces/content-delivery-network/rooms/local/nodes#metrics_correlation=false&after=-900&before=0&utc=Europe%2FRome&offset=%2B1&timezoneName=Amsterdam%2C%20Berlin%2C%20Bern%2C%20Rome%2C%20Stockholm%2C%20Vienna&modal=&modalTab=&modalParams=&selectedIntegrationCategory=deploy.operating-systems&force_play=false&local--chartName-val=menu_system&local-nodesView-nodeIdToGo-val=menu_Live)
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/content_delivery_network_live.gif" width="auto"></img>
 #### Planet - Region - Country - City
 ```bash
 npm i
