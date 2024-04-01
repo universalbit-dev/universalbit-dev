@@ -8,13 +8,19 @@
 
 [ProgrammingBlockchain](https://programmingblockchain.gitbook.io/programmingblockchain)
 ---
+* Latest Bitcoin Full Node 
+```bash
+curl https://bitnodes.io/install-full-node.sh | sh
+```
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/bitcoin/gif/btc-net-node.gif" width="auto"></img>
+
+
+
 
 * edit bitcoin configuration file
 ```bash
-mkdir /home/your_username/.bitcoin
 nano /home/your_username/.bitcoin/bitcoin.conf
 ```
-* add [this](https://programmingblockchain.gitbook.io/programmingblockchain/wallet/pruned-node)
 ```bash
 prune=550
 maxconnections=8
@@ -33,10 +39,6 @@ txindex=0
 #### [BitNodes](https://bitnodes.io)
 
 ---
-* Latest Bitcoin Full Node 
-```bash
-curl https://bitnodes.io/install-full-node.sh | sh
-```
 
 * Run Node
 ```bash
