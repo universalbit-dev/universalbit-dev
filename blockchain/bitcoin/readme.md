@@ -1,6 +1,7 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 
 * ### [Bitcoin](https://en.wikipedia.org/wiki/Bitcoin)
+* ### [Getting Started](https://bitcoin.org/en/getting-started)
 
 #### Pruned Node simple explanation
 [means: |storage - minimum disk space required for running a full node|](https://programmingblockchain.gitbook.io/programmingblockchain/wallet/pruned-node)
