@@ -34,10 +34,53 @@ create package.json file
 ```bash
 nano /home/your_username/bitcoin-core/package.json
 ```
+```json
+{
+  "name": "bitcoin_pruned",
+  "version": "1.0.0",
+  "description": "",
+  "main": "btc_pruned.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "UniversalBit-Dev",
+  "license": "MIT",
+  "dependencies": {"pm2": "^5.3.1"}
+}
+```
+
+
 create btc_pruned.js file
 ```bash
 nano /home/your_username/bitcoin-core/btc_pruned.js
 ```
+```js
+var pm2 = require('pm2');
+pm2.connect(function(err) {
+  if (err) {
+    console.error(err)
+    process.exit(2)
+}
+
+pm2.start({
+  script    : './bitcoind',
+  name      : '|BITCOIN-NODE|'
+},
+
+function(err, apps) {
+  if (err) {
+    console.error(err)
+    return pm2.disconnect()
+}
+
+pm2.list((err, list) => {
+  console.log(err, list)
+})
+})
+})
+```
+
+
 ---
 
 
