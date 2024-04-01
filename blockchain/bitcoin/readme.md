@@ -30,15 +30,16 @@ checkblocks=1
 checklevel=0
 txindex=0
 ```
-* save configuration file as : bitcoin.conf
-
+create package.json file
+```bash
+nano /home/your_username/bitcoin-core/package.json
+```
+create btc_pruned.js file
+```bash
+nano /home/your_username/bitcoin-core/btc_pruned.js
+```
 ---
 
-#### [BitCoinCore](https://bitcoincore.org/)
-
-#### [BitNodes](https://bitnodes.io)
-
----
 
 * Run Node
 ```bash
