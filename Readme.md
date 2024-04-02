@@ -5,6 +5,7 @@
 * [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 * [CityGenerator](https://github.com/universalbit-dev/CityGenerator)
 * [ByeBye IPV4](https://github.com/universalbit-dev/universalbit-dev/tree/main/ipv4toipv6) it doesn't hold a [charge](https://ipv6.he.net/statistics/)
+* [Conceptual Framework](https://en.wikipedia.org/wiki/Conceptual_framework)
 * [Blockchain](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)
 * [Gekko-M4](https://github.com/universalbit-dev/gekko-m4)
 * [CNC Router Machines](https://github.com/universalbit-dev/cnc-router-machines)
