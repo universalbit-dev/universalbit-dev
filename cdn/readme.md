@@ -18,7 +18,7 @@ apt install globalping
 
 #### Planet - Region - Country - City
 ```bash
-npm i
+npm i && npm update
 pm2 start ecosystem.config.js
 ```
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/cdn_ecosystem.gif" width="auto"></img>
