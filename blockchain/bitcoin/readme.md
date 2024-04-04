@@ -6,7 +6,6 @@
 #### Pruned Node simple explanation
 [means: |storage - minimum disk space required for running a full node|](https://programmingblockchain.gitbook.io/programmingblockchain/wallet/pruned-node)
 
-[ProgrammingBlockchain](https://programmingblockchain.gitbook.io/programmingblockchain)
 ---
 * Latest Bitcoin Full Node 
 ```bash
@@ -95,3 +94,6 @@ pm2 start btc_pruned.js
 
 ### [PM2 Startup Script Generator](https://pm2.keymetrics.io/docs/usage/startup/)
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/bitcoin/gif/pm2_btc_startup_script.gif" width="auto"></img>
+
+
+* [Programming Blockchain](https://programmingblockchain.gitbook.io/programmingblockchain)
