@@ -1,4 +1,6 @@
 ## ByeBye IPv4
+##### [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)
+
 #### [HE](https://ipv6.he.net/statistics/) Hurricane Electric has a series of applications, widgets and JavaScript snippets to display the estimated exhaustion time
 
 * [6to4](https://github.com/universalbit-dev/HArmadillium/blob/main/6to4.md)
