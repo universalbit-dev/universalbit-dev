@@ -21,7 +21,7 @@ cd letsencrypt
 ```
 ---
 ### Debian12
-[LetsEncrypt Debian Wiki](https://wiki.debian.org/LetsEncrypt)
+[LetsEncrypt Debian](https://www.server-world.info/en/note?os=Debian_12&p=ssl&f=2)
 ```
 ```
 ---
