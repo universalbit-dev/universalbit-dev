@@ -15,7 +15,7 @@
 * [Site](https://www.universalbit.it)
 * [OpenStreetMap](https://github.com/universalbit-dev/iD) - [App](https://oyster-app-c5dox.ondigitalocean.app) - [Learning](https://learnosm.org/it/beginner/start-osm/)
 * [Making](https://en.wikipedia.org/wiki/Maker_culture#Philosophical_emphasis)
-* [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html
+* [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
 
 ---
 ##### [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)
