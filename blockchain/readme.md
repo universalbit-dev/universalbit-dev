@@ -4,8 +4,10 @@
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/images/blockchain.png" width="5%"></img>
 
 * ### [BlockChain](https://en.wikipedia.org/wiki/Blockchain)
-  ---
+
+---
+* [sync bitcoin node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/images/btc_logo.png" width="5%"></img>
+
 
 * [sync litecoin node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/litecoin)
-* [sync bitcoin node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)
 
