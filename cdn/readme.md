@@ -1,6 +1,8 @@
 
 #### [Rescaling Global Manufacturing](https://github.com/universalbit-dev/CityGenerator/blob/master/Fab-City_Whitepaper.pdf) 
-[universalbitcdn](https://universalbitcdn.it)
+
+* [universalbitcdn](https://universalbitcdn.it)
+---
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/netdata_android_device.jpg" width="40%"></img>
 
 * [globalping repository](https://github.com/jsdelivr/globalping)
