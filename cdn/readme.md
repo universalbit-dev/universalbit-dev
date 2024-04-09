@@ -1,6 +1,7 @@
 
 #### [Rescaling Global Manufacturing](https://github.com/universalbit-dev/CityGenerator/blob/master/Fab-City_Whitepaper.pdf) 
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/rescaling_fab_city_whitepaper.png" width="40%"></img>
+[universalbitcdn](universalbitcdn.it)
+<img src="" width="40%"></img>
 
 * [globalping repository](https://github.com/jsdelivr/globalping)
 ```bash
