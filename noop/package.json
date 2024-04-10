@@ -1,14 +1,27 @@
 {
   "name": "noop",
-  "version": "1.0.0",
-  "description": "noop no operation",
+  "version": "1.0.1",
+  "description": "Provides a few global functions such as noop, throwop, and doop",
   "main": "noop.js",
-  "devDependencies": {
-  "noop":"^1.0.1"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "universalbit-dev",
-  "license": "GPL-3.0-or-later"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coolaj86/noop.js.git"
+  },
+  "dependecies":{
+  "noop":"^1.0.1",
+  "pm2":"^5.3.1"
+  },
+
+  "keywords": [
+    "noop"
+  ],
+  "author": "coolaj86@gmail.com",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/coolaj86/noop.js/issues"
+  },
+  "homepage": "https://github.com/coolaj86/noop.js#readme"
 }
