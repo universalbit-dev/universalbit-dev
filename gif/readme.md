@@ -1,6 +1,6 @@
 #### Create your Gif From Mp4 Video
 
-Recording Videos with: 
+Recording .mp4 Videos with: 
 ### [SimpleScreenRecorder](https://en.wikipedia.org/wiki/SimpleScreenRecorder)
 ```bash
 sudo apt install simplescreenrecorder
