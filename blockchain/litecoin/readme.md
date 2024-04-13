@@ -26,10 +26,10 @@ txindex=0
 
 * Litecoin Node
 ```bash
-wget https://github.com/litecoin-project/litecoin/releases/download/v0.21.2.2/litecoin-0.21.2.2-x86_64-linux-gnu.tar.gz
-tar xvzf litecoin-0.21.2.2-x86_64-linux-gnu.tar.gz
-cp ltc_pruned.js package.json litecoin-0.21.2.2/
-cd litecoin-0.21.2.2/
+wget https://github.com/litecoin-project/litecoin/releases/download/v0.21.3/litecoin-0.21.3-x86_64-linux-gnu.tar.gz
+tar xvzf litecoin-0.21.3-x86_64-linux-gnu.tar.gz
+cp ltc_pruned.js package.json litecoin-0.21.3/
+cd litecoin-0.21.3/
 ```
 
 * Install [Pm2 Process Manager](https://pm2.io/docs/runtime/guide/process-management/)
