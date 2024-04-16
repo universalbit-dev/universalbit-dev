@@ -133,8 +133,9 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ##### Firewall Rules:
 
 ```bash
-ufw allow 'Nginx Full'
-ufw allow 22
+ufw allow 443
+ufw allow 853
+ufw allow 953
 ufw allow 53
 ```
 
