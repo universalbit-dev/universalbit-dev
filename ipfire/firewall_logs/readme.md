@@ -12,4 +12,4 @@ first quarter 2024:
 second quarter 2024:
 
 ---
-* [April](https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/firewall_logs/files/april_2024_threatanalyzer.csv)
+* [April](https://github.com/universalbit-dev/universalbit-dev/tree/main/ipfire/firewall_logs/files/april)
