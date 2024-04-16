@@ -2,6 +2,8 @@
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/firewall_logs/images/ipfire_url_filter_configuration.jpg" width="auto"></img>
 
+#### the missing files are simply missing
+
 first quarter 2024:
 
 ---
