@@ -23,20 +23,15 @@ example: [conf](https://github.com/universalbit-dev/universalbit-dev/blob/main/n
 
 
 
-Edit NTP configuration file:
+##### Edit NTP configuration file:
 
-```
+```bash
 nano /etc/ntp.conf
 ```
-
-
-```
+```bash
 server pool.ntp.org
-```  
-
-
-Customization completed:
 ```
+```bash
 dpkg-reconfigure ntp
 ```
 
