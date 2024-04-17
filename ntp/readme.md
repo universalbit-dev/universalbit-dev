@@ -31,10 +31,7 @@ nano /etc/ntp.conf
 
 
 ```
-server 0.europe.pool.ntp.org
-server 1.europe.pool.ntp.org
-server 2.europe.pool.ntp.org
-server 3.europe.pool.ntp.org
+server pool.ntp.org
 ```  
 
 
