@@ -3,7 +3,7 @@
 
 * [ipfire](https://en.wikipedia.org/wiki/IPFire)
   project [website:](https://www.ipfire.org/)
-  ##### [URL Filter](https://github.com/universalbit-dev/universalbit-dev/tree/main/ipfire/firewall_logs)
+  ##### [Firewall Logs](https://github.com/universalbit-dev/universalbit-dev/tree/main/ipfire/firewall_logs)
 * [selks](https://github.com/StamusNetworks/SELKS/blob/master/README.rst)
   project [website:](https://www.stamus-networks.com/selks)
 
