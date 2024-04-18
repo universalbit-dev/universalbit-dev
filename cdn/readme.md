@@ -8,6 +8,8 @@
 * [globalping repository](https://github.com/jsdelivr/globalping)
 ```bash
 curl -s https://packagecloud.io/install/repositories/jsdelivr/globalping/script.deb.sh | sudo bash
+```
+```bash
 apt install globalping
 ```
 [content delivery network operation](https://universalbitcdn.it/)
