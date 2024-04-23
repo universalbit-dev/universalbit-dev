@@ -1,5 +1,5 @@
 ### [UniversalBit](https://github.com/universalbit-dev)
-<img src="" width="auto"></img>
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/gif/gears_rotating/gears.gif" width="auto"></img>
 
 ### projects and customizations for a digital and real workplace
 * [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
