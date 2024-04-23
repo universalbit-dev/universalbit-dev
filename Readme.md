@@ -1,5 +1,5 @@
 ### [UniversalBit](https://github.com/universalbit-dev)
-![Alt text](docs/assets/images/small_logo.png "")
+<img src="" width="auto"></img>
 
 ### projects and customizations for a digital and real workplace
 * [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
