@@ -15,7 +15,9 @@
 * [CNC Router Machines](https://github.com/universalbit-dev/cnc-router-machines)
 * [NN](https://github.com/universalbit-dev/universalbit-dev/tree/main/ann)
 * [CNCjs](https://github.com/universalbit-dev/cncjs/blob/master/README.md)
-* [HA Cluster](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md)
+* [HA Cluster](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md)  <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/HP-T610.png" width="20"></img>  <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/HP-T630.png" width="20"></img>
+
+
 * [Site](https://www.universalbit.it)
 * [OpenStreetMap](https://github.com/universalbit-dev/iD) - [App](https://oyster-app-c5dox.ondigitalocean.app) - [Learning](https://learnosm.org/it/beginner/start-osm/)
 * [Making](https://en.wikipedia.org/wiki/Maker_culture#Philosophical_emphasis)
