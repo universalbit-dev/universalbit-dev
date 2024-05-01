@@ -10,6 +10,8 @@
 * [Conceptual Framework](https://en.wikipedia.org/wiki/Conceptual_framework)
 * [Blockchain](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)
 * [Gekko-M4](https://github.com/universalbit-dev/gekko-m4)
+  <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/geppo.png" width="20"></img>
+
 * [CNC Router Machines](https://github.com/universalbit-dev/cnc-router-machines)
 * [NN](https://github.com/universalbit-dev/universalbit-dev/tree/main/ann)
 * [CNCjs](https://github.com/universalbit-dev/cncjs/blob/master/README.md)
