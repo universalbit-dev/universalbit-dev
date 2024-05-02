@@ -13,9 +13,9 @@
   <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/geppo.png" width="20"></img>
 
 * [CNC Router Machines](https://github.com/universalbit-dev/cnc-router-machines)
-* [NN](https://github.com/universalbit-dev/universalbit-dev/tree/main/ann)
+* [NN](https://github.com/universalbit-dev/universalbit-dev/tree/main/ann) <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/arduino.png" width="30"></img>
 * [CNCjs](https://github.com/universalbit-dev/cncjs/blob/master/README.md)  <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/cncjs.png" width="30"></img>
-* [HA Cluster](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md)  <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/HP-T610.png" width="22"></img>  <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/HP-T630.png" width="30"></img>
+* [HA Cluster](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md)  <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/HP-T610.png" width="20"></img>  <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/HP-T630.png" width="27"></img>
 
 
 * [Site](https://www.universalbit.it)
