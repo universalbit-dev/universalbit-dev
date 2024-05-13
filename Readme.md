@@ -22,6 +22,7 @@
 * [OpenStreetMap](https://github.com/universalbit-dev/iD) - [App](https://oyster-app-c5dox.ondigitalocean.app) - [Learning](https://learnosm.org/it/beginner/start-osm/)
 * [Making](https://en.wikipedia.org/wiki/Maker_culture#Philosophical_emphasis)
 * [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
+* [Trainers](https://cs.stanford.edu/people/karpathy/convnetjs/demo/trainers.html)
   
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/social/mastodon/wordmark-black-text.svg" width="auto"></img>
 #### [JOIN](https://mastodon.social/invite/UR5693Bc )
