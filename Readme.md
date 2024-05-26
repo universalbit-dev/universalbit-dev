@@ -6,7 +6,7 @@
 | [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)| | |
 | [UniversalBit-Dev](https://github.com/universalbit-dev/universalbit-dev)      | | |
 | [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)     | | |
-| [CityGenerator](https://github.com/universalbit-dev/CityGenerator)     | | |
+| [CityGenerator](https://github.com/universalbit-dev/CityGenerator)     | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/citygenerator.png" width="25"></img> | |
 | [ByeBye IPV4](https://github.com/universalbit-dev/universalbit-dev/tree/main/ipv4toipv6) it doesn't hold a [charge](https://ipv6.he.net/statistics/)    | | |
 | [Blockchain](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)    | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/blockchain.png" width="25"></img> | |
 | [Gekko-M4](https://github.com/universalbit-dev/gekko-m4)    |<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/geppo.png" width="20"></img> | |
