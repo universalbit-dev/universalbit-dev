@@ -8,7 +8,7 @@
 | [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)     | | |
 | [CityGenerator](https://github.com/universalbit-dev/CityGenerator)     | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/citygenerator.png" width="25"></img> | |
 | [ByeBye IPV4](https://github.com/universalbit-dev/universalbit-dev/tree/main/ipv4toipv6) it doesn't hold a [charge](https://ipv6.he.net/statistics/)    | | |
-| [Blockchain](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)    | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/blockchain.png" width="25"></img> | |
+| [Blockchain](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)    | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/blockchain.png" width="25"></img> | [Live-Map](https://bitnodes.io/nodes/live-map/)|
 | [Gekko-M4](https://github.com/universalbit-dev/gekko-m4)    |<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/geppo.png" width="20"></img> | |
 | [CNC Router Machines](https://github.com/universalbit-dev/cnc-router-machines)    | | |
 | [NN](https://github.com/universalbit-dev/universalbit-dev/tree/main/ann)    |<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/arduino.png" width="30"></img> | |
