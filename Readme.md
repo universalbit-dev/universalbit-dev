@@ -21,5 +21,4 @@
 | [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)    | | |
 | [Trainers](https://github.com/universalbit-dev/convnetjs)    | | |
 
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/social/mastodon/wordmark-black-text.svg" width="auto"></img>
-#### [JOIN](https://mastodon.social/invite/UR5693Bc )
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/social/mastodon/wordmark-black-text.svg" width="auto"></img>[JOIN](https://mastodon.social/invite/UR5693Bc )
