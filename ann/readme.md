@@ -14,14 +14,13 @@
 * ### [Arduino Nano](https://en.wikipedia.org/wiki/Arduino_Nano) || [Arduino Uno](https://en.wikipedia.org/wiki/Arduino_Uno)
 ---
 
-
-* [esp32](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/esp32.ino) || [esp8266](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/esp8266.ino)
-
 ---
 
 #### Be careful to use only a USB data cable,some usb cables are only used to recharge and do not allow the upload of code.
 
 ## Wire ESP8266(Wifi) and Two Arduino Nano
+
+---
 
 ###### D1 Mini ESP8266     - [Logic Converter 3.3 | 5V](https://forum.arduino.cc/t/logic-level-converter/1136803/9)   - Two Arduino Nano
 
