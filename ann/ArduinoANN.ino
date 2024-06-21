@@ -225,7 +225,7 @@ void loop (){
 * If error rate is less than pre-determined threshold then end
 ******************************************************************/
 
-    if( Error < Success ) break ;  
+    if( Error > Success ) break ;  
   }
   Serial.println ();
   Serial.println(); 
@@ -294,6 +294,3 @@ void toTerminal()
 
 
 }
-
-
-
