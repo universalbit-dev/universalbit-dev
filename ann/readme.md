@@ -13,8 +13,7 @@
 * ### [ESP8266](https://en.wikipedia.org/wiki/ESP8266) || [ESP32](https://en.wikipedia.org/wiki/ESP32)
 * ### [Arduino Nano](https://en.wikipedia.org/wiki/Arduino_Nano) || [Arduino Uno](https://en.wikipedia.org/wiki/Arduino_Uno)
 ---
-#### [A Neural Network for Arduino](http://robotics.hobbizine.com/arduinoann.html)
-* [arduino-uno-ATmega328P](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/arduino-uno-ATmega328P.ino) || [arduino-nano-ATmega328P](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/arduino-nano-ATmega328P.ino)
+
 
 * [esp32](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/esp32.ino) || [esp8266](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/esp8266.ino)
 
