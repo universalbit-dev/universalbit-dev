@@ -6,7 +6,9 @@
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/gif/arduino-nano_ANN.gif" width="auto"></img>
 
 
+* ##### ESP32 Dev Module -- ANN - An artificial neural network for the ESP32 --
 
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/gif/esp32_ANN.gif" width="auto"></img>
 
 * ### [ESP8266](https://en.wikipedia.org/wiki/ESP8266) || [ESP32](https://en.wikipedia.org/wiki/ESP32)
 * ### [Arduino Nano](https://en.wikipedia.org/wiki/Arduino_Nano) || [Arduino Uno](https://en.wikipedia.org/wiki/Arduino_Uno)
