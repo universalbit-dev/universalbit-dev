@@ -3,7 +3,7 @@
 
 
 * ##### Arduino Nano -- ArduinoANN - An artificial neural network for the Arduino --
-<img src="" width="auto"></img>
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/gif/arduino-nano_ANN.gif" width="auto"></img>
 
 
 
