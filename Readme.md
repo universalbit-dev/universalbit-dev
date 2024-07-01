@@ -16,7 +16,7 @@
 | [HA Cluster](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md)       |<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/HP-T610.png" width="20"></img> | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/HP-T630.png" width="27"></img> |
 | [NetData](https://universalbitcdn.it/spaces/content-delivery-network/rooms/local/nodes#metrics_correlation=false&after=-900&before=0&utc=Europe%2FRome&offset=%2B2&timezoneName=Amsterdam%2C%20Berlin%2C%20Bern%2C%20Rome%2C%20Stockholm%2C%20Vienna&modal=&modalTab=&modalParams=&selectedIntegrationCategory=deploy.operating-systems&force_play=false&local--chartName-val=menu_system_submenu_cpu&local-nodesView-nodeIdToGo-val=menu_Live)    | | |
 | [Site](https://www.universalbit.it)    | | |
-| [OpenStreetMap](https://github.com/universalbit-dev/iD) - [App](https://oyster-app-c5dox.ondigitalocean.app) - [Learning](https://learnosm.org/it/beginner/start-osm/)    | | |
+| [OpenStreetMap](https://github.com/universalbit-dev/iD) - [App](https://oyster-app-c5dox.ondigitalocean.app) - [Learning](https://learnosm.org/it/beginner/start-osm/)    | [QGIS](https://github.com/universalbit-dev/QGIS) | |
 | [Making](https://en.wikipedia.org/wiki/Maker_culture#Philosophical_emphasis)    | | |
 | [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)    | | |
 | [Trainers](https://github.com/universalbit-dev/convnetjs)    | | |
