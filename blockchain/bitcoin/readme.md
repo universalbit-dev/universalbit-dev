@@ -13,10 +13,7 @@ curl https://bitnodes.io/install-full-node.sh | sh
 ```
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/bitcoin/gif/btc-net-node.gif" width="auto"></img>
 
-
-
-
-* edit bitcoin configuration file
+* edit [bitcoin configuration file](https://bitcoincoredocs.com/bitcoin-conf.html)
 ```bash
 nano /home/your_username/.bitcoin/bitcoin.conf
 ```
@@ -29,63 +26,19 @@ checkblocks=1
 checklevel=0
 txindex=0
 ```
-create package.json file
-```bash
-nano /home/your_username/bitcoin-core/package.json
-```
-```json
-{
-  "name": "bitcoin_pruned",
-  "version": "1.0.0",
-  "description": "",
-  "main": "btc_pruned.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "UniversalBit-Dev",
-  "license": "MIT",
-  "dependencies": {"pm2": "^5.3.1"}
-}
-```
-
-
-create btc_pruned.js file
-```bash
-nano /home/your_username/bitcoin-core/btc_pruned.js
-```
-```js
-var pm2 = require('pm2');
-pm2.connect(function(err) {
-  if (err) {
-    console.error(err)
-    process.exit(2)
-}
-
-pm2.start({
-  script    : './bitcoind',
-  name      : '|BITCOIN-NODE|'
-},
-
-function(err, apps) {
-  if (err) {
-    console.error(err)
-    return pm2.disconnect()
-}
-
-pm2.list((err, list) => {
-  console.log(err, list)
-})
-})
-})
-```
 
 
 ---
 
 
-* Run Node
+* [npm installation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 ```bash
-npm i 
+npm i
+#to fix vulnerabilities:
+npm audit fix
+```
+* start BITCOIN-NODE with [pm2 process manager](https://pm2.io/docs/runtime/guide/process-management/) 
+```bash
 pm2 start btc_pruned.js
 ```
 ![BTC](https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/bitcoin/btc-pruned-node.png "btc")
