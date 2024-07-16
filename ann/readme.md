@@ -1,6 +1,11 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 ##### [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
+* clone project:
+```bash
+git clone https://github.com/universalbit-dev/universalbit-dev.git
+cd universalbit-dev/ann/
 
+```
 
 * ##### Arduino Nano -- ArduinoANN - An artificial neural network for the Arduino --
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/gif/arduino-nano_ANN.gif" width="auto"></img>
