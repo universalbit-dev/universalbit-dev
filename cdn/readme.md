@@ -1,6 +1,12 @@
 
 #### [Rescaling Global Manufacturing](https://github.com/universalbit-dev/CityGenerator/blob/master/Fab-City_Whitepaper.pdf) 
 
+* clone project:
+```bash
+git clone https://github.com/universalbit-dev/universalbit-dev.git
+cd universalbit-dev/cdn/
+```
+
 * [universalbitcdn](https://universalbitcdn.it)
 ---
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/netdata_android_device.jpg" width="40%"></img>
