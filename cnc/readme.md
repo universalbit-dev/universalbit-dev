@@ -7,4 +7,4 @@
 * ### [CNC wiki](https://en.wikipedia.org/wiki/CNC_router)
 ---
 
-* ###### [Github Repository:](https://github.com/universalbit-dev/cnc-router-machines)
+* ###### [CNC MACHINES:](https://github.com/universalbit-dev/cnc-router-machines)
