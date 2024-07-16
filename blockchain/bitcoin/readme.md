@@ -6,6 +6,14 @@
 #### Pruned Node simple explanation
 [means: |storage - minimum disk space required for running a full node|](https://programmingblockchain.gitbook.io/programmingblockchain/wallet/pruned-node)
 
+* clone project:
+```bash
+git clone https://github.com/universalbit-dev/universalbit-dev.git
+cd universalbit-dev/blockchain/
+
+```
+
+
 ---
 * Latest Bitcoin Full Node 
 ```bash
