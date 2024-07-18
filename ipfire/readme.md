@@ -35,11 +35,11 @@ Overview:
 ## ZoneConfiguration 
 <strong>Configuring 3 NICs</strong> assignment
 
-<strong>Red Zone</strong>
-* wlan1 (Native)   [INTERNET]
+<strong>Red Zone</strong>  [INTERNET]
+* wlan1 (Native)  
 
-<strong>Green Zone</strong>
-* Bridged Together wlan2 and eth0 [LAN] 
+<strong>Green Zone Switch Area</strong> [LAN] 
+* Bridged Together wlan2 and eth0 
 
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/bridge_green_area.png" width="auto"></img>
