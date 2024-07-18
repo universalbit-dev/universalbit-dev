@@ -1,5 +1,5 @@
 #### [IPFIRE](https://www.ipfire.org/) Customizable Router:
-much more than this configuration
+much more than configuration
 
 ---
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/IPFIRE_HPT610.jpg" width="50%"></img>
