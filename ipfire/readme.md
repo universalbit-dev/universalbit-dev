@@ -44,3 +44,19 @@ Overview:
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/bridge_green_area.png" width="auto"></img>
 [docs](https://www.ipfire.org/docs/configuration/network/zoneconf/bridge3nic2green)
+
+---
+<strong>Configuring 4 NICs</strong> assignment:
+
+
+<strong>Red Zone</strong>  [INTERNET]
+* wlan1 (Native)
+  
+<strong>Green Zone Switch Area</strong> [LAN]
+* Bridge old reused  Mini PCI Express 54Mbps WiFi card,Ralink USB Wifi Adapter 300mbps and  Ethernet 40 Gbps 2000 MHz Cat 8
+
+* Bridged wlan 0 wlan2 and eth0 (Native)
+
+<img src="" width="auto"></img>
+[Network Adapter Hardware Compatibility List](https://www.ipfire.org/docs/hardware/networking)
+
