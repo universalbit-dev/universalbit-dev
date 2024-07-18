@@ -34,6 +34,7 @@ Overview:
 
 ## ZoneConfiguration 
 <strong>Configuring 3 NICs</strong> assignment
+
 <strong>Red Zone</strong>
 * wlan1 (Native)   [INTERNET]
 
