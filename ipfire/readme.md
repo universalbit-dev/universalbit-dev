@@ -6,7 +6,7 @@ much more than this configuration
 
 
 Overview:
-* [ZoneConfiguration](##ZoneConfiguration)
+* [ZoneConfiguration](#ZoneConfiguration)
 
 
 
@@ -32,7 +32,8 @@ Overview:
 * [Install Addon](https://www.ipfire.org/docs/search?q=install+addon)
 
 
-## ZoneConfiguration <strong>Configuring 3 NICs</strong> assignment
+## ZoneConfiguration 
+<strong>Configuring 3 NICs</strong> assignment
 <strong>Red Zone</strong>
 * wlan1 (Native)   [INTERNET]
 
