@@ -1,22 +1,43 @@
 module.exports = {
   apps : [
-  {script: 'node cdn.js'},
-  {script: 'node cdn_europe.js'},
-  {script: 'node cdn_united_states.js'},
-  {script: 'node cdn_italy.js'},
-  {script: 'node cdn_italy_palermo.js'}
-],
+  {
+  name: 'europe',
+  script    : 'cdn_europe.js',
+  args      : '',
+  name      : '|EUROPE|-cdn.jsdelivr.net-|',
+  instances : "1",
+  restart_delay: 3000,
+  exec_mode : "cluster"
+  },
+  {
+  name: 'united states',
+  script    : 'cdn_united_states.js',
+  args      : '',
+  name      : '|USA|-cdn.jsdelivr.net-|',
+  instances : "1",
+  restart_delay: 3000,
+  exec_mode : "cluster"
+  },
+    
+  {
+  name: 'italy',
+  script    : 'cdn_italy.js',
+  args      : '',
+  name      : '|Italy|-cdn.jsdelivr.net-|',
+  instances : "1",
+  restart_delay: 3000,
+  exec_mode : "cluster"
+  },
 
-  deploy : {
-    development : {
-      user : '',
-      host : '',
-      ref  : 'origin/master',
-      repo : '',
-      path : '',
-      'pre-deploy-local': '',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env development',
-      'pre-setup': ''
-    }
+  {
+  name: 'italy palermo',
+  script    : 'cdn_italy_palermo.js',
+  args      : '',
+  name      : '|Italy Palermo|-cdn.jsdelivr.net-|',
+  instances : "1",
+  restart_delay: 3000,
+  exec_mode : "cluster"
   }
-};
+]
+
+}
