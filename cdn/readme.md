@@ -31,17 +31,14 @@ apt install globalping
 
 * [Conceptual framework](https://en.wikipedia.org/wiki/Conceptual_framework)
 
-#### Planet - Region - Country - City
+#### Required npm packages 
 ```bash
-npm i && npm update
+npm i 
 pm2 start ecosystem.config.js
 ```
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/cdn_ecosystem.gif" width="auto"></img>
 
 
-* ## [GlobalPing-Cli](https://github.com/jsdelivr/globalping-cli)
-
-* ##### [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)
 ---
 * ##### [jsDelivr Network Map](https://www.jsdelivr.com/network#map)
 ```bash
@@ -66,4 +63,8 @@ pm2 save
 ```
 * Router dns setup: https://cdn.jsdelivr.net
 #### DNS
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/router_cdn_dns_jsdelivr.png" width="80%"></img>  
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/router_cdn_dns_jsdelivr.png" width="80%"></img>
+
+Resources:
+* #### [GlobalPing-Cli](https://github.com/jsdelivr/globalping-cli)
+* #### [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)
