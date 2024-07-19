@@ -9,11 +9,7 @@ cd universalbit-dev/cdn/
 
 * [universalbitcdn](https://universalbitcdn.it)
 ---
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/netdata_android_device.jpg" width="40%"></img>
-* [ubuntu 24.04 LTS]
-```bash
-snap install globalping
-```
+
 * [install from repository]()
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/content_delivery_network_live.gif" width="auto"></img>
@@ -21,8 +17,11 @@ snap install globalping
 [Machine learning (ML) powered anomaly detection](https://learn.netdata.cloud/docs/machine-learning-and-anomaly-detection/machine-learning-ml-powered-anomaly-detection)
 
 #### Anomalies may exist without adequate "lenses" or "filters" to see them and may become visible only when the tools exist to define them
-
-* [Conceptual framework](https://en.wikipedia.org/wiki/Conceptual_framework)
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/netdata_android_device.jpg" width="40%"></img>
+* [ubuntu 24.04 LTS]
+```bash
+snap install globalping
+```
 
 #### Required npm packages 
 ```bash
@@ -61,3 +60,5 @@ pm2 save
 Resources:
 * #### [GlobalPing-Cli](https://github.com/jsdelivr/globalping-cli)
 * #### [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)
+* #### [Conceptual framework](https://en.wikipedia.org/wiki/Conceptual_framework)
+
