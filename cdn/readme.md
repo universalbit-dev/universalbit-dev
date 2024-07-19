@@ -10,7 +10,11 @@ cd universalbit-dev/cdn/
 * [universalbitcdn](https://universalbitcdn.it)
 ---
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/netdata_android_device.jpg" width="40%"></img>
-
+[ubuntu 24.04 LTS]
+```bash
+snap install globalping
+```
+repository
 * [globalping repository](https://github.com/jsdelivr/globalping)
 ```bash
 curl -s https://packagecloud.io/install/repositories/jsdelivr/globalping/script.deb.sh | sudo bash
