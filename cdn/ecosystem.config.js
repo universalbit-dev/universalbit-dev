@@ -17,7 +17,6 @@ module.exports = {
   {
   name: 'united states',
   script    : 'cdn_united_states.js',
-  args      : '',
   name      : '|USA||',
   exec_mode : "cluster"
   },
@@ -31,12 +30,28 @@ module.exports = {
   },
 
   {
-  name: 'italy palermo',
-  script    : 'cdn_italy_palermo.js',
-  name      : '|Italy Palermo||',
+  name: 'france',
+  script    : 'cdn_france.js',
+  name      : '|France||',
+  instances : "1",
+  exec_mode : "cluster"
+  },
+  {
+  name: 'germany',
+  script    : 'cdn_germany.js',
+  name      : '|Germany||',
+  instances : "1",
+  exec_mode : "cluster"
+  },
+  {
+  name: 'spain',
+  script    : 'cdn_spain.js',
+  name      : '|Spain||',
   instances : "1",
   exec_mode : "cluster"
   }
+
+
 ]
 
 }
