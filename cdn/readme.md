@@ -29,8 +29,6 @@ pm2 start ecosystem.config.js
 ```
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/cdn_ecosystem.gif" width="auto"></img>
 * [globalping repository](https://github.com/jsdelivr/globalping)
-[NodeJs v20.11.1 -- Npm 10.2.4]
-
 * GlobalPing with [Pm2](https://pm2.keymetrics.io/) advanced process manager
 * [Blockchain Net node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
 
