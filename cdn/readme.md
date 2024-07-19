@@ -64,6 +64,6 @@ pm2 startup
 systemctl enable pm2-root
 pm2 save
 ```
-* Routing : Root endpoint is always https://cdn.jsdelivr.net
-#### LocalNet Routing
+* Router dns setup: https://cdn.jsdelivr.net
+#### DNS
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/router_cdn_dns_jsdelivr.png" width="80%"></img>  
