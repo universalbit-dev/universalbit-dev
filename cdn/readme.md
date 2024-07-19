@@ -10,7 +10,7 @@ cd universalbit-dev/cdn/
 * [universalbitcdn](https://universalbitcdn.it)
 ---
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/netdata_android_device.jpg" width="40%"></img>
-[ubuntu 24.04 LTS]
+* [ubuntu 24.04 LTS]
 ```bash
 snap install globalping
 ```
