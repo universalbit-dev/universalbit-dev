@@ -14,15 +14,8 @@ cd universalbit-dev/cdn/
 ```bash
 snap install globalping
 ```
-repository
-* [globalping repository](https://github.com/jsdelivr/globalping)
-```bash
-curl -s https://packagecloud.io/install/repositories/jsdelivr/globalping/script.deb.sh | sudo bash
-```
-```bash
-apt install globalping
-```
-[content delivery network operation](https://universalbitcdn.it/)
+* [install from repository]()
+
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/content_delivery_network_live.gif" width="auto"></img>
 
 [Machine learning (ML) powered anomaly detection](https://learn.netdata.cloud/docs/machine-learning-and-anomaly-detection/machine-learning-ml-powered-anomaly-detection)
