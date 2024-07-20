@@ -4,8 +4,6 @@
 
 * ### [Hacker Culture](https://en.wikipedia.org/wiki/Hacker_culture)
 ---
-    
-    Required:  arduino nano and mini enc28j60 arduino             
     ===================================================================             
     #                                                                 #
     #   Armadillium         MAC ADDRESS                               #
@@ -16,7 +14,8 @@
     #                         0xDE,0xAF,0xCF,0xEF,0xFE,0xBD  =        #                
     #                         ================================        #
     ===================================================================
-
+    
+#### Required:  arduino nano and mini enc28j60 arduino          
 ```
 /******************************************************************
  * ArduinoANN - An artificial neural network for the Arduino
