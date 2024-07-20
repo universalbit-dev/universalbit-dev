@@ -8,9 +8,9 @@
     Required:  arduino nano and mini enc28j60 arduino             
     ===================================================================             
     #                                                                 #
-    #   Armadillium              MAC spoofing                         #
+    #   Armadillium         MAC ADDRESS                               #
     #   Net settings       <==================================        #
-    #   cloned mac(spoofing)         ----------------------  =        #
+    #   cloned mac                   ----------------------  =        #
     #   DE:AF:CF:EF:FE:BD            Arduino Nano NeuralNet  =        #
     #                                ----------------------  =        #
     #                         0xDE,0xAF,0xCF,0xEF,0xFE,0xBD  =        #                
@@ -18,7 +18,6 @@
     ===================================================================
 
 ```
-
 /******************************************************************
  * ArduinoANN - An artificial neural network for the Arduino
  * All basic settings can be controlled via the Network Configuration
@@ -26,16 +25,19 @@
  * See robotics.hobbizine.com/arduinoann.html for details.
  ******************************************************************/
 
+#include <math.h>
 #include <SPI.h>
 #include <Ethernet.h>
-#include <math.h>
-EthernetClient client;
 
-byte mac[] = { 0xDE,0xAF,0xCF,0xEF,0xFE,0xBD };
+byte mac[] = { 0xDE, 0xAF, 0xCF, 0xEF, 0xFE, 0xBD };
+byte ip[] = { 192, 168, 1, 177 };
+byte server[] = { 64, 233, 187, 99 }; // Google
 int HTTP_PORT = 8010;
 String HTTP_METHOD = "POST";
-char HOST_NAME[] = "localhost";
+char HOST_NAME[] = "google.com";
 String PATH_NAME = "/";
+EthernetClient client;
+
 
 /******************************************************************
  * Network Configuration - customized per network 
@@ -106,6 +108,7 @@ void setup(){
   for( p = 0 ; p < PatternCount ; p++ ) {    
     RandomizedIndex[p] = p ;
   }
+  
 }  
 
 void loop (){
