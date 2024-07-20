@@ -33,6 +33,7 @@ pm2 start ecosystem.config.js
   
 * [Github Globalping Repository](https://github.com/jsdelivr/globalping)
 * [Pm2](https://pm2.keymetrics.io/) advanced process manager
+* [Exponential Backoff Restart Delay](https://pm2.io/docs/runtime/features/restart-strategies/)
 * [Blockchain Net node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
 
 ```bash
