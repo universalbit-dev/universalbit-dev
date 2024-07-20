@@ -34,7 +34,7 @@ EthernetClient client;
 byte mac[] = { 0xDE,0xAF,0xCF,0xEF,0xFE,0xBD };
 int HTTP_PORT = 8010;
 String HTTP_METHOD = "POST";
-char HOST_NAME[] = "cdn.jsdelivr.net";
+char HOST_NAME[] = "localhost";
 String PATH_NAME = "/";
 
 /******************************************************************
