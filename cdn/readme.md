@@ -30,7 +30,7 @@ pm2 start ecosystem.config.js
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/cdn_ecosystem.gif" width="auto"></img>
 * [JSdelivr MAP](https://www.jsdelivr.com/globalping)find resources nearest you
 * [Pm2](https://pm2.keymetrics.io/) advanced process manager
-* [Exponential Backoff Restart Delay](https://pm2.io/docs/runtime/features/restart-strategies/)
+* [Exponential Backoff Restart Delay](https://pm2.io/docs/runtime/features/restart-strategies/)reducing the pressure on your DB or your external provider… 
 
 ```bash
 pm2 startup
