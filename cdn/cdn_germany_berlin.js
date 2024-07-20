@@ -1,6 +1,6 @@
 /* Run Bash Script */
 var exec = require('node:child_process').exec
-exec('echo $(globalping dns cdn.jsdelivr.net from spain --limit 10)',
+exec('echo $(globalping dns cdn.jsdelivr.net from germany+berlin --limit 10)',
     function (error, stdout, stderr) {
         console.log('stdout:'+ stdout);
         console.log('stderr: ' + stderr);
