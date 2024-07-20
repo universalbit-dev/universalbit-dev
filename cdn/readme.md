@@ -28,13 +28,9 @@ npm i
 pm2 start ecosystem.config.js
 ```
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/cdn_ecosystem.gif" width="auto"></img>
-* [JSdelivr MAP](https://www.jsdelivr.com/globalping)
-  find resources nearest you
-  
-* [Github Globalping Repository](https://github.com/jsdelivr/globalping)
+* [JSdelivr MAP](https://www.jsdelivr.com/globalping)find resources nearest you
 * [Pm2](https://pm2.keymetrics.io/) advanced process manager
 * [Exponential Backoff Restart Delay](https://pm2.io/docs/runtime/features/restart-strategies/)
-* [Blockchain Net node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
 
 ```bash
 pm2 startup
@@ -49,8 +45,10 @@ pm2 save
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/router_cdn_dns_jsdelivr.png" width="80%"></img>
 
 Resources:
+* #### [Github Globalping Repository](https://github.com/jsdelivr/globalping)
 * #### [Pm2 startup script](https://pm2.keymetrics.io/docs/usage/startup/)  
 * #### [GlobalPing-Cli](https://github.com/jsdelivr/globalping-cli)
 * #### [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)
 * #### [Conceptual framework](https://en.wikipedia.org/wiki/Conceptual_framework)
+* #### [Blockchain Net node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
 
