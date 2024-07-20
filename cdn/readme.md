@@ -1,3 +1,4 @@
+##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)   ##### [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)   ##### [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) ##### [HArmadillium](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md)
 
 #### [Rescaling Global Manufacturing](https://github.com/universalbit-dev/CityGenerator/blob/master/Fab-City_Whitepaper.pdf) 
 
@@ -51,6 +52,7 @@ Resources:
 * #### [Github Globalping Repository](https://github.com/jsdelivr/globalping)
 * #### [Pm2 startup script](https://pm2.keymetrics.io/docs/usage/startup/)  
 * #### [GlobalPing-Cli](https://github.com/jsdelivr/globalping-cli)
+* #### [High Availability Clusters](https://ubuntu.com/server/docs/introduction-to-high-availability#high-availability-clusters)
 * #### [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)
 * #### [Conceptual framework](https://en.wikipedia.org/wiki/Conceptual_framework)
 * #### [Blockchain Net node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
