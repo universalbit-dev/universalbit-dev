@@ -325,6 +325,7 @@ void toTerminal()
 
 }
 ```
+* [Ethernet Client](https://www.arduino.cc/reference/en/libraries/ethernet/ethernetclient/)
 * [Ethernet Reference](https://www.arduino.cc/reference/en/libraries/ethernet/)
 
 #### Stay Tuned!
