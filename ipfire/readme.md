@@ -18,7 +18,7 @@ Overview:
 * [Backup](https://www.ipfire.org/docs/configuration/system/backup)
 ### Network:
 * [Zone Configuration](https://www.ipfire.org/docs/configuration/network/zoneconf)
-* [Domain Name System](https://www.ipfire.org/docs/configuration/network/dns-server)
+* [Domain Name System](https://www.ipfire.org/docs/configuration/network/dns-server) -- [DNS Public Servers](https://www.ipfire.org/docs/dns/public-servers) 
 * [Location Block](https://www.ipfire.org/docs/configuration/firewall/geoip-block)
 * [Web Proxy](https://www.ipfire.org/docs/configuration/network/proxy)
 * [URL Filter](https://www.ipfire.org/docs/configuration/network/proxy/url-filter)
