@@ -50,12 +50,12 @@ Overview:
 
 
 <strong>Red Zone</strong>  [INTERNET]
-* wlan1 (Native)
+* Ralink USB Wifi Adapter 300mbps
+* interface:wlan1 (Native)
   
 <strong>Green Zone Switch Area</strong> [LAN]
-* Bridge old reused  Mini PCI Express 54Mbps WiFi card,Ralink USB Wifi Adapter 300mbps and  Ethernet 40 Gbps 2000 MHz Cat 8
-
-* Bridged wlan0 wlan2 and eth0 (Native)
+* Bridged old reused  Mini PCI Express 54Mbps WiFi card,Ralink USB Wifi Adapter 300mbps and  Ethernet 40 Gbps 2000 MHz Cat 8
+* Bridged interfaces:wlan0 wlan2 and eth0 (Native)
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/bridge_green_area_4.png" width="auto"></img>
 [Network Adapter Hardware Compatibility List](https://www.ipfire.org/docs/hardware/networking)
