@@ -1,17 +1,16 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) ##### [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) ##### [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)
 
-# Upload GRBL Firmare: CNC Controller
-Arduino Nano Shield V3
+# Upload [GRBL](https://github.com/grbl/grbl) to Arduino Nano Shield V3.
+Grbl is a no-compromise, high performance, low cost alternative to parallel-port-based motion control for CNC milling. It will run on a vanilla Arduino (Duemillanove/Uno) as long as it sports an Atmega 328.
+
+[Ubuntu 24.04 LTS]
+Required packages: 
 ```bash
 sudo apt install arduino zip unzip wget
 ```
 GRBL Release : [v1.1](https://github.com/gnea/grbl/archive/refs/tags/v1.1h.20190825.zip) 
 ---
 
-[Ubuntu 24.04 LTS]
-Required packages: 
-
-Arduino Nano Shield V3 Upload GRBL Firmware 1.1
 
 * Release:[GRBL1.1](https://github.com/gnea/grbl/releases)
 
