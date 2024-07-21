@@ -30,11 +30,12 @@ cp -R GRBL /home/universalbit/Arduino/libraries/
 
 run [Arduino-IDE](https://www.arduino.cc/en/software) 1.8.19
 <strong>Upload</strong> grbl.zip created previously
-Sketch ==> Include Library ===> Add .ZIP Library 
 
+* Arduino-IDE == > Sketch ==> Include Library ===> Add .ZIP Library 
 
+---
 
-
-* ### [CNC MACHINES:](https://github.com/universalbit-dev/cnc-router-machines)
-* ### [CNC wiki](https://en.wikipedia.org/wiki/CNC_router)
+Resources:
+* ##### [CNC MACHINES:](https://github.com/universalbit-dev/cnc-router-machines)
+* ##### [CNC wiki](https://en.wikipedia.org/wiki/CNC_router)
 
