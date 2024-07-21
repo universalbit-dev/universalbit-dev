@@ -28,8 +28,8 @@ cp -R GRBL /home/universalbit/Arduino/libraries/
 
 
 
-run [Arduino-IDE](https://www.arduino.cc/en/software)
-Upload grbl.zip created previously
+run [Arduino-IDE](https://www.arduino.cc/en/software) 1.8.19
+<strong>Upload</strong> grbl.zip created previously
 Sketch ==> Include Library ===> Add .ZIP Library 
 
 
