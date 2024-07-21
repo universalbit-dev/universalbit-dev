@@ -25,6 +25,13 @@ Overview:
 * [DHCP Server](https://www.ipfire.org/docs/configuration/network/dhcp)
 * [Captive Portal](https://www.ipfire.org/docs/configuration/network/captive)
 * [DNS forwarding](https://www.ipfire.org/docs/configuration/network/dnsforward)
+
+### Status
+[Network Status](#Status)
+* <strong>External</strong> Network Traffic (red)
+* <strong>Internal</strong> Network Traffic (green)
+  
+
 ### Firewall
 * [Intrusion Prevention System](https://www.ipfire.org/docs/configuration/firewall/ips)
 * [Logs](https://www.ipfire.org/docs/configuration/logs/firewall)
@@ -59,4 +66,17 @@ Overview:
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/bridge_green_area_4.png" width="auto"></img>
 [Network Adapter Hardware Compatibility List](https://www.ipfire.org/docs/hardware/networking)
+
+## Status
+### External (Red)
+<img src="" width="auto"></img>
+
+### Internal (Green)
+<img src=""></img>
+
+
+[status reports on various parts of the system](https://www.ipfire.org/docs/configuration/status)
+
+
+
 
