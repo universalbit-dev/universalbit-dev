@@ -34,6 +34,8 @@ run [Arduino-IDE](https://www.arduino.cc/en/software) 1.8.19
 * Arduino-IDE == > Sketch ==> Include Library ===> Add .ZIP Library 
 
 ---
+### Ready to connect Arduino Nano Shield V3 to [CncJS](https://github.com/universalbit-dev/cnc-router-machines) for uploading gcode and start cnc milling simulation.
+
 
 Resources:
 * ##### [CNC MACHINES:](https://github.com/universalbit-dev/cnc-router-machines)
