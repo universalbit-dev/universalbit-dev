@@ -72,7 +72,7 @@ Overview:
 <img src="" width="auto"></img>
 
 ### Internal (Green)
-<img src=""></img>
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/status_internal_traffic.png"></img>
 
 
 [status reports on various parts of the system](https://www.ipfire.org/docs/configuration/status)
