@@ -67,9 +67,9 @@ Overview:
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/bridge_green_area_4.png" width="auto"></img>
 [Network Adapter Hardware Compatibility List](https://www.ipfire.org/docs/hardware/networking)
 
-## Status
+#Status
 ### External (Red)
-<img src="" width="auto"></img>
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/status_external_traffic.png" width="auto"></img>
 
 ### Internal (Green)
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/status_internal_traffic.png"></img>
