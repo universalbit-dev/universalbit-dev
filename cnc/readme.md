@@ -21,7 +21,9 @@ wget https://github.com/gnea/grbl/archive/refs/tags/v1.1h.20190825.zip
 unzip grbl-1.1h.20190825.zip
 #create .zip archive of grbl folder 
 cd grbl-1.1h.20190825/ && zip -r grbl.zip grbl
+#rename folder grbl-1.1h.20190825 to GRBL
 cp -R ~/Downloads/grbl-1.1h.20190825 GRBL
+#copy GRBL to ...~/Arduino/libraries directory
 cp -R GRBL /home/universalbit/Arduino/libraries/
 ```
 
