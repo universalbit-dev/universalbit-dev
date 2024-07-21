@@ -1,7 +1,7 @@
-##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
-##### [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
-
-
+##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) ##### [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) ##### [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)
+```bash
+sudo apt install arduino
+```
 
 GRBL Release : [v1.1](https://github.com/gnea/grbl/archive/refs/tags/v1.1h.20190825.zip) 
 ---
