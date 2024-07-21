@@ -27,7 +27,7 @@ Overview:
 * [DNS forwarding](https://www.ipfire.org/docs/configuration/network/dnsforward)
 
 ### Status
-[Network Status](#Status)
+[Network Status](#NetworkStatus)
 * <strong>External</strong> Network Traffic (red)
 * <strong>Internal</strong> Network Traffic (green)
   
@@ -67,7 +67,8 @@ Overview:
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/bridge_green_area_4.png" width="auto"></img>
 [Network Adapter Hardware Compatibility List](https://www.ipfire.org/docs/hardware/networking)
 
-#Status
+## NetworkStatus
+
 ### External (Red)
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/status_external_traffic.png" width="auto"></img>
 
