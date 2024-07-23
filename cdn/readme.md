@@ -18,14 +18,24 @@ cd universalbit-dev/cdn/
 
 #### Anomalies may exist without adequate "lenses" or "filters" to see them and may become visible only when the tools exist to define them
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/netdata_android_device.jpg" width="40%"></img>
-* [ubuntu 24.04 LTS]
+
+* globalping installation 
+```bash
+sudo apt install curl
+curl -s https://packagecloud.io/install/repositories/jsdelivr/globalping/script.deb.sh | sudo bash
+apt install globalping
+```
+<strong>OR</strong>
+
+* snap install [ubuntu 24.04 LTS]
 ```bash
 snap install globalping
 ```
 
 #### Required npm packages 
 ```bash
-npm i 
+npm i
+npm i pm2 -g
 pm2 start ecosystem.config.js
 ```
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/cdn_ecosystem.gif" width="auto"></img>
