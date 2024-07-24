@@ -52,6 +52,12 @@ pm2 save
 #### DNS
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/router_cdn_dns_jsdelivr.png" width="80%"></img>
 
+* Heavy disk memory usage :autoclean 
+```bash
+pm2 start autoclean.js --exp-backoff-restart-delay=10000
+```
+
+
 Resources:
 * #### [Github Globalping Repository](https://github.com/jsdelivr/globalping)
 * #### [Pm2 startup script](https://pm2.keymetrics.io/docs/usage/startup/)  
