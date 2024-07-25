@@ -3,14 +3,8 @@
 ## ByeBye IPv4
 ## [IPv4 Address Exhaustion](https://en.wikipedia.org/wiki/IPv4_address_exhaustion)
 
-#### [HE](https://ipv6.he.net/statistics/) Hurricane Electric has a series of applications, widgets and JavaScript snippets to display the estimated exhaustion time
-* [6to4](https://github.com/universalbit-dev/HArmadillium/blob/main/6to4.md)
----
-
-* ### [Hurricane Electric IPv6 Tunnel Broker](https://tunnelbroker.net/)
-```bash
-nano /etc/network/interfaces
-```
+* #### [HE](https://ipv6.he.net/statistics/) Hurricane Electric has a series of applications, widgets and JavaScript snippets to display the estimated exhaustion time
+* #### [Hurricane Electric IPv6 Tunnel Broker](https://tunnelbroker.net/)
 ---
 
 * ### [IPV6](https://en.wikipedia.org/wiki/IPv6)
