@@ -40,7 +40,7 @@ Overview:
 * [Intrusion Prevention System](https://www.ipfire.org/docs/configuration/firewall/ips)
 * [Logs](https://www.ipfire.org/docs/configuration/logs/firewall)
 ### Add-ons
-* [Install Addon](https://www.ipfire.org/docs/search?q=install+addon)
+* [Install Add-ons](https://www.ipfire.org/docs/search?q=install+addon)
 
 
 ## ZoneConfiguration 
