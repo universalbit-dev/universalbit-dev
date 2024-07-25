@@ -27,7 +27,7 @@ Overview:
 * [URL Filter](https://www.ipfire.org/docs/configuration/network/proxy/url-filter)
 * [DHCP Server](https://www.ipfire.org/docs/configuration/network/dhcp)
 * [Captive Portal](https://www.ipfire.org/docs/configuration/network/captive)
-* [VPN](https://www.ipfire.org/docs/configuration/services/openvpn)
+* [VPN](https://www.ipfire.org/docs/configuration/services/openvpn) -- [OpenVPN Configuration](https://www.ipfire.org/docs/configuration/services/openvpn/config)
 * [DNS forwarding](https://www.ipfire.org/docs/configuration/network/dnsforward)
 
 ### Status
