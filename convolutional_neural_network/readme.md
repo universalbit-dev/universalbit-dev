@@ -47,8 +47,7 @@ MagicNet: [Function: MagicNet]
 
 ---
 ### working example here
-  * [nn](https://github.com/universalbit-dev/gekko-m4/blob/master/strategies/NN.js)
-  * [gekko-m4](https://github.com/universalbit-dev/gekko-m4/blob/master/strategies/NNSTOCH.js)
-
+  * [Gekko M4 Globular Cluster NN](https://github.com/universalbit-dev/gekko-m4-globular-cluster/blob/master/strategies/NN.js)
+  * [An artificial neural network for the Arduino](https://github.com/universalbit-dev/universalbit-dev/tree/main/ann)
 
   
