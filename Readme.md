@@ -6,7 +6,7 @@
 | [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)| | |
 | [UniversalBit-Dev](https://github.com/universalbit-dev/universalbit-dev)      | | |
 | [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)     | | |
-| [CityGenerator](https://github.com/universalbit-dev/CityGenerator)     | <img src="https://github.com/universalbit-dev/CityGenerator/blob/master/assets/images/gif/citygenerator.gif" width="25"></img> | |
+| [CityGenerator](https://github.com/universalbit-dev/CityGenerator)     | ![citygenerator](https://github.com/universalbit-dev/CityGenerator/blob/master/assets/images/gif/citygenerator.gif) | |
 | [Blockchain](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)    | [Net](https://bitnodes.io/nodes/network-map/) <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/blockchain.png" width="25"></img> | [Live](https://bitnodes.io/nodes/live-map/)| 
 | [Gekko-M4-Globular-Cluster](https://github.com/universalbit-dev/gekko-m4)    |<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/geppo.png" width="20"></img> | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/Globular_cluster_Messier_4.jpg" width="40"></img>|
 | [CNC Router Machines](https://github.com/universalbit-dev/cnc-router-machines)    | | |
