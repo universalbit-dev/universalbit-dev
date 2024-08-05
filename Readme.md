@@ -1,10 +1,8 @@
 ### [UniversalBit](https://github.com/universalbit-dev) 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/gif/nebula/nebula_loop.gif" width="auto"></img>
-
+#### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
 |    |  |  |
 |--------------|:-----:|-----------:|
-| [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)| | |
-| [UniversalBit-Dev](https://github.com/universalbit-dev/universalbit-dev)      | | |
 | [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)     | | |
 | [CityGenerator](https://github.com/universalbit-dev/CityGenerator)     | ![citygenerator](https://github.com/universalbit-dev/CityGenerator/blob/master/assets/images/gif/citygenerator.gif) | |
 | [Blockchain](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)    | [Net](https://bitnodes.io/nodes/network-map/) <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/blockchain.png" width="25"></img> | [Live](https://bitnodes.io/nodes/live-map/)| 
