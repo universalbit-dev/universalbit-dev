@@ -1,6 +1,6 @@
 ### [UniversalBit](https://github.com/universalbit-dev) 
 
-#### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html)
+#### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) -- [Join Mastodon](https://mastodon.social/invite/wTHp2hSD)
 |    | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/gif/nebula/nebula_loop.gif" width="auto"></img> |  |
 |--------------|:-----:|-----------:|
 | [UniversalBit-dev](https://github.com/universalbit-dev/universalbit-dev) | | |
