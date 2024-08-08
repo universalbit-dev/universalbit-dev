@@ -83,7 +83,7 @@ Overview:
 * Bridged Ralink USB Wifi Adapters 300mbps and  Ethernet 40 Gbps 2000 MHz Cat 8
 * interfaces:wlan1 wlan2 wlan4 and eth0 (Native)
 
-<img src="" width="auto"></img>
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/bridge_green_area_5.png" width="auto"></img>
 
 [Network Adapter Hardware Compatibility List](https://www.ipfire.org/docs/hardware/networking)
 
