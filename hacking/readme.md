@@ -15,7 +15,9 @@
     #                         ================================        #
     ===================================================================
     
-#### Required:  arduino nano and mini enc28j60 arduino          
+#### Required:  arduino nano and mini enc28j60 arduino      
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/hacking/images/DSCF2499.JPG" width="auto" />
+
 ```
 /******************************************************************
  * ArduinoANN - An artificial neural network for the Arduino
