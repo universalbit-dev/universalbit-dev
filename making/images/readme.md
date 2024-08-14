@@ -11,12 +11,12 @@
 |                             |                             |
 | ![woodwork_07](https://github.com/universalbit-dev/universalbit-dev/blob/main/making/images/woodwork/IMG-20230527-WA0007woodworking.jpg) |  |
 
+| Parallel Joints                           |                              |
+| ----------------------------------- | ----------------------------------- |
+| ![parallel_joints_01](https://github.com/universalbit-dev/universalbit-dev/blob/main/making/images/woodwork/P_20240305_194809_HDR_woodjoint.jpg) | ![parallel_joints_02](https://github.com/universalbit-dev/universalbit-dev/blob/main/making/images/woodwork/P_20240305_194316_HDR_woodjoint.jpg) |
+|                             |                             |
+| ![parallel_joints_03](https://github.com/universalbit-dev/universalbit-dev/blob/main/making/images/woodwork/P_20240305_131027_HDR_woodjoint.jpg) |  |
 
----
-### Parallel Joints
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/making/images/woodwork/P_20240305_194809_HDR_woodjoint.jpg" width="30%"></img>
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/making/images/woodwork/P_20240305_194316_HDR_woodjoint.jpg" width="30%"></img>
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/making/images/woodwork/P_20240305_131027_HDR_woodjoint.jpg" width="30%"></img>
 
 | Terrarium                           |                              |
 | ----------------------------------- | ----------------------------------- |
