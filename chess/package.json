@@ -7,7 +7,7 @@
   "url": "git+https://github.com/universalbit-dev/universalbit-dev/chess"
 },
  "author": "universalbit-dev <+393774788289>",
- "license": "GNU General Public License v2.0",
+ "license": "GNU General Public License v3.0",
  "dependencies": {"chess.js": "^1.0.0-beta.6"},
  "engines": {"node": ">=20"},
  "keywords": ["game","chess"],
