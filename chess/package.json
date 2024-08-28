@@ -4,7 +4,7 @@
  "description": "TheRandomGameOfChess",
  "main": "the_random_game_of_chess.js",
  "repository": {"type": "git",
-  "url": "git+https://github.com/universalbit-dev/universalbit-dev/chess"
+  "url": "https://github.com/universalbit-dev/universalbit-dev"
 },
  "author": "universalbit-dev <+393774788289>",
  "license": "GNU General Public License v3.0",
