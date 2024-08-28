@@ -1,8 +1,11 @@
-#### The Game of Chess
+#### The Game of Chess   [chess.js](https://www.npmjs.com/package/chess.js)
 
-* [PM2](https://www.npmjs.com/package/pm2)
+* [PM2](https://www.npmjs.com/package/pm2)    [Process Manager](https://pm2.io/docs/runtime/guide/process-management/)
 
 ```bash
+git clone https://github.com/universalbit-dev/universalbit-dev/
+cd universalbit-dev/chess/
+npm i
 npm i pm2 -g
 pm2 start the_random_game_of_chess.js
 ```
