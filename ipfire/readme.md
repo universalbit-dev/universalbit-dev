@@ -5,7 +5,7 @@
 much more than configuration
 
 ---
-<img src="" width="50%"></img>
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/ipfire.png" width="50%"></img>
 
 
 Overview:
