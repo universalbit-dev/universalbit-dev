@@ -1,8 +1,5 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) -- [Join Mastodon](https://mastodon.social/invite/wTHp2hSD) -- [Website](https://www.universalbit.it/) -- [Content Delivery Network](https://universalbitcdn.it/)
 
-* ### [Bitcoin](https://en.wikipedia.org/wiki/Bitcoin)
-* ### [Getting Started](https://bitcoin.org/en/getting-started)
-
 #### Pruned Node simple explanation
 [means: |storage - minimum disk space required for running a full node|](https://programmingblockchain.gitbook.io/programmingblockchain/wallet/pruned-node)
 
@@ -54,5 +51,7 @@ pm2 start btc_pruned.js
 ### [PM2 Startup Script Generator](https://pm2.keymetrics.io/docs/usage/startup/)
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/bitcoin/gif/pm2_btc_startup_script.gif" width="auto"></img>
 
-
-* [Programming Blockchain](https://programmingblockchain.gitbook.io/programmingblockchain)
+### Resources:
+##### [Bitcoin](https://en.wikipedia.org/wiki/Bitcoin)
+##### [Getting Started](https://bitcoin.org/en/getting-started)
+##### [Programming Blockchain](https://programmingblockchain.gitbook.io/programmingblockchain)
