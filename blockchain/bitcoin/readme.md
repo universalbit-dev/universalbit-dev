@@ -25,6 +25,7 @@ curl https://bitnodes.io/install-full-node.sh | sh
 ```bash
 nano /home/your_username/.bitcoin/bitcoin.conf
 ```
+#### bitcoin node configuration file (minimal disk space)
 ```bash
 prune=550
 maxconnections=8
@@ -35,16 +36,13 @@ checklevel=0
 txindex=0
 ```
 
-
 ---
-
 
 * [npm installation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 ```bash
-npm i
-#to fix vulnerabilities:
-npm audit fix
+npm i && npm i audit fix
 ```
+
 * start BITCOIN-NODE with [pm2 process manager](https://pm2.io/docs/runtime/guide/process-management/) 
 ```bash
 pm2 start btc_pruned.js
