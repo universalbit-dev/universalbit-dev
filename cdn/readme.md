@@ -1,4 +1,4 @@
-##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)   ##### [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)   ##### [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) ##### [HArmadillium](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md)
+##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) -- [Join Mastodon](https://mastodon.social/invite/wTHp2hSD) -- [Website](https://www.universalbit.it/) -- [Content Delivery Network](https://universalbitcdn.it/)
 
 #### [Rescaling Global Manufacturing](https://github.com/universalbit-dev/CityGenerator/blob/master/Fab-City_Whitepaper.pdf) 
 
@@ -48,7 +48,7 @@ pm2 startup
 systemctl enable pm2-root
 pm2 save
 ```
-* Router dns setup: https://cdn.jsdelivr.net
+* ##### [Router DNS setup](https://www.ipfire.org/docs/dns/public-servers) 
 #### DNS
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/router_cdn_dns_jsdelivr.png" width="80%"></img>
 
@@ -58,12 +58,12 @@ pm2 start autoclean.js --exp-backoff-restart-delay=10000
 ```
 
 
-Resources:
-* #### [Github Globalping Repository](https://github.com/jsdelivr/globalping)
-* #### [Pm2 startup script](https://pm2.keymetrics.io/docs/usage/startup/)  
-* #### [GlobalPing-Cli](https://github.com/jsdelivr/globalping-cli)
-* #### [High Availability Clusters](https://ubuntu.com/server/docs/introduction-to-high-availability#high-availability-clusters)
-* #### [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)
-* #### [Conceptual framework](https://en.wikipedia.org/wiki/Conceptual_framework)
-* #### [Blockchain Net node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
+#### Resources:
+* ##### [Github Globalping Repository](https://github.com/jsdelivr/globalping)
+* ##### [Pm2 startup script](https://pm2.keymetrics.io/docs/usage/startup/)  
+* ##### [GlobalPing-Cli](https://github.com/jsdelivr/globalping-cli)
+* ##### [High Availability Clusters](https://ubuntu.com/server/docs/introduction-to-high-availability#high-availability-clusters)
+* ##### [Content Delivery Network](https://en.wikipedia.org/wiki/Content_delivery_network)
+* ##### [Conceptual framework](https://en.wikipedia.org/wiki/Conceptual_framework)
+* ##### [Blockchain Net node](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
 
