@@ -6,9 +6,7 @@ BlockChain |  | # Stack
  [Mining](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain) |  | 
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/images/blockchain.png" width="5%"></img>
----
-##### [ -- EXPERIMENTAL Installation of AMD Driver and DownGrade OR UpGrade Kernel version -- ]
-##### [ -- WRONG Combination of Kernel version and AMD Driver could makes the operating system unusable -- ]
+
 ---
 
 ## Actively participate in blockchain mining
@@ -90,6 +88,8 @@ amdgpu-install --opencl=rocr,legacy --vulkan=amdvlk,pro
 
 
 ---
+##### [ -- EXPERIMENTAL Installation of AMD Driver and DownGrade OR UpGrade Kernel version -- ]
+##### [ -- WRONG Combination of Kernel version and AMD Driver could makes the operating system unusable -- ]
 ### Ubuntu Tools :
 * Upgrade or Downgrade Kernel
 ### [ubuntu-mainline-kernel](https://github.com/pimlie/ubuntu-mainline-kernel.sh/blob/617171ebea0a506d57659f43bc07fb591e3c4a56/ubuntu-mainline-kernel.sh#L4) 
