@@ -46,6 +46,3 @@ cd universalbit-dev/ann/
 * [Arduino Projects](https://randomnerdtutorials.com/projects-esp32/)
 * [MicroPython on ESP32](https://randomnerdtutorials.com/getting-started-micropython-esp32-esp8266/)
 ---
-
-## Contact
-##### [UniversalBit-dev](https://github.com/universalbit-dev) -- [UniversalBitCDN](https://universalbitcdn.it) -- [WebSite](https://universalbit.it) -- [@Universalbit](https://mastodon.social/@UniversalBit)
