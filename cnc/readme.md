@@ -27,8 +27,6 @@ cp -R ~/Downloads/grbl-1.1h.20190825 GRBL
 cp -R GRBL /home/universalbit/Arduino/libraries/
 ```
 
-
-
 run [Arduino-IDE](https://www.arduino.cc/en/software) 1.8.19
 <strong>Upload</strong> grbl.zip created previously
 
@@ -39,7 +37,7 @@ run [Arduino-IDE](https://www.arduino.cc/en/software) 1.8.19
 
 
 ### Resources:
-* [CNC MACHINES:](https://github.com/universalbit-dev/cnc-router-machines)
+* [CNC MACHINES](https://github.com/universalbit-dev/cnc-router-machines)
 * [CNC wiki](https://en.wikipedia.org/wiki/CNC_router)
 * [Universal G-Code Sender (UGS)](https://universalgcodesender.com/)
 
