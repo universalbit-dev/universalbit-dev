@@ -1,4 +1,4 @@
-##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) ##### [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) ##### [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)
+##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) -- [Join Mastodon](https://mastodon.social/invite/wTHp2hSD) -- [Website](https://www.universalbit.it/) -- [Content Delivery Network](https://universalbitcdn.it/)
 
 # Upload [GRBL](https://github.com/grbl/grbl) to Arduino Nano Shield V3.
 Grbl is a no-compromise, high performance, low cost alternative to parallel-port-based motion control for CNC milling. It will run on a vanilla Arduino (Duemillanove/Uno) as long as it sports an Atmega 328.
@@ -38,7 +38,8 @@ run [Arduino-IDE](https://www.arduino.cc/en/software) 1.8.19
 ### Ready to connect Arduino Nano Shield V3 to [CNCJS](https://github.com/universalbit-dev/cnc-router-machines) for uploading gcode and start cnc milling simulation.
 
 
-Resources:
-* ##### [CNC MACHINES:](https://github.com/universalbit-dev/cnc-router-machines)
-* ##### [CNC wiki](https://en.wikipedia.org/wiki/CNC_router)
+### Resources:
+* [CNC MACHINES:](https://github.com/universalbit-dev/cnc-router-machines)
+* [CNC wiki](https://en.wikipedia.org/wiki/CNC_router)
+* [Universal G-Code Sender (UGS)](https://universalgcodesender.com/)
 
