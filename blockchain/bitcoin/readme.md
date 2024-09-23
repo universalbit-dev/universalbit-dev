@@ -5,9 +5,8 @@
 
 * Clone project:
 ```bash
+cd /home/$USER
 git clone https://github.com/universalbit-dev/universalbit-dev.git
-cd universalbit-dev/blockchain/
-
 ```
 ---
 * Latest Bitcoin Full Node 
@@ -16,26 +15,16 @@ curl https://bitnodes.io/install-full-node.sh | sh
 ```
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/bitcoin/gif/btc-net-node.gif" width="auto"></img>
 
-* Edit [bitcoin configuration file](https://bitcoincoredocs.com/bitcoin-conf.html)
-```bash
-nano /home/your_username/.bitcoin/bitcoin.conf
-```
 #### bitcoin node configuration file (minimal disk space)
 ```bash
-prune=550
-maxconnections=8
-listen=0
-maxuploadtarget=144
-checkblocks=1
-checklevel=0
-txindex=0
+cp bitcoin.conf /home/$USER/.bitcoin/
+cp /home/$USER/bitcoin-core/bin/bitcoind /home/$USER/universalbit-dev/blockchain/bitcoin/
 ```
 
----
-
-* [npm installation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 ```bash
-npm i && npm i audit fix
+cd /home/$USER/universalbit-dev/blockchain/bitcoin
+npm i && npm audit fix
+npm i pm2 -g
 ```
 
 * start BITCOIN-NODE with [pm2 process manager](https://pm2.io/docs/runtime/guide/process-management/) 
