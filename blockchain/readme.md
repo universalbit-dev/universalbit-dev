@@ -111,20 +111,6 @@ sudo wget https://raw.githubusercontent.com/pimlie/ubuntu-mainline-kernel.sh/mas
 sudo ubuntu-mainline-kernel.sh -r
 ```
 
-* Install Kernel Version v6.2.0 (default kernel 6.1.57-sm4) 
-
-```bash
-#sudo ubuntu-mainline-kernel.sh -i <<kernel version to install>>
-sudo ubuntu-mainline-kernel.sh -i v6.2.0
-```
-
-```bash
-Downloading amd64/linux-headers-6.2.0-060200-generic_6.2.0-060200.202302191831_amd64.deb: 100%
-Downloading amd64/linux-headers-6.2.0-060200_6.2.0-060200.202302191831_all.deb: 100%
-Downloading amd64/linux-image-unsigned-6.2.0-060200-generic_6.2.0-060200.202302191831_amd64.deb: 100%
-Downloading amd64/linux-modules-6.2.0-060200-generic_6.2.0-060200.202302191831_amd64.deb: 100%
-```
-
 ##### Edit Grub Bootloader Display MenuEntry 
 ```bash
 sudo grub-mkconfig | grep -iE "menuentry 'Ubuntu, with Linux" | awk '{print i++ " : "$1, $2, $3, $4, $5, $6, $7}'
