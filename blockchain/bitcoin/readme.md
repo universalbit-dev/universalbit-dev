@@ -36,6 +36,7 @@ pm2 start btc_pruned.js
 ---
 
 #### [PM2 Startup Script Generator](https://pm2.keymetrics.io/docs/usage/startup/)
+can generate startup scripts and configure them in order to keep your process list intact across expected or unexpected machine restarts.
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/bitcoin/gif/pm2_btc_startup_script.gif" width="auto"></img>
 
 ### Resources:
