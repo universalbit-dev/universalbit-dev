@@ -77,14 +77,19 @@ sudo wget -qO - https://packages.lunarg.com/lunarg-signing-key-pub.asc | sudo ap
 && sudo apt install vulkan-sdk
 ```
 
-### Install AMD Driver 22.40  (Ubuntu 20.04) [Release Notes](https://www.amd.com/en/resources/support-articles/release-notes/RN-AMDGPU-UNIFIED-LINUX-22-40-6.html)
+### [Development and Tools packages](https://github.com/universalbit-dev/AMDVLK?tab=readme-ov-file)
+```bash
+sudo apt-get install libssl-dev libx11-dev libxcb1-dev x11proto-dri2-dev libxcb-dri3-dev libxcb-dri2-0-dev libxcb-present-dev libxshmfence-dev libxrandr-dev libwayland-dev
+```
 
+### Install AMD Driver 22.40  (Ubuntu 20.04) [Release Notes](https://www.amd.com/en/resources/support-articles/release-notes/RN-AMDGPU-UNIFIED-LINUX-22-40-6.html)
 ```bash
 sudo wget https://repo.radeon.com/amdgpu-install/22.40.6/ubuntu/focal/amdgpu-install_5.4.50406-1_all.deb
 sudo dpkg --add-architecture i386
 amdgpu-install --opencl=rocr,legacy --vulkan=amdvlk,pro
 ```
-* After this operation, 2.8GB of additional disk space will be used. 
+
+* After this operation, > 2.8GB of additional disk space will be used. 
 
 
 ---
