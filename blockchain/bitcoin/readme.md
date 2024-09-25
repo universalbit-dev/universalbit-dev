@@ -1,5 +1,14 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) -- [Join Mastodon](https://mastodon.social/invite/wTHp2hSD) -- [Website](https://www.universalbit.it/) -- [Content Delivery Network](https://universalbitcdn.it/)
 
+BlockChain |  | # Stack
+---|---|---
+ [NetNode](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin) |  | 
+ [Buy-Sell](https://github.com/universalbit-dev/gekko-m4-globular-cluster/blob/master/README.md) |  | 
+ [Mining](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain) |  | 
+
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/images/blockchain.png" width="5%"></img>
+
+
 #### Pruned Node simple explanation
 [means: |storage - minimum disk space required for running a full node|](https://programmingblockchain.gitbook.io/programmingblockchain/wallet/pruned-node)
 
