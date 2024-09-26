@@ -32,7 +32,7 @@ pm2 start ecosystem.config.js
 ```
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/cdn_ecosystem.gif" width="auto"></img>
 
-#### Pm2 Script heavy disk memory usage
+#### heavy disk memory usage (optimization of system performance)
 ```bash
 pm2 start autoclean.js --exp-backoff-restart-delay=10000
 ```
