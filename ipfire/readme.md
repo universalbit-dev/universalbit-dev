@@ -60,8 +60,6 @@ Overview:
 
 ---
 <strong>Configuring 4 NICs</strong> assignment:
-
-
 <strong>Red Zone</strong>  [INTERNET]
 * Ralink USB Wifi Adapter 300mbps
 * interface:wlan1 (Native)
@@ -72,7 +70,6 @@ Overview:
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/bridge_green_area_4.png" width="auto"></img>
 
----
 ---
 
 <strong>Configuring 5 NICs</strong> assignment:
