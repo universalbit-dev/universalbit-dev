@@ -29,6 +29,7 @@ Overview:
 * [Captive Portal](https://www.ipfire.org/docs/configuration/network/captive)
 * [VPN](https://www.ipfire.org/docs/configuration/services/openvpn) -- [OpenVPN Configuration](https://www.ipfire.org/docs/configuration/services/openvpn/config)
 * [DNS forwarding](https://www.ipfire.org/docs/configuration/network/dnsforward)
+* [IPS(Intrusion Prevention System)](https://www.ipfire.org/docs/configuration/firewall/ips)
 
 ### Status
 [Network Status](#NetworkStatus)
