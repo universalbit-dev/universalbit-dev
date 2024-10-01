@@ -84,7 +84,7 @@ Overview:
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/bridge_green_area_5.png" width="auto"></img>
 
-## Network [ Internet -- Wireless -- LAN -- DMZ ]
+## [NetworkSetup](https://www.ipfire.org/docs/installation/step5) [ Internet -- Wireless -- LAN -- DMZ ]
 * ##### another example [Zone Configuration NIC Assignment](https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/nic/images/4_Zone_Configuration.png)
 
 [Network Adapter Hardware Compatibility List](https://www.ipfire.org/docs/hardware/networking)
