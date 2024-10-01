@@ -31,6 +31,7 @@ Overview:
 * [VPN](https://www.ipfire.org/docs/configuration/services/openvpn) -- [OpenVPN Configuration](https://www.ipfire.org/docs/configuration/services/openvpn/config)
 * [DNS forwarding](https://www.ipfire.org/docs/configuration/network/dnsforward)
 * [IPS(Intrusion Prevention System)](https://www.ipfire.org/docs/configuration/firewall/ips)
+* [Net-to-Net as a TLS-server](https://www.ipfire.org/docs/configuration/services/openvpn/tls-server)
 
 ### Status
 [Network Status](#NetworkStatus)
@@ -89,16 +90,14 @@ Overview:
 
 [Network Adapter Hardware Compatibility List](https://www.ipfire.org/docs/hardware/networking)
 
-## NetworkStatus
+## Network Status:
 
-### External (Red)
+### (Red) Internet
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/status_external_traffic.png" width="auto"></img>
 
-### Internal (Green)
+### (Green) LAN
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/status_internal_traffic.png"></img>
-
-
-[status reports on various parts of the system](https://www.ipfire.org/docs/configuration/status)
+* [status reports on various parts of the system](https://www.ipfire.org/docs/configuration/status)
 
 
 
