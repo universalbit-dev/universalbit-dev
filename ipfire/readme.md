@@ -14,7 +14,7 @@ Overview:
 
 
 ## [Docs](https://www.ipfire.org/docs)
-[Installer](https://www.ipfire.org/docs/installation/step3)
+* [Installer](https://www.ipfire.org/docs/installation/step3)
 ---
 ### WebGui
 * [Web Interface](https://www.ipfire.org/docs/configuration)
