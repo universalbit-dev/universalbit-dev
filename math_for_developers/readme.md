@@ -4,13 +4,13 @@
 
 |         Math For Developers                   |                              |
 | ----------------------------------- | ----------------------------------- |
-| ![math_for_developer_01]() | ![math_for_developers_02]() |
+| ![math_for_developer_0_0](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-0_0.png) | ![math_for_developers_0_1](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-1_1.png) |
 |                             |                             |
-| ![math_for_developers_03]() | ![math_for_developers_04]() |
-| ![math_for_developers_05]() | ![math_for_developers_06]() |
+| ![math_for_developers_0_2](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-2_2.png) | ![math_for_developers_0_3](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-3_3.png) |
+| ![math_for_developers_0_4](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-4_4.png) | ![math_for_developers_0_5](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-5_5.png) |
 
 |                            |                              |
 | ----------------------------------- | ----------------------------------- |
-| ![math_for_developers_07]() | ![math_for_developers_08]() |
+| ![math_for_developers_0_6](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-6_6.png) | ![math_for_developers_0_7](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-7_7.png) |
 |                             |                             |
-| ![math_for_developers_09]() | ![math_for_developers_10]() |
+| ![math_for_developers_0_8](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-8_8.png) | ![math_for_developers_0_9](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-9_9.png) |
