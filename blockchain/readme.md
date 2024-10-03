@@ -4,6 +4,8 @@ BlockChain |  | # Stack
  [NetNode](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin) |  | 
  [Buy-Sell](https://github.com/universalbit-dev/gekko-m4-globular-cluster/blob/master/README.md) |  | 
  [Mining](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain) |  | 
+ * [CPU Mining](https://github.com/universalbit-dev/CityGenerator/blob/master/workers/workers.md)
+ * [ESP32 MicroMiner](https://github.com/universalbit-dev/esptool)
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/images/blockchain.png" width="5%"></img>
 
@@ -11,8 +13,8 @@ BlockChain |  | # Stack
 
 ## Actively participate in blockchain mining
 ### It does not require large investments and is useful in a blockchain environment. 
-
-Simplemining Os :
+* [GPU mining] 
+##### Simplemining Os :
 Offers an advanced dashboard for CPU/GPU/ASIC management at a negligible monthly cost. 
 [SimpleMining.net](https://simplemining.net/)
 Make mining more accessible,advantages and disadvantages are being evaluated.
@@ -116,8 +118,7 @@ sudo ubuntu-mainline-kernel.sh -r
 sudo grub-mkconfig | grep -iE "menuentry 'Ubuntu, with Linux" | awk '{print i++ " : "$1, $2, $3, $4, $5, $6, $7}'
 ```
 ### Resources:
-##### [CPU Mining](https://github.com/universalbit-dev/CityGenerator/blob/master/workers/workers.md)
-##### [ESP32 Mining](https://github.com/universalbit-dev/esptool)
+
 ##### [Release Note AMD Driver 22.40](https://www.amd.com/en/resources/support-articles/release-notes/RN-AMDGPU-UNIFIED-LINUX-22-40-6.html)
 ##### [AMDGPU Mining Ubuntu Server](https://github.com/michalslonina/Ubuntu-Server-LTS-20.04-GUIDE-AMDGPU-Mining)
 ##### [Bypass PCIE 3.0 atomics limitation](https://www.reddit.com/r/gpumining/comments/ptmyjd/ubuntu_20043_amdgpu_2130_opencl_rocr_rocm/)
