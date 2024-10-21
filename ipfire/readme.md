@@ -46,46 +46,11 @@ Overview:
 
 
 ## ZoneConfiguration 
-<strong>Configuring 3 NICs</strong> assignment
+* NIC Assignment
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/nic/images/4_Zone_Configuration.png" width="auto"></img>
 
-<strong>Red Zone</strong>  [INTERNET]
-* wlan1 (Native)  
-
-<strong>Green Zone Switch Area</strong> [LAN] 
-* Bridged Together wlan2 and eth0 
-
-
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/bridge_green_area.png" width="auto"></img>
-[docs](https://www.ipfire.org/docs/configuration/network/zoneconf/bridge3nic2green)
-
----
-<strong>Configuring 4 NICs</strong> assignment:
-<strong>Red Zone</strong>  [INTERNET]
-* Ralink USB Wifi Adapter 300mbps
-* interface:wlan1 (Native)
-  
-<strong>Green Zone Switch Area</strong> [LAN]
-* Bridged old reused  Mini PCI Express 54Mbps WiFi card,Ralink USB Wifi Adapter 300mbps and  Ethernet 40 Gbps 2000 MHz Cat 8
-* interfaces:wlan0 wlan2 and eth0 (Native)
-
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/bridge_green_area_4.png" width="auto"></img>
-
----
-
-<strong>Configuring 5 NICs</strong> assignment:
-
-<strong>Red Zone</strong>  [INTERNET]
-* Ralink USB Wifi Adapter 300mbps
-* interface:wlan3 (Native)
-  
-<strong>Green Zone Switch Area</strong> [LAN]
-* Bridged Ralink USB Wifi Adapters 300mbps and  Ethernet 40 Gbps 2000 MHz Cat 8
-* interfaces:wlan1 wlan2 wlan4 and eth0 (Native)
-
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/bridge_green_area_5.png" width="auto"></img>
 
 ## [NetworkSetup](https://www.ipfire.org/docs/installation/step5) [ Internet -- Wireless -- LAN -- DMZ ]
-* ##### another example [Zone Configuration NIC Assignment](https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/nic/images/4_Zone_Configuration.png)
 
 [Network Adapter Hardware Compatibility List](https://www.ipfire.org/docs/hardware/networking)
 
