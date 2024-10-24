@@ -1,3 +1,4 @@
+const { addon: ov } = require('openvino-node');
 const { Chess } = require('chess.js')
 
 thegameofchess=[];
