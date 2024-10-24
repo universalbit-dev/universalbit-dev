@@ -7,7 +7,7 @@ git clone https://github.com/universalbit-dev/universalbit-dev/
 cd universalbit-dev/chess/
 npm i
 npm i pm2 -g
-pm2 start the_random_game_of_chess.js
+pm2 start ecosystem.config.js
 ```
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/chess/images/random_game_of_chess.gif" width="auto"></img>
 
