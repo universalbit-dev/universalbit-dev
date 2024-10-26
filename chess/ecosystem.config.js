@@ -1,7 +1,7 @@
 module.exports = {
   apps : [
   {
-  name: 'world',
+  name: 'chess',
   script    : 'the_random_game_of_chess.js',
   name      : '|CHESS||',
   exec_mode: '',
