@@ -1,7 +1,12 @@
 module.exports = {
-  apps : [{
-    name   : "chess",
-    script : "./the_random_game_of_chess.js",
-    restart_delay: 3000
-  }]
+  apps : [
+  {
+  name: 'world',
+  script    : 'the_random_game_of_chess.js',
+  name      : '|CHESS||',
+  exec_mode: '',
+  exp_backoff_restart_delay: 5000
+  }
+]
+
 }
