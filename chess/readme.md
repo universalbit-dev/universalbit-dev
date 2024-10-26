@@ -1,7 +1,8 @@
 #### The Game of Chess   [chess.js](https://www.npmjs.com/package/chess.js)
 
 * [PM2](https://www.npmjs.com/package/pm2)
-* [Process Manager](https://pm2.io/docs/runtime/guide/process-management/)
+* [Process Management](https://pm2.io/docs/runtime/guide/process-management/)
+* [Documentation Usage](https://pm2.keymetrics.io/docs/usage/process-management/)
 
 ```bash
 git clone https://github.com/universalbit-dev/universalbit-dev/
