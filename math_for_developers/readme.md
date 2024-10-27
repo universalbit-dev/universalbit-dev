@@ -7,7 +7,7 @@
 
 |         Math For Developers                   |                              |
 | ----------------------------------- | ----------------------------------- |
-| ![math_for_developer_0_0](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-0_0.png) | ![math_for_developers_0_1](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-1_1.png) |
+| <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-0_0.png" width="60">  | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-1_1.png" width="50"> |
 |                             |                             |
 | ![math_for_developers_0_2](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-2_2.png) | ![math_for_developers_0_3](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-3_3.png) |
 | ![math_for_developers_0_4](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-4_4.png) | ![math_for_developers_0_5](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-5_5.png) |
