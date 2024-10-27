@@ -1,13 +1,16 @@
+## Math For Developers
+##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) -- [Join Mastodon](https://mastodon.social/invite/wTHp2hSD) -- [Website](https://www.universalbit.it/) -- [Content Delivery Network](https://universalbitcdn.it/)
+
+* [Dark](https://github.com/universalbit-dev/universalbit-dev/tree/main/math_for_developers/dark)
+* [Colors](https://github.com/universalbit-dev/universalbit-dev/tree/main/math_for_developers/colors)
+
 
 |         Math For Developers                   |                              |
 | ----------------------------------- | ----------------------------------- |
-| ![math_for_developer_0_0](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-0.png) | ![math_for_developers_0_1](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-1.png) |
+| <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-0.png" width="60">  | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-1.png" width="50"> |
 |                             |                             |
-| ![math_for_developers_0_2](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-2.png) | ![math_for_developers_0_3](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-3.png) |
-| ![math_for_developers_0_4](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-4.png) | ![math_for_developers_0_5](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-5.png) |
-
-|                            |                              |
-| ----------------------------------- | ----------------------------------- |
-| ![math_for_developers_0_6](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-6.png) | ![math_for_developers_0_7](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-7.png) |
+| <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-2.png" width="50"> | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-3.png" width="50"> |
+| <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-4.png" width="50"> | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-5.png" width="50"> |
+| <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-6.png" width="60"> | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-7.png" width="50"> |
 |                             |                             |
-| ![math_for_developers_0_8](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-8.png) | ![math_for_developers_0_9](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-9.png) |
+| <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-8.png" width="60"> | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/colors/mathematics-9.png" width="60"> |
