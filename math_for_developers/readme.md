@@ -9,11 +9,8 @@
 | ----------------------------------- | ----------------------------------- |
 | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-0_0.png" width="60">  | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-1_1.png" width="50"> |
 |                             |                             |
-| ![math_for_developers_0_2](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-2_2.png) | ![math_for_developers_0_3](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-3_3.png) |
-| ![math_for_developers_0_4](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-4_4.png) | ![math_for_developers_0_5](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-5_5.png) |
-
-|                            |                              |
-| ----------------------------------- | ----------------------------------- |
-| ![math_for_developers_0_6](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-6_6.png) | ![math_for_developers_0_7](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-7_7.png) |
+| <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-2_2.png" width="50"> | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-3_3.png" width="50"> |
+| <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-4_4.png" width="50"> | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-5_5.png" width="50"> |
+| <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-6_6.png" width="60"> | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-7_7.png" width="50"> |
 |                             |                             |
-| ![math_for_developers_0_8](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-8_8.png) | ![math_for_developers_0_9](https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-9_9.png) |
+| <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-8_8.png" width="60"> | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/math_for_developers/mathematics-9_9.png" width="60"> |
