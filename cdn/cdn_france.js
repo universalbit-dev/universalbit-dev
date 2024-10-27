@@ -8,3 +8,13 @@ exec('echo $(globalping dns cdn.jsdelivr.net from france --limit 10)',
              console.log('exec error: ' + error);
         }
     });
+
+var exec02 = require('node:child_process').exec
+exec('echo $(globalping dns cdn.jsdelivr.net from france+paris --limit 10)',
+    function (error, stdout, stderr) {
+        console.log('stdout:'+ stdout);
+        console.log('stderr: ' + stderr);
+        if (error !== null) {
+             console.log('exec error: ' + error);
+        }
+    });
