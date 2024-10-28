@@ -1,6 +1,6 @@
 /* Run Bash Script */
 var exec = require('node:child_process').exec
-exec('echo $(pm2 restart all)',
+exec('echo $(pm2 restart all --restart-delay=30000)',
     function (error, stdout, stderr) {
         console.log('stdout:'+ stdout);
         console.log('stderr: ' + stderr);
