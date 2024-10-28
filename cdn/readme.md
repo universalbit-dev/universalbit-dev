@@ -10,6 +10,8 @@ cd universalbit-dev/cdn/
 
 * [universalbitcdn](https://universalbitcdn.it)
 ---
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/cdn_universalbit.png" width="auto"></img>
+
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/content_delivery_network_live.gif" width="auto"></img>
 
