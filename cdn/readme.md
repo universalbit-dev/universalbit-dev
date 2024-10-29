@@ -13,8 +13,9 @@ cd universalbit-dev/cdn/
 docker run -d --log-driver local --network host --restart=always --name globalping-probe globalping/globalping-probe
 ```
 
-### To join the UniversalBit network what to do:
-* [snap](https://snapcraft.io/docs/installing-snap-on-ubuntu) install [GlobalPing]
+### To join the UniversalBit network what to do.
+
+* [snap](https://snapcraft.io/docs/installing-snap-on-ubuntu) install [GlobalPing](https://globalping.io)
 ```bash
 snap install globalping
 ```
@@ -38,7 +39,7 @@ pm2 start autoclean.js --exp-backoff-restart-delay=10000
 
 * [Machine learning (ML) powered anomaly detection](https://learn.netdata.cloud/docs/machine-learning-and-anomaly-detection/machine-learning-ml-powered-anomaly-detection)
 ##### Anomalies may exist without adequate "lenses" or "filters" to see them and may become visible only when the tools exist to define them
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/netdata_android_device.jpg" width="40%"></img>
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/netdata_android_device.jpg" width="auto"></img>
 
 #### Resources:
 * ##### [Github Globalping Repository](https://github.com/jsdelivr/globalping)
