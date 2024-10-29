@@ -8,7 +8,7 @@ git clone https://github.com/universalbit-dev/universalbit-dev.git
 cd universalbit-dev/cdn/
 ```
 
-### To join the Globalping probe network all you have to do is run our container.
+### To join the [Globalping probe network](https://globalping.io) all you have to do is run our container.
 ```
 docker run -d --log-driver local --network host --restart=always --name globalping-probe globalping/globalping-probe
 ```
