@@ -9,13 +9,13 @@ cd universalbit-dev/cdn/
 ```
 
 ### To join the [Globalping probe network](https://globalping.io) all you have to do is run our container.
+[Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 ```
 docker run -d --log-driver local --network host --restart=always --name globalping-probe globalping/globalping-probe
 ```
 
 ### To join the UniversalBit network what to do.
-
-* [snap](https://snapcraft.io/docs/installing-snap-on-ubuntu) install [GlobalPing](https://globalping.io)
+[Snap Store GlobalPing Installation](https://snapcraft.io/install/globalping/ubuntu)
 ```bash
 snap install globalping
 ```
