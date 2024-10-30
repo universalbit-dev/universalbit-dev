@@ -31,7 +31,7 @@ cp bitcoin.conf /home/$USER/.bitcoin/
 cp /home/$USER/bitcoin-core/bin/bitcoind /home/$USER/universalbit-dev/blockchain/bitcoin/
 ```
 
-#### [Nodejs Engine 20]
+#### [Nodejs Engine 20](https://github.com/nvm-sh/nvm)
 ```bash
 cd /home/$USER/universalbit-dev/blockchain/bitcoin
 npm i && npm audit fix
