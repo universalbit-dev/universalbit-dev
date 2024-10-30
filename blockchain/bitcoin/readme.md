@@ -30,11 +30,14 @@ cp bitcoin.conf /home/$USER/.bitcoin/
 cp /home/$USER/bitcoin-core/bin/bitcoind /home/$USER/universalbit-dev/blockchain/bitcoin/
 ```
 
+#### [Nodejs Engine 20]
 ```bash
 cd /home/$USER/universalbit-dev/blockchain/bitcoin
 npm i && npm audit fix
 npm i pm2 -g
+npm i pm2 --save
 ```
+Note: [Module Not Found]()
 
 * start BITCOIN-NODE with [pm2 process manager](https://pm2.io/docs/runtime/guide/process-management/) 
 ```bash
