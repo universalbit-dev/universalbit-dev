@@ -42,8 +42,8 @@ pm2 start btc_pruned.js
 ```
 ![BTC](https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/bitcoin/btc-pruned-node.png "btc")
 ##### Note: 
-* [PM2 Module Not Found](https://github.com/universalbit-dev/universalbit-dev/edit/main/blockchain/bitcoin/gif/readme.md)
-* [Gif Tutorial](https://github.com/universalbit-dev/universalbit-dev/edit/main/blockchain/bitcoin/gif/readme.md)
+* [PM2 Module Not Found](https://github.com/universalbit-dev/universalbit-dev/main/blockchain/bitcoin/gif/readme.md)
+* [Gif Tutorial](https://github.com/universalbit-dev/universalbit-dev/main/blockchain/bitcoin/gif/readme.md)
 ---
 
 #### [PM2 Startup Script Generator](https://pm2.keymetrics.io/docs/usage/startup/)
