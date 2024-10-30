@@ -22,8 +22,6 @@ git clone https://github.com/universalbit-dev/universalbit-dev.git
 ```bash
 curl https://bitnodes.io/install-full-node.sh | sh
 ```
-[gif tutorial under review]
-<img src="" width="auto"></img>
 
 #### bitcoin node configuration file (minimal disk space)
 ```bash
@@ -38,14 +36,14 @@ npm i && npm audit fix
 npm i pm2 -g
 npm i pm2 --save
 ```
-Note: [Module Not Found]()
-
-* start BITCOIN-NODE with [pm2 process manager](https://pm2.io/docs/runtime/guide/process-management/) 
+* Start BITCOIN-NODE with [pm2 process manager](https://pm2.io/docs/runtime/guide/process-management/) 
 ```bash
 pm2 start btc_pruned.js
 ```
 ![BTC](https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/bitcoin/btc-pruned-node.png "btc")
-
+##### Note: 
+* [PM2 Module Not Found](https://github.com/universalbit-dev/universalbit-dev/edit/main/blockchain/bitcoin/gif/readme.md)
+* [Gif Tutorial](https://github.com/universalbit-dev/universalbit-dev/edit/main/blockchain/bitcoin/gif/readme.md)
 ---
 
 #### [PM2 Startup Script Generator](https://pm2.keymetrics.io/docs/usage/startup/)
