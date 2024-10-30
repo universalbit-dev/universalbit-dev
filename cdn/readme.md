@@ -13,6 +13,7 @@ cd universalbit-dev/cdn/
 ```
 docker run -d --log-driver local --network host --restart=always --name globalping-probe globalping/globalping-probe
 ```
+[How to use UFW firewall with Docker containers](https://blog.jarrousse.org/2023/03/18/how-to-use-ufw-firewall-with-docker-containers/)
 
 ### To join the UniversalBit network what to do.
 [Snap Store GlobalPing Installation](https://snapcraft.io/install/globalping/ubuntu)
