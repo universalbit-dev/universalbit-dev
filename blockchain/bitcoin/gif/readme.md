@@ -2,7 +2,7 @@
 
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/bitcoin/gif/btc-net-node.gif" width="auto"></img>
 
-#### Issue: [bitcoin network](https://bitnodes.io/nodes/network-map/) pruned node does not start
+#### Issue: [bitcoin network](https://bitnodes.io/nodes/network-map/) pruned node does not start [Module Not Found]
 ```bash
 #After Running this command 
 pm2 start btc_pruned.js
