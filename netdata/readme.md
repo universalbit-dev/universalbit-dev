@@ -132,26 +132,11 @@ sudo mkswap /swapfile
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
 
-##### [Ufw](https://en.wikipedia.org/wiki/Uncomplicated_Firewall)
-
-##### Firewall Rules:
-
-```bash
-ufw allow 443
-ufw allow 853
-ufw allow 953
-ufw allow 53
-```
-
-<gif>
-
-##### [Fail2Ban](https://en.wikipedia.org/wiki/Fail2ban)
+##### [Fail2Ban](https://github.com/fail2ban/fail2ban)
 
 ```bash
 apt install fail2ban
 ```
-
-<gif>
 
 ##### [Pihole](https://en.wikipedia.org/wiki/Pi-hole) Low Level URL filter
 
@@ -161,17 +146,7 @@ apt install fail2ban
 curl -sSL https://install.pi-hole.net | bash
 ```
 
-<gif>
-
-##### note pihole setup:
-Configuration DNS : 4.2.2.2 (Low Level)
-Admin Web Interface: Disabled
-Logging Level : No Log
-
-
 * [Nodejs](https://en.wikipedia.org/wiki/Node.js) Javascript Engine:
-
-<gif>
 
 ##### [NVM](https://github.com/nvm-sh/nvm) node version manager :
 ```bash
