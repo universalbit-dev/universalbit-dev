@@ -2,20 +2,10 @@
 
 ---
 
-## [UniversalBitCDN](https://universalbitcdn.it/)
-### [content-delivery-network](https://en.wikipedia.org/wiki/Content_delivery_network) basic configuration:
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/netdata_android_device.jpg" width="40%"></img>
-
-### [NetData](https://en.wikipedia.org/wiki/Netdata):
-
-* Like all open source programs, [jsdelivr.com](https://en.wikipedia.org/wiki/JSDelivr) Network.
-
-##### Technically, it's fine
-
-* [Ubuntu 22.04 • 2.29 GHz • 1 Cores • x86_64 • 957.41 MiB RAM • 35.00 GiB HD]
-
-##### There's more open source software in a smartphone than in linux
-
+##### [NetData](https://github.com/netdata/netdata)
+```bash
+wget -O /tmp/netdata-kickstart.sh https://get.netdata.cloud/kickstart.sh && sh /tmp/netdata-kickstart.sh
+```
 
 * WebServer [Nginx](https://en.wikipedia.org/wiki/Nginx)
 ```bash
@@ -137,49 +127,5 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```bash
 apt install fail2ban
 ```
-
-##### [Pihole](https://en.wikipedia.org/wiki/Pi-hole) Low Level URL filter
-
-  -- Server DNS Enabled -- (PiHole) 
-
-```bash
-curl -sSL https://install.pi-hole.net | bash
-```
-
-* [Nodejs](https://en.wikipedia.org/wiki/Node.js) Javascript Engine:
-
-##### [NVM](https://github.com/nvm-sh/nvm) node version manager :
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-```
-
-##### [NetData](https://github.com/netdata/netdata)
-```bash
-wget -O /tmp/netdata-kickstart.sh https://get.netdata.cloud/kickstart.sh && sh /tmp/netdata-kickstart.sh
-```
-
-##### Content Delivery Network [GlobalPing](https://www.jsdelivr.com/globalping) jsdelivr.com
-from universalbit-dev repository:
-
-<gif>
-
-```bash
-git clone https://github.com/universalbit-dev/universalbit-dev.git
-```
-
--- GLOBAL - USA - EUROPE - ITALY - PALERMO --
-```bash
-cd universalbit-dev/cdn
-npm i
-npm i pm2 -g
-pm2 start ecosystem.config.js
-```
-
-##### [HaCluster](https://en.wikipedia.org/wiki/High-availability_cluster) Environment && [HAproxy](https://en.wikipedia.org/wiki/HAProxy) Environment
-
-```bash
-apt install haproxy heartbeat
-```
-
 
 
