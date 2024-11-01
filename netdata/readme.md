@@ -12,21 +12,22 @@ wget -O /tmp/netdata-kickstart.sh https://get.netdata.cloud/kickstart.sh && sh /
 sudo apt install nginx
 ```
 
+##### [LetsEncrypt](https://letsencrypt.org/)
 * [CertBot](https://en.wikipedia.org/wiki/Let's_Encrypt#Software_implementation) (LetsEncrypt) HTTPS
-##### [LetsEncrypt](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-22-04)
+
 ```bash
 sudo snap install core; sudo snap refresh core
 sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
+```
+#### [UFW](https://help.ubuntu.com/community/UFW)
+```bash
 sudo ufw allow 'Nginx Full'
 sudo ufw delete allow 'Nginx HTTP'
 ```
-<gif>
+
 
 ##### [Nginx as Reverse Proxy](https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-reverse-proxy-on-ubuntu-22-04)
-
-<gif>
-
 ```
  sudo nano /etc/nginx/sites-enabled/default
 ```
@@ -113,8 +114,6 @@ server {
 dpkg-reconfigure tzdata
 ```
 ##### [Swap space](https://en.wikipedia.org/wiki/Memory_paging#Unix_and_Unix-like_systems)
-<gif>
-  
 ```bash
 sudo fallocate -l 6G /swapfile
 sudo chmod 600 /swapfile
@@ -123,7 +122,6 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
 
 ##### [Fail2Ban](https://github.com/fail2ban/fail2ban)
-
 ```bash
 apt install fail2ban
 ```
