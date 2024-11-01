@@ -7,7 +7,7 @@
 wget -O /tmp/netdata-kickstart.sh https://get.netdata.cloud/kickstart.sh && sh /tmp/netdata-kickstart.sh
 ```
 
-* WebServer [Nginx](https://en.wikipedia.org/wiki/Nginx)
+* WebServer [Nginx](https://nginx.org/en/docs/)
 ```bash
 sudo apt install nginx
 ```
@@ -31,7 +31,8 @@ sudo ufw delete allow 'Nginx HTTP'
 ```
  sudo nano /etc/nginx/sites-enabled/default
 ```
-##### default
+
+canonical: www.universalbitcdn.it
 ```
 server {
 	listen 80 default_server;
@@ -76,7 +77,8 @@ server {
 
 }
 ```
-##### universalbitcdn
+
+domain: universalbitcdn.it
 ```
 sudo nano /etc/nginx/sites-enabled/universalbitcdn
 ```
@@ -109,21 +111,24 @@ server {
 
 ```
 
-##### Reconfigure [TimeZone](https://en.wikipedia.org/wiki/Time_zone) (Europe/Italy)
-```bash
-dpkg-reconfigure tzdata
-```
-##### [Swap space](https://en.wikipedia.org/wiki/Memory_paging#Unix_and_Unix-like_systems)
-```bash
-sudo fallocate -l 6G /swapfile
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
-```
-
 ##### [Fail2Ban](https://github.com/fail2ban/fail2ban)
 ```bash
 apt install fail2ban
 ```
+
+##### Reconfigure [TimeZone](https://en.wikipedia.org/wiki/Time_zone) (Europe/Italy)
+```bash
+dpkg-reconfigure tzdata
+```
+
+##### [UniversalBitCdn.it](https://universalbitcdn.it/)
+
+---
+
+#### Wikipedia Resources:
+* [NetData](https://en.wikipedia.org/wiki/Netdata)
+* [Nginx](https://en.wikipedia.org/wiki/Nginx)
+* [UFW](https://en.wikipedia.org/wiki/Uncomplicated_Firewall)
+* [NetWork Time Protocol](https://en.wikipedia.org/wiki/Network_Time_Protocol)
 
 
