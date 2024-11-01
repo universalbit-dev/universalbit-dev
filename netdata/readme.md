@@ -32,7 +32,7 @@ sudo ufw delete allow 'Nginx HTTP'
  sudo nano /etc/nginx/sites-enabled/default
 ```
 
-canonical: www.universalbitcdn.it
+domain: universalbitcdn.it
 ```
 server {
 	listen 80 default_server;
@@ -78,7 +78,6 @@ server {
 }
 ```
 
-domain: universalbitcdn.it
 ```
 sudo nano /etc/nginx/sites-enabled/universalbitcdn
 ```
