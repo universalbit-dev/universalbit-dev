@@ -13,7 +13,7 @@ However you may customize this for your network location.
 
 ---
 
-#### [Europe — europe.pool.ntp.org](https://www.ntppool.org/zone/europe)
+#### [pool.ntp.org](https://www.ntppool.org)
 
 Installation
 ```
