@@ -2,7 +2,7 @@
 
 ---
 
-* ## [pdf2json](https://github.com/universalbit-dev/pdf2json) repository:
+* ##### [pdf2json](https://github.com/universalbit-dev/pdf2json) repository:
   
 JSON-encoded PDF files:
 | File Name         |  | [wikipedia resources](https://en.wikipedia.org/wiki/Main_Page)  |
