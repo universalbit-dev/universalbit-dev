@@ -14,6 +14,9 @@ JSON-encoded PDF files:
 | [fab_city_whitepaper.json](https://github.com/universalbit-dev/universalbit-dev/blob/main/json/fab_city_whitepaper.json) |  | [Fab City WhitePaper](https://fab.city/wp-content/uploads/2023/03/Fab-City_Whitepaper.pdf) |
 |   | |  |
 
+##### the scale of the problem is so complex that it requires global technological help
+* [Quick Store JSON](https://jsonbin.io/quick-store)
+
 
 
 ..."beware of the cuddly"
