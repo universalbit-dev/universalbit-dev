@@ -13,7 +13,8 @@ JsonBin.io project work well with json data.(Zero Database Setup or Maintenance)
 */
 
 import fs from "fs";
-import pdfParser from "pdf2json"; 
+import PDFParser from "pdf2json";
+const pdfParser = new PDFParser();
 
 pdfParser.on("pdfParser_dataError", errData => console.error(errData.parserError) );
 
