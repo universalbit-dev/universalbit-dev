@@ -12,8 +12,8 @@ JsonBin.io project work well with json data.(Zero Database Setup or Maintenance)
 
 */
 
-const fs=require("node:fs");const PDFParser=require("pdf2json");
-const pdfParser = new PDFParser();
+import fs from "fs";
+import pdfParser from "pdf2json"; 
 
 pdfParser.on("pdfParser_dataError", errData => console.error(errData.parserError) );
 
