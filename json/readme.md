@@ -11,7 +11,7 @@ JSON-encoded PDF files:
 | [maker culture.json](https://raw.githubusercontent.com/universalbit-dev/universalbit-dev/main/json/maker_culture.json)     |   | [Maker Culture](https://en.wikipedia.org/wiki/Maker_culture) |
 | [permaculture.json](https://raw.githubusercontent.com/universalbit-dev/universalbit-dev/main/json/permaculture.json)     |  | [Permaculture](https://en.wikipedia.org/wiki/Permaculture) |
 | [amicizia.json](https://github.com/universalbit-dev/universalbit-dev/blob/main/json/amicizia.json)     |  | [Amicizia](https://it.wikipedia.org/wiki/Amicizia) |
-| [fabcity white paper](https://github.com/universalbit-dev/universalbit-dev/blob/main/json/fab_city_whitepaper.json) |  | [Fab City WhitePaper](https://fab.city/wp-content/uploads/2023/03/Fab-City_Whitepaper.pdf) |
+| [fab_city_whitepaper.json](https://github.com/universalbit-dev/universalbit-dev/blob/main/json/fab_city_whitepaper.json) |  | [Fab City WhitePaper](https://fab.city/wp-content/uploads/2023/03/Fab-City_Whitepaper.pdf) |
 |   | |  |
 
 
