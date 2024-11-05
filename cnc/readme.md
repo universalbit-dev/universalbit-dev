@@ -1,5 +1,21 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) -- [Join Mastodon](https://mastodon.social/invite/wTHp2hSD) -- [Website](https://www.universalbit.it/) -- [Content Delivery Network](https://universalbitcdn.it/)
 
+
+### Internet of normal things in life
+
+
+##### CNCjs is a full-featured web-based interface for CNC controllers running Grbl, Marlin, Smoothieware, or TinyG.
+---
+
+* Linux app image cncjs v1.10.3
+```bash
+wget https://github.com/cncjs/cncjs/releases/download/v1.10.3/cncjs-app-1.10.3-linux-x86_64.AppImage
+```
+
+* ## [CncJS Desktop App](https://github.com/cncjs/cncjs/releases/download/v1.10.3/cncjs-app-1.10.3-linux-x86_64.AppImage)
+  ##### [releases](https://github.com/cncjs/cncjs/releases)
+
+
 # Upload [GRBL](https://github.com/grbl/grbl) to Arduino Nano Shield V3.
 Grbl is a no-compromise, high performance, low cost alternative to parallel-port-based motion control for CNC milling. It will run on a vanilla Arduino (Duemillanove/Uno) as long as it sports an Atmega 328.
 
@@ -34,7 +50,6 @@ run [Arduino-IDE](https://www.arduino.cc/en/software) 1.8.19
 
 ---
 ### Ready to connect Arduino Nano Shield V3 to [CNCJS](https://github.com/universalbit-dev/cnc-router-machines) for uploading gcode and start cnc milling simulation.
-
 
 ### Resources:
 * [CNC MACHINES](https://github.com/universalbit-dev/cnc-router-machines)
