@@ -11,8 +11,7 @@ module.exports = {
   name: 'planet debian',
   script    : 'cdn_planet_debian.js',
   name      : '|Planet Debian CDN ||',
-  exec_mode : "cluster",
-  instances : "-1"
+  exec_mode : "fork"
   },
   {
   name: 'europe',
@@ -53,43 +52,37 @@ module.exports = {
   name: 'world',
   script    : 'www.universalbit.it/cdn.js',
   name      : '|WORLD WWW UNBT||',
-  exec_mode : "cluster",
-  instances : "-1"
+  exec_mode : "fork"
   },
   {
   name: 'europe',
   script    : 'www.universalbit.it/cdn_europe.js',
   name      : '|EUROPE WWW UNBT||',
-  exec_mode : "cluster",
-  instances : "-1"
+  exec_mode : "fork"
   },
   {
   name: 'united states',
   script    : 'www.universalbit.it/cdn_united_states.js',
   name      : '|USA WWW UNBT||',
-  exec_mode : "cluster",
-  instances : "-1"
+  exec_mode : "fork"
   },
   {
   name: 'world',
   script    : 'universalbit.it/cdn.js',
   name      : '|WORLD UNIVERSALBIT||',
-  exec_mode : "cluster",
-  instances : "-1"
+  exec_mode : "fork"
   },
   {
   name: 'europe',
   script    : 'universalbit.it/cdn_europe.js',
   name      : '|EUROPE UNIVERSALBIT||',
-  exec_mode : "cluster",
-  instances : "-1"
+  exec_mode : "fork"
   },
   {
   name: 'united states',
   script    : 'universalbit.it/cdn_united_states.js',
   name      : '|USA UNIVERSALBIT||',
-  exec_mode : "cluster",
-  instances : "-1"
+  exec_mode : "fork"
   },
   {
   name: 'restart',
