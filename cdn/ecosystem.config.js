@@ -5,7 +5,7 @@ module.exports = {
   script    : 'cdn.js',
   name      : '|WORLD CDN ||',
   exec_mode : "cluster",
-  instances : "-1"
+  instances : "1"
   },
   {
   name: 'planet debian',
@@ -18,35 +18,35 @@ module.exports = {
   script    : 'cdn_europe.js',
   name      : '|EUROPE CDN ||',
   exec_mode : "cluster",
-  instances : "-1"
+  instances : "1"
   },
   {
   name: 'united states',
   script    : 'cdn_united_states.js',
   name      : '|USA CDN ||',
   exec_mode : "cluster",
-  instances : "-1"
+  instances : "1"
   },
   {
   name: 'world',
   script    : '93018.ddns.net/cdn.js',
   name      : '|WORLD 93018||',
   exec_mode : "cluster",
-  instances : "-1"
+  instances : "1"
   },
   {
   name: 'europe',
   script    : '93018.ddns.net/cdn_europe.js',
   name      : '|EUROPE 93018||',
   exec_mode : "cluster",
-  instances : "-1"
+  instances : "1"
   },
   {
   name: 'united states',
   script    : '93018.ddns.net/cdn_united_states.js',
   name      : '|USA 93018||',
   exec_mode : "cluster",
-  instances : "-1"
+  instances : "1"
   },
   {
   name: 'world',
