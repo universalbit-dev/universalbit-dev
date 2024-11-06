@@ -27,8 +27,6 @@ npm i && npm audit fix
 npm i pm2 -g
 pm2 start ecosystem.config.js
 ```
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/cdn_universalbit.png" width="auto"></img>
-
 #### heavy disk memory usage (optimization of system performance)
 ```bash
 pm2 start autoclean.js --exp-backoff-restart-delay=10000
