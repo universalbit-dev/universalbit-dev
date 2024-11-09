@@ -1,7 +1,7 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) -- [Join Mastodon](https://mastodon.social/invite/wTHp2hSD) -- [Website](https://www.universalbit.it/) -- [Content Delivery Network](https://universalbitcdn.it/)
 ---
 
-#### Node Version Manager Simplify the steps to install [NodeJs Engine](https://nodejs.org/en):
+#### Node Version Manager Simplify installation steps [NodeJs Engine](https://nodejs.org/en):
 * [NVM](https://github.com/nvm-sh/nvm)
 
 ```bash
