@@ -5,7 +5,7 @@
 much more than configuration
 
 ---
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/ipfire.png" width="50%"></img>
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/ipfire.png" width="10%"></img>
 
 
 Overview:
@@ -50,7 +50,8 @@ Overview:
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/nic/images/4_Zone_Configuration.png" width="auto"></img>
 
 
-## [NetworkSetup](https://www.ipfire.org/docs/installation/step5) [ Internet -- Wireless -- LAN -- DMZ ]
+## [NetworkSetup](https://www.ipfire.org/docs/installation/step5) [ Internet [RED] -- LAN [GREEN] -- Wireless [BLUE] -- DMZ [ORANGE] ]
+                                                                  
 
 [Network Adapter Hardware Compatibility List](https://www.ipfire.org/docs/hardware/networking)
 
