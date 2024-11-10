@@ -5,7 +5,6 @@
 #### Creating a digital and real work environment requires a lot of effort and many hours of study and application.
 
 #### FundRaising:
-- [tallycoin.app](https://tallycoin.app/@universalbit/universalbit-eRZD7THe/)
 - [buymeacoffee.com](https://www.buymeacoffee.com/universalbit)
 
 
