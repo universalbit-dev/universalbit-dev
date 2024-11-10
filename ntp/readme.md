@@ -19,18 +19,15 @@ Installation
 ```
 sudo apt-get install ntp
 ```
-example: [conf](https://github.com/universalbit-dev/universalbit-dev/blob/main/ntp/ntp.conf)
-
-
 
 ##### Edit NTP configuration file:
 
 ```bash
 nano /etc/ntp.conf
 ```
-```bash
-server pool.ntp.org
-```
+* ntp example configuration: [conf](https://github.com/universalbit-dev/universalbit-dev/blob/main/ntp/ntp.conf)
+
+##### Running [dpkg](https://askubuntu.com/questions/173465/what-is-dpkg-for)
 ```bash
 dpkg-reconfigure ntp
 ```
