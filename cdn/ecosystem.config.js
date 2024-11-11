@@ -85,6 +85,12 @@ module.exports = {
   exec_mode : "fork"
   },
   {
+  name: 'unbt',
+  script    : 'universalbit.js',
+  name      : '|UNBT||',
+  exec_mode : "fork"
+  },
+  {
   name: 'restart',
   script    : 'restart.js',
   name      : '|Restart||',
