@@ -27,6 +27,14 @@ npm i && npm audit fix
 npm i pm2 -g
 pm2 start ecosystem.config.js
 ```
+#### UniversalBit Network GlobalPing CDN
+-- [WebSite](https://www.universalbit.it/) -- [UniversalBitCDN](https://universalbitcdn.it/) Domain -- [UniversalBit](https://github.com/universalbit-dev/) Github Repositry --
+```bash
+pm2 start universalbit.config.js
+```
+
+
+
 #### heavy disk memory usage (optimization of system performance)
 ```bash
 pm2 start autoclean.js --exp-backoff-restart-delay=10000
