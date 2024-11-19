@@ -2,7 +2,7 @@
 
 BlockChain |  | # Stack
 ---|---|---
- [NetNode](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin) | <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/bitcoin/images/bitnodes.png" width="auto"></img> | 
+ [NetNode](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin) | | 
  [Buy-Sell](https://github.com/universalbit-dev/gekko-m4-globular-cluster/blob/master/README.md) |  | 
  [Mining](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain) |  | 
 
