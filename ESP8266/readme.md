@@ -24,5 +24,4 @@ Network Time Protocol [NTP](https://microcontrollerslab.com/current-date-time-es
 [upload a sketch](https://support.arduino.cc/hc/en-us/articles/4733418441116-Upload-a-sketch-in-Arduino-IDE)
 
 ---
-* [MicroPython on ESP32](https://randomnerdtutorials.com/getting-started-micropython-esp32-esp8266/)
-* [Clocks](https://greenwichmeantime.com/articles/clocks/global/)
+* [Flashing MicroPython on ESP32](https://github.com/universalbit-dev/micropython)
