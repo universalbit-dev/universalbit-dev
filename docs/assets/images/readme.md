@@ -20,7 +20,7 @@
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/unbt_free_pass.png" width="30%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/btc_qr_unbt.png" width="15%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/bolt_out_of_place_nut_yin_yang.png" width="20%"></img>
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/geppo.png" width="10%"></img>
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/geppo.png" width="5%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/trisquel_sexy_logo.png" width="5%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/trisquel_custom_share_button.png" width="10%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/node-js.png" width="20%"></img>
