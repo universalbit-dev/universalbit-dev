@@ -1,8 +1,12 @@
 /*
- UniversalBit ... once again
+ UniversalBit ... once again 
  about some copy and paste code
+ 
  European NTP Server 
  0.europe.pool.ntp.org | 1.europe.pool.ntp.org | 2.europe.pool.ntp.org | pool 3.europe.pool.ntp.org
+ 
+ Generic NTP Server
+ pool.ntp.org
 
  https://microcontrollerslab.com/current-date-time-esp8266-nodemcu-ntp-server/
  Board:Generic ESP8266 Module
@@ -19,7 +23,7 @@
 
 const char* ssid       = "Guest Wifi-Name";   //Replace with your guest wifi name
 const char* password   = "Guest Password";  //Replace with your guest wifi password
-const char* ntpServer = "0.europe.pool.ntp.org";
+const char* ntpServer = "pool.ntp.org";
 //How many seconds in 1 hour
 const long  gmtOffset_sec = 3600;  //Replace with your GMT offset (seconds)
 //
