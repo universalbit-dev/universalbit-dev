@@ -1,6 +1,8 @@
-##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) -- [Join Mastodon](https://mastodon.social/invite/wTHp2hSD) -- [Website](https://www.universalbit.it/) -- [Content Delivery Network](https://universalbitcdn.it/)
+##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) -- [Join Mastodon](https://mastodon.social/invite/wTHp2hSD) -- [Website](https://www.universalbit.it/) -- [Content Delivery Network](https://universalbitcdn.it/) -- [Why jsDelivr?](https://github.com/jsdelivr/jsdelivr?tab=readme-ov-file#multi-cdn)
 
-### [Rescaling Global Manufacturing](https://github.com/universalbit-dev/CityGenerator/blob/master/Fab-City_Whitepaper.pdf) 
+### [Rescaling Global Manufacturing](https://github.com/universalbit-dev/CityGenerator/blob/master/Fab-City_Whitepaper.pdf)
+
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/router_cdn_dns_jsdelivr.png" width="90%"></img>
 
 * clone project:
 ```bash
@@ -28,14 +30,12 @@ npm i pm2 -g
 pm2 start ecosystem.config.js
 ```
 #### UniversalBit Network GlobalPing CDN
--- [WebSite](https://www.universalbit.it/) -- [UniversalBitCDN](https://universalbitcdn.it/) Domain -- [UniversalBit](https://github.com/universalbit-dev/) Github Repositry --
+
+#### -- [WebSite](https://www.universalbit.it/) -- [UniversalBitCDN](https://universalbitcdn.it/) Domain -- [UniversalBit](https://github.com/universalbit-dev/) Github Repositry --
 ```bash
 pm2 start universalbit.config.js
 ```
-
-
-
-#### heavy disk memory usage (optimization of system performance)
+#### -- Heavy Disk memory usage (optimization of system performance)
 ```bash
 pm2 start autoclean.js --exp-backoff-restart-delay=10000
 ```
