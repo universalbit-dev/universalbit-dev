@@ -10,7 +10,7 @@ async function fxchess() {
   const move = moves[Math.floor(Math.random() * moves.length)]
   chess.move(move)
 }  
-return await fs.appendFile("chessout.json",JSON.stringify(chess.pgn()));
+return await fs.appendFile("chessout",JSON.stringify(chess.pgn()));
 }
 thegameofchess=[fxchess()];
 module.exports = thegameofchess;
