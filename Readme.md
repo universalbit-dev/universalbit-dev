@@ -13,4 +13,4 @@
 | [CDN](https://github.com/universalbit-dev/universalbit-dev/tree/main/cdn) | <strong>Content Delivery NetWork</strong> | [NetData](https://universalbitcdn.it/spaces/content-delivery-network/rooms/local/nodes#metrics_correlation=false&after=-900&before=0&utc=Europe%2FRome&offset=%2B2&timezoneName=Amsterdam%2C%20Berlin%2C%20Bern%2C%20Rome%2C%20Stockholm%2C%20Vienna&modal=&modalTab=&modalParams=&selectedIntegrationCategory=deploy.operating-systems&force_play=false&local--chartName-val=menu_system_submenu_cpu&local-nodesView-nodeIdToGo-val=menu_Live) |
 | [OpenStreetMap](https://github.com/universalbit-dev/iD) - [App](https://oyster-app-c5dox.ondigitalocean.app) - [Learning](https://learnosm.org/it/beginner/start-osm/)    | [QGIS](https://github.com/qgis/QGIS) | [Index](https://ubuntu.qgis.org/ubuntu/) |
 | [Making](https://github.com/universalbit-dev/universalbit-dev/tree/main/making/images/)    | <strong>Low voltage Hydrogen Generator</strong>| |
-| [NeuralNet Trainers](https://github.com/universalbit-dev/convnetjs)    |  |  |
+| [NeuralNet Trainers](https://github.com/universalbit-dev/universalbit-dev/tree/main/convolutional_neural_network)    |  |  |
