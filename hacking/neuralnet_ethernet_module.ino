@@ -11,10 +11,10 @@
 
 byte mac[] = { 0xDE, 0xAF, 0xCF, 0xEF, 0xFE, 0xBD };
 byte ip[] = { 192, 168, 1, 177 };
-byte server[] = { 64, 233, 187, 99 }; // Google
+byte server[] = {116,202,176,26}; // Google
 int HTTP_PORT = 8010;
 String HTTP_METHOD = "POST";
-char HOST_NAME[] = "google.com";
+char HOST_NAME[] = "noads.libredns.gr";
 String PATH_NAME = "/";
 EthernetClient client;
 
