@@ -1,29 +1,25 @@
 module.exports = {
   apps : [
   {
-  name: 'world',
-  script    : 'cdn.js',
   name      : '|Globalping CDN ||',
+  script    : 'cdn.js',
   exec_mode : "cluster",
   instances : "1"
   },
   {
-  name: 'unbt',
-  script    : 'universalbit.js',
   name      : '|UNBT||',
+  script    : 'universalbit.js',
   exec_mode : "fork"
   },
   {
-  name: 'restart',
-  script    : 'restart.js',
   name      : '|Restart||',
+  script    : 'restart.js',
   exp_backoff_restart_delay: 500000,
   exec_mode : "fork"
   },
   {
-  name: 'autoclean',
-  script    : 'autoclean.js',
   name      : '|AutoClean||',
+  script    : 'autoclean.js',
   exp_backoff_restart_delay: 500000,
   exec_mode : "fork"
   }
