@@ -20,6 +20,7 @@ export BDB_INCLUDE_PATH="/usr/local/BerkeleyDB.4.8/include"
 export BDB_LIB_PATH="/usr/local/BerkeleyDB.4.8/lib"
 ln -s /usr/local/BerkeleyDB.4.8/lib/libdb-4.8.so /usr/lib/libdb-4.8.so
 
+#COPILOT EXPLAIN
 #This shell script, `berkeley.sh`, is used to update the system, install dependencies, download, compile, and install Berkeley DB 4.8. Here's a step-by-step explanation:
 #
 #1. **Comments**: 
