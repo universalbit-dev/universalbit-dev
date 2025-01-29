@@ -1,3 +1,5 @@
+//command line globalping (net optimizer):    https://globalping.io/cli
+
 /* Run Bash Script */
 var exec = require('node:child_process').exec
 exec('echo $(globalping dns cdn.jsdelivr.net --limit 3)',
