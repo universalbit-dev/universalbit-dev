@@ -12,7 +12,7 @@
  "license": "BSD-2-Clause license",
  "dependencies": {
   "chess.js": "^1.0.0-beta.6",
-  "openvino-node": "^2024.3.0"
+  "openvino-node": "^2024.6.0"
  },
  "engines": {
   "node": ">=20"
