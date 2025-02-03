@@ -1,6 +1,4 @@
-[![CodeQL](https://github.com/universalbit-dev/universalbit-dev/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/universalbit-dev/universalbit-dev/actions/workflows/github-code-scanning/codeql)
 ### [UniversalBit](https://github.com/universalbit-dev) 
-
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) -- [Join Mastodon](https://mastodon.social/invite/wTHp2hSD) -- [Website](https://www.universalbit.it/) -- [Content Delivery Network](https://universalbitcdn.it/)
 |    |  |  |
 |--------------|:-----:|-----------:|
@@ -15,3 +13,5 @@
 | [OpenStreetMap](https://github.com/universalbit-dev/iD) - [App](https://oyster-app-c5dox.ondigitalocean.app) - [Learning](https://learnosm.org/it/beginner/start-osm/)    | [QGIS](https://github.com/qgis/QGIS) | [Index](https://ubuntu.qgis.org/ubuntu/) |
 | [Making](https://github.com/universalbit-dev/universalbit-dev/tree/main/making/images/)    | <strong>Low voltage Hydrogen Generator</strong>| |
 | [NeuralNet Trainers](https://github.com/universalbit-dev/universalbit-dev/tree/main/convolutional_neural_network)    |  |  |
+
+[![CodeQL](https://github.com/universalbit-dev/universalbit-dev/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/universalbit-dev/universalbit-dev/actions/workflows/github-code-scanning/codeql)
