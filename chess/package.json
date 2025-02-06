@@ -11,7 +11,7 @@
  "contributor": "universalbit-dev <+393774788289>",
  "license": "BSD-2-Clause license",
  "dependencies": {
-  "chess.js": "^1.0.0-beta.6",
+  "chess.js": "^1.0.0",
   "openvino-node": "^2024.3.0"
  },
  "engines": {
