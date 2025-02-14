@@ -1,6 +1,6 @@
 copilot explain:
 
-The `convnet.js` file appears to be part of a library for creating and training convolutional neural networks (CNNs) in JavaScript. Here are the main components:
+The `convnet.js` file is a part of a library for creating and training convolutional neural networks (CNNs) in JavaScript. Here are the main components:
 
 1. **Utility Functions**: Functions for generating random numbers, creating zero arrays, and other array utilities.
 2. **Volume Class (`Vol`)**: Represents a 3D volume of numbers, which is the core data structure for holding data, weights, and gradients.
