@@ -19,6 +19,8 @@ The `deepqlearn.js` file is part of a reinforcement learning library that utiliz
 
 For more details, you can explore the actual [deepqlearn.js file](https://github.com/universalbit-dev/universalbit-dev/blob/main/convolutional_neural_network/deepqlearn.js).
 
+---
+
 #### [Convolutional Neural Network](https://stanford.edu/~shervine/teaching/cs-230/cheatsheet-convolutional-neural-networks)
 
 
@@ -44,7 +46,7 @@ For more details, you can explore the actual [deepqlearn.js file](https://github
   - `Trainer`, `SGDTrainer`: Implements different training algorithms (e.g., SGD) to train the network.
 - **MagicNet Class (`MagicNet`)**: Automates the process of finding the best neural network configuration by sampling candidates, evaluating them, and averaging the best ones.
 
-These components work together to create and train neural networks using reinforcement learning techniques. For more details, you can explore the actual [deepqlearn.js file](https://github.com/universalbit-dev/universalbit-dev/blob/main/convolutional_neural_network/deepqlearn.js).
+These components work together to create and train neural networks using reinforcement learning techniques. For more details, you can explore the actual [deepqlearn.js file](https://github.com/universalbit-dev/universalbit-dev/blob/main/convolutional_neural_network/deepqlearn.js) and [convnet.js file](https://github.com/universalbit-dev/universalbit-dev/blob/main/convolutional_neural_network/convnet.js).
 
 
 * [Trainers](https://cs.stanford.edu/people/karpathy/convnetjs/demo/trainers.html)
@@ -52,7 +54,4 @@ These components work together to create and train neural networks using reinfor
 * [Documentation](https://cs.stanford.edu/people/karpathy/convnetjs/docs.html)
 
 ---
-### working examples here: 
-  * [Gekko M4 Globular Cluster NN](https://github.com/universalbit-dev/gekko-m4-globular-cluster/blob/master/strategies/NN.js)
-  * [Gekko M4 Globular Cluster NEURALENT](https://github.com/universalbit-dev/gekko-m4-globular-cluster/blob/master/strategies/NEURALNET.js)
   
