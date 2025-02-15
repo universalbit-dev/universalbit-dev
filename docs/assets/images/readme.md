@@ -1,5 +1,10 @@
 ##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) -- [Join Mastodon](https://mastodon.social/invite/wTHp2hSD) -- [Website](https://www.universalbit.it/) -- [Content Delivery Network](https://universalbitcdn.it/) -- [Images](https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images) -- [Pixabay](https://pixabay.com/it/users/universalbit-10593110/)
 
+copilot explain
+
+The `docs/assets/images/readme.md` file contains a list of images with their respective links and dimensions. It includes various images such as logos, diagrams, and illustrations.
+
+
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/unbt_aerogel.png" width="20%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/js-code_content_delivery_network.png" width="5%"></img>
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/logo.png" width="10%"></img>
