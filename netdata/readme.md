@@ -28,7 +28,7 @@ The `netdata/readme.md` file provides detailed instructions for setting up NetDa
    - Command to reconfigure the timezone to Europe/Italy.
 
 8. **Additional Resources**:
-   - Links to NetData, Nginx, UFW, Network Time Protocol, and [UniversalBitCdn]() for further information.
+   - Links to NetData, Nginx, UFW, Network Time Protocol, and [UniversalBitCdn](https://github.com/universalbit-dev/universalbit-dev/tree/main/cdn) for further information.
 ---
 
 ##### [NetData](https://github.com/netdata/netdata)
