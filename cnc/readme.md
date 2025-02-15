@@ -2,6 +2,31 @@
 
 
 ### Internet of normal things in life
+copilot explain
+
+The `cnc/readme.md` file provides detailed instructions and information for setting up CNCjs with an Arduino Nano Shield V3. Here are the key sections explained:
+
+1. **Support and References**:
+   - Links to support the UniversalBit project and references for disambiguation and Bash.
+
+2. **CNCjs Overview**:
+   - CNCjs is a web-based interface for CNC controllers running Grbl, Marlin, Smoothieware, or TinyG.
+
+3. **Download CNCjs**:
+   - Instructions to download the CNCjs Linux app image using the `wget` command.
+   - Link to the CNCjs desktop app download page and its releases.
+
+4. **Uploading GRBL to Arduino Nano Shield V3**:
+   - GRBL is a firmware for CNC milling. The instructions detail how to upload GRBL to an Arduino Nano Shield V3.
+   - Required packages for Ubuntu, command to download and unzip GRBL, and steps to copy GRBL to the Arduino libraries directory.
+   - Instructions to upload GRBL using the Arduino IDE.
+
+5. **Connecting to CNCjs**:
+   - Instructions to connect the Arduino Nano Shield V3 to CNCjs for uploading G-code and starting CNC milling simulations.
+
+6. **Resources**:
+   - Links to CNC machines, CNC wiki, and Universal G-Code Sender (UGS) for further information.
+---
 
 
 ##### CNCjs is a full-featured web-based interface for CNC controllers running Grbl, Marlin, Smoothieware, or TinyG.
