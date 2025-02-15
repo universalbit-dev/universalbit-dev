@@ -55,13 +55,10 @@ cd universalbit-dev/ann/
 | ![arduino_ann](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/arduino_ann.JPG) | ![arduino_ann_02](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/arduino_ann_02.JPG) |
 
 
-
-* ##### ESP32 Dev Module -- ANN - An artificial neural network for the ESP32 --
-
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/gif/esp32_ANN.gif" width="auto"></img>
 
-* ### [ESP8266](https://en.wikipedia.org/wiki/ESP8266) || [ESP32](https://en.wikipedia.org/wiki/ESP32)
-* ### [Arduino Nano](https://en.wikipedia.org/wiki/Arduino_Nano) || [Arduino Uno](https://en.wikipedia.org/wiki/Arduino_Uno)
+* [Arduino Nano -- wiki --](https://en.wikipedia.org/wiki/Arduino_Nano) || [Arduino Uno -- wiki --](https://en.wikipedia.org/wiki/Arduino_Uno)
+  
 ---
 
 ---
@@ -69,6 +66,8 @@ cd universalbit-dev/ann/
 #### Be careful to use only a USB data cable,some usb cables are only used to recharge and do not allow the upload of code.
 
 ## Wire ESP8266(Wifi) and Two Arduino Nano
+* [ESP8266](https://en.wikipedia.org/wiki/ESP8266)
+* [ESP32](https://en.wikipedia.org/wiki/ESP32)
 
 ---
 
