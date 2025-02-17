@@ -50,7 +50,7 @@ cd universalbit-dev/ann/
 * ##### Arduino Nano -- ArduinoANN - An artificial neural network for the Arduino --
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/gif/arduino-nano_ANN.gif" width="auto"></img>
 
-| Arduino ANN                           |                             |
+| Wire Four Arduino Nano                           |                             |
 | ----------------------------------- | ----------------------------------- |
 | ![arduino_ann](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/arduino_ann.JPG) | ![arduino_ann_02](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/arduino_ann_02.JPG) |
 
