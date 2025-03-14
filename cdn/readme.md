@@ -49,7 +49,6 @@ pm2 start autoclean.js --exp-backoff-restart-delay=10000
 * ##### [GlobalPing-Cli](https://github.com/jsdelivr/globalping-cli)
 * ##### [Fab-City_Whitepaper](https://github.com/universalbit-dev/CityGenerator/blob/master/Fab-City_Whitepaper.pdf)
 * ##### [High Availability Clusters](https://github.com/universalbit-dev/HArmadillium)
-* ##### [Content Delivery Network](https://universalbitcdn.it/spaces/)
 * ##### [Conceptual framework](https://en.wikipedia.org/wiki/Conceptual_framework)
 * ##### [Blockchain Infrastructure](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain)
 
