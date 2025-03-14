@@ -31,5 +31,5 @@ The `chess/readme.md` file provides instructions for setting up and running a ch
    - Links to PM2 package, process management guide, and usage documentation.
 ---
 * [Process Management](https://pm2.io/docs/runtime/guide/process-management/)
-* [Documentation Usage](https://pm2.keymetrics.io/docs/usage/process-management/)
+* [Usage](https://pm2.keymetrics.io/docs/usage/process-management/)
 
