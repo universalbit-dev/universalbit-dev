@@ -4,7 +4,6 @@
  * section.
  * See robotics.hobbizine.com/arduinoann.html for details.
  ******************************************************************/
-
 #include <math.h>
 #include <SPI.h>
 #include <Ethernet.h>
@@ -17,7 +16,6 @@ String HTTP_METHOD = "POST";
 char HOST_NAME[] = "noads.libredns.gr";
 String PATH_NAME = "/";
 EthernetClient client;
-
 
 /******************************************************************
  * Network Configuration - customized per network 
@@ -62,7 +60,6 @@ const byte Target[PatternCount][OutputNodes] = {
  * End Network Configuration
  ******************************************************************/
 
-
 int i, j, p, q, r;
 int ReportEvery1000;
 int RandomizedIndex[PatternCount];
@@ -70,7 +67,6 @@ long  TrainingCycle;
 float Rando;
 float Error;
 float Accum;
-
 
 float Hidden[HiddenNodes];
 float Output[OutputNodes];
@@ -89,14 +85,20 @@ void setup(){
     RandomizedIndex[p] = p ;
   }
   
+  // Initialize Ethernet
+  if (Ethernet.begin(mac) == 0) {
+    Serial.println("Failed to configure Ethernet using DHCP");
+    // Try to configure using IP address instead of DHCP:
+    Ethernet.begin(mac, ip);
+  }
+  delay(1000);
+  Serial.println("Ethernet initialized");
 }  
 
 void loop (){
-
-
-/******************************************************************
-* Initialize HiddenWeights and ChangeHiddenWeights 
-******************************************************************/
+  /******************************************************************
+  * Initialize HiddenWeights and ChangeHiddenWeights 
+  ******************************************************************/
 
   for( i = 0 ; i < HiddenNodes ; i++ ) {    
     for( j = 0 ; j <= InputNodes ; j++ ) { 
@@ -105,9 +107,9 @@ void loop (){
       HiddenWeights[j][i] = 2.0 * ( Rando - 0.5 ) * InitialWeightMax ;
     }
   }
-/******************************************************************
-* Initialize OutputWeights and ChangeOutputWeights
-******************************************************************/
+  /******************************************************************
+  * Initialize OutputWeights and ChangeOutputWeights
+  ******************************************************************/
 
   for( i = 0 ; i < OutputNodes ; i ++ ) {    
     for( j = 0 ; j <= HiddenNodes ; j++ ) {
@@ -118,15 +120,15 @@ void loop (){
   }
   Serial.println("Initial/Untrained Outputs: ");
   toTerminal();
-/******************************************************************
-* Begin training 
-******************************************************************/
+  /******************************************************************
+  * Begin training 
+  ******************************************************************/
 
   for( TrainingCycle = 1 ; TrainingCycle < 2147483647 ; TrainingCycle++) {    
 
-/******************************************************************
-* Randomize order of training patterns
-******************************************************************/
+  /******************************************************************
+  * Randomize order of training patterns
+  ******************************************************************/
 
     for( p = 0 ; p < PatternCount ; p++) {
       q = random(PatternCount);
@@ -135,15 +137,15 @@ void loop (){
       RandomizedIndex[q] = r ;
     }
     Error = 0.0 ;
-/******************************************************************
-* Cycle through each training pattern in the randomized order
-******************************************************************/
+  /******************************************************************
+  * Cycle through each training pattern in the randomized order
+  ******************************************************************/
     for( q = 0 ; q < PatternCount ; q++ ) {    
       p = RandomizedIndex[q];
 
-/******************************************************************
-* Compute hidden layer activations
-******************************************************************/
+  /******************************************************************
+  * Compute hidden layer activations
+  ******************************************************************/
 
       for( i = 0 ; i < HiddenNodes ; i++ ) {    
         Accum = HiddenWeights[InputNodes][i] ;
@@ -153,9 +155,9 @@ void loop (){
         Hidden[i] = 1.0/(1.0 + exp(-Accum)) ;
       }
 
-/******************************************************************
-* Compute output layer activations and calculate errors
-******************************************************************/
+  /******************************************************************
+  * Compute output layer activations and calculate errors
+  ******************************************************************/
 
       for( i = 0 ; i < OutputNodes ; i++ ) {    
         Accum = OutputWeights[HiddenNodes][i] ;
@@ -167,9 +169,9 @@ void loop (){
         Error += 0.5 * (Target[p][i] - Output[i]) * (Target[p][i] - Output[i]) ;
       }
 
-/******************************************************************
-* Backpropagate errors to hidden layer
-******************************************************************/
+  /******************************************************************
+  * Backpropagate errors to hidden layer
+  ******************************************************************/
 
       for( i = 0 ; i < HiddenNodes ; i++ ) {    
         Accum = 0.0 ;
@@ -179,11 +181,9 @@ void loop (){
         HiddenDelta[i] = Accum * Hidden[i] * (1.0 - Hidden[i]) ;
       }
 
-
-/******************************************************************
-* Update Inner-->Hidden Weights
-******************************************************************/
-
+  /******************************************************************
+  * Update Inner-->Hidden Weights
+  ******************************************************************/
 
       for( i = 0 ; i < HiddenNodes ; i++ ) {     
         ChangeHiddenWeights[InputNodes][i] = LearningRate * HiddenDelta[i] + Momentum * ChangeHiddenWeights[InputNodes][i] ;
@@ -194,9 +194,9 @@ void loop (){
         }
       }
 
-/******************************************************************
-* Update Hidden-->Output Weights
-******************************************************************/
+  /******************************************************************
+  * Update Hidden-->Output Weights
+  ******************************************************************/
 
       for( i = 0 ; i < OutputNodes ; i ++ ) {    
         ChangeOutputWeights[HiddenNodes][i] = LearningRate * OutputDelta[i] + Momentum * ChangeOutputWeights[HiddenNodes][i] ;
@@ -208,9 +208,9 @@ void loop (){
       }
     }
 
-/******************************************************************
-* Every 1000 cycles send data to terminal for display
-******************************************************************/
+  /******************************************************************
+  * Every 1000 cycles send data to terminal for display
+  ******************************************************************/
     ReportEvery1000 = ReportEvery1000 - 1;
     if (ReportEvery1000 == 0)
     {
@@ -233,10 +233,9 @@ void loop (){
       }
     }    
 
-
-/******************************************************************
-* If error rate is less than pre-determined threshold then end
-******************************************************************/
+  /******************************************************************
+  * If error rate is less than pre-determined threshold then end
+  ******************************************************************/
 
     if( Error > Success ) break ;  
   }
@@ -260,7 +259,6 @@ void loop (){
 
 void toTerminal()
 {
-
   for( p = 0 ; p < PatternCount ; p++ ) { 
     Serial.println(); 
     Serial.print ("  Training Pattern: ");
@@ -275,9 +273,9 @@ void toTerminal()
       Serial.print (Target[p][i], DEC);
       Serial.print (" ");
     }
-/******************************************************************
-* Compute hidden layer activations
-******************************************************************/
+  /******************************************************************
+  * Compute hidden layer activations
+  ******************************************************************/
 
     for( i = 0 ; i < HiddenNodes ; i++ ) {    
       Accum = HiddenWeights[InputNodes][i] ;
@@ -287,9 +285,9 @@ void toTerminal()
       Hidden[i] = 1.0/(1.0 + exp(-Accum)) ;
     }
 
-/******************************************************************
-* Compute output layer activations and calculate errors
-******************************************************************/
+  /******************************************************************
+  * Compute output layer activations and calculate errors
+  ******************************************************************/
 
     for( i = 0 ; i < OutputNodes ; i++ ) {    
       Accum = OutputWeights[HiddenNodes][i] ;
@@ -304,8 +302,6 @@ void toTerminal()
       Serial.print (" ");
     }
   }
-
-
 }
 
 /* COPILOT EXPLAIN
