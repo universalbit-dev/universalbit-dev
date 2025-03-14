@@ -36,7 +36,7 @@ pm2 start autoclean.js --exp-backoff-restart-delay=10000
 ```
 ---
 
-* [Universalbit Content Delivery Network](https://universalbitcdn.it)   
+* [Universalbit Content Delivery Network](https://www.universalbitcdn.it)   
 <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/cdn/images/gif/content_delivery_network_live.gif" width="auto"></img>
 
 * [Machine learning (ML) powered anomaly detection](https://learn.netdata.cloud/docs/machine-learning-and-anomaly-detection/machine-learning-ml-powered-anomaly-detection)
