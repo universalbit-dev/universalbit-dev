@@ -10,7 +10,7 @@
 | [CNCjs](https://github.com/universalbit-dev/universalbit-dev/tree/main/cnc)    |<strong>Cncjs Desktop AppImage  use 3D printers and CNC milling machines</strong> | |
 | [HA Cluster](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md)       |  <strong>IT resources High Availability Clusters</strong> | |
 | [CDN JsDelivr](https://github.com/universalbit-dev/universalbit-dev/tree/main/cdn) | <strong>Content Delivery NetWork</strong> |  |
-| [OpenStreetMap](https://www.openstreetmap.org/) - [App](https://maps.universalbit.it) - [Learning](https://learnosm.org/it/beginner/start-osm/)    |<strong>The OpenStreetMap tagging model used by the iD editor</strong> | [id-tagging-schema](https://cdn.jsdelivr.net/npm/@openstreetmap/id-tagging-schema@1.0.0/index.min.js) [geoip2](https://geoip-js.com/js/apis/geoip2/v2.1/geoip2.js)|
+| [OpenStreetMap](https://www.openstreetmap.org/) - [App](https://maps.universalbit.it) - [Learning](https://learnosm.org/it/beginner/start-osm/)    |<strong>The OpenStreetMap tagging model used by the iD editor</strong> | [id-tagging-schema](https://cdn.jsdelivr.net/npm/@openstreetmap/id-tagging-schema@1.0.0/index.min.js) [geoip2](https://cdn.jsdelivr.net/npm/geoip2@1.0.5/node-geoip2.min.js)|
 | [Making](https://github.com/universalbit-dev/universalbit-dev/tree/main/making/images/)    | <strong>Low voltage Hydrogen Generator</strong>| |
 | [NeuralNet Trainers](https://github.com/universalbit-dev/universalbit-dev/tree/main/convolutional_neural_network)    |  |  |
 
