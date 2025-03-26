@@ -22,6 +22,6 @@ sudo apt-get install ./amdgpu-install_6.3.60304-1_all.deb
 ```bash
 sudo amdgpu-install --usecase=hip
 ```
-* [HIP offers several benefits over OpenCL](https://gpuopen.com/wp-con:ent/uploads/2016/01/7637_HIP_Datasheet_V1_7_PrintReady_US_WE.pdf)
+
 * [Blender HIP](https://docs.blender.org/manual/en/latest/render/cycles/gpu_rendering.html)
 * [AMD Radeon Software Instructions](https://amdgpu-install.readthedocs.io/en/latest/)
