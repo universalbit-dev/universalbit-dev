@@ -3,7 +3,7 @@
 |    |  |  |
 |--------------|:-----:|-----------:|
 | [UniversalBit-dev](https://github.com/universalbit-dev/universalbit-dev) | | [Site](https://sites.google.com/view/universalbit-dev/) |
-| [CityGenerator](https://github.com/universalbit-dev/CityGenerator)     | <strong>Generate a city model</strong> | [App](https://fabcity.universalbit.it)  |
+| [CityGenerator](https://github.com/universalbit-dev/CityGenerator)     | <strong>Generate a city model</strong> |   |
 | [Blockchain](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)    |  <strong>BlockChain Infrastructure</strong>  | [Net](https://bitnodes.io/nodes/network-map/) [Live](https://bitnodes.io/nodes/live-map/)| 
 | [Gekko-M4-Globular-Cluster](https://github.com/universalbit-dev/gekko-m4)    | <strong>Thinking Sustainable personal finance</strong> ||
 | [NN](https://github.com/universalbit-dev/universalbit-dev/tree/main/ann)    |<strong>An artificial neural network for the Arduino and ESP32 </strong> | |
