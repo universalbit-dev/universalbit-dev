@@ -45,6 +45,7 @@ The **HIP (Heterogeneous-Compute Interface for Portability)** model is a program
          }
      }
      ```
+[Details](https://github.com/universalbit-dev/universalbit-dev/blob/main/hip/hip_kernel_doc.md)
 
 2. **Compilation**:
    - The HIP compiler translates the code to the appropriate backend (e.g., ROCm for AMD or CUDA for NVIDIA).
