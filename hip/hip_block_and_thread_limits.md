@@ -63,5 +63,8 @@ For AMD GPUs using the HIP (Heterogeneous-Compute Interface for Portability) fra
 - Ensure that your thread block size is a multiple of 64 to align with AMD's wavefront size for optimal performance.
 - Always consult the specific AMD GPU's specifications (e.g., RDNA, Vega, or MI series) to confirm the exact hardware capabilities.
 
+---
+### **Resources**
+* [Parallel Computing](https://gfxcourses.stanford.edu/cs149/fall21content/media/gpuarch/07_gpuarch.pdf)
 
 
