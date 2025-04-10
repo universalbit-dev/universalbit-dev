@@ -19,6 +19,8 @@ If your computation requires more than 1024 threads:
    - For example, instead of launching a single block with 2048 threads, you could launch 2 blocks with 1024 threads each.
 2. Use a **grid-stride loop** to handle additional elements that exceed the thread block limit.
 
+* [hip_block_and_thread_limits](https://github.com/universalbit-dev/universalbit-dev/blob/main/hip/hip_block_and_thread_limits.md)
+
 ---
 
 ### **Key Notes**
