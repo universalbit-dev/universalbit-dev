@@ -26,6 +26,7 @@
  * 
  * How to Compile:
  * Use the HIP compiler to compile this program:
+ * https://rocm.docs.amd.com/projects/HIP/en/docs-develop/understand/compilers.html
  * hipcc random_game_of_chess.cpp -o random_game_of_chess
  * 
  * How to Run:
