@@ -26,7 +26,7 @@
  * hipcc monte_carlo_pi_hip.cpp -o monte_carlo_pi_hip
  * 
  * How to Run:
- * ./monte_carlo_pi_hip
+ * ./monte_carlo_pi
  * 
  * Example Output:
  * Estimated value of Pi: 3.14159
@@ -35,7 +35,7 @@
  * - The accuracy of the result improves as the number of points increases.
  * - Adjust the number of threads and blocks for optimal GPU utilization.
  * 
- * Repository: https://github.com/universalbit-dev/
+ * Repository: github.com/universalbit-dev/
  * Date: April 2025
  ******************************************************************************/
 
