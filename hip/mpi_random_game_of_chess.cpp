@@ -7,9 +7,24 @@
  * Each process simulates a portion of the games, computes the results, and gathers 
  * the results at the root process.
  *
+ * Compilation:
+ *   mpic++ -o mpi_random_game_of_chess mpi_random_game_of_chess.cpp
+ *
+ * Execution:
+ *   mpirun -np <num_processes> ./mpi_random_game_of_chess
+ *   Replace <num_processes> with the number of processes to use.
+ *
+ * Example:
+ *   mpirun -np 4 ./mpi_random_game_of_chess
+ *
+ * Output:
+ *   The program prints the results of the simulated chess games, such as which player won
+ *   (White or Black), or if the game was a Draw, for each game simulated.
+ *
  * Repository: https://github.com/universalbit-dev/
  * Date: April 2025
- */
+*/
+
 
 #include <mpi.h>
 #include <iostream>
