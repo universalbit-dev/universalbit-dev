@@ -23,7 +23,7 @@
  * 
  * How to Compile:
  * Use the HIP compiler to compile this program:
- * hipcc monte_carlo_pi_hip.cpp -o monte_carlo_pi_hip
+ * hipcc monte_carlo_pi.cpp -o monte_carlo_pi
  * 
  * How to Run:
  * ./monte_carlo_pi
