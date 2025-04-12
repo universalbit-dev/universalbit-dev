@@ -103,10 +103,11 @@ std::string boardToFEN(int *board) {
 }
 
 // Function to communicate with Stockfish
-std::string getStockfishMove(const std::string &fen) {
+std::string getStockfishMove(const std::string &fen, int &gameState) {
     FILE *stockfish = popen("stockfish", "w+");
     if (!stockfish) {
         std::cerr << "Failed to start Stockfish!" << std::endl;
+        gameState = -1; // Error state
         return "invalid";
     }
 
@@ -122,20 +123,25 @@ std::string getStockfishMove(const std::string &fen) {
         if (response.find("bestmove") != std::string::npos) break;
     }
 
-    // Parse the best move
+    // Parse Stockfish's response
     std::istringstream iss(response);
     std::string token;
     while (iss >> token) {
         if (token == "bestmove") {
             iss >> token; // The next token is the best move
-            break;
+        } else if (response.find("mate") != std::string::npos) {
+            gameState = 1; // Checkmate
+        } else if (response.find("stalemate") != std::string::npos) {
+            gameState = 2; // Stalemate
+        } else if (response.find("draw") != std::string::npos) {
+            gameState = 3; // Draw
         }
     }
 
     // Close Stockfish process
     pclose(stockfish);
 
-    return token;
+    return token; // Return the move or "invalid"
 }
 
 // Kernel to simulate chess games
@@ -151,28 +157,39 @@ __global__ void simulateChessGames(int *boards, int *results, int boardSize, int
 
     // Simulate moves
     while (moveCount < maxMoves) {
-        // Generate a random move index (simplified logic)
-        int pieceIdx = rand_r(&seed) % boardSize;
-
-        // Validate the move using Stockfish (host-side)
         // Convert board to FEN
         std::string fen = boardToFEN(board);
-        std::string move = getStockfishMove(fen);
+
+        // Get Stockfish move and game state
+        int gameState = 0;
+        std::string move = getStockfishMove(fen, gameState);
 
         if (move == "invalid" || move.empty()) {
             *result = -1; // Invalid game
             break;
         }
 
-        // Update board state based on Stockfish move (simplified)
+        // Handle endgame conditions
+        if (gameState == 1) { // Checkmate
+            *result = whiteTurn ? 1 : -1; // White wins if whiteTurn, Black otherwise
+            break;
+        } else if (gameState == 2) { // Stalemate
+            *result = 0; // Draw
+            break;
+        } else if (gameState == 3) { // Draw
+            *result = 0; // Draw
+            break;
+        }
+
+        // Update board state based on Stockfish move (to be implemented)
         // Note: You need to parse the move and update the board here
 
         moveCount++;
         whiteTurn = !whiteTurn;
 
-        // Check for endgame conditions
+        // Check for move limit
         if (moveCount >= maxMoves) {
-            *result = (whiteTurn) ? 1 : -1; // White wins if whiteTurn, black otherwise
+            *result = (whiteTurn) ? 1 : -1; // White wins if whiteTurn, Black otherwise
             break;
         }
     }
@@ -213,6 +230,8 @@ int main() {
             std::cout << "White wins!" << std::endl;
         } else if (results[game] == -1) {
             std::cout << "Black wins!" << std::endl;
+        } else if (results[game] == 0) {
+            std::cout << "Draw!" << std::endl;
         } else {
             std::cout << "Invalid game!" << std::endl;
         }
