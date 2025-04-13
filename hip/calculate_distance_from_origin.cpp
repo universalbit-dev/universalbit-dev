@@ -3,25 +3,30 @@
  * File: calculate_distance_from_origin.cpp
  * 
  * Description:
- * This program calculates the distance of 2D points from the origin using 
- * HIP (Heterogeneous-Compute Interface for Portability). Points are represented 
- * using a struct, and the distance is calculated in parallel on the GPU.
+ * This program demonstrates the use of HIP (Heterogeneous-Compute Interface 
+ * for Portability) to calculate the distance of 2D points from the origin 
+ * using GPU parallel computation.
  * 
- * Features:
- * - HIP implementation for GPU parallel computation.
- * - Uses a custom struct for better organization of point data.
+ * Key Features:
+ * - Implements a custom `Point` struct for 2D point representation.
+ * - Utilizes HIP for efficient parallel distance computation on the GPU.
+ * - Measures kernel execution time using HIP events for performance analysis.
  * 
- * How It Works:
+ * Workflow:
  * 1. Points are initialized on the host with random values in the range [-1, 1].
- * 2. The kernel calculates the distance of each point from the origin in parallel.
- * 3. Results are copied back to the host for further processing.
+ * 2. Data is transferred to the GPU for parallel distance computation.
+ * 3. Kernel execution time is measured and results are copied back to the host.
+ * 4. The program prints example outputs and cleans up allocated resources.
  * 
- * How to Compile:
- * Use the HIP compiler to compile this program:
- * hipcc calculate_distance_from_origin.cpp -o calculate_distance_from_origin
+ * Compilation Instructions:
+ * Compile the program using the HIP compiler:
  * 
- * How to Run:
- * ./calculate_distance_from_origin
+ *     hipcc calculate_distance_from_origin.cpp -o calculate_distance_from_origin
+ * 
+ * Execution:
+ * Run the compiled binary as follows:
+ * 
+ *     ./calculate_distance_from_origin
  * 
  * Example Output:
  * Distance of point (0.5, -0.3) from origin: 0.583095
@@ -29,9 +34,11 @@
  * 
  * Notes:
  * - The program can be extended to handle 3D points or other distance metrics.
- * - Adjust the number of threads and blocks for optimal GPU utilization.
+ * - Optimize GPU utilization by tuning the number of threads and blocks.
+ * - HIP event profiling is used to measure kernel execution performance.
  * 
- * Repository: github.com/universalbit-dev/
+ * Repository: https://github.com/universalbit-dev/universalbit-dev
+ * 
  * Date: April 2025
  ******************************************************************************/
 
@@ -81,8 +88,25 @@ int main() {
     // Copy data from host to device
     hipMemcpy(devicePoints, hostPoints, numPoints * sizeof(Point), hipMemcpyHostToDevice);
 
+    // Create HIP events for timing
+    hipEvent_t start, stop;
+    hipEventCreate(&start);
+    hipEventCreate(&stop);
+
+    // Record the start event
+    hipEventRecord(start, 0);
+
     // Launch kernel
     calculateDistances<<<blocks, threadsPerBlock>>>(devicePoints, deviceDistances, numPoints);
+
+    // Record the stop event
+    hipEventRecord(stop, 0);
+    hipEventSynchronize(stop);
+
+    // Calculate elapsed time
+    float elapsedTime;
+    hipEventElapsedTime(&elapsedTime, start, stop);
+    std::cout << "Kernel execution time: " << elapsedTime << " ms" << std::endl;
 
     // Copy results back to host
     hipMemcpy(hostDistances, deviceDistances, numPoints * sizeof(float), hipMemcpyDeviceToHost);
@@ -98,6 +122,10 @@ int main() {
     delete[] hostDistances;
     hipFree(devicePoints);
     hipFree(deviceDistances);
+
+    // Destroy HIP events
+    hipEventDestroy(start);
+    hipEventDestroy(stop);
 
     return 0;
 }
