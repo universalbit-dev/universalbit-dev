@@ -5,27 +5,38 @@
  * This example demonstrates how to bind methods to an object-like structure in HIP,
  * ensuring that the correct context is maintained when executing GPU kernels.
  *
- * Relation to SIMD (Single Instruction, Multiple Data) and Wavefronts:
+ * Relation to SIMD (Single Instruction, Multiple Data), Wavefronts, and Compute Units (CUs):
  * 
  * Wavefronts:
- *     On AMD GPUs (e.g., R9 290), threads are grouped into wavefronts. A wavefront typically consists of 64 threads.
+ *     On AMD GPUs (e.g., R9 290x), threads are grouped into wavefronts. A wavefront typically consists of 64 threads.
  *     If fewer than 64 threads are launched (e.g., threadsPerBlock = 1), the wavefront is underutilized. Only 1 lane of the SIMD unit is active, and the remaining lanes are idle.
  * 
- * Cycles for SIMD Execution:
- *     The SIMD unit executes one instruction per cycle per active lane.
- *     If only 1 thread is launched, it will take 1 cycle to execute the instruction for that thread, but the SIMD unit's full capacity (64 lanes) is not utilized.
- * 
- * 1 Cycle vs. 4 Cycles:
- *     In this case, with threadsPerBlock = 1 and blocksPerGrid = 1, only 1 thread is active, so it will execute in 1 cycle.
- *     If 64 threads were launched (threadsPerBlock = 64), the SIMD unit could execute all 64 threads in 1 cycle (fully utilizing the wavefront).
+ * Compute Units (CUs):
+ *     The AMD R9 290x has 44 Compute Units (CUs). To fully utilize the GPU's processing power, the kernel launch configuration should:
+ *     - Use threadsPerBlock = 64 to match the wavefront size.
+ *     - Use blocksPerGrid = 44 to utilize all CUs (one block per CU).
+ *     - If the workload permits, blocksPerGrid can be increased further to improve GPU occupancy, especially for memory-bound workloads.
  * 
  * Optimization and Efficiency:
  * 
- *     Using threadsPerBlock = 1 and blocksPerGrid = 1 is inefficient because it underutilizes the GPU's parallel processing capabilities.
+ *     Using threadsPerBlock = 64 and blocksPerGrid = 44 ensures that:
+ *         - Each wavefront is fully occupied (64 active threads).
+ *         - All 44 CUs are utilized simultaneously.
  *     For better performance:
  *         - Increase threadsPerBlock to match the wavefront size (e.g., 64 threads for AMD GPUs).
- *         - Launch multiple blocks (blocksPerGrid > 1) to utilize multiple Compute Units (CUs).
+ *         - Launch multiple blocks (blocksPerGrid >= 44) to utilize multiple CUs efficiently.
  *
+ * Updated Launch Configuration:
+ *     int threadsPerBlock = 64;   // Matches the wavefront size
+ *     int blocksPerGrid = 44;     // Matches the number of Compute Units (CUs) on R9 290x
+ *     hipLaunchKernelGGL(bindAllKernel, dim3(blocksPerGrid), dim3(threadsPerBlock), 0, 0, deviceObj, 42);
+ *
+ * Kernel Execution Cycle Explanation:
+ *     With threadsPerBlock = 64 and blocksPerGrid = 44:
+ *         - The GPU can execute 44 wavefronts simultaneously (one per CU).
+ *         - Each wavefront will execute in 1 cycle, assuming no memory or resource stalls.
+ *     If the workload requires more wavefronts than available CUs, additional wavefronts will be executed in subsequent cycles.
+ * 
  * @author universalbit-dev
  * @date 2025-04-14
  */
@@ -72,8 +83,8 @@ int main() {
     hipMemcpy(deviceObj, &hostObj, sizeof(Object), hipMemcpyHostToDevice);
 
     // Launch the kernel to bind methods and execute them
-    int threadsPerBlock = 1;
-    int blocksPerGrid = 1;
+    int threadsPerBlock = 64;   // Matches the wavefront size
+    int blocksPerGrid = 44;     // Matches the number of Compute Units (CUs) on R9 290x
     hipLaunchKernelGGL(bindAllKernel, dim3(blocksPerGrid), dim3(threadsPerBlock), 0, 0, deviceObj, 42);
 
     // Copy the modified object back to the host
