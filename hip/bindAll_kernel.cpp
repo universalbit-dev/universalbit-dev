@@ -5,6 +5,27 @@
  * This example demonstrates how to bind methods to an object-like structure in HIP,
  * ensuring that the correct context is maintained when executing GPU kernels.
  *
+ * Relation to SIMD (Single Instruction, Multiple Data) and Wavefronts:
+ * 
+ * Wavefronts:
+ *     On AMD GPUs (e.g., R9 290), threads are grouped into wavefronts. A wavefront typically consists of 64 threads.
+ *     If fewer than 64 threads are launched (e.g., threadsPerBlock = 1), the wavefront is underutilized. Only 1 lane of the SIMD unit is active, and the remaining lanes are idle.
+ * 
+ * Cycles for SIMD Execution:
+ *     The SIMD unit executes one instruction per cycle per active lane.
+ *     If only 1 thread is launched, it will take 1 cycle to execute the instruction for that thread, but the SIMD unit's full capacity (64 lanes) is not utilized.
+ * 
+ * 1 Cycle vs. 4 Cycles:
+ *     In this case, with threadsPerBlock = 1 and blocksPerGrid = 1, only 1 thread is active, so it will execute in 1 cycle.
+ *     If 64 threads were launched (threadsPerBlock = 64), the SIMD unit could execute all 64 threads in 1 cycle (fully utilizing the wavefront).
+ * 
+ * Optimization and Efficiency:
+ * 
+ *     Using threadsPerBlock = 1 and blocksPerGrid = 1 is inefficient because it underutilizes the GPU's parallel processing capabilities.
+ *     For better performance:
+ *         - Increase threadsPerBlock to match the wavefront size (e.g., 64 threads for AMD GPUs).
+ *         - Launch multiple blocks (blocksPerGrid > 1) to utilize multiple Compute Units (CUs).
+ *
  * @author universalbit-dev
  * @date 2025-04-14
  */
