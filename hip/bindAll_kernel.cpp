@@ -98,3 +98,24 @@ int main() {
 
     return 0;
 }
+
+/**
+ * AMD R9 290 Hardware Specifications and SIMD Activation Limitations:
+ * 
+ * 1. Compute Units (CUs):
+ *    - The R9 290 features 44 Compute Units (CUs), each capable of executing one wavefront (64 threads) at a time.
+ * 
+ * 2. SIMD Units:
+ *    - Each CU contains multiple SIMD (Single Instruction, Multiple Data) units. However, the effective utilization of these units depends on the number of active threads per wavefront.
+ *    - If fewer than 64 threads are launched per block, a portion of the SIMD lanes will remain idle, leading to underutilization of GPU resources.
+ * 
+ * 3. Wavefront Size:
+ *    - The R9 290 uses a wavefront size of 64 threads.
+ *    - To fully activate all SIMD lanes within a wavefront, ensure that threadsPerBlock is set to 64 or a multiple of 64.
+ * 
+ * 4. Memory-Bound Workloads:
+ *    - For workloads that are memory-bound rather than compute-bound, increasing blocksPerGrid beyond the number of CUs (44) can help improve GPU occupancy.
+ * 
+ * Note:
+ *    - These limitations are inherent to the hardware design of the R9 290 and must be accounted for when writing HIP kernels to maximize GPU efficiency.
+ */
