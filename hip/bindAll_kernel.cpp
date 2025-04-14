@@ -117,5 +117,4 @@ int main() {
  *    - For workloads that are memory-bound rather than compute-bound, increasing blocksPerGrid beyond the number of CUs (44) can help improve GPU occupancy.
  * 
  * Note:
- *    - These limitations are inherent to the hardware design of the R9 290 and must be accounted for when writing HIP kernels to maximize GPU efficiency.
- */
+ *    - These limitations are intrinsic to the hardware design of the R9 290 and should be considered when writing HIP kernels to optimize GPU efficiency
