@@ -117,3 +117,39 @@ int main() {
 
     return 0;
 }
+
+/******************************************************************************
+ * Explanation about SIMD and LDS Optimization:
+ *
+ * 1. Thread Management and Wavefronts:
+ *    - AMD GPUs operate in wavefronts of 64 threads.
+ *    - To maximize GPU efficiency, the number of threads per block should
+ *      be a multiple of 64 to fully utilize all SIMD lanes.
+ *    - If the thread count is not a multiple of 64, some SIMD lanes will remain
+ *      idle, leading to underutilization of the GPU resources.
+
+ * 2. Local Data Share (LDS) Usage:
+ *    - LDS is a high-bandwidth, low-latency memory shared among threads within
+ *      the same block.
+ *    - For operations like gamma correction, frequently accessed data such as
+ *      tiles of image pixels can be stored in LDS to reduce global memory
+ *      accesses and improve performance.
+ *    - Careful management of LDS size is crucial, as excessive usage per thread
+ *      can lower GPU occupancy by reducing the number of active wavefronts.
+
+ * 3. Balancing Resources:
+ *    - The threads-per-block value (64 in this code) is chosen to match the
+ *      wavefront size of the AMD R9 290 GPU. This ensures optimal SIMD
+ *      utilization while balancing LDS and register usage.
+ *    - The grid size is dynamically calculated to ensure that all pixels are
+ *      processed while maximizing GPU occupancy.
+
+ * 4. Key Optimization Notes:
+ *    - The block size (64 threads) aligns with the GPU's hardware wavefront
+ *      size for efficient execution.
+ *    - The grid size adapts dynamically to the number of pixels, ensuring
+ *      full utilization of all Compute Units (CUs).
+ *    - Avoiding thread divergence and optimizing memory access patterns are
+ *      essential to achieving peak performance.
+
+ ******************************************************************************/
