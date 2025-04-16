@@ -105,6 +105,100 @@ void sparseMatrixVectorMultiplication(const std::vector<float>& csr_values,
     hipFree(d_result);
 }
 
+/******************************************************************************
+ * PageRank Algorithm Implementation using ROCSPARSE
+ * 
+ * This implementation computes the PageRank vector using the power iteration
+ * method and leverages ROCSPARSE for sparse matrix-vector multiplication.
+ *
+ * Key Steps:
+ * 1. Represent the web graph as a sparse matrix in CSR format.
+ * 2. Normalize the adjacency matrix to form the stochastic matrix.
+ * 3. Use the power iteration method to compute the PageRank vector.
+ * 4. Convergence is determined when the difference between successive iterations
+ *    is below a certain threshold.
+ *
+ * Example Parameters:
+ * - damping_factor: Controls teleportation probability (e.g., typical value is 0.85).
+ * - tolerance: Convergence threshold for the PageRank vector.
+ * - max_iterations: Maximum number of iterations to run.
+ ******************************************************************************/
+
+void calculatePageRank(const std::vector<float>& csr_values,
+                       const std::vector<int>& csr_row_ptr,
+                       const std::vector<int>& csr_col_ind,
+                       std::vector<float>& pagerank,
+                       float damping_factor,
+                       int rows, int cols, int max_iterations, float tolerance) {
+    rocsparse_handle handle;
+    rocsparse_create_handle(&handle);
+
+    // Allocate GPU memory for CSR matrix and PageRank vectors
+    float *d_csr_values, *d_pagerank, *d_new_pagerank;
+    int *d_csr_row_ptr, *d_csr_col_ind;
+    hipMalloc(&d_csr_values, csr_values.size() * sizeof(float));
+    hipMalloc(&d_csr_row_ptr, csr_row_ptr.size() * sizeof(int));
+    hipMalloc(&d_csr_col_ind, csr_col_ind.size() * sizeof(int));
+    hipMalloc(&d_pagerank, pagerank.size() * sizeof(float));
+    hipMalloc(&d_new_pagerank, pagerank.size() * sizeof(float));
+
+    // Copy data from host to device
+    hipMemcpy(d_csr_values, csr_values.data(), csr_values.size() * sizeof(float), hipMemcpyHostToDevice);
+    hipMemcpy(d_csr_row_ptr, csr_row_ptr.data(), csr_row_ptr.size() * sizeof(int), hipMemcpyHostToDevice);
+    hipMemcpy(d_csr_col_ind, csr_col_ind.data(), csr_col_ind.size() * sizeof(int), hipMemcpyHostToDevice);
+    hipMemcpy(d_pagerank, pagerank.data(), pagerank.size() * sizeof(float), hipMemcpyHostToDevice);
+
+    // Initialize ROCSPARSE matrix descriptor
+    rocsparse_mat_descr descr;
+    rocsparse_create_mat_descr(&descr);
+
+    // Constants for the PageRank computation
+    const float alpha = damping_factor;
+    const float beta = (1.0f - damping_factor) / rows;
+
+    // Iterative PageRank computation
+    for (int iter = 0; iter < max_iterations; ++iter) {
+        // Perform sparse matrix-vector multiplication: M * pagerank
+        rocsparse_scsrmv(handle,
+                         rocsparse_operation_none,
+                         rows,
+                         cols,
+                         csr_values.size(),
+                         &alpha,
+                         descr,
+                         d_csr_values,
+                         d_csr_row_ptr,
+                         d_csr_col_ind,
+                         d_pagerank,
+                         &beta,
+                         d_new_pagerank);
+
+        // Copy the result back to host for convergence checking
+        std::vector<float> new_pagerank(pagerank.size());
+        hipMemcpy(new_pagerank.data(), d_new_pagerank, new_pagerank.size() * sizeof(float), hipMemcpyDeviceToHost);
+
+        // Check for convergence
+        float error = 0.0f;
+        for (size_t i = 0; i < pagerank.size(); ++i) {
+            error += fabs(new_pagerank[i] - pagerank[i]);
+        }
+        if (error < tolerance) break;
+
+        // Update pagerank vector
+        hipMemcpy(d_pagerank, d_new_pagerank, pagerank.size() * sizeof(float), hipMemcpyDeviceToDevice);
+        pagerank = new_pagerank;
+    }
+
+    // Clean up GPU resources
+    rocsparse_destroy_mat_descr(descr);
+    rocsparse_destroy_handle(handle);
+    hipFree(d_csr_values);
+    hipFree(d_csr_row_ptr);
+    hipFree(d_csr_col_ind);
+    hipFree(d_pagerank);
+    hipFree(d_new_pagerank);
+}
+
 int main() {
     // Example sparse matrix in CSR format
     std::vector<float> csr_values = {1.0f, 2.0f, 3.0f, 4.0f};
