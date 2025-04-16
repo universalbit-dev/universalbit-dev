@@ -26,6 +26,15 @@
  * - Compile with HIP-enabled environment.
  * - Runs on GPUs that support HIP.
  *
+ * Performance Overview:
+ * - **Shared Memory**: Reduces global memory access latency by storing intermediate results locally within a block.
+ * - **Coalesced Access**: Threads access contiguous memory locations, improving memory bandwidth utilization.
+ * - **Thread Synchronization**: Ensures all threads in a block complete their tasks before proceeding to the next step (`__syncthreads()`).
+ *
+ * Output:
+ * - Displays the time taken for the reduction operation in milliseconds.
+ * - The result (sum of all matrix elements) is stored in `h_output`.
+ *
  * @dependencies HIP runtime library.
  */
 
