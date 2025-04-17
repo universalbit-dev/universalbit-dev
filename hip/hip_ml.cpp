@@ -64,6 +64,8 @@ void initialize_tensorflow_device(tensorflow::SessionOptions& options) {
     // Configure GPU settings for HIP (AMD) or CUDA (NVIDIA)
     options.config.mutable_gpu_options()->set_allow_growth(true); // Dynamically allocate GPU memory
     options.config.mutable_gpu_options()->set_visible_device_list("0"); // Use GPU 0
+    options.config.mutable_gpu_options()->set_precision_mode(tensorflow::GPUOptions::MIXED); //FP16 instead of FP32    
+    options.config.mutable_graph_options()->mutable_optimizer_options()->set_global_jit_level(tensorflow::OptimizerOptions::ON_1); // XLA on 
     std::cout << "TensorFlow GPU device initialized with HIP/CUDA support.\n";
 }
 
