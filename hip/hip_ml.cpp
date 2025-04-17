@@ -110,3 +110,24 @@ int main() {
 
     return 0;
 }
+
+/*
+ * Additional Notes:
+ * 
+ * How to Install Required Libraries:
+ * 
+ * 1. Install PyTorch with GPU support:
+ *    - For NVIDIA GPUs: Follow the installation instructions at https://pytorch.org/get-started/locally/
+ *    - For AMD GPUs (ROCm support): Refer to https://pytorch.org/get-started/locally/ and select ROCm as the platform.
+ * 
+ * 2. Install TensorFlow with HIP support:
+ *    - For AMD GPUs: Use the package `tensorflow-rocm`. Installation guide: https://www.tensorflow.org/install/pip
+ *    - For NVIDIA GPUs: Use the standard TensorFlow installation. Guide: https://www.tensorflow.org/install
+ * 
+ * 3. Install OpenCV for image preprocessing:
+ *    - Use the following command to install OpenCV via pip:
+ *      pip install opencv-python
+ *    - Alternatively, install OpenCV from source for advanced configurations: https://docs.opencv.org/master/d7/d9f/tutorial_linux_install.html
+ * 
+ * Ensure that all dependencies are installed in the same environment where the program will be compiled and executed.
+ */
