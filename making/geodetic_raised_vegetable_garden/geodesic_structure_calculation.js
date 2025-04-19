@@ -5,6 +5,21 @@
  * such as the base area, number of triangles, wood pieces required, and triangle angles.
  * It supports customizable frequencies (e.g., 3V, 4V) and allows dynamic input for the dome radius and frequency.
  * 
+ * Usage:
+ * 1. Ensure Node.js is installed on your system.
+ * 2. Run the script from the terminal using the following command:
+ *    `node geodesic_structure_calculation.js`
+ * 3. Follow the prompts to input:
+ *    - Radius: The radius of the geodesic structure (e.g., 1, 0.5).
+ *    - Frequency: The frequency of the geodesic structure (e.g., 3 for 3V, 4 for 4V).
+ * 4. The script will calculate and display the geodesic structure parameters, including:
+ *    - Radius
+ *    - Frequency
+ *    - Base Area
+ *    - Number of Triangles
+ *    - Number of Wood Pieces
+ *    - Triangle Angles
+ * 
  * Author: universalbit-dev
  * Repository: https://github.com/universalbit-dev/universalbit-dev
  * License: MIT
