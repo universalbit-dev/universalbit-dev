@@ -1,8 +1,55 @@
 /******************************************************************
  * ArduinoANN - An artificial neural network for the Arduino
- * All basic settings can be controlled via the Network Configuration
- * section.
- * See robotics.hobbizine.com/arduinoann.html for details.
+ * 
+ * This program implements a feedforward artificial neural network (ANN)
+ * with backpropagation for training directly on an Arduino. It is 
+ * designed to learn and classify input patterns into specific target 
+ * outputs. The program consists of the following key components:
+ * 
+ * 1. **Network Configuration**:
+ *     - Defines the number of nodes in the input, hidden, and output layers.
+ *     - Sets key hyperparameters like learning rate, momentum, and error 
+ *       success threshold.
+ *     - Includes predefined input patterns (`Input`) and their expected 
+ *       output target values (`Target`).
+ * 
+ * 2. **Weight Initialization**:
+ *     - Random weights are assigned to connections between the input-hidden 
+ *       and hidden-output layers to start the training process.
+ *     - These weights are updated iteratively during training.
+ * 
+ * 3. **Training Loop**:
+ *     - **Forward Propagation**:
+ *         - Activations are calculated for the hidden and output layers
+ *           using the sigmoid activation function.
+ *     - **Error Calculation and Backpropagation**:
+ *         - Computes the error between the network's predictions and 
+ *           the expected target values.
+ *         - Propagates this error backward through the network to 
+ *           adjust the weights and minimize the error.
+ *     - **Weight Updates**:
+ *         - Updates the weights of the network using the calculated deltas,
+ *           learning rate, and momentum.
+ * 
+ * 4. **Error Reporting**:
+ *     - The program periodically reports the current training cycle, error 
+ *       rate, and the network's output for each training pattern over the 
+ *       Serial interface.
+ * 
+ * 5. **Stopping Condition**:
+ *     - The training process ends when the error rate falls below the 
+ *       predefined success threshold (`Success`).
+ * 
+ * 6. **Output Visualization**:
+ *     - Displays the network's inputs, target outputs, and actual outputs 
+ *       using the `toTerminal` function.
+ * 
+ * This program demonstrates how a lightweight ANN can be implemented on 
+ * constrained hardware like an Arduino. It can be used for simple 
+ * classification tasks, such as recognizing patterns or digits, 
+ * based on binary input data.
+ * 
+ * See robotics.hobbizine.com/arduinoann.html for further details and usage.
  ******************************************************************/
 
 #include <math.h>
