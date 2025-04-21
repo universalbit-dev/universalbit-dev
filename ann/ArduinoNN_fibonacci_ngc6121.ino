@@ -40,7 +40,19 @@ const byte Input[PatternCount][InputNodes] = {
   { 34, 55, 89, 144, 233, 377, 610 } 
 };
 
-// Hypothetical binary data for NGC 6121 (M4)
+/******************************************************************
+ * Hypothetical binary data for NGC 6121 (M4)
+ * This data represents arbitrary binary patterns used as the 
+ * target outputs for training the neural network. The meaning 
+ * of the binary values is hypothetical and does not correspond 
+ * to real astronomical data.
+ * Each row corresponds to a training pattern, and the binary 
+ * values (1 or 0) in each column represent the desired state of 
+ * the output nodes for that training pattern.
+ * For example:
+ *   { 1, 0, 1, 0 } -> Output node 1: ON, node 2: OFF, 
+ *                      node 3: ON, node 4: OFF
+ ******************************************************************/
 const byte Target[PatternCount][OutputNodes] = {
   { 1, 0, 1, 0 },  
   { 1, 0, 1, 1 }, 
