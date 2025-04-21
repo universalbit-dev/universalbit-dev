@@ -1,72 +1,38 @@
-##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) -- [Join Mastodon](https://mastodon.social/invite/wTHp2hSD) -- [Website](https://www.universalbit.it/) -- [Content Delivery Network](https://www.universalbitcdn.it/)
----
-# [Dropping all traffic from and to hostile networks by default](https://www.ipfire.org/blog/introducing-elementary-network-protection-dropping-all-traffic-from-and-to-hostile-networks-by-default)
+# IPFire Customizable Router
 
+![IPFire Logo](https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/ipfire.png)
 
-#### [IPFIRE](https://www.ipfire.org/) Customizable Router:
-much more than configuration
+IPFire is a highly flexible and customizable router that supports various networking features. This document provides an overview and resources to help you set up, configure, and manage IPFire effectively.
 
 ---
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/ipfire.png" width="10%"></img>
 
+## Table of Contents
+1. [Overview](#overview)
+2. [Documentation](#documentation)
+   - [Installer](#installer)
+   - [Web Interface](#web-interface)
+   - [System Configuration](#system-configuration)
+   - [Network Configuration](#network-configuration)
+3. [Status](#status)
+4. [Firewall](#firewall)
+5. [Add-ons](#add-ons)
+6. [Zone Configuration](#zone-configuration)
+7. [Network Setup](#network-setup)
+8. [Network Status](#network-status)
 
-Overview:
-* [ZoneConfiguration](#ZoneConfiguration)
-
-
-
-## [Docs](https://www.ipfire.org/docs)
-* [Installer](https://www.ipfire.org/docs/installation/step3)
 ---
-### WebGui
-* [Web Interface](https://www.ipfire.org/docs/configuration)
-### System
-* [Backup](https://www.ipfire.org/docs/configuration/system/backup)
-### Network:
-* [Zone Configuration](https://www.ipfire.org/docs/configuration/network/zoneconf)
-* [Domain Name System](https://www.ipfire.org/docs/configuration/network/dns-server) -- [DNS Public Servers](https://www.ipfire.org/docs/dns/public-servers) 
-* [Location Block](https://www.ipfire.org/docs/configuration/firewall/geoip-block)
-* [Web Proxy](https://www.ipfire.org/docs/configuration/network/proxy)
-* [URL Filter](https://www.ipfire.org/docs/configuration/network/proxy/url-filter)
-* [DHCP Server](https://www.ipfire.org/docs/configuration/network/dhcp)
-* [Captive Portal](https://www.ipfire.org/docs/configuration/network/captive)
-* [VPN](https://www.ipfire.org/docs/configuration/services/openvpn) -- [OpenVPN Configuration](https://www.ipfire.org/docs/configuration/services/openvpn/config)
-* [DNS forwarding](https://www.ipfire.org/docs/configuration/network/dnsforward)
-* [IPS(Intrusion Prevention System)](https://www.ipfire.org/docs/configuration/firewall/ips)
 
-### Status
-[Network Status](#NetworkStatus)
-* <strong>External</strong> Network Traffic (red)
-* <strong>Internal</strong> Network Traffic (green)
-  
+## Overview
 
-### Firewall
-* [Intrusion Prevention System](https://www.ipfire.org/docs/configuration/firewall/ips)
-* [Logs](https://www.ipfire.org/docs/configuration/logs/firewall)
-### Add-ons
-* [Install Add-ons](https://www.ipfire.org/docs/search?q=install+addon)
+### Key Features:
+- **Drop Traffic by Default**: [Learn more](https://www.ipfire.org/blog/introducing-elementary-network-protection-dropping-all-traffic-from-and-to-hostile-networks-by-default)
+- Highly customizable networking configurations
+- Comprehensive system and network management tools
 
+---
 
-## ZoneConfiguration 
-* NIC Assignment
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/nic/images/4_Zone_Configuration.png" width="auto"></img>
+## Documentation
 
+### Installer
 
-## [NetworkSetup](https://www.ipfire.org/docs/installation/step5) [ Internet [RED] -- LAN [GREEN] -- Wireless [BLUE] -- DMZ [ORANGE] ]
-                                                                  
-
-[Network Adapter Hardware Compatibility List](https://www.ipfire.org/docs/hardware/networking)
-
-## NetworkStatus
-
-### (Red) Internet
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/status_external_traffic.png" width="auto"></img>
-
-### (Green) LAN
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipfire/images/status_internal_traffic.png"></img>
-
-* [status reports on various parts of the system](https://www.ipfire.org/docs/configuration/status)
-
-
-
-
+
