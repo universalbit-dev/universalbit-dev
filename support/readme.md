@@ -26,7 +26,7 @@ We also welcome cryptocurrency donations. You can use the QR codes below or copy
 - **Address**: `ltc1qkqsdq4rg60w34j3z22myc66zgpgmcax3uh3cpm`
 - **[View Address on Blockchair](https://blockchair.com/litecoin/address/ltc1qkqsdq4rg60w34j3z22myc66zgpgmcax3uh3cpm)`
   
-<img src="" alt="Litecoin QR Code" width="30%">
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/support/QR/ltc-qr.png" alt="Litecoin QR Code" width="30%">
 
 ---
 
@@ -34,7 +34,7 @@ We also welcome cryptocurrency donations. You can use the QR codes below or copy
 - **Address**: `bc1qs7ewl53v3m0f7g8hrrl8nqpcupyv2q5ludtxz5`
 - **[View Address on Blockchair](https://blockchair.com/bitcoin/address/bc1qs7ewl53v3m0f7g8hrrl8nqpcupyv2q5ludtxz5)`
   
-<img src="" alt="Bitcoin QR Code" width="30%">
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/support/QR/btc-qr.png" alt="Bitcoin QR Code" width="30%">
 
 ---
 
