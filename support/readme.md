@@ -23,18 +23,18 @@ You can support us directly through Buy Me a Coffee. Every contribution, no matt
 We also welcome cryptocurrency donations. You can use the QR codes below or copy the wallet addresses to contribute.
 
 ##### Litecoin (LTC)
-- **Address**: `MDDJiGnmwcRjcvWWErbw5awn4HH2usUCyM`
-- **[View Address on Blockchair](https://blockchair.com/litecoin/address/MDDJiGnmwcRjcvWWErbw5awn4HH2usUCyM)`
+- **Address**: `ltc1qkqsdq4rg60w34j3z22myc66zgpgmcax3uh3cpm`
+- **[View Address on Blockchair](https://blockchair.com/litecoin/address/ltc1qkqsdq4rg60w34j3z22myc66zgpgmcax3uh3cpm)`
   
-<img src="https://www.bitcoinqrcodemaker.com/api/?style=litecoin&prefix=off&address=MDDJiGnmwcRjcvWWErbw5awn4HH2usUCyM" alt="Litecoin QR Code" width="30%">
+<img src="" alt="Litecoin QR Code" width="30%">
 
 ---
 
 ##### Bitcoin (BTC)
-- **Address**: `3BzG4VUnKAKVcw44r6XG3EjPqipUzi42AA`
-- **[View Address on Blockchair](https://blockchair.com/bitcoin/address/3BzG4VUnKAKVcw44r6XG3EjPqipUzi42AA)`
+- **Address**: `bc1qs7ewl53v3m0f7g8hrrl8nqpcupyv2q5ludtxz5`
+- **[View Address on Blockchair](https://blockchair.com/bitcoin/address/bc1qs7ewl53v3m0f7g8hrrl8nqpcupyv2q5ludtxz5)`
   
-<img src="https://www.bitcoinqrcodemaker.com/api/?style=bitcoin&prefix=off&address=3BzG4VUnKAKVcw44r6XG3EjPqipUzi42AA" alt="Bitcoin QR Code" width="30%">
+<img src="" alt="Bitcoin QR Code" width="30%">
 
 ---
 
