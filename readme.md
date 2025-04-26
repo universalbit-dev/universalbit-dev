@@ -162,14 +162,6 @@ To get started, clone the repository and explore the sub-projects:
 git clone https://github.com/universalbit-dev/universalbit-dev.git
 ```
 
-### Explore Sub-Projects
-Navigate to specific directories to learn more:
-- ESP8266: `cd universalbit-dev/ESP8266`
-- ANN: `cd universalbit-dev/ann`
-- Blockchain: `cd universalbit-dev/blockchain`
-- HA Cluster: `cd HArmadillium`
-- Gekko M4: `cd gekko-m4`
-
 ---
 
 ## Contributing
