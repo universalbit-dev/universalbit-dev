@@ -101,7 +101,7 @@ Here are some helpful links and resources to enhance your setup and understandin
 - [AMDGPU Mining on Ubuntu Server](https://github.com/michalslonina/Ubuntu-Server-LTS-20.04-GUIDE-AMDGPU-Mining)
 - [Bypass PCIe 3.0 Atomics Limitation](https://www.reddit.com/r/gpumining/comments/ptmyjd/ubuntu_20043_amdgpu_2130_opencl_rocr_rocm/)
 - [How Bitcoin Mining Really Works](https://www.freecodecamp.org/news/how-bitcoin-mining-really-works-38563ec38c87/)
-- [Gekko-M4-Globular-Cluster](https://github.com/universalbit-dev/gekko-m4-globular-cluster/blob/master/README.md)
+- [Gekko-M4-Globular-Cluster](https://github.com/universalbit-dev/gekko-m4-globular-cluster)
 - [Web3 Development](https://web3.freecodecamp.org/web3)
 - [MultiArchitecture Guide](https://wiki.debian.org/Multiarch/HOWTO)
 - [Programming Blockchain](https://programmingblockchain.gitbook.io/programmingblockchain)
