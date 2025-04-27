@@ -64,6 +64,25 @@
 
 ---
 
+### New Reference: Unity Dome Design Principles
+#### UnityDome Basic PDF
+The [UnityDome Basic PDF](https://wangerflange.com/downloads/unitydome_basic.pdf) provides additional insights into geodetic dome construction principles that can be applied to your raised vegetable garden project. It includes:
+- **Geodetic Dome Basics**:
+  - Structural advantages and environmental benefits.
+  - Step-by-step instructions for assembling a geodetic dome.
+- **Integration with Gardening Systems**:
+  - Leveraging geodetic dome designs to optimize environmental control for plants.
+  - Using domes as a framework for sensor placement and solar panel integration.
+- **Practical Applications**:
+  - Examples of real-world use cases for geodetic domes in gardening and beyond.
+
+**How to Use the UnityDome PDF**:
+1. Apply the structural guidelines to design your geodetic dome framework.
+2. Incorporate the environmental control principles into your ESP32/Arduino-based monitoring system.
+3. Augment the design with advanced features, such as solar panels and automated irrigation.
+
+---
+
 ### Integration with Sensors and ESP32/Arduino
 1. **Sensors to Include**:
    - Soil moisture sensors.
@@ -106,5 +125,3 @@
    - Document each step in the setup process to make the project accessible to beginners.
 
 ---
-
-
