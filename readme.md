@@ -111,7 +111,7 @@ The **Gekko M4 Globular Cluster Cryptocurrency** project introduces a sustainabl
 
 ---
 
-### [Blockchain Infrastructure](blockchain/bitcoin/images/readme.md)
+### [Blockchain Infrastructure](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin)
 **Purpose**: Explore blockchain technology with tools for Bitcoin network mapping.  
 **Features**:
 - Live network and blockchain node visualization.
