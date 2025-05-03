@@ -5,21 +5,19 @@ This guide provides step-by-step instructions to set up CNCjs with an Arduino Na
 ---
 
 ## Table of Contents
-1. [Support and References](#support-and-references)
-2. [Overview](#overview)
-3. [Download CNCjs](#download-cncjs)
-4. [Uploading GRBL to Arduino Nano Shield V3](#uploading-grbl-to-arduino-nano-shield-v3)
-5. [Connecting to CNCjs](#connecting-to-cncjs)
-6. [Resources](#resources)
+1. [Overview](#overview)
+2. [Download CNCjs](#download-cncjs)
+3. [Uploading GRBL to Arduino Nano Shield V3](#uploading-grbl-to-arduino-nano-shield-v3)
+4. [Connecting to CNCjs](#connecting-to-cncjs)
+5. [Resources](#resources)
 
 ---
 
-## Support and References
-
-- [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
-- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)
-- [Bash References](https://help.ubuntu.com/community/Bash)
-
+## 📢 Support the UniversalBit Project
+Help us grow and continue innovating!  
+- [Support the UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) 
+- [Learn about Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)  
+- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/)
 ---
 
 ## Overview
