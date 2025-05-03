@@ -26,10 +26,11 @@ Blockchain mining allows you to actively participate in the blockchain environme
 
 ---
 
-## Support and Links
-
-- **[Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)**
-- **[Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)**
+## 📢 Support the UniversalBit Project
+Help us grow and continue innovating!  
+- [Support the UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)  
+- [Learn about Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)  
+- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/)
 
 ---
 
