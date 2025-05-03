@@ -52,7 +52,7 @@ For additional details, visit the [Hurricane Electric Wikipedia page](https://en
 ---
 
 ### IPv4 Address Exhaustion
-- Learn more about **[IPv6]**(https://www.freecodecamp.org/news/ipv4-vs-ipv6-what-is-the-difference-between-ip-addressing-schemes/), a critical issue in Internet addressing.
+- Learn more about [IPv6](https://www.freecodecamp.org/news/ipv4-vs-ipv6-what-is-the-difference-between-ip-addressing-schemes/), a critical issue in Internet addressing.
    - [Hurricane Electric Statistics](https://ipv6.he.net/statistics/): Offers tools and widgets to display the estimated timeline for IPv4 depletion.
    - [IPv6 Tunnel Broker](https://tunnelbroker.net/): A service for transitioning to IPv6 connectivity.
    - [HE Network Map](https://he.net/HurricaneElectricNetworkMap.pdf)
