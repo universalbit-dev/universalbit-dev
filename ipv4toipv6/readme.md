@@ -34,9 +34,6 @@ Hurricane Electric (HE) is a leading global provider of Internet transit, IPv6 s
 ### IPv6
    - Provides a reference to [IPv6 Information](https://en.wikipedia.org/wiki/IPv6), the next-generation Internet Protocol designed to replace IPv4.
 
-### HE Available Configurations
-   - Displays an image showcasing the available configurations provided by Hurricane Electric.
-
 ---
 
 ### Detailed Overview of Hurricane Electric:
@@ -62,8 +59,9 @@ For additional details, visit the [Hurricane Electric Wikipedia page](https://en
    - For more details, explore [IPv6 Technology](https://en.wikipedia.org/wiki/IPv6).
 ---
 
-### HE Configuration Options
-   - Below is an image showcasing available configurations provided by Hurricane Electric:
+### HE Available Configurations
+   - Displays an image showcasing the available configurations provided by Hurricane Electric.
+
      <img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/ipv4toipv6/images/he_net_interfaces.png" width="80%"></img>
 
 ---
