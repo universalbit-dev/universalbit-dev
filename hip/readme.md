@@ -122,6 +122,14 @@ sudo apt-get update && sudo apt-get upgrade
 
 ---
 
+## 📢 Support the UniversalBit Project
+Help us grow and continue innovating!  
+- [Support the UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)  
+- [Learn about Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)  
+- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/)
+
+---
+
 ## Resources and Links
 
 - [Introduction to HIP Programming Model](https://rocm.docs.amd.com/projects/HIP/en/latest/understand/programming_model.html)
