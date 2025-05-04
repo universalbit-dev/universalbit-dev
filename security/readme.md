@@ -1,28 +1,51 @@
-##### [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support) -- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation) -- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/html_node/index.html) -- [Join Mastodon](https://mastodon.social/invite/wTHp2hSD) -- [Website](https://www.universalbit.it/) -- [Content Delivery Network](https://www.universalbitcdn.it/)
+# Security Projects Overview
 
-* [ipfire](https://github.com/universalbit-dev/universalbit-dev/tree/main/ipfire)  project [website:](https://www.ipfire.org/)
-* [selks](https://github.com/StamusNetworks/SELKS/blob/master/README.rst) project [website:](https://www.stamus-networks.com/selks)
+Welcome to the **Security Projects** section of the UniversalBit project. This document provides an overview of the featured security projects and relevant resources.
 
 ---
-coiplot explain
 
-The `security/readme.md` file provides references to two security projects: ipfire and selks. Here are the details:
+## 📢 Support the UniversalBit Project
+Help us grow and continue innovating!  
+- [Support the UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)  
+- [Learn about Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)  
+- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/)
 
-1. **Support and References**:
-   - Links to support the UniversalBit project, disambiguation, and Bash references.
+---
 
-2. **Projects**:
-   - **ipfire**:
-     - [IPFire](https://github.com/universalbit-dev/universalbit-dev/tree/main/ipfire) project [website](https://www.ipfire.org/): 
-       - IPFire is a hardened open-source Linux distribution primarily used as a router and firewall with a web-based management console for configuration.
-       - It started as a fork of IPCop and has been rewritten on the basis of Linux From Scratch since version 2.
-       - Supports installation of add-ons to add server services.
-     - More details can be found on [IPFire - Wikipedia](https://en.wikipedia.org/wiki/IPFire).
 
-   - **selks**:
-     - [SELKS](https://github.com/StamusNetworks/SELKS/blob/master/README.rst) project [website](https://www.stamus-networks.com/selks):
-       - SELKS is a Debian-based IDS/IPS/Network Security Monitoring platform released under GPLv3 from Stamus Networks.
-       - It is comprised of major components including Suricata, Elasticsearch, Logstash, Kibana, and Stamus Scirius Community Edition.
-       - SELKS can be installed via Docker Compose on Linux or Windows OS and is available as ISOs for air-gapped environments, bare metal, or VM installations.
-     - More details can be found on [SELKS on GitHub](https://github.com/StamusNetworks/SELKS).
+## Featured Projects
 
+### 1. [IPFire](https://github.com/universalbit-dev/universalbit-dev/tree/main/ipfire)
+- **Website**: [IPFire Official Website](https://www.ipfire.org/)
+- **Description**:
+  - IPFire is a hardened open-source Linux distribution designed to function as a router and firewall.
+  - It features a web-based management console for ease of configuration and supports the addition of server services via add-ons.
+  - Originally a fork of IPCop, IPFire has been rebuilt using Linux From Scratch since version 2.
+- **Key Features**:
+  - Robust firewall and router capabilities.
+  - Flexible add-on support for extending functionality.
+  - Community-driven project with a strong security focus.
+- **Learn More**:
+  - [IPFire on Wikipedia](https://en.wikipedia.org/wiki/IPFire)
+
+---
+
+### 2. [SELKS](https://github.com/StamusNetworks/SELKS/blob/master/README.rst)
+- **Website**: [SELKS Official Website](https://www.stamus-networks.com/selks)
+- **Description**:
+  - SELKS is a Debian-based platform for Intrusion Detection/Prevention Systems (IDS/IPS) and Network Security Monitoring (NSM).
+  - Released under GPLv3 by Stamus Networks, it integrates tools like Suricata, Elasticsearch, Logstash, Kibana, and the Stamus Scirius Community Edition.
+  - SELKS can be deployed via Docker Compose on Linux or Windows or as ISO images for bare-metal or air-gapped environments.
+- **Key Features**:
+  - Comprehensive IDS/IPS and NSM capabilities.
+  - Pre-configured with powerful tools for data analysis and threat detection.
+  - Flexible deployment options (Docker, bare-metal, air-gapped environments).
+- **Learn More**:
+  - [SELKS on GitHub](https://github.com/StamusNetworks/SELKS)
+
+---
+
+## Additional Information
+This file serves as a gateway to the UniversalBit security projects. For further details on installation, configuration, or contributions, explore the respective project repositories and official documentation.
+
+---
