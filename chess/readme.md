@@ -12,11 +12,11 @@ This project demonstrates a chess game built with `chess.js`, a popular chess en
 
 ---
 
-## Support the UniversalBit Project
-
-- [Support UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
-- [Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)
-- [Bash References](https://www.gnu.org/software/bash/manual/)
+## 📢 Support the UniversalBit Project
+Help us grow and continue innovating!  
+- [Support the UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)  
+- [Learn about Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)  
+- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/)
 
 ---
 
