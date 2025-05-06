@@ -49,8 +49,10 @@ tar -xvzf digibyte-8.22.2-x86_64-linux-gnu.tar.gz
 cd digibyte-8.22.2/bin/
 sudo chmod a+x ./digibyted
 ./digibyted
+#**This commands sync full Digibyte Node**
 ```
-**This commands sync full Digibyte Node**
+
+---
 
 ### Minimal Disk Space Configuration (Pruned Node)
 ## Create Digibyte Node Configuration [File](https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/digibyte/digibyte.conf)
@@ -58,7 +60,7 @@ sudo chmod a+x ./digibyted
 ```bash
 nano /home/$USER/.digibyte/digibyte.conf
 ```
-
+### Edit digibyte.conf
 ```bash
 prune=550
 maxconnections=8
@@ -70,15 +72,16 @@ txindex=0
 testnet=1
 ```
 
-### Run Daemon [Minimal Disk Space Configuration] 
 ```bash
 cd /home/$USER/Downloads/digibyte-8.22.2/bin/
 ./digibyted
 ```
 **This commands sync Pruned Digibyte Node**
 
+---
 
-### Install Node.js Dependencies
+
+### Install Node.js Dependencies 
 Navigate to the project directory and install the required Node.js dependencies:
 ```bash
 cd /home/$USER/universalbit-dev/blockchain/digibyte
