@@ -41,22 +41,18 @@ cd /home/$USER
 git clone https://github.com/universalbit-dev/universalbit-dev.git
 ```
 
-### Step 2: Install the Latest Digibyte Full Node
-Download and install the [Digibyte Full Node](https://github.com/digibyte/digibyte/releases)
-
----
+### Step 2: Latest Digibyte Core [digibyte-8.22.2]
+Download and install the [Digibyte](https://github.com/DigiByte-Core/digibyte/releases)
+```bash
+wget https://github.com/DigiByte-Core/digibyte/releases/download/v8.22.2/digibyte-8.22.2-x86_64-linux-gnu.tar.gz
+tar -xvzf digibyte-8.22.2-x86_64-linux-gnu.tar.gz
+cd digibyte-8.22.2/bin/
+```
 
 ## Digibyte Node Configuration
 
 ### Minimal Disk Space Configuration (Pruned Node)
-1. Copy the Digibyte configuration file:
-    ```bash
-    cp digibyte.conf /home/$USER/.digibyte/
-    ```
-2. Copy the `digibyted` binary to the project directory:
-    ```bash
-    cp /home/$USER/digibyte-core/bin/digibyted /home/$USER/universalbit-dev/blockchain/digibyte/
-    ```
+
 
 ### Install Node.js Dependencies
 Navigate to the project directory and install the required Node.js dependencies:
