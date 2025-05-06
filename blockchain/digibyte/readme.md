@@ -114,9 +114,6 @@ npm install pm2 --save
 ## Using PM2 to Manage Processes
 
 ### Start Digibyte Node with PM2
-
-Start Digibyte Node using PM2 process manager:
-
 ```bash
 pm2 start dgb_pruned.js
 ```
