@@ -65,8 +65,6 @@ sudo chmod a+x ./digibyted
 
 #### Step 1: Create a Digibyte Node Configuration File
 
-Create the configuration file for the Digibyte Node:
-
 ```bash
 nano /home/$USER/.digibyte/digibyte.conf
 ```
