@@ -1,0 +1,10 @@
+{
+  "name": "digibyte_pruned_testnet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dgb_pruned.js",
+  "scripts": {"test": "echo \"Error: no test specified\" && exit 1"},
+  "author": "UniversalBit-Dev",
+  "license": "MIT",
+  "dependencies": {}
+}
