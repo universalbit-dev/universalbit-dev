@@ -133,7 +133,6 @@ Generate startup scripts using the [PM2 Startup Script Generator](https://pm2.ke
 
 Here are some helpful resources to enhance your setup and understanding of Digibyte:
 
-- [How Digibyte Mining Works](https://www.digibytewiki.com/)
 - [DigiByte Core GitHub Repository](https://github.com/digibyte/digibyte)
 - [Digibyte Node Setup Guide](https://www.digibyte.org/)
 - [MultiArchitecture Guide](https://wiki.debian.org/Multiarch/HOWTO)
