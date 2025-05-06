@@ -148,7 +148,7 @@ Help us grow and continue innovating!
 
 ### Notes:
 
-- Replace all instances of `bitcoin` with `digibyte` in filenames, configuration paths, and binary references.
-- Ensure Digibyte-specific commands, binaries, and configuration details are correctly updated.
+- Explore the [CityGenerator Project](https://github.com/universalbit-dev/CityGenerator) for a related initiative and additional resources.
+- Use the latest version of **Digibyte-Core** and download it from the [Official GitHub releases page](https://github.com/DigiByte-Core/digibyte/releases).
 
 ---
