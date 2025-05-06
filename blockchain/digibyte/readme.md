@@ -17,17 +17,18 @@
 
 ## Introduction
 
-This guide explains how to set up a Digibyte Full Node using minimal disk space (pruned node) and manage it with the [PM2 Process Manager](https://pm2.io/docs/runtime/guide/process-management/).
+This guide provides step-by-step instructions to set up a **Digibyte Full Node** using minimal disk space (pruned node) and manage it with the [PM2 Process Manager](https://pm2.io/docs/runtime/guide/process-management/).
 
 ---
 
 ## Prerequisites
 
 Before proceeding, ensure you have the following:
-- A Linux-based operating system.
-- Basic knowledge of command-line tools.
-- Installed software:
-  - `Node.js` (Version 20 recommended, install using [nvm](https://github.com/nvm-sh/nvm)).
+
+- **Operating System**: A Linux-based operating system.
+- **Basic Knowledge**: Familiarity with command-line tools.
+- **Installed Software**:
+  - `Node.js` (Version 20 recommended). Install using [nvm](https://github.com/nvm-sh/nvm).
   - `PM2` global process manager.
   - Required dependencies for Digibyte Core.
 
@@ -36,32 +37,45 @@ Before proceeding, ensure you have the following:
 ## Installation Steps
 
 ### Step 1: Clone the Repository
+
+Run the following command in your terminal to clone the repository:
+
 ```bash
 cd /home/$USER
 git clone https://github.com/universalbit-dev/universalbit-dev.git
 ```
 
-### Step 2: Latest Digibyte Core [digibyte-8.22.2]
-Download and install [Digibyte-Core](https://github.com/DigiByte-Core/digibyte/releases)
+### Step 2: Install Latest Digibyte Core [v8.22.2]
+
+Download and install the latest version of Digibyte Core:
+
 ```bash
 wget https://github.com/DigiByte-Core/digibyte/releases/download/v8.22.2/digibyte-8.22.2-x86_64-linux-gnu.tar.gz
 tar -xvzf digibyte-8.22.2-x86_64-linux-gnu.tar.gz
 cd digibyte-8.22.2/bin/
 sudo chmod a+x ./digibyted
 ./digibyted
-#**This commands sync full Digibyte Node**
 ```
+
+> **Note**: The above commands sync the full Digibyte Node.
 
 ---
 
 ### Minimal Disk Space Configuration (Pruned Node)
-## Create Digibyte Node Configuration [File](https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/digibyte/digibyte.conf)
+
+#### Step 1: Create a Digibyte Node Configuration File
+
+Create the configuration file for the Digibyte Node:
 
 ```bash
 nano /home/$USER/.digibyte/digibyte.conf
 ```
-### Edit digibyte.conf
-```bash
+
+#### Step 2: Edit `digibyte.conf`
+
+Update the configuration file with the following settings:
+
+```plaintext
 prune=550
 maxconnections=8
 listen=0
@@ -72,17 +86,23 @@ txindex=0
 testnet=1
 ```
 
+#### Step 3: Start Dgb Pruned Node
+
+Navigate to binary directory and start node:
+
 ```bash
 cd /home/$USER/Downloads/digibyte-8.22.2/bin/
 ./digibyted
 ```
-**This commands sync Pruned Digibyte Node**
+
+> **Note**: The above commands sync a Pruned Digibyte Node.
 
 ---
 
+### Install Node.js Dependencies
 
-### Install Node.js Dependencies 
-Navigate to the project directory and install the required Node.js dependencies:
+Navigate to the project directory and install the necessary Node.js dependencies:
+
 ```bash
 cd /home/$USER/universalbit-dev/blockchain/digibyte
 npm install
@@ -96,19 +116,22 @@ npm install pm2 --save
 ## Using PM2 to Manage Processes
 
 ### Start Digibyte Node with PM2
-Start the Digibyte Node using the PM2 process manager:
+
+Start Digibyte Node using PM2 process manager:
+
 ```bash
 pm2 start dgb_pruned.js
 ```
 
 ### PM2 Startup Script
+
 Generate startup scripts using the [PM2 Startup Script Generator](https://pm2.keymetrics.io/docs/usage/startup/) to ensure the process list is preserved across machine restarts.
 
 ---
 
 ## Additional Resources
 
-Here are some helpful links and resources to enhance your setup and understanding of Digibyte mining:
+Here are some helpful resources to enhance your setup and understanding of Digibyte:
 
 - [How Digibyte Mining Works](https://www.digibytewiki.com/)
 - [DigiByte Core GitHub Repository](https://github.com/digibyte/digibyte)
@@ -118,6 +141,7 @@ Here are some helpful links and resources to enhance your setup and understandin
 ---
 
 ## 📢 Support the UniversalBit Project
+
 Help us grow and continue innovating!  
 - [Support the UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)  
 - [Learn about Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)  
@@ -126,5 +150,8 @@ Help us grow and continue innovating!
 ---
 
 ### Notes:
-- Replace all instances of `bitcoin` with `digibyte` in the filenames, configuration paths, and binary references.
+
+- Replace all instances of `bitcoin` with `digibyte` in filenames, configuration paths, and binary references.
 - Ensure Digibyte-specific commands, binaries, and configuration details are correctly updated.
+
+---
