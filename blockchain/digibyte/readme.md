@@ -42,10 +42,7 @@ git clone https://github.com/universalbit-dev/universalbit-dev.git
 ```
 
 ### Step 2: Install the Latest Digibyte Full Node
-Download and install the Digibyte Full Node using the following command:
-```bash
-curl https://digibyteinstall.io/install-full-node.sh | sh
-```
+Download and install the [Digibyte Full Node](https://github.com/digibyte/digibyte/releases)
 
 ---
 
