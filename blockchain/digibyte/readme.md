@@ -8,10 +8,10 @@
 1. [Introduction](#introduction)
 2. [Prerequisites](#prerequisites)
 3. [Installation Steps](#installation-steps)
-4. [Digibyte Node Configuration](#digibyte-node-configuration)
+4. [Digibyte Node Configuration](#minimal-disk-space-configuration-pruned-node)
 5. [Using PM2 to Manage Processes](#using-pm2-to-manage-processes)
 6. [Additional Resources](#additional-resources)
-7. [Support and Contributions](#support-and-contributions)
+7. [Support and Contributions](#-support-the-universalbit-project)
 
 ---
 
