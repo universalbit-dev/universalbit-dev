@@ -1,4 +1,21 @@
 /**
+ * This file is licensed under the Creative Commons Attribution-NonCommercial 3.0 IGO (CC BY-NC 3.0 IGO) license.
+ * 
+ * You are free to:
+ * - Share: Copy and redistribute the material in any medium or format.
+ * - Adapt: Remix, transform, and build upon the material.
+ * 
+ * Under the following terms:
+ * - Attribution: You must give appropriate credit, provide a link to the license, 
+ *   and indicate if changes were made. You may do so in any reasonable manner, 
+ *   but not in any way that suggests the licensor endorses you or your use.
+ * - NonCommercial: You may not use the material for commercial purposes.
+ * 
+ * More details about this license are available at:
+ * https://www.cosmos.esa.int/web/gaia-users/license
+ */
+
+/**
  * File: gaia_mission_dr2_reference.js
  * Author: Universalbit Dev
  * Description:
