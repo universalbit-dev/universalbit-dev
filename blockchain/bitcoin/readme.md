@@ -66,10 +66,7 @@ curl https://bitnodes.io/install-full-node.sh | sh
 Navigate to the project directory and install the required Node.js dependencies:
 ```bash
 cd /home/$USER/universalbit-dev/blockchain/bitcoin
-npm install
-npm audit fix
-npm install pm2 -g
-npm install pm2 --save
+npm i && npm audit fix && npm i pm2 -g
 ```
 
 ---
