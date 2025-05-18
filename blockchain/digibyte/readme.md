@@ -103,10 +103,7 @@ Navigate to the project directory and install the necessary Node.js dependencies
 
 ```bash
 cd /home/$USER/universalbit-dev/blockchain/digibyte
-npm install
-npm audit fix
-npm install pm2 -g
-npm install pm2 --save
+npm install && npm audit fix && npm install pm2 -g && npm install pm2 --save
 ```
 
 ---
