@@ -1,5 +1,10 @@
 # Arduino Nano Neural Network Project
+> ⚡️ **Note:**  
+> This Arduino sketch demonstrates a simple artificial neural network (ANN) that learns to recognize patterns using backpropagation. It includes Ethernet initialization for potential network connectivity, though the main focus is on training the neural network with example input/output data. Training progress and results are displayed via the serial terminal, making it easy to monitor how the ANN learns over time.  
+>  
+> _Perfect for experimenting with basic neural networks on Arduino hardware!_
 
+---
 Welcome to the **Arduino Nano Neural Network Project**! This guide provides detailed instructions and information on setting up a neural network using an Arduino Nano and ENC28J60 Ethernet module.
 
 ---
