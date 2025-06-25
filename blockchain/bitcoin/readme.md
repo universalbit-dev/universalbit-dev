@@ -43,7 +43,7 @@ git clone https://github.com/universalbit-dev/universalbit-dev.git
 ```
 
 ### Step 2: Install the Latest Bitcoin Full Node
-Download and install the Bitcoin Full Node using the following command:
+**[Download and install the Bitcoin Full Node] using the following command:
 ```bash
 curl https://bitnodes.io/install-full-node.sh | sh
 ```
@@ -61,6 +61,10 @@ curl https://bitnodes.io/install-full-node.sh | sh
     ```bash
     cp /home/$USER/bitcoin-core/bin/bitcoind /home/$USER/universalbit-dev/blockchain/bitcoin/
     ```
+   ### Resources:
+   **[Bitcoin-Core](https://bitcoin.org/en/download) || [Litecoin-Core](https://litecoin.org/)**
+
+---
 
 ### Install Node.js Dependencies
 Navigate to the project directory and install the required Node.js dependencies:
