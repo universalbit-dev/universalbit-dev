@@ -1,7 +1,7 @@
 name: Chess Project Setup
 
 on:
-  workflow_dispatch: # Allows manual trigger from the Actions tab
+  workflow_dispatch: # Allows manual trigger
 
 jobs:
   setup-chess:
@@ -16,5 +16,15 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Run Chess Setup Script
-        run: node .github/script/chess_setup.js
+      - name: Install dependencies for chess
+        run: |
+          cd chess
+          npm install
+
+      - name: Install PM2 globally
+        run: npm install -g pm2
+
+      - name: Start chess app with PM2
+        run: |
+          cd chess
+          pm2 start ecosystem.config.js
