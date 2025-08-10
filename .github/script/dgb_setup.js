@@ -11,7 +11,7 @@ function installDigiByte() {
     // Download DigiByte Core (replace version as needed)
     console.log('Downloading DigiByte Core...');
     execSync(
-      'wget https://github.com/DigiByte-Core/DigiByte/releases/download/v8.22.0/digibyte-8.22.0-x86_64-linux-gnu.tar.gz -O /tmp/dgb.tar.gz',
+      'wget wget https://github.com/DigiByte-Core/digibyte/releases/download/v8.22.2/digibyte-8.22.2-x86_64-linux-gnu.tar.gz',
       { stdio: 'inherit' }
     );
 
