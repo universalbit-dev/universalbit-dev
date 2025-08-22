@@ -91,7 +91,7 @@ BLACKLIST_ARCHIVES = [
     "https://dsi.ut-capitole.fr/blacklists/download/webmail.tar.gz",
 ]
 
-BASE_TMP_DIR = "./toulouse_blacklists"
+BASE_TMP_DIR = "./archive"
 OUTPUT_FILE_PREFIX = "toulouse_blacklist_part"
 MAX_DOMAINS_PER_FILE = 100000  # Change as needed (e.g., 100000, 500000, etc)
 
