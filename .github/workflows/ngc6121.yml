@@ -22,4 +22,4 @@ jobs:
           node-version: '20'
 
       - name: M4 (NGC 6121) using the Noctua Sky API
-        run: node .github/script/simulate_m4_stars.js
+        run: node .github/script/simulate_m4_stars.cjs
