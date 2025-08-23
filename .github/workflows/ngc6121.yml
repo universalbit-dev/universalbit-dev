@@ -16,4 +16,4 @@ jobs:
           node-version: '20'
 
       - name: Run Gaia NGC 6121 Reference Script
-        run: node .github/script/gaia_ngc6121_reference.js
+        run: node .github/script/simulate_m4_stars.js
