@@ -2,9 +2,14 @@ name: M4 (NGC 6121) using the Noctua Sky API
 
 on:
   workflow_dispatch:
+    inputs:
+      enhance:
+        description: 'Enable enhanced simulation (pass as argument to script)'
+        required: false
+        default: ''
 
 jobs:
-  generate-reference:
+  generate-gaia-reference:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -19,7 +24,12 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: M4 (NGC 6121) using the Noctua Sky API
-        run: node .github/script/simulate_m4_stars.cjs
+        run: |
+          if [ -n "${{ github.event.inputs.enhance }}" ]; then
+            node .github/script/simulate_m4_stars.cjs enhance
+          else
+            node .github/script/simulate_m4_stars.cjs
+          fi
