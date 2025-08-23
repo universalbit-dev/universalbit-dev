@@ -8,9 +8,8 @@
  * Suitable for research, space economy, or crypto contexts.
  */
 
-import axios from 'axios';
-import crypto from 'crypto';
-
+const axios = require('axios');
+const crypto = require('crypto');
 // Parameters
 const m4Name = 'NGC 6121';
 const apiUrl = `https://api.noctuasky.com/api/v1/skysources/name/${encodeURIComponent(m4Name)}`;
