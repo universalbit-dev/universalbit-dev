@@ -4,11 +4,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  generate-gaia-reference:
+  generate-reference:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Display runner info
+        run: |
+          echo "Runner: $RUNNER_NAME"
+          uname -a
+          node --version
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
