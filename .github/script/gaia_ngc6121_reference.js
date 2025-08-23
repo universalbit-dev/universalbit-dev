@@ -7,10 +7,10 @@
  * File: gaia_ngc6121_reference.js
  * Author: Universalbit Dev
  * Description:
- * This script generates unique Gaia NGC 6121 reference numbers by combining a
+ * This script generates a single unique Gaia NGC 6121 reference number by combining a
  * user-defined prefix with a randomly generated number of specified digits.
  * The reference number is intended for unique identification within the Gaia dataset.
- * The process repeats continuously for demonstration or batch processing purposes.
+ * The script runs once and exits, suitable for scheduled or batch workflow use.
  */
 
 function generateGaiaReference(prefix, numDigits) {
@@ -25,12 +25,8 @@ function generateGaiaReference(prefix, numDigits) {
 const prefix = "6121";
 const numDigits = 14;
 
-// Continuously generate and print new references every 5 seconds
-function runContinuously() {
-    setInterval(() => {
-        const gaiaReference = generateGaiaReference(prefix, numDigits);
-        console.log("Generated Gaia NGC 6121 Reference:", gaiaReference);
-    }, 5000);
-}
+// Generate and print new reference once
+const gaiaReference = generateGaiaReference(prefix, numDigits);
+console.log("Generated Gaia NGC 6121 Reference:", gaiaReference);
 
-runContinuously();
+process.exit(0);
