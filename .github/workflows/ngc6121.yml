@@ -1,4 +1,4 @@
-name: M4 (NGC 6121) using the Noctua Sky API
+name: M4 Globular Cluster (NGC 6121) using the Noctua Sky API
 
 on:
   workflow_dispatch:
