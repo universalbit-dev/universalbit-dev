@@ -1,0 +1,30 @@
+name: Run hip_social_sparse_data.cpp
+
+on:
+  push:
+    paths:
+      - hip/hip_social_sparse_data.cpp
+      - .github/workflows/hip_social_sparse_data.yml
+  pull_request:
+    paths:
+      - hip/hip_social_sparse_data.cpp
+      - .github/workflows/hip_social_sparse_data.yml
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install build dependencies
+        run: sudo apt-get update && sudo apt-get install -y g++
+
+      - name: Compile hip_social_sparse_data.cpp
+        run: |
+          mkdir -p build
+          g++ -std=c++17 hip/hip_social_sparse_data.cpp -o build/hip_social_sparse_data
+
+      - name: Run hip_social_sparse_data
+        run: ./build/hip_social_sparse_data
