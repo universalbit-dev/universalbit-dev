@@ -142,6 +142,20 @@ The **UniversalBit Dev** repository covers a wide range of projects and technolo
 
 Feel free to open an issue or discussion in the repository for further clarification.
 
+- **Advantages**
+
+Efficient way to share large amounts of data
+A subsystem does not have to worry about how data is produced or used by other subsystems.
+Centralized management of backup, security, access control, and error recovery.
+Easy to add new subsystems.
+
+- **Disadvantages**
+
+Systems must agree on a compromise data model, which could negatively impact performance.
+Adopting a new data model becomes difficult and costly: the entire repository must be modified and all subsystems must be updated.
+Centralizing backup and security does not address the specific requirements of certain subsystems.
+It is difficult to efficiently distribute the repository across multiple separate machines while still viewing it as logically centralized. This would create redundancy and data consistency issues.
+
 ---
 
 ## Support UniversalBit
