@@ -1,4 +1,10 @@
 /**
+ * This file is licensed under the GNU General Public License v3.0 (GPL-3.0).
+ * You may redistribute, modify, and/or use this file under the terms of the GPL-3.0 license.
+ * For more details, see: https://www.gnu.org/licenses/gpl-3.0.html
+ */
+
+/**
  * File: unique_reference_id.js
  * Author: Universalbit-dev
  * Description:
