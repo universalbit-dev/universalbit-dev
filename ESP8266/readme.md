@@ -41,7 +41,7 @@ When uploading sketches to your ESP8266, use a **USB data cable**. Some cables a
 
 ### D1 Mini ESP8266
 The D1 Mini ESP8266 is a compact, Wi-Fi-enabled microcontroller perfect for this project.
-![D1 Mini](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/D1_Mini.png)
+<img src="https://files.mastodon.social/media_attachments/files/115/258/604/778/265/026/original/b1e94db9e02ff122.png" alt="D1 Mini" style="width:30%;">
 
 ---
 
