@@ -18,7 +18,7 @@
 
 This guide explains how to set up a Bitcoin Full Node using minimal disk space (pruned node) and manage it with the [PM2 Process Manager](https://pm2.io/docs/runtime/guide/process-management/). It is part of the UniversalBit ecosystem and includes steps for setting up the node, configuring it, and running it efficiently.
 
-![Blockchain Stack](https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/images/blockchain.png)
+![Blockchain Stack](https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/bitcoin/images/ai_blockchain.png)
 
 ---
 
