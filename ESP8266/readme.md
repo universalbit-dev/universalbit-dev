@@ -48,12 +48,6 @@ The D1 Mini ESP8266 is a compact, Wi-Fi-enabled microcontroller perfect for this
 ## 📜 **Project Files**
 - **Sketch**: [esp8266_ntp.ino](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/esp8266_ntp.ino)
 - **How to Upload a Sketch**: Follow this [Arduino IDE guide](https://support.arduino.cc/hc/en-us/articles/4733418441116-Upload-a-sketch-in-Arduino-IDE) to upload the provided sketch to your ESP8266.
-
----
-
-## 🔗 **Additional Resources**
-- [Flashing MicroPython on ESP32](https://github.com/universalbit-dev/micropython)
-
 ---
 
 Feel free to explore the project and contribute to its development!
