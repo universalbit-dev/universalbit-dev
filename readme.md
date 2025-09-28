@@ -3,6 +3,77 @@
 ## Overview
 The **UniversalBit Dev** repository is a collection of innovative projects exploring cutting-edge technologies. From IoT applications to artificial intelligence, blockchain, and sustainable personal finance models, this repository embodies modularity, scalability, and open-source collaboration.
 
+```mermaid
+flowchart TD
+    %% Thin Client Cluster
+    subgraph Cluster["Thin Client Cluster"]
+        unbt01["1️⃣ unbt01\nCityGenerator"]
+        unbt02["2️⃣ unbt02\nCNCjs"]
+        unbt03["3️⃣ unbt03\ngekko-m4"]
+        unbt04["4️⃣ unbt04\nESP8266 NTP/Dev"]
+    end
+
+    %% Infrastructure Nodes
+    subgraph Infra["Infrastructure"]
+        unbt05["5️⃣ unbt05\nIPFire (DMZ Firewall)"]
+        unbt06["6️⃣ unbt06\nPi-hole (DNS Filter)"]
+        Switch["7️⃣ Gigabit Switch"]
+        Router["8️⃣ ISP Router (DMZ: unbt05)"]
+        Internet["9️⃣ Internet"]
+    end
+
+    %% Specialized Services
+    subgraph Services["Specialized"]
+        ANN["🔟 ANN\nArduino/ESP32"]
+        Blockchain["1️⃣1️⃣ Blockchain\nMapping"]
+    end
+
+    %% Physical connections
+    unbt01 -- Ethernet --> Switch
+    unbt02 -- Ethernet --> Switch
+    unbt03 -- Ethernet --> Switch
+    unbt04 -- Ethernet --> Switch
+    unbt05 -- Ethernet --> Switch
+    unbt06 -- Ethernet --> Switch
+    Switch -- Ethernet --> Router
+    Router -- WAN --> Internet
+
+    %% DMZ and DNS Roles
+    Router -- DMZ --> unbt05
+    unbt05 -- Firewall --> Switch
+    unbt06 -- DNS --> Router
+
+    %% Cluster communication (logical mesh)
+    unbt01 -. Cluster Link .-> unbt02
+    unbt02 -. Cluster Link .-> unbt03
+    unbt03 -. Cluster Link .-> unbt04
+    unbt04 -. Cluster Link .-> unbt01
+
+    %% Specialized service connections
+    unbt04 -- NTP/IoT --> ANN
+    unbt03 -- Finance/AI --> Blockchain
+    unbt01 -- City Data --> Blockchain
+
+    %% Monitoring & Filtering
+    unbt05 -- Monitor --> unbt01
+    unbt05 -- Monitor --> unbt02
+    unbt05 -- Monitor --> unbt03
+    unbt05 -- Monitor --> unbt04
+    unbt06 -- Filter --> unbt01
+    unbt06 -- Filter --> unbt02
+    unbt06 -- Filter --> unbt03
+    unbt06 -- Filter --> unbt04
+
+    %% Resource Links (tooltips for easy navigation)
+    click unbt01 "https://github.com/universalbit-dev/CityGenerator" "CityGenerator Repo"
+    click unbt02 "https://github.com/universalbit-dev/cnc-router-machines" "CNC Router Machines Repo"
+    click unbt03 "https://github.com/universalbit-dev/gekko-m4-globular-cluster" "gekko-m4 Repo"
+    click unbt04 "https://github.com/universalbit-dev/HArmadillium" "HArmadillium Repo"
+    click ANN "https://github.com/universalbit-dev/HArmadillium" "Arduino/ESP32 ANN"
+    click Blockchain "https://github.com/universalbit-dev/gekko-m4-globular-cluster" "Blockchain Mapping Tools"
+```
+
+
 ---
 
 ## Table of Contents
