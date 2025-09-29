@@ -51,6 +51,7 @@ Help us grow and continue innovating!
 ![CNCjs Interface]()
 
 ---
+![Future CNC](https://github.com/universalbit-dev/cnc-router-machines/raw/main/assets/images/future_cnc.png)
 
 ## Download CNCjs
 
