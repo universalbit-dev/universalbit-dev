@@ -1,21 +1,27 @@
 /*
- UniversalBit ... once again 
- about some copy and paste code
- 
- European NTP Server 
- 0.europe.pool.ntp.org | 1.europe.pool.ntp.org | 2.europe.pool.ntp.org | pool 3.europe.pool.ntp.org
- 
- Generic NTP Server
- pool.ntp.org
+UniversalBit ... once again 
 
- https://microcontrollerslab.com/current-date-time-esp8266-nodemcu-ntp-server/
- Board:Generic ESP8266 Module
- Connecting....
- *********************************
- Chip is ESP8266EX
- Features: WiFi
- Writing at 0x00030000... (100 %)
- *********************************
+Example Arduino sketch for ESP8266.
+ Ready to copy, paste, and upload with minimal changes (e.g., WiFi credentials).
+ Based on standard copy-and-paste code practices for quick prototyping.
+ 
+NTP Pool Project servers:
+- Generic/global:        pool.ntp.org
+- Europe:                europe.pool.ntp.org
+- Asia:                  asia.pool.ntp.org
+- Individual European:   0.europe.pool.ntp.org | 1.europe.pool.ntp.org | 2.europe.pool.ntp.org | 3.europe.pool.ntp.org
+
+For best results, use the generic pool.ntp.org for most cases.
+If your device is in a specific region (Europe, Asia, etc.), you may use the regional pool URL for potentially lower latency.
+
+More info: https://www.ntppool.org/en/use.html
+
+Reference ESP8266 tutorial:
+https://microcontrollerslab.com/current-date-time-esp8266-nodemcu-ntp-server/
+
+Board: Generic ESP8266 Module
+Chip: ESP8266EX
+Features: WiFi
 */
 
 #include <ESP8266WiFi.h>
