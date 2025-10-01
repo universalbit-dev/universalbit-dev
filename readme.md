@@ -201,8 +201,8 @@ The **Gekko M4 Globular Cluster Cryptocurrency** project introduces a sustainabl
 - Modular design for adapting to diverse urban planning needs.
 
 ---
-
-### [CNCjs Desktop AppImage](cnc/readme.md)
+### [UniversalBit CNC](https://github.com/universalbit-dev/cnc-router-machines)
+##### [Desktop AppImage](cnc/readme.md)
 **Purpose**: Desktop application for managing CNC milling machines and 3D printers.  
 **Features**:
 - User-friendly interface for CNC operations.
