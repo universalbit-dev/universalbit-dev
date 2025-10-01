@@ -1,4 +1,5 @@
 # Neuro-AI Explorer
+![Neuro AI Explorer](https://github.com/universalbit-dev/universalbit-dev/raw/main/convolutional_neural_network/images/neuro_ai_explorer.png)
 
 ## Bridging Natural & Artificial Environments
 
