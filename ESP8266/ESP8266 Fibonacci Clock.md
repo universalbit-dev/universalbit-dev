@@ -109,4 +109,4 @@ Open issues or submit pull requests to improve features or fix bugs!
 ## License
 
 Released under GNU General Public License v2.  
-See LICENSE for details.
+See LICENSE for [details](https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt).
