@@ -13,7 +13,7 @@ No RTC module required—accurate time is maintained as long as the clock is con
 
 - **WiFi-Enabled:** Seamless local network connection.
 - **Accurate Time:** Periodically fetches time from NTP servers.
-- **Unique Display:** Visualizes time with color-coded NeoPixels in a Fibonacci layout.
+- [**Unique Display:** Visualizes time with color-coded NeoPixels in a Fibonacci layout.](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/images/readme.md)
 - **Color Palettes:** Choose from multiple color themes.
 - **Interactive Controls:** Change palettes, modes, and toggle display with buttons.
 
