@@ -44,9 +44,13 @@ The D1 Mini ESP8266 is a compact, Wi-Fi-enabled microcontroller perfect for this
 <img src="https://files.mastodon.social/media_attachments/files/115/258/604/778/265/026/original/b1e94db9e02ff122.png" alt="D1 Mini" style="width:30%;">
 
 ---
+## **[ESP8266 Fibonacci Clock with NTP Synchronization](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/ESP8266%20Fibonacci%20Clock.md)**
 
 ## 📜 **Project Files**
-- **Sketch**: [esp8266_ntp.ino](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/esp8266_ntp.ino)
+- **Sketch**:
+- [esp8266_ntp.ino](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/esp8266_ntp.ino)
+- [fibonacci_clock_esp.ino](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/fibonacci_clock_esp.ino)
+  
 - **How to Upload a Sketch**: Follow this [Arduino IDE guide](https://support.arduino.cc/hc/en-us/articles/4733418441116-Upload-a-sketch-in-Arduino-IDE) to upload the provided sketch to your ESP8266.
 ---
 
