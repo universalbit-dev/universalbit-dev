@@ -21,16 +21,24 @@ This guide explains how to set up a Bitcoin Full Node using minimal disk space (
 ![Blockchain Stack](https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/bitcoin/images/ai_blockchain.png)
 
 ---
-
 ## Prerequisites
 
 Before proceeding, ensure you have the following:
 - A Linux-based operating system.
 - Basic knowledge of command-line tools.
 - Installed software:
-  - `Node.js` (Version 20 recommended, install using [nvm](https://github.com/nvm-sh/nvm)).
-  - `PM2` global process manager.
-  - Required dependencies for Bitcoin Core.
+  - `Node.js` (Version 24 recommended, install using [nvm](https://github.com/nvm-sh/nvm)):
+    ```bash
+    # Install nvm if not already installed
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    # Load nvm (restart shell or run the following)
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    # Install Node.js 24
+    nvm install 24
+    nvm use 24
+    nvm alias default 24
+    ```
 
 ---
 
