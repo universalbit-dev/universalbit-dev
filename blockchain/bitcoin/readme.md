@@ -113,8 +113,6 @@ Start the Bitcoin Node using the PM2 process manager:
 pm2 start btc_pruned.js
 ```
 
-![Bitcoin Node Process](https://github.com/universalbit-dev/universalbit-dev/blob/main/blockchain/bitcoin/btc-pruned-node.png "Bitcoin Node Process")
-
 ### PM2 Startup Script
 Generate startup scripts using the [PM2 Startup Script Generator](https://pm2.keymetrics.io/docs/usage/startup/) to ensure the process list is preserved across machine restarts.
 
