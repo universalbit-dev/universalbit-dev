@@ -120,14 +120,15 @@ Generate startup scripts using the [PM2 Startup Script Generator](https://pm2.ke
 
 ---
 
-## Additional Resources
+## Relevant Resources
+- [AMDGPU Mining on Ubuntu Server](https://github.com/ArSd-g/anytech-mining)
 
+## Additional Resources
 Here are some helpful links and resources to enhance your setup and understanding of Bitcoin mining:
 
 - [CPU Mining](https://github.com/universalbit-dev/CityGenerator/blob/master/workers/workers.md)
 - [ESP32 Mining](https://github.com/universalbit-dev/esptool)
 - [AMD Driver Release Notes](https://www.amd.com/en/resources/support-articles/release-notes/RN-AMDGPU-UNIFIED-LINUX-22-40-6.html)
-- [AMDGPU Mining on Ubuntu Server](https://github.com/michalslonina/Ubuntu-Server-LTS-20.04-GUIDE-AMDGPU-Mining)
 - [Bypass PCIe 3.0 Atomics Limitation](https://www.reddit.com/r/gpumining/comments/ptmyjd/ubuntu_20043_amdgpu_2130_opencl_rocr_rocm/)
 - [How Bitcoin Mining Really Works](https://www.freecodecamp.org/news/how-bitcoin-mining-really-works-38563ec38c87/)
 - [Gekko-M4-Globular-Cluster](https://github.com/universalbit-dev/gekko-m4-globular-cluster)
