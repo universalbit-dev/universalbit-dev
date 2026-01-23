@@ -51,24 +51,44 @@ git clone https://github.com/universalbit-dev/universalbit-dev.git
 ```
 
 ### Step 2: Install the Latest Bitcoin Full Node
-**[Download and install the Bitcoin Full Node] using the following command:
+**[Download and install the Bitcoin Full Node]**
+
 ```bash
 curl https://bitnodes.io/install-full-node.sh | sh
 ```
 
 ---
 
+
 ## Bitcoin Node Configuration
 
 ### Minimal Disk Space Configuration (Pruned Node)
-1. Copy the Bitcoin configuration file:
-    ```bash
+
+Copy the Bitcoin configuration file:
+
+**Note: Summary of bitcoin.conf Configuration**
+This `bitcoin.conf` file configures a lightweight Bitcoin node for testnet operation with limited resource usage:
+
+- `prune=550`: Enables blockchain pruning, keeping disk usage low by only storing recent blocks (here, up to ~550 MB).
+- `maxconnections=8`: Limits the maximum number of peer connections to 8, reducing network resource requirements.
+- `listen=0`: Disables listening for incoming connections, making this a non-public, outbound-only node.
+- `maxuploadtarget=144`: Restricts data uploaded to peers each day to 144 MB (helpful for bandwidth limitation).
+- `checkblocks=1`/`checklevel=0`: Minimal blockchain verification for faster, lightweight startup and operation.
+- `txindex=0`: Disables full transaction indexing, reducing storage and indexing needs.
+- `testnet=1`: Runs the node on the Bitcoin testnet, not on the main Bitcoin blockchain—useful for development and testing purposes.
+
+This setup is ideal for a resource-constrained environment, development, or testing without maintaining a full blockchain or publicly accessible node.
+
+```bash
     cp bitcoin.conf /home/$USER/.bitcoin/
-    ```
-2. Copy the `bitcoind` binary to the project directory:
-    ```bash
+```
+
+Copy the `bitcoind` binary to the project directory:
+
+```bash
     cp /home/$USER/bitcoin-core/bin/bitcoind /home/$USER/universalbit-dev/blockchain/bitcoin/
-    ```
+```
+
    ### Resources:
    **[Bitcoin-Core](https://bitcoin.org/en/download) || [Litecoin-Core](https://litecoin.org/)**
 
@@ -76,6 +96,7 @@ curl https://bitnodes.io/install-full-node.sh | sh
 
 ### Install Node.js Dependencies
 Navigate to the project directory and install the required Node.js dependencies:
+
 ```bash
 cd /home/$USER/universalbit-dev/blockchain/bitcoin
 npm i && npm audit fix && npm i pm2 -g
@@ -87,6 +108,7 @@ npm i && npm audit fix && npm i pm2 -g
 
 ### Start Bitcoin Node with PM2
 Start the Bitcoin Node using the PM2 process manager:
+
 ```bash
 pm2 start btc_pruned.js
 ```
