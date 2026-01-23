@@ -1,4 +1,5 @@
-# UniversalBit Dev Repository
+# UniversalBit Dev Repository   
+[![Mastodon Follow](https://img.shields.io/badge/Mastodon-Follow-blue?logo=mastodon&logoColor=white)](https://mastodon.social/@UniversalBit)
 
 ## Overview
 The **UniversalBit Dev** repository is a collection of innovative projects exploring cutting-edge technologies. From IoT applications to artificial intelligence, blockchain, and sustainable personal finance models, this repository embodies modularity, scalability, and open-source collaboration.
