@@ -43,6 +43,7 @@ Help us grow and continue innovating!
 | [CPU Mining](https://github.com/universalbit-dev/CityGenerator/blob/master/workers/workers.md) | CPU-based mining setup | [Details](https://github.com/universalbit-dev/CityGenerator/blob/master/workers/workers.md) |
 | [ESP32 MicroMiner](https://github.com/universalbit-dev/esptool) | MicroMiner implementation using ESP32 | [Details](https://github.com/universalbit-dev/esptool) |
 
+
 ---
 
 ## Mining Setup
@@ -64,24 +65,7 @@ Help us grow and continue innovating!
 
 ## Step-by-Step Guides
 
-### Configuring Repositories
-Edit the `sources.list` file to include necessary repositories:
-```bash
-sudo nano /etc/apt/sources.list
-```
-Add the following lines:
-```bash
-deb http://archive.ubuntu.com/ubuntu focal main restricted
-deb http://archive.ubuntu.com/ubuntu focal-updates main restricted
-deb http://archive.ubuntu.com/ubuntu focal universe
-deb http://archive.ubuntu.com/ubuntu focal-updates universe
-deb http://archive.ubuntu.com/ubuntu focal multiverse
-deb http://archive.ubuntu.com/ubuntu focal-updates multiverse
-deb http://archive.ubuntu.com/ubuntu focal-backports main restricted universe multiverse
-deb http://archive.ubuntu.com/ubuntu focal-security main restricted
-deb http://archive.ubuntu.com/ubuntu focal-security universe
-deb http://archive.ubuntu.com/ubuntu focal-security multiverse
-```
+> **Note:** For configuring repositories in Ubuntu, please refer to the official documentation and guide at [Ubuntu Community Help: Repositories](https://help.ubuntu.com/community/Repositories/Ubuntu) for up-to-date and comprehensive instructions instead of manually editing your `sources.list` as previously described.
 Save the file with `CTRL+O` and exit with `CTRL+X`.
 
 ### System Update and Upgrade
@@ -129,11 +113,50 @@ Find the available kernel versions:
 ```bash
 sudo ubuntu-mainline-kernel.sh -r
 ```
+---
+
+# NiceHash and GPU Mining Overview
+
+## NiceHash Model
+
+NiceHash acts as a broker, connecting miners with buyers who want to rent computing power for mining various cryptocurrencies. As a miner (seller), you run the NiceHash Miner software, which automatically selects the most profitable algorithm at any given time and pays you in Bitcoin (BTC), regardless of the actual coin being mined. This eliminates the need for miners to manually switch between altcoins or manage complex configurations.
+
+## GPU Mining Focus
+
+GPUs are suitable for mining ASIC-resistant altcoins (e.g., Ethereum Classic, Monero), as dedicated ASIC hardware dominates the more popular Bitcoin mining. NiceHash handles the algorithm switching automatically to maximize returns for the GPU owner.
 
 ---
 
-## Resources
+## Implications of 100% Free Electricity
 
+Free electricity is the single most significant factor in mining profitability, as power costs are typically the largest operating expense.
+
+- **Maximized Profit Margins:** With 100% free electricity, the entire gross income from mining becomes net profit, minus platform fees and the initial hardware cost.
+- **Viability of Older Hardware:** Even less efficient or older GPUs that are unprofitable with standard electricity costs can become viable sources of income with free power.
+- **Focus on Uptime and Efficiency:** The primary focus shifts from minimizing power draw to maximizing the GPU's uptime and raw hashing power, ensuring consistent earnings.
+
+---
+
+## Possible Earnings (as of January 2026)
+
+Earnings fluctuate based on market conditions, algorithm demand, and GPU performance.
+
+---
+
+## Key Considerations
+
+- **Platform Fees:** NiceHash charges fees. For sellers (miners), there is a 2% fee on payouts to a NiceHash Wallet, and buyers have fees for placing orders. These fees slightly reduce your total earnings.
+- **Market Volatility:** The value of cryptocurrencies is highly volatile. Your earnings, paid in BTC, will fluctuate with the Bitcoin exchange rate.
+- **Hardware Lifespan:** Continuous mining puts wear and tear on your GPUs, potentially shortening their lifespan or impacting resale value.
+- **Check Real-time Estimates:** For the most accurate, up-to-date estimates, use the official NiceHash Profitability Calculator and input your specific GPU models.
+
+---
+
+
+
+
+
+## Resources 
 - [How Bitcoin Mining Really Works](https://www.freecodecamp.org/news/how-bitcoin-mining-really-works-38563ec38c87/)
 - [Web3 Overview](https://web3.freecodecamp.org/web3)
 - [Release Notes for AMD Driver 22.40](https://www.amd.com/en/resources/support-articles/release-notes/RN-AMDGPU-UNIFIED-LINUX-22-40-6.html)
