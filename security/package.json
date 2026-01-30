@@ -1,24 +1,23 @@
 {
   "name": "toulouse-blacklist",
   "version": "1.0.0",
-  "description": "Downloads, extracts, and splits Toulouse blacklist domains for Pi-hole or IPFire",
+  "description": "Download and extract Toulouse blacklist archives and compile domain lists for Pi-hole/IPFire.",
   "main": "toulouse_blacklist.js",
   "type": "module",
   "scripts": {
     "start": "node toulouse_blacklist.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/universalbit-dev/universalbit-dev.git"
+  },
+  "author": "universalbit-dev",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16"
+  },
   "dependencies": {
     "node-fetch": "^3.3.2",
-    "tar": "^7.5.6"
-  },
-  "keywords": [
-    "pihole",
-    "blacklist",
-    "domains",
-    "tar.gz",
-    "ipfire",
-    "adlist"
-  ],
-  "author": "universalbit-dev",
-  "license": "MIT"
+    "tar": "7.5.7"
+  }
 }

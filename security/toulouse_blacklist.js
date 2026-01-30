@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import tar from 'tar';
+import * as tar from 'tar';
 import fs from 'fs';
 import path from 'path';
 
