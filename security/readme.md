@@ -80,7 +80,7 @@ Available for additional hardwired devices or Access Points.
 
 ### IPFire Customization >>(The Shield)<<
 
-* **Zone ORANGE (DMZ):** REJECT all incoming traffic by default.
+* **ORANGE (DMZ):** REJECT all incoming traffic by default.
 * **IDS (Intrusion Detection):** Enabled on RED, GREEN, ORANGE, and BLUE zones.
 * **DNS over TLS (DoT):** (Recursor Mode)
 * **DNS Forwarding** (IPFire TLS DNS list)
