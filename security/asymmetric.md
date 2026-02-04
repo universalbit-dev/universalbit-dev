@@ -100,7 +100,4 @@ Summary / Recommendation
 - For most single‑homed servers and simple networks: enable strict reverse‑path filtering (`rp_filter=1`) and enable martian logging.
 - For multi‑homed or policy‑routed hosts: prefer per‑interface `rp_filter` settings or `rp_filter=2` where needed, and combine with careful monitoring of martian logs.
 - Prefer placing this check in the kernel — it’s inexpensive and removes spoofed packets before they reach user‑space firewalls.
-
-Further reading and notes
 - Use `/etc/sysctl.d/99-rpfilter.conf` on modern systems to persist settings cleanly.
-- If you want a version focused more on martian logging for technical audiences, I can produce a second document with example logs, log rotation guidance, and automated alerting snippets.
