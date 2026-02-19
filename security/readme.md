@@ -105,10 +105,13 @@ Available for additional hardwired devices or Access Points.
 |---|---|
 | Use ISP-assigned DNS servers | Disabled |
 | Protocol for DNS queries | TLS |
-| Enable Safe Search | Disabled |
-| Include YouTube in Safe Search | Disabled |
+| Enable Safe Search | Enabled |
+| Include YouTube in Safe Search | Enabled |
 | QNAME Minimisation | Standard |
 ---
+
+![Domain Name System Diagram](https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/Domain_Name_System.png)
+
 
 **DNS Forwarder** IPFire TLS DNS list
 | Zone | Nameserver | Remark |
