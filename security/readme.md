@@ -45,6 +45,21 @@ Available for additional hardwired devices or Access Points.
 --> Refresh 86400s
 --> Prefix Delegate Type: Disabled
 
+### DHCP Server IP Allocation Table
+
+**Network:** 192.168.1.0/24  
+**Subnet Mask:** 255.255.255.0
+
+| Server           | Start IP       | End IP         | Purpose               |
+|------------------|---------------|---------------|-----------------------|
+| Generic Router   | 192.168.1.2   | 192.168.1.120  | General / Guest Devices |
+| IPFire           | 192.168.1.121 | 192.168.1.152  | Security / Firewall     |
+| Pi-hole          | 192.168.1.153 | 192.168.1.253  | Ad-Blocking Table       |
+
+> **Note**:  
+> - 192.168.1.1 is often reserved as the gateway or router IP.
+> - Allocation ranges avoid overlaps and allow separation by device purpose.
+
 ### Wifi
 * **Centralized SSID:** Unified name for 2.4G/5G for seamless handoff.
 
