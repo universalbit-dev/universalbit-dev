@@ -54,7 +54,14 @@ The D1 Mini ESP8266 is a compact, Wi-Fi-enabled microcontroller perfect for this
 - **How to Upload a Sketch**: Follow this [Arduino IDE guide](https://support.arduino.cc/hc/en-us/articles/4733418441116-Upload-a-sketch-in-Arduino-IDE) to upload the provided sketch to your ESP8266.
 ---
 
-Feel free to explore the project and contribute to its development!
+## 🚀 Explore More ESP32 & ESP8266 Projects
+
+Looking for more inspiration? Check out these curated project collections from Random Nerd Tutorials:
+
+- [ESP32 Project](https://randomnerdtutorials.com/projects-esp32/)
+- [ESP8266 Project](https://randomnerdtutorials.com/projects-esp8266/)
+
+Discover creative ideas, detailed tutorials, and inspiring builds for your next Internet of Things project!
 
 --- 
 
