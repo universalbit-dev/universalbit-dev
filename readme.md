@@ -30,7 +30,7 @@ This repository is organized into multiple sub-projects, each focusing on a spec
 - **CNC**: Desktop AppImage for CNC milling machines and 3D printers.
 - **HA Cluster**: High Availability clusters for IT resource management.
 - **Gekko M4 Globular Cluster Cryptocurrency**: Sustainable personal finance modeling.
-- Explore additional projects like **CityGenerator**, **CDN JsDelivr**, and more.
+- Explore additional projects like **CityGenerator** and [more](https://github.com/universalbit-dev)
 
 ---
 
