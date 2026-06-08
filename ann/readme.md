@@ -70,7 +70,7 @@ Here are some additional resources to help you get started:
 
 - [Arduino Nano](https://en.wikipedia.org/wiki/Arduino_Nano) Wiki
 - [Arduino Uno](https://en.wikipedia.org/wiki/Arduino_Uno) Wiki
-- [Arduino Projects](https://randomnerdtutorials.com/projects-esp32/)
+- [Arduino Projects](https://randomnerdtutorials.com/projects-arduino/)
 - [MicroPython on ESP32](https://randomnerdtutorials.com/getting-started-micropython-esp32-esp8266/)
 
 ---
