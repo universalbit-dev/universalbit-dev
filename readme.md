@@ -91,8 +91,8 @@ The **Gekko M4 Globular Cluster Cryptocurrency** project introduces a sustainabl
 **Getting Started**:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/universalbit-dev/gekko-m4.git
-   cd gekko-m4
+   git clone https://github.com/universalbit-dev/gekko-m4-globular-cluster.git
+   cd gekko-m4-globular-cluster
    ```
 2. Explore the documentation and use case examples to understand the financial models and tools provided.
 
