@@ -28,7 +28,17 @@ jobs:
         with:
           node-version: '22'
       
+      - name: Check if package.json exists
+        id: check_package
+        run: |
+          if [ -f package.json ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+      
       - name: Install dependencies
+        if: steps.check_package.outputs.exists == 'true'
         run: npm install
       
       - name: Run Snyk test
@@ -48,17 +58,17 @@ jobs:
           fi
       
       - name: Upload SARIF to GitHub Security
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         if: always()
         with:
           sarif_file: snyk.sarif
       
       - name: Install Snyk CLI
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && steps.check_package.outputs.exists == 'true'
         run: npm install -g snyk
       
       - name: Monitor project in Snyk
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && steps.check_package.outputs.exists == 'true'
         run: snyk monitor --remote-repo-url=${{ github.server_url }}/${{ github.repository }}
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
