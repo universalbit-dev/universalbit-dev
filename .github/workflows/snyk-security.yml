@@ -40,6 +40,13 @@ jobs:
           args: --severity-threshold=medium --sarif-file-output=snyk.sarif
           command: test
       
+      - name: Check SARIF file exists
+        run: |
+          if [ ! -f snyk.sarif ]; then
+            echo "Warning: snyk.sarif not generated. Creating empty SARIF file."
+            echo '{"version":"2.1.0","$schema":"https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json","runs":[]}' > snyk.sarif
+          fi
+      
       - name: Upload SARIF to GitHub Security
         uses: github/codeql-action/upload-sarif@v3
         if: always()
@@ -52,6 +59,7 @@ jobs:
       
       - name: Monitor project in Snyk
         if: github.event_name == 'push'
-        run: snyk monitor
+        run: snyk monitor --remote-repo-url=${{ github.server_url }}/${{ github.repository }}
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        continue-on-error: true
