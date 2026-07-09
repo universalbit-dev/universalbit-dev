@@ -8,23 +8,22 @@ Welcome to the **Security Projects** section of UniversalBit. This document prov
 
 ## 📖 Overview
 
-Asymmetric routing occurs when packets follow different paths for outgoing and incoming traffic. 
-This setup centralizes the flow through a stateful firewall (**IPFire**) and a dedicated DNS sinkhole (**Pi-hole**) to ensure path consistency, lower latency, and higher security.
+Asymmetric routing occurs when packets follow different paths for outgoing and incoming traffic. This setup centralizes the flow through a stateful firewall (**IPFire**) and a dedicated DNS sinkhole (**Pi-hole**) to improve path consistency, reduce latency, and increase security.
 
 ### 🕸️ Physical Network Topology (RJ45)
 
 ### Port Mapping Summary
 ### LAN
-1. **ZTE ONT (LAN01)** ➔ **Router (WAN Port)** 
-This establishes the external Internet connection.
-2. **Router (LAN02)** ➔ **Switch (LAN02)** 
-This bridges the router's internal network to the Gigabit Switch.
-3. **Switch (LAN03)** ➔ **IPFire (ThinClient #01)** 
-Dedicated hardware for DMZ and Intrusion Detection.
-4. **Switch (LAN04)** ➔ **Pi-hole (ThinClient #02)** 
-Dedicated hardware for DNS/URL filtering.
-5. **Switch (LAN01 / LAN05)** 
-Available for additional hardwired devices or Access Points.
+1. **ZTE ONT (LAN01)** ➔ **Router (WAN Port)**  
+   This establishes the external Internet connection.
+2. **Router (LAN02)** ➔ **Switch (LAN02)**  
+   This bridges the router's internal network to the Gigabit Switch.
+3. **Switch (LAN03)** ➔ **IPFire (ThinClient #01)**  
+   Dedicated hardware for DMZ and Intrusion Detection.
+4. **Switch (LAN04)** ➔ **Pi-hole (ThinClient #02)**  
+   Dedicated hardware for DNS/URL filtering.
+5. **Switch (LAN01 / LAN05)**  
+   Available for additional hardwired devices or Access Points.
 
 | Device | Port | Connection Target |
 | --- | --- | --- |
@@ -40,25 +39,26 @@ Available for additional hardwired devices or Access Points.
 * **IPv6 DHCPv6:** Enabled (Manual) to reduce overhead/latency.
 * **DNS 1:** `2a01:4f8:1c0c:8274::1` (LibreDNS)
 * **DNS 2:** `2001:4860:4860::8888` (Google)
-* **DNS 3:** `fe80::cc19:6f42:328c:eec8` (Local)
---> MTU 1492
---> Refresh 86400s
---> Prefix Delegate Type: Disabled
+* **DNS 3:** `fe80::cc19:6f42:328c:eec8` (Local link-local DNS; interface scope may be required)
+* **MTU:** 1492
+* **Refresh:** 86400s
+* **Prefix Delegate Type:** Disabled
 
 ### DHCP Server IP Allocation Table
 
 **Network:** 192.168.1.0/24  
 **Subnet Mask:** 255.255.255.0
 
-| Server           | Start IP       | End IP         | Purpose               |
-|------------------|---------------|---------------|-----------------------|
-| Generic Router   | 192.168.1.2   | 192.168.1.120  | General / Guest Devices |
-| IPFire           | 192.168.1.121 | 192.168.1.152  | Security / Firewall     |
-| Pi-hole          | 192.168.1.153 | 192.168.1.253  | Ad-Blocking Table       |
+| Server | Start IP | End IP | Purpose |
+|---|---:|---:|---|
+| Generic Router | 192.168.1.2 | 192.168.1.120 | General / Guest Devices |
+| IPFire | 192.168.1.121 | 192.168.1.152 | Security / Firewall |
+| Pi-hole | 192.168.1.153 | 192.168.1.253 | Ad-Blocking Table |
 
-> **Note**:  
-> - 192.168.1.1 is often reserved as the gateway or router IP.
-> - Allocation ranges avoid overlaps and allow separation by device purpose.
+> **Note**:
+> - `192.168.1.1` is reserved as the gateway/router IP.
+> - Keep DHCP pools non-overlapping and use reservations where possible.
+> - Avoid running multiple DHCP servers on the same subnet unless they are strictly coordinated.
 
 ### Wifi
 * **Centralized SSID:** Unified name for 2.4G/5G for seamless handoff.
@@ -72,11 +72,12 @@ Available for additional hardwired devices or Access Points.
 ---
 
 ### DMZ
-* **ORANGE (DMZ):** REJECT all incoming traffic by default
+* **ORANGE (DMZ):** Reject all unsolicited inbound traffic by default.
+* **Stateful firewall behavior:** Only reply traffic for connections initiated from allowed internal sources should be permitted.
 
 | Zone | Host | Firewall (DMZ) |
 |---|---|---|
-| ORANGE (DMZ) | HOST | REJECT all incoming traffic |
+| ORANGE (DMZ) | HOST | REJECT all unsolicited inbound traffic |
 ---
 
 ## 🛠️ Infrastructure Components
@@ -90,21 +91,21 @@ Available for additional hardwired devices or Access Points.
 * **ThinClient #02:** [Pi-hole Adblocker](https://docs.pi-hole.net/main/basic-install/) (DNS/URL Filtering)
   - Upstream: IPFire TLS DNS (local)
   - Gravity: Steven Black lists (or equivalent curated lists)
-  - Layer 3 inspection: Enabled (use with care / ensure performance)
+  - Layer 3 inspection: Not applicable to Pi-hole; DNS filtering only
   - Admin UI: restrict to management VLAN / IP
 
 ### IPFire Customization >>(The Shield)<<
 
-* **ORANGE (DMZ):** REJECT all incoming traffic by default.
+* **ORANGE (DMZ):** Reject all unsolicited inbound traffic by default.
 * **IDS (Intrusion Detection):** Enabled on RED, GREEN, ORANGE, and BLUE zones.
 * **DNS over TLS (DoT):** (Recursor Mode)
-* **DNS Forwarding** (IPFire TLS DNS list)
+* **DNS Forwarding:** IPFire TLS DNS list
 
 **Firewall — DMZ Rule**
 | Setting | Value |
 |---|---|
 | Zone | ORANGE |
-| Rule for incoming traffic | REJECT All Incoming Traffic |
+| Rule for incoming traffic | REJECT all unsolicited inbound traffic |
 ---
 
 **IDS (Intrusion Detection)**
@@ -125,7 +126,7 @@ Available for additional hardwired devices or Access Points.
 | QNAME Minimisation | Standard |
 ---
 
-![Domain Name System Diagram](https://github.com/universalbit-dev/universalbit-dev/blob/main/docs/assets/images/Domain_Name_System.png)
+![Domain Name System Diagram](https://raw.githubusercontent.com/universalbit-dev/universalbit-dev/main/docs/assets/images/Domain_Name_System.png)
 
 
 **DNS Forwarder** IPFire TLS DNS list
@@ -161,16 +162,16 @@ Available for additional hardwired devices or Access Points.
 
 * **Upstream DNS:** Configured to use the **IPFire TLS DNS** list.
 * **Gravity:** Steven Black URL List enabled.
-* **Layer 3:** Enabled for deep packet inspection/filtering.
+* **Layer 3:** DNS filtering only; no packet inspection role.
 ---
 
 ### 🛡️ Why This Setup Works
 
-* **Isolation:** By putting the ONT strictly into the Router WAN, you ensure the Router's NAT/Firewall handles the initial handshake.
-* **Security Stack:** The Switch allows IPFire and Pi-hole to sit on the same high-speed gigabit backplane, reducing the latency for DNS queries and packet inspection.
+* **Isolation:** By putting the ONT strictly into the Router WAN, the Router's NAT/Firewall handles the initial handshake.
+* **Security Stack:** The Switch allows IPFire and Pi-hole to sit on the same high-speed gigabit backplane, reducing latency for DNS queries and packet inspection.
 * **Scalability:** Since you have LAN01 and LAN05 available on the Switch, you can add more APs for the "Strong Signal" Wifi strategy without rearranging the core security logic.
 * **Access Points** are hardwired via RJ45 to the Gigabit Switch to maintain maximum throughput.
-* **Extenders** Centralized SSID:Unified name for 2.4G/5G for seamless handoff.
+* **Extenders** use a centralized SSID for seamless 2.4G/5G handoff.
 
 > **Note:** This configuration prioritizes **Micro-networking** (low latency for multimedia) and **Macro-networking** (high security via TLS forwarding).
 
