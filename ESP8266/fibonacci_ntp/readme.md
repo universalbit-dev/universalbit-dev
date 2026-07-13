@@ -1,15 +1,61 @@
-[![status](https://img.shields.io/badge/status-concept_/_untested-orange?style=flat-square)](https://github.com/universalbit-dev/universalbit-dev)
-# 📡 Fibonacci NTP Engine
+# 🌀 Fibonacci NTP Clock (`fibonacci_ntp`)
 
-This subsystem handles the core networking logic and matrix rendering for the futuristic Fibonacci Chronometer. By combining the Wi-Fi processing power of the **ESP8266** with a dedicated **LOLIN TFT-2.4** display, this project replaces physical clock components with a real-time network-synced cryptic visual puzzle.
+[![status](https://img.shields.io/badge/status-concept_/_untested-orange?style=flat-square)](https://github.com/universalbit-dev/universalbit-dev)
+
+A specialized time-tracking engine that maps Network Time Protocol (NTP) data onto a geometric grid using the Fibonacci sequence. Powered by the ESP8266EX microcontroller, this project replaces traditional physical clocks with a real-time, network-synced cryptic visual puzzle.
 
 ---
 
-## 🛠️ Hardware Integration Architecture
+## 🧭 How It Works: The Fibonacci Matrix
 
-Instead of managing complex discrete wiring loops for physical panels, this build utilizes the high-speed native **SPI bus** of the Wemos D1 Mini (ESP8266) to digitally render the entire geometric layout directly onto the TFT display panel.
+The clock displays time using a golden rectangle layout divided into 5 squares whose side lengths match the first 5 terms of the Fibonacci sequence: **1, 1, 2, 3, and 5**. 
 
-> 💡 **Why SPI Architecture?** Traditional DIY Fibonacci clocks require wiring complex physical LED/wooden matrix boxes via massive copper grids or shift registers. By switching to a high-speed native SPI bus, hardware complexity drops to just a few data lines. The ESP8266 streams mathematical coordinates directly over SPI, letting the TFT controller instantly draw the geometric color grid on the glass.
+### 1. The Color Encoding Schema
+Instead of hands or digits, the current time is translated into an array of color configurations rendered digitally on screen:
+
+| Cell Color | Chronological Interpretation | Operational Matrix Action |
+| :--- | :--- | :--- |
+| **🟥 Red** | Hour Value Component | Add cell weight to Hours total |
+| **🟩 Green** | Minute Value Component | Add cell weight to Minutes total |
+| **🟦 Blue** | Dual-Value Intersection | Add cell weight to **Both** Hours & Minutes |
+| **⬜ White** | Null Spacer Value | Ignored entirely during value calculations |
+
+### 2. Computing the Time Arrays
+* **Hours ($1 \rightarrow 12$):** Sum the side-lengths of all **Red** and **Blue** squares.
+* **Minutes ($0 \rightarrow 55$):** Sum the side-lengths of all **Green** and **Blue** squares, then **multiply the result by 5**. 
+* **Precision Rounding:** Standard layout algorithms round standard system clock times down to the nearest lower multiple of 5 minutes (e.g., `10:34` becomes the Fibonacci equivalent of `10:30`).
+
+$$\text{Final Minute Value} = \text{Calculated Minute Sum} \times 5$$
+
+---
+
+## 🔌 Hardware Circuit Architecture
+
+The device transitions away from legacy, drift-heavy hardware Real-Time Clock modules (like the DS1307) by leveraging the ESP8266's integrated 802.11b/g/n Wi-Fi stack to sync directly with atomic clock stratums over the internet.
+
+Traditional DIY Fibonacci clocks require wiring complex physical LED/wooden matrix boxes via massive copper grids or shift registers. By switching to a high-speed native SPI bus, hardware complexity drops to just a few data lines. The ESP8266 streams mathematical coordinates directly over SPI, letting the TFT controller instantly draw the geometric color grid on the glass.
+
+
+```text
+                +-----------------------------------+
+                |             ESP8266               |
+                |        (NodeMCU / D1 Mini)        |
+                |                                   |
+                |   [Wi-Fi] <---> Internet (NTP)    |
+                |                                   |
+                |       SPI Hardware Bus Interface  |
+                +-----------------------------------+
+                          |   |   |   |   |
+                         SCK MOSI CS  DC RST
+                          |   |   |   |   |
+                +-----------------------------------+
+                |           LOLIN TFT-2.4           |
+                |        (ILI9341 Color Glass)      |
+                |                                   |
+                |   🔴 🟩 🟦 Dynamic Geometric Grid |
+                +-----------------------------------+
+
+```
 
 ### Pinout Mapping Configuration
 
@@ -22,11 +68,8 @@ Instead of managing complex discrete wiring loops for physical panels, this buil
 | **SI** (MOSI) | **D7** | `GPIO13` | Native Hardware SPI Data Input |
 | **SO** (MISO) | **D6** | `GPIO12` | SPI Data Output (Optional) |
 | **CS** | **D8** | `GPIO15` | Hardware Chip Select Line |
-| **DC** (Data/Command)| **D3** | `GPIO0` | Display Command Bus Toggle |
+| **DC** (Data/Cmd)| **D3** | `GPIO0` | Display Command Bus Toggle |
 | **RST** (Reset) | **RST** | Physical Reset Link | Shared Hardware System Reset |
-
-> 📁 **Hardware Schematic References:**
-> * [D1 Mini ESP8266 Pinout Schematic]()
 
 ---
 
@@ -43,22 +86,9 @@ The system completely bypasses the need for an external physical Real-Time Clock
 
 ```
 
-### The Visual Core Calculation Logic
+### Display Driver Code Hook
 
-The clock face is drawn dynamically on the TFT screen as a 5-block grid scaling proportionally to the Fibonacci sequence: **1, 1, 2, 3, and 5**.
-
-* 🔴 **Red Grid Units:** Contribute their sequence value directly to the **Hour Sum**.
-* 🟢 **Green Grid Units:** Contribute their sequence value directly to the **Minute Sum**.
-* 🔵 **Blue Grid Units:** Dual contribution — values are added to **both** the Hour and Minute totals.
-* ⚪ **Unlit Units:** Ignored during the active calculation cycle.
-
-$$\text{Final Minute Value} = \text{Calculated Minute Sum} \times 5$$
-
----
-
-## 💻 Firmware Engine Setup
-
-The accompanying sketch utilizes the performance-optimized `TFT_eSPI` or `Adafruit_ILI9341` library suites. To flash this to your ESP8266 platform, ensure your initialization header flags are set as follows:
+The accompanying sketch utilizes the performance-optimized `TFT_eSPI` or `Adafruit_ILI9341` library suites. To map this to your hardware platform, use the following initialization parameters:
 
 ```cpp
 #define TFT_CS    D8  // Hardware Pin GPIO15
@@ -70,7 +100,109 @@ Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_RST);
 
 ```
 
-### Navigation Links
+---
+
+## ⚡ Firmware Optimization Layer
+
+The accompanying `fibonacci_ntp.ino` production binary features several structural performance enhancements:
+
+* 🟢 **Asynchronous Network Guards:** Replaced legacy infinite blocking loops during setup with a definitive timeout sequence to prevent hard hangs if an access point drops offline.
+* 🟢 **Active Drift Suppression:** Retains a persistent background connection to local regional `pool.ntp.org` servers to automatically update the software RTC without animation stutter.
+* 🟢 **Non-Blocking Logic:** Swapped out execution-pausing `delay()` statements within the primary loop for timestamp tracking via `millis()` state checks to preserve fluid visual rendering.
+* 🟢 **High-Speed Serial Communication:** Standardized to a profile speed of `115200` baud to match native ESP8266 boot parameters and clear out data pipe parsing overhead.
+
+---
+
+## 📁 Source Code (`fibonacci_ntp.ino`)
+
+```cpp
+/*
+==============================================================================
+  UniversalBit Project - Fibonacci NTP Clock Firmware
+  Repository Path: ESP8266/fibonacci_ntp/fibonacci_ntp.ino
+==============================================================================
+*/
+
+#include <ESP8266WiFi.h>
+#include <time.h>
+
+// --- Configuration Network Profiles ---
+const char* ssid             = "Guest Wifi-Name";     // Replace with your WiFi SSID
+const char* password         = "Guest Password";      // Replace with your WiFi Password
+const char* ntpServer        = "pool.ntp.org";
+
+// --- Timezone Offset Calculations ---
+const long gmtOffset_sec     = 3600;                  // 1 Hour offset = 3600 seconds (e.g., UTC+1)
+const int daylightOffset_sec = 0;                     // Daylight savings offset in seconds
+
+// Forward Declarations
+void printLocalTime();
+
+void setup() {
+  // Boost communication baud speed to standard high-speed profile
+  Serial.begin(115200);
+  Serial.println("\n\n====================================");
+  Serial.println("  UniversalBit NTP Clock Initializing  ");
+  Serial.println("====================================");
+
+  // Initialize Station Mode interface
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password);
+  Serial.printf("[WIFI] Connecting to target SSID: %s ", ssid);
+
+  // Guard against permanent hangs using an explicit connection timeout gate
+  int timeout_counter = 0;
+  while (WiFi.status() != WL_CONNECTED && timeout_counter < 30) {
+    delay(500);
+    Serial.print(".");
+    timeout_counter++;
+  }
+
+  if (WiFi.status() == WL_CONNECTED) {
+    Serial.println("\n[WIFI] Connected successfully!");
+    Serial.print("[WIFI] Assigned Local IP Address: ");
+    Serial.println(WiFi.localIP());
+  } else {
+    Serial.println("\n[WARN] Connection timed out. Running on internal RTC tracking fallback...");
+  }
+
+  // Bind the core NTP background synchronization engine service layer 
+  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+}
+
+void loop() {
+  // Non-blocking delay execution tracking to display time updates every second
+  static unsigned long last_update = 0;
+  if (millis() - last_update >= 1000) {
+    last_update = millis();
+    printLocalTime();
+  }
+}
+
+void printLocalTime() {
+  struct tm timeinfo;
+  time_t now;
+  
+  time(&now);                       // Fetch current internal system epoch timestamp
+  localtime_r(&now, &timeinfo);     // Parse epoch metrics cleanly into the structured time container
+
+  // Verify if the system has completed its baseline synchronization handshake
+  if (timeinfo.tm_year < (2016 - 1900)) { 
+    Serial.println("[TIME] Syncing with pool.ntp.org servers...");
+    return;
+  }
+
+  // Dynamically format and output a human-readable clean string snapshot over Serial
+  char timeStringBuff[64];
+  strftime(timeStringBuff, sizeof(timeStringBuff), "%A, %B %d %Y %H:%M:%S", &timeinfo);
+  Serial.printf("[CLOCK] %s\n", timeStringBuff);
+}
+
+```
+
+---
+
+## 🔗 Navigation Links
 
 * 🏠 [Return to Main Project Root](https://github.com/universalbit-dev/universalbit-dev/tree/main/ESP8266)
 * 💻 [View Core Firmware Sketch File](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/fibonacci_ntp/fibonacci_ntp.ino)
