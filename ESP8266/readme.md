@@ -39,9 +39,9 @@ When uploading sketches to your ESP8266, use a **USB data cable**. Some cables a
 
 ## 🔧 **Hardware Requirements**
 
-### D1 Mini ESP8266
+### [D1 Mini](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/images/D1_Mini_ESP8266.png)
+ ESP8266
 The D1 Mini ESP8266 is a compact, Wi-Fi-enabled microcontroller perfect for this project.
-<img src="https://i.postimg.cc/VvDWLLJ7/esp32-d1-mini.png" alt="D1 Mini" style="width:30%;">
 
 ---
 ## **[ESP8266 Fibonacci Clock with NTP Synchronization](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/ESP8266%20Fibonacci%20Clock.md)**
