@@ -73,7 +73,7 @@ Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_RST);
 ### Navigation Links
 
 * 🏠 [Return to Main Project Root]()
-* 💻 [View Core Firmware Sketch File]()
+* 💻 [View Core Firmware Sketch File](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/fibonacci_ntp/fibonacci_ntp.ino)
 
 ```
 
