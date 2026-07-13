@@ -1,72 +1,79 @@
 /*
-UniversalBit ... once again 
-
-Example Arduino sketch for ESP8266.
- Ready to copy, paste, and upload with minimal changes (e.g., WiFi credentials).
- Based on standard copy-and-paste code practices for quick prototyping.
- 
-NTP Pool Project servers:
-- Generic/global:        pool.ntp.org
-- Europe:                europe.pool.ntp.org
-- Asia:                  asia.pool.ntp.org
-- Individual European:   0.europe.pool.ntp.org | 1.europe.pool.ntp.org | 2.europe.pool.ntp.org | 3.europe.pool.ntp.org
-
-For best results, use the generic pool.ntp.org for most cases.
-If your device is in a specific region (Europe, Asia, etc.), you may use the regional pool URL for potentially lower latency.
-
-More info: https://www.ntppool.org/en/use.html
-
-Reference ESP8266 tutorial:
-https://microcontrollerslab.com/current-date-time-esp8266-nodemcu-ntp-server/
-
-Board: Generic ESP8266 Module
-Chip: ESP8266EX
-Features: WiFi
+==============================================================================
+  UniversalBit Project - Optimized ESP8266 NTP Clock
+==============================================================================
 */
 
 #include <ESP8266WiFi.h>
-#include "time.h"
+#include <time.h>
 
-const char* ssid       = "Guest Wifi-Name";   //Replace with your guest wifi name
-const char* password   = "Guest Password";  //Replace with your guest wifi password
-const char* ntpServer = "pool.ntp.org";
-//How many seconds in 1 hour
-const long  gmtOffset_sec = 3600;  //Replace with your GMT offset (seconds)
-//
-const int   daylightOffset_sec = 0;  //Replace with your daylight offset (seconds)
+// --- Configuration Network Profiles ---
+const char* ssid             = "Guest Wifi-Name";     // Replace with your WiFi SSID
+const char* password         = "Guest Password";      // Replace with your WiFi Password
+const char* ntpServer        = "pool.ntp.org";
 
-void setup()
-{
-  Serial.begin(9600);  
-  //connect to WiFi
-  Serial.printf("Connecting to %s ", ssid);
+// --- Timezone Offset Calculations ---
+const long gmtOffset_sec     = 3600;                  // 1 Hour offset = 3600 seconds (e.g., UTC+1)
+const int daylightOffset_sec = 0;                     // Daylight savings offset in seconds
+
+void printLocalTime();
+
+void setup() {
+  // Boost communication baud speed to standard high-speed profile
+  Serial.begin(115200);
+  Serial.println("\n\n====================================");
+  Serial.println("  UniversalBit NTP Clock Initializing  ");
+  Serial.println("====================================");
+
+  // Initialize Station Mode interface
+  WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
-  while (WiFi.status() != WL_CONNECTED) {
-      delay(500);
-      Serial.print(".");
+  Serial.printf("[WIFI] Connecting to target SSID: %s ", ssid);
+
+  // Guard against permanent hangs using an explicit connection timeout gate
+  int timeout_counter = 0;
+  while (WiFi.status() != WL_CONNECTED && timeout_counter < 30) {
+    delay(500);
+    Serial.print(".");
+    timeout_counter++;
   }
-  Serial.println("CONNECTED to WIFI");
-  
-  //init and get the time
+
+  if (WiFi.status() == WL_CONNECTED) {
+    Serial.println("\n[WIFI] Connected successfully!");
+    Serial.print("[WIFI] Assigned Local IP Address: ");
+    Serial.println(WiFi.localIP());
+  } else {
+    Serial.println("\n[WARN] Connection timed out. Running on internal RTC tracking fallback...");
+  }
+
+  // Bind the core NTP background synchronization engine service layer 
   configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
-  printLocalTime();
-
-  //disconnect WiFi as it's no longer needed
-  WiFi.disconnect(true);
-  WiFi.mode(WIFI_OFF);
 }
 
-void loop()
-{
-  delay(1000);
-  printLocalTime();
+void loop() {
+  // Non-blocking delay execution tracking to display time updates every second
+  static unsigned long last_update = 0;
+  if (millis() - last_update >= 1000) {
+    last_update = millis();
+    printLocalTime();
+  }
 }
-void printLocalTime()
-{
-  time_t rawtime;
-  struct tm * timeinfo;
-  time (&rawtime);
-  timeinfo = localtime (&rawtime);
-  Serial.println(asctime(timeinfo));
-  delay(1000);
+
+void printLocalTime() {
+  struct tm timeinfo;
+  time_t now;
+  
+  time(&now);                       // Fetch current internal system epoch timestamp
+  localtime_r(&now, &timeinfo);     // Parse epoch metrics cleanly into the structured time container
+
+  // Verify if the system has completed its baseline synchronization handshake
+  if (timeinfo.tm_year < (2016 - 1900)) { 
+    Serial.println("[TIME] Syncing with pool.ntp.org servers...");
+    return;
+  }
+
+  // Dynamically format and output a human-readable clean string snapshot over Serial
+  char timeStringBuff[64];
+  strftime(timeStringBuff, sizeof(timeStringBuff), "%A, %B %d %Y %H:%M:%S", &timeinfo);
+  Serial.printf("[CLOCK] %s\n", timeStringBuff);
 }
