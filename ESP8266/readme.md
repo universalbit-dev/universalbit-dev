@@ -58,7 +58,6 @@ The D1 Mini ESP8266 is a compact, Wi-Fi-enabled microcontroller perfect for this
 
 Looking for more inspiration? Check out these curated project collections from Random Nerd Tutorials:
 
-- [ESP32 Project](https://randomnerdtutorials.com/projects-esp32/)
 - [ESP8266 Project](https://randomnerdtutorials.com/projects-esp8266/)
 
 Discover creative ideas, detailed tutorials, and inspiring builds for your next Internet of Things project!
