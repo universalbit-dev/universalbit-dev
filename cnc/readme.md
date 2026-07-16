@@ -1,33 +1,7 @@
 # CNCjs and Arduino Nano Shield V3 Setup Guide
-
 This guide provides step-by-step instructions to set up CNCjs with an Arduino Nano Shield V3, including downloading the required software and uploading GRBL firmware for CNC milling.
-
 ---
-```mermaid
-flowchart TD
-    PowerSupply["Power Supply<br>DC Input Jack/Screw Terminals<br>(12V-36V)"]
-    Shield["CNC Shield"]
-    Drivers["Stepper Motor Drivers"]
-    Motors["Stepper Motors<br>(NEMA, 4-pin headers)"]
-    LimitSwitches["Limit Switches (End Stops)<br>X+, X-, Y+, Y-, Z+, Z- Pins"]
-    Arduino["Arduino Board"]
 
-    PowerSupply --> Shield
-    Shield --> Drivers
-    Drivers --> Motors
-    Shield -- "X-, Y-, Z- Pins" --> LimitSwitches
-    Shield --> Arduino
-
-    subgraph Notes
-        A["<b>Stepper Motors:</b> Move X, Y, Z axes"]
-        B["<b>Limit Switches:</b> Sense end of travel, prevent crashes"]
-        C["<b>Power Supply:</b> Provides motor voltage, separate from Arduino"]
-    end
-
-    Motors -. Purpose .-> A
-    LimitSwitches -. Purpose .-> B
-    PowerSupply -. Purpose .-> C
-```
 ## Table of Contents
 1. [Overview](#overview)
 2. [Download CNCjs](#download-cncjs)
@@ -130,8 +104,8 @@ For more details, visit the [CNC Router Machines Repository](https://github.com/
 
 Explore the following resources for additional information and tools:
 
-- [CNC Machines](https://github.com/universalbit-dev/cnc-router-machines)
-- [CNC Wiki](https://en.wikipedia.org/wiki/CNC_router)
-- [Universal G-Code Sender (UGS)](https://universalgcodesender.com/)
+- **[CNC Machines](https://github.com/universalbit-dev/cnc-router-machines)**
+- **[CNC Wiki](https://en.wikipedia.org/wiki/CNC_router)**
+- **[Universal G-Code Sender (UGS)](https://universalgcodesender.com/)**
 
 ---
