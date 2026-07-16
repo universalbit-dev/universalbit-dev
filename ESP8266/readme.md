@@ -1,3 +1,6 @@
+![Tested on Wemos D1 Mini](https://img.shields.io/badge/Tested%20on-Wemos%20D1%20Mini-00979D?style=flat-color&logo=expressif&logoColor=white)
+![Tested on WeMos D1 R3](https://img.shields.io/badge/Tested%20on-WeMos%20D1%20R3%20(ESP8266)-orange?style=flat-color&logo=espressif&logoColor=white)
+![Firmware Status](https://img.shields.io/badge/Firmware-Verified%20%26%20Stable-success?style=flat-color)
 # ESP8266 NTP Server Setup Guide
 
 Welcome to the ESP8266 NTP Server project! This guide will help you set up and use the ESP8266 module to synchronize time using the Network Time Protocol (NTP).
@@ -50,8 +53,18 @@ The D1 Mini ESP8266 is a compact, Wi-Fi-enabled microcontroller perfect for this
 - **Sketch**:
 - [esp8266_ntp.ino](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/esp8266_ntp.ino)
 - [fibonacci_clock_esp.ino](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/fibonacci_clock_esp.ino)
-  
-- **How to Upload a Sketch**: Follow this [Arduino IDE guide](https://support.arduino.cc/hc/en-us/articles/4733418441116-Upload-a-sketch-in-Arduino-IDE) to upload the provided sketch to your ESP8266.
+
+- **⚡ How to Upload the Firmware**: 
+  Instead of setting up the bulky Arduino IDE, you can compile and flash the firmware directly from your terminal using our automated, interactive deployment script. This tool handles compiler installation, hardware auto-detection, and flashing under the hood[cite: 3]:
+
+  ```bash
+  # 1. Make the script executable
+  chmod +x esp8266_ntp.sh
+
+  # 2. Run the interactive menu
+  ./esp8266_ntp.sh
+  ```
+
 ---
 
 ## 🚀 Explore More ESP32 & ESP8266 Projects
