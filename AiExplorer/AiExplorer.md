@@ -1,22 +1,13 @@
 ![Geometrical Learning](https://img.shields.io/badge/geometrical_learning-in_progress-0052cc?style=flat&logo=geometry&logoColor=white)
-# Neuro-AI Explorer
-![Neuro AI Explorer](https://github.com/universalbit-dev/universalbit-dev/raw/main/convolutional_neural_network/images/neuro_ai_explorer.png)
+
+# AiExplorer
 
 ## Bridging Natural & Artificial Environments
 
-This project introduces a conceptual framework for collaborative learning and system modeling, connecting natural and artificial environments within the Neuro-AI Explorer platform.
+This project introduces a conceptual framework for collaborative learning and system modeling, connecting natural and artificial environments within the AIExplorer platform.
 
 ---
 
-### 🧩 Entities
-
-- 🌍 **Spheres:**  
-  Represent natural environments and biological concepts—such as neuron counts in various animal species (see [animals_by_number_of_neurons](https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons)).  
-  Each sphere is color-coded to correspond with a specific domain (e.g., Nature, Environment, Social) and may be interconnected to reflect relationships within the natural world.
-
-- 🤖 **Squares:**  
-  Represent artificial (neural network) environments and key AI concepts—such as **neuron**, **layers**, **adadelta**—adapted from modern neural network architectures and inspired by resources like the [Stanford CS221: Artificial Intelligence](https://github.com/afshinea/stanford-cs-221-artificial-intelligence) course.  
-  Each square is color-coded to its function or architectural role, and squares may also be interconnected to reflect modularity and collaboration in AI systems.
 
 ---
 
