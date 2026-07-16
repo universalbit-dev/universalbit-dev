@@ -1,61 +1,13 @@
 /******************************************************************
  * ArduinoANN - An artificial neural network for the Arduino
- * 
- * This program implements a feedforward artificial neural network (ANN)
- * with backpropagation for training directly on an Arduino. It is 
- * designed to learn and classify input patterns into specific target 
- * outputs. The program consists of the following key components:
- * 
- * 1. **Network Configuration**:
- *     - Defines the number of nodes in the input, hidden, and output layers.
- *     - Sets key hyperparameters like learning rate, momentum, and error 
- *       success threshold.
- *     - Includes predefined input patterns (`Input`) and their expected 
- *       output target values (`Target`).
- * 
- * 2. **Weight Initialization**:
- *     - Random weights are assigned to connections between the input-hidden 
- *       and hidden-output layers to start the training process.
- *     - These weights are updated iteratively during training.
- * 
- * 3. **Training Loop**:
- *     - **Forward Propagation**:
- *         - Activations are calculated for the hidden and output layers
- *           using the sigmoid activation function.
- *     - **Error Calculation and Backpropagation**:
- *         - Computes the error between the network's predictions and 
- *           the expected target values.
- *         - Propagates this error backward through the network to 
- *           adjust the weights and minimize the error.
- *     - **Weight Updates**:
- *         - Updates the weights of the network using the calculated deltas,
- *           learning rate, and momentum.
- * 
- * 4. **Error Reporting**:
- *     - The program periodically reports the current training cycle, error 
- *       rate, and the network's output for each training pattern over the 
- *       Serial interface.
- * 
- * 5. **Stopping Condition**:
- *     - The training process ends when the error rate falls below the 
- *       predefined success threshold (`Success`).
- * 
- * 6. **Output Visualization**:
- *     - Displays the network's inputs, target outputs, and actual outputs 
- *       using the `toTerminal` function.
- * 
- * This program demonstrates how a lightweight ANN can be implemented on 
- * constrained hardware like an Arduino. It can be used for simple 
- * classification tasks, such as recognizing patterns or digits, 
- * based on binary input data.
- * 
- * See robotics.hobbizine.com/arduinoann.html for further details and usage.
+ * Designed to learn and classify 7-segment input patterns into binary digits.
  ******************************************************************/
 
 #include <math.h>
+#include <Arduino.h>
 
 /******************************************************************
- * Network Configuration - customized per network 
+ * Network Configuration
  ******************************************************************/
 
 const int PatternCount = 10;
@@ -67,6 +19,7 @@ const float Momentum = 0.9;
 const float InitialWeightMax = 0.5;
 const float Success = 0.0004;
 
+// Representing 7-segment display segments (A-G) for digits 0-9
 const byte Input[PatternCount][InputNodes] = {
   { 1, 1, 1, 1, 1, 1, 0 },  // 0
   { 0, 1, 1, 0, 0, 0, 0 },  // 1
@@ -80,6 +33,7 @@ const byte Input[PatternCount][InputNodes] = {
   { 1, 1, 1, 0, 0, 1, 1 }   // 9
 }; 
 
+// Expected 4-bit binary outputs
 const byte Target[PatternCount][OutputNodes] = {
   { 0, 0, 0, 0 },  
   { 0, 0, 0, 1 }, 
@@ -93,19 +47,13 @@ const byte Target[PatternCount][OutputNodes] = {
   { 1, 0, 0, 1 } 
 };
 
-/******************************************************************
- * End Network Configuration
- ******************************************************************/
-
-
 int i, j, p, q, r;
 int ReportEvery1000;
 int RandomizedIndex[PatternCount];
-long  TrainingCycle;
+long TrainingCycle;
 float Rando;
 float Error;
 float Accum;
-
 
 float Hidden[HiddenNodes];
 float Output[OutputNodes];
@@ -116,8 +64,11 @@ float OutputDelta[OutputNodes];
 float ChangeHiddenWeights[InputNodes+1][HiddenNodes];
 float ChangeOutputWeights[HiddenNodes+1][OutputNodes];
 
+void toTerminal();
+
 void setup(){
-  Serial.begin(9600);
+  Serial.begin(115200);
+  while(!Serial);
   randomSeed(analogRead(3));
   ReportEvery1000 = 1;
   for( p = 0 ; p < PatternCount ; p++ ) {    
@@ -126,59 +77,45 @@ void setup(){
 }  
 
 void loop (){
-
-
-/******************************************************************
-* Initialize HiddenWeights and ChangeHiddenWeights 
-******************************************************************/
-
+  // Initialize HiddenWeights and ChangeHiddenWeights 
   for( i = 0 ; i < HiddenNodes ; i++ ) {    
     for( j = 0 ; j <= InputNodes ; j++ ) { 
       ChangeHiddenWeights[j][i] = 0.0 ;
-      Rando = float(random(100))/100;
+      Rando = float(random(100))/100.0;
       HiddenWeights[j][i] = 2.0 * ( Rando - 0.5 ) * InitialWeightMax ;
     }
   }
-/******************************************************************
-* Initialize OutputWeights and ChangeOutputWeights
-******************************************************************/
 
+  // Initialize OutputWeights and ChangeOutputWeights
   for( i = 0 ; i < OutputNodes ; i ++ ) {    
     for( j = 0 ; j <= HiddenNodes ; j++ ) {
       ChangeOutputWeights[j][i] = 0.0 ;  
-      Rando = float(random(100))/100;        
+      Rando = float(random(100))/100.0;        
       OutputWeights[j][i] = 2.0 * ( Rando - 0.5 ) * InitialWeightMax ;
     }
   }
+  
   Serial.println("Initial/Untrained Outputs: ");
   toTerminal();
-/******************************************************************
-* Begin training 
-******************************************************************/
 
+  // Begin training 
   for( TrainingCycle = 1 ; TrainingCycle < 2147483647 ; TrainingCycle++) {    
 
-/******************************************************************
-* Randomize order of training patterns
-******************************************************************/
-
+    // Randomize order of training patterns
     for( p = 0 ; p < PatternCount ; p++) {
       q = random(PatternCount);
       r = RandomizedIndex[p] ; 
       RandomizedIndex[p] = RandomizedIndex[q] ; 
       RandomizedIndex[q] = r ;
     }
+    
     Error = 0.0 ;
-/******************************************************************
-* Cycle through each training pattern in the randomized order
-******************************************************************/
+
+    // Cycle through each training pattern
     for( q = 0 ; q < PatternCount ; q++ ) {    
       p = RandomizedIndex[q];
 
-/******************************************************************
-* Compute hidden layer activations
-******************************************************************/
-
+      // Compute hidden layer activations
       for( i = 0 ; i < HiddenNodes ; i++ ) {    
         Accum = HiddenWeights[InputNodes][i] ;
         for( j = 0 ; j < InputNodes ; j++ ) {
@@ -187,10 +124,7 @@ void loop (){
         Hidden[i] = 1.0/(1.0 + exp(-Accum)) ;
       }
 
-/******************************************************************
-* Compute output layer activations and calculate errors
-******************************************************************/
-
+      // Compute output layer activations and calculate errors
       for( i = 0 ; i < OutputNodes ; i++ ) {    
         Accum = OutputWeights[HiddenNodes][i] ;
         for( j = 0 ; j < HiddenNodes ; j++ ) {
@@ -201,10 +135,7 @@ void loop (){
         Error += 0.5 * (Target[p][i] - Output[i]) * (Target[p][i] - Output[i]) ;
       }
 
-/******************************************************************
-* Backpropagate errors to hidden layer
-******************************************************************/
-
+      // Backpropagate errors to hidden layer
       for( i = 0 ; i < HiddenNodes ; i++ ) {    
         Accum = 0.0 ;
         for( j = 0 ; j < OutputNodes ; j++ ) {
@@ -213,12 +144,7 @@ void loop (){
         HiddenDelta[i] = Accum * Hidden[i] * (1.0 - Hidden[i]) ;
       }
 
-
-/******************************************************************
-* Update Inner-->Hidden Weights
-******************************************************************/
-
-
+      // Update Input-->Hidden Weights
       for( i = 0 ; i < HiddenNodes ; i++ ) {     
         ChangeHiddenWeights[InputNodes][i] = LearningRate * HiddenDelta[i] + Momentum * ChangeHiddenWeights[InputNodes][i] ;
         HiddenWeights[InputNodes][i] += ChangeHiddenWeights[InputNodes][i] ;
@@ -228,10 +154,7 @@ void loop (){
         }
       }
 
-/******************************************************************
-* Update Hidden-->Output Weights
-******************************************************************/
-
+      // Update Hidden-->Output Weights
       for( i = 0 ; i < OutputNodes ; i ++ ) {    
         ChangeOutputWeights[HiddenNodes][i] = LearningRate * OutputDelta[i] + Momentum * ChangeOutputWeights[HiddenNodes][i] ;
         OutputWeights[HiddenNodes][i] += ChangeOutputWeights[HiddenNodes][i] ;
@@ -242,9 +165,7 @@ void loop (){
       }
     }
 
-/******************************************************************
-* Every 1000 cycles send data to terminal for display
-******************************************************************/
+    // Periodically report to terminal
     ReportEvery1000 = ReportEvery1000 - 1;
     if (ReportEvery1000 == 0)
     {
@@ -257,23 +178,17 @@ void loop (){
 
       toTerminal();
 
-      if (TrainingCycle==1)
-      {
+      if (TrainingCycle==1) {
         ReportEvery1000 = 999;
-      }
-      else
-      {
+      } else {
         ReportEvery1000 = 1000;
       }
     }    
 
-
-/******************************************************************
-* If error rate is less than pre-determined threshold then end
-******************************************************************/
-
-    if( Error > Success ) break ;  
+    // Stop if the error is lower than success threshold
+    if( Error < Success ) break ;  
   }
+  
   Serial.println ();
   Serial.println(); 
   Serial.print ("TrainingCycle: ");
@@ -289,12 +204,10 @@ void loop (){
   Serial.println ("--------"); 
   Serial.println ();
   Serial.println ();  
-  ReportEvery1000 = 0;
+  while(true); // Halt execution once solved
 }
 
-void toTerminal()
-{
-
+void toTerminal() {
   for( p = 0 ; p < PatternCount ; p++ ) { 
     Serial.println(); 
     Serial.print ("  Training Pattern: ");
@@ -309,10 +222,8 @@ void toTerminal()
       Serial.print (Target[p][i], DEC);
       Serial.print (" ");
     }
-/******************************************************************
-* Compute hidden layer activations
-******************************************************************/
 
+    // Compute hidden layer activations
     for( i = 0 ; i < HiddenNodes ; i++ ) {    
       Accum = HiddenWeights[InputNodes][i] ;
       for( j = 0 ; j < InputNodes ; j++ ) {
@@ -321,10 +232,7 @@ void toTerminal()
       Hidden[i] = 1.0/(1.0 + exp(-Accum)) ;
     }
 
-/******************************************************************
-* Compute output layer activations and calculate errors
-******************************************************************/
-
+    // Compute output layer activations
     for( i = 0 ; i < OutputNodes ; i++ ) {    
       Accum = OutputWeights[HiddenNodes][i] ;
       for( j = 0 ; j < HiddenNodes ; j++ ) {
@@ -332,12 +240,11 @@ void toTerminal()
       }
       Output[i] = 1.0/(1.0 + exp(-Accum)) ; 
     }
+    
     Serial.print ("  Output ");
     for( i = 0 ; i < OutputNodes ; i++ ) {       
       Serial.print (Output[i], 5);
       Serial.print (" ");
     }
   }
-
-
 }

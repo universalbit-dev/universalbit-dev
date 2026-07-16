@@ -13,9 +13,9 @@
 #define NUM_ACTIONS 2
 
 // RL Hyperparameters
-const float alpha = 0.1;   // Learning rate
-const float gamma = 0.9;   // Discount factor
-const float epsilon = 0.2; // Exploration rate (epsilon-greedy)
+const float alpha = 0.1;          // Learning rate
+const float discount_gamma = 0.9; // Discount factor (renamed to prevent math.h collision)
+const float epsilon = 0.2;        // Exploration rate (epsilon-greedy)
 
 // Q-Table: States x Actions
 float Q[NUM_STATES][NUM_ACTIONS];
@@ -28,7 +28,7 @@ unsigned int episodeCount = 1;
 
 void setup() {
     Serial.begin(115200);
-    while (!Serial); // Wait for serial port to connect (needed for Leonardo/Micro/ESP)
+    while (!Serial); // Wait for serial port to connect
     
     // Seed random number generator
     randomSeed(analogRead(0));
@@ -79,9 +79,9 @@ void loop() {
     }
 
     // 4. Update Q-Value using the Bellman Equation:
-    // Q(s, a) = Q(s, a) + alpha * (reward + gamma * max(Q(s', a')) - Q(s, a))
+    // Q(s, a) = Q(s, a) + alpha * (reward + discount_gamma * max(Q(s', a')) - Q(s, a))
     float maxNextQ = (Q[nextState][0] > Q[nextState][1]) ? Q[nextState][0] : Q[nextState][1];
-    Q[currentState][action] = Q[currentState][action] + alpha * (reward + gamma * maxNextQ - Q[currentState][action]);
+    Q[currentState][action] = Q[currentState][action] + alpha * (reward + (discount_gamma * maxNextQ) - Q[currentState][action]);
 
     // Update state tracking
     currentState = nextState;
