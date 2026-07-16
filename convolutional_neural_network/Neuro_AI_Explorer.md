@@ -1,3 +1,4 @@
+![Geometrical Learning](https://img.shields.io/badge/geometrical_learning-in_progress-0052cc?style=flat&logo=geometry&logoColor=white)
 # Neuro-AI Explorer
 ![Neuro AI Explorer](https://github.com/universalbit-dev/universalbit-dev/raw/main/convolutional_neural_network/images/neuro_ai_explorer.png)
 
