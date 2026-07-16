@@ -20,13 +20,15 @@ The **UniversalBit Dev** repository is a collection of innovative projects explo
 
 ## Repository Structure
 This repository is organized into multiple sub-projects, each focusing on a specific domain or technology:
+- **CityGenerator** [app](https://universalbit-dev.github.io/CityGenerator/)
+- **MicroChess** [app](https://universalbit-dev.github.io/chess.js/)
+
 - **ESP8266**: A Wi-Fi microchip-based NTP server for IoT applications.
 - **ANN**: Implementation of artificial neural networks for Arduino and ESP32 platforms.
 - **Blockchain**: Bitcoin infrastructure and live network mapping tools.
 - **CNC**: Desktop AppImage for CNC milling machines and 3D printers.
 - **HA Cluster**: High Availability clusters for IT resource management.
 - **Gekko M4 Globular Cluster Cryptocurrency**: Sustainable personal finance modeling.
-- Explore additional projects like **CityGenerator** and [more](https://github.com/universalbit-dev)
 
 ---
 
