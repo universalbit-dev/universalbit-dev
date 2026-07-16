@@ -191,9 +191,3 @@ We welcome contributions to enhance the UniversalBit Dev repository! Please foll
 3. Submit a pull request with a detailed description of your contributions.
 
 ---
-
-## Resources
-- [FreeCodeCamp: Software Architecture Patterns](https://www.freecodecamp.org/news/an-introduction-to-software-architecture-patterns/)
-- Documentation and guides for individual sub-projects are available in their respective directories.
-
----
