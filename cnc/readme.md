@@ -48,11 +48,7 @@ Help us grow and continue innovating!
 
 **CNCjs** is a full-featured, web-based interface for CNC controllers running Grbl, Marlin, Smoothieware, or TinyG. It enables users to upload G-code and simulate CNC milling operations efficiently.
 
-![CNCjs Interface]()
-
 ---
-![Future CNC](https://github.com/universalbit-dev/cnc-router-machines/raw/main/assets/images/future_cnc.png)
-
 ## Download CNCjs
 
 To download the CNCjs Linux app image:
