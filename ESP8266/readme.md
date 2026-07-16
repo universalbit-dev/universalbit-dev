@@ -47,11 +47,11 @@ When uploading sketches to your ESP8266, use a **USB data cable**. Some cables a
 The D1 Mini ESP8266 is a compact, Wi-Fi-enabled microcontroller perfect for this project.
 
 ---
-## **[ESP8266 Fibonacci Clock with NTP Synchronization](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/ESP8266%20Fibonacci%20Clock.md)**
+## **[ESP8266 Fibonacci NTP Synchronization](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/fibonacci_ntp/readme.md)**
 
 ## 📜 **Project Files**
 - **Sketch**:
-- [ntp](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/esp8266_ntp.ino)
+- [esp8266_ntp](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/esp8266_ntp.ino)
 - [fibonacci_ntp](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/fibonacci_ntp/fibonacci_ntp.ino)
 
 - **⚡ How to Upload the Firmware**: 
@@ -71,7 +71,7 @@ The D1 Mini ESP8266 is a compact, Wi-Fi-enabled microcontroller perfect for this
 
 Looking for more inspiration? Check out these curated project collections from Random Nerd Tutorials:
 
-- [ESP8266 Project](https://randomnerdtutorials.com/projects-esp8266/)
+- [ESP8266 Projects](https://randomnerdtutorials.com/projects-esp8266/)
 
 Discover creative ideas, detailed tutorials, and inspiring builds for your next Internet of Things project!
 
