@@ -1,101 +1,89 @@
-# ArduinoANN: An Artificial Neural Network for Arduino
+# Arduino Light AI: On-Device ANN & Reinforcement Learning
 
-This project implements an Artificial Neural Network (ANN) for the Arduino platform. It demonstrates how neural networks can be used to learn and predict based on predefined input and output patterns.
-
----
-
-## Project Overview
-
-### Key Features
-- **Platform**: Arduino Nano, Arduino Uno, ESP8266, and ESP32.
-- **Neural Network**: A feedforward ANN trained using backpropagation.
-- **Inputs and Outputs**:
-  - The input patterns are based on the Fibonacci sequence.
-  - Target outputs are hypothetical binary data.
-
-For more details on the ANN implementation, refer to the source file: `ArduinoANN.ino`.
+This repository implements lightweight Machine Learning ("Light AI" or TinyML) algorithms running natively and entirely offline on highly constrained microcontrollers. It showcases how both neural networks and reinforcement learning can execute directly on edge silicon.
 
 ---
 
-## Clone the Project
+## 📂 Repository Structure
 
-To get started, clone the repository:
+Your workspace contains the following files:
+*   **`ArduinoANN.ino`**: The feedforward Artificial Neural Network classifier.
+*   **`ArduinoRL.ino`**: The autonomous tabular Q-learning reinforcement learning agent.
+*   **`arduino_ai_uploader.sh`**: The automated multi-board compiler and firmware flasher.
+---
+
+## 🧠 The Light AI Models
+
+### 1. Artificial Neural Network (`ArduinoANN.ino`)
+*   **Paradigm**: Supervised Feedforward Artificial Neural Network (ANN) trained on-chip via backpropagation.
+*   **Task**: 7-segment display digit recognition (mapping physical segments to digits 0–9).
+*   **Architecture**: 7 input nodes, 8 hidden nodes, and 4 binary output nodes.
+*   **Mathematical Model**: Calculates activations using the sigmoid function and performs localized weight updates with adjustable Learning Rate and Momentum.
+
+### 2. Reinforcement Learning Agent (`ArduinoRL.ino`)
+*   **Paradigm**: Tabular Q-learning.
+*   **Task**: Autonomous pathfinding in a 1D grid world of 6 states (0 to 5).
+*   **Algorithm**: Utilizes an epsilon-greedy strategy to balance exploration and exploitation, dynamically updating a localized State-Action value matrix (Q-Table) via the Bellman optimality equation.
+*   **Goal**: Reach State 5 (Goal State) while dynamically minimizing steps taken per episode.
+
+---
+
+## 🛠️ Clone & Quick Start
+
+To get started, clone the repository and navigate into the project directory:
 
 ```bash
 git clone https://github.com/universalbit-dev/universalbit-dev.git
 cd universalbit-dev/ann/
+
 ```
+
+### Deploying Firmware via CLI (No IDE Required)
+
+You can compile and flash either model using the local sandbox script `arduino_ai_uploader.sh`.
+
+```bash
+# Make the deployment script executable
+chmod +x arduino_ai_uploader.sh
+
+# Run the automated uploader (Handles serial ports and chip auto-probing)
+sudo ./arduino_ai_uploader.sh
+
+```
+
+#### What the Script Does:
+
+1. Dynamically scans and lists the `.ino` sketches in your folder so you can choose which one to build.
+2. Installs a localized, sandboxed instance of `arduino-cli` inside your home directory.
+3. Scans active USB lines to auto-detect your active port (e.g., `/dev/ttyUSB1`).
+4. Probes the hardware signature to check if it's an AVR (Nano/Uno), ESP8266, or ESP32 chip.
+5. Isolates the build environment in `/tmp` to prevent compilation/multiple-definition bugs.
 
 ---
 
-## Hardware Requirements
+## 🔌 Hardware Setup & Requirements
+
+The firmware is fully compatible with standard AVR (Nano/Uno) and 32-bit Expressif (ESP8266/ESP32) boards.
 
 ### **Arduino Nano**
-An artificial neural network implemented on the Arduino Nano.
 
-![Arduino Nano ANN](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/gif/arduino-nano_ANN.gif)
-
-#### Wiring Multiple Arduino Nano Boards
-| Four Arduino Nano Boards                       | Example Setup                              |
-| ---------------------------------------------- | ------------------------------------------ |
-| ![arduino_ann](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/arduino_ann.JPG) | ![arduino_ann_02](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/arduino_ann_02.JPG) |
+Running on-device backpropagation and Q-value iteration inside only 2 KB of SRAM.
 
 ---
 
 ### **ESP8266 and ESP32**
-The project also supports ESP8266 and ESP32 microcontrollers.
+Leveraging higher CPU clock speeds and larger flash/RAM capacities.
+---
 
-![ESP32 ANN](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/gif/esp32_ANN.gif)
+## ⚡ Important Operational Notes
 
-#### Wiring ESP8266 (WiFi) and Two Arduino Nano Boards
-- [ESP8266](https://en.wikipedia.org/wiki/ESP8266)
-- [ESP32](https://en.wikipedia.org/wiki/ESP32)
-
-![D1 Mini + Arduino Nano](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/img/D1_Mini_ArduinoNano_Logic_Converter.png)
-
-*Note*: Use a [Logic Converter (3.3V ↔ 5V)](https://forum.arduino.cc/t/logic-level-converter/1136803/9) for safe communication between ESP8266 and Arduino Nano.
+* **USB Data Cable**: Be sure to use a dedicated **USB Data Cable**. Standard charging-only cables omit internal data lines and cannot compile/upload sketches or output serial logs.
+* **Old Bootloader Fallback**: Many common Arduino Nano clone boards use the Atmega328P Old Bootloader. If your upload times out, simply select **Option 2** (Arduino Nano Old Bootloader) in the command-line script.
 
 ---
 
-## Important Notes
+## ⚖️ License
 
-- **USB Data Cable**: Be cautious to use only a USB data cable. Some USB cables are designed for charging only and will not allow code uploads.
-- **Upload Sketch**: Follow [this guide](https://support.arduino.cc/hc/en-us/articles/4733418441116-Upload-a-sketch-in-Arduino-IDE) to upload sketches to your Arduino.
+This project is licensed under the **GNU General Public License v3.0**. See the [LICENSE](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/LICENSE) file for the full terms and conditions.
 
----
-
-## Resources
-
-Here are some additional resources to help you get started:
-
-- [Arduino Nano](https://en.wikipedia.org/wiki/Arduino_Nano) Wiki
-- [Arduino Uno](https://en.wikipedia.org/wiki/Arduino_Uno) Wiki
-- [Arduino Projects](https://randomnerdtutorials.com/projects-arduino/)
-- [MicroPython on ESP32](https://randomnerdtutorials.com/getting-started-micropython-esp32-esp8266/)
-
----
-
-## About the Code
-
-The `ArduinoANN.ino` file implements the following:
-
-1. **Header and Includes**:
-   - `math.h` library is used for mathematical operations.
-
-2. **Network Configuration**:
-   - Configurations such as the number of nodes, learning rate, and momentum are predefined.
-   - Input patterns (Fibonacci sequence) and target outputs are stored in arrays.
-
-3. **Setup Function**:
-   - Initializes serial communication.
-   - Seeds the random number generator for weight initialization.
-
-4. **Main Loop**:
-   - Trains the neural network using backpropagation.
-   - Adjusts weights to minimize errors.
-   - Monitors progress every 1000 training cycles.
-
-5. **toTerminal Function**:
-   - Displays the state of the neural network, including input patterns, target outputs, and computed outputs.
-
----
+```
