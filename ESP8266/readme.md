@@ -51,8 +51,8 @@ The D1 Mini ESP8266 is a compact, Wi-Fi-enabled microcontroller perfect for this
 
 ## 📜 **Project Files**
 - **Sketch**:
-- [esp8266_ntp.ino](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/esp8266_ntp.ino)
-- [fibonacci_clock_esp.ino](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/fibonacci_clock_esp.ino)
+- [ntp](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/esp8266_ntp.ino)
+- [fibonacci_ntp](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/fibonacci_ntp/fibonacci_ntp.ino)
 
 - **⚡ How to Upload the Firmware**: 
   Instead of setting up the bulky Arduino IDE, you can compile and flash the firmware directly from your terminal using our automated, interactive deployment script. This tool handles compiler installation, hardware auto-detection, and flashing under the hood[cite: 3]:
