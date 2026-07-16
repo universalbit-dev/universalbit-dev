@@ -96,11 +96,25 @@ zip -r grbl.zip grbl
     cp -R GRBL /home/<your-username>/Arduino/libraries/
     ```
 
-### Upload GRBL Firmware
-1. Download and install the [Arduino IDE](https://www.arduino.cc/en/software) (Version 1.8.19 recommended).
-2. Run the Arduino IDE.
-3. Navigate to **Sketch → Include Library → Add .ZIP Library**, and select the `grbl.zip` file created earlier.
-4. Upload the firmware to your Arduino Nano Shield V3.
+## Upload GRBL Firmware
+To deploy GRBL firmware to your **Arduino Nano Shield V3** (which runs on an AVR ATmega328p microcontroller), you can choose between our quick automated script or the classic manual Arduino IDE process.
+
+---
+
+### Method A: Automated CLI Flash (Recommended)
+
+This repository includes a unified Master Flasher script (`universalbit_grbl_flasher.sh`) that auto-detects your connected Arduino Nano, downloads the verified GRBL `v1.1h` firmware, installs necessary flashing tools (`avrdude`), and deploys it automatically.
+
+1. Connect your Arduino Nano Shield V3 via USB.
+2. Open your terminal and run the following commands:
+
+```bash
+# Set execute permissions on the flasher script
+chmod +x universalbit_grbl_flasher.sh
+
+# Flash GRBL directly to your AVR board
+sudo ./universalbit_grbl_flasher.sh --chip avr --yes
+```
 
 ---
 
