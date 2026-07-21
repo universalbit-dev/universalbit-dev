@@ -1,242 +1,337 @@
-# Security Projects Overview
+# 🔐 Security Projects Overview
 
-Welcome to the **Security Projects** section of UniversalBit. This document provides an overview and relevant resources.
+Welcome to the **Security Projects** section of UniversalBit.  
+This document describes the layered home-lab security architecture built around **IPFire**, **Pi-hole**, and **SELKS** — forming a privacy-first, threat-aware micro-network.
 
 ---
 
-# 🛡️ Reducing Net Frustration
+## 📋 Table of Contents
+
+1. [Overview](#-overview)
+2. [Physical Network Topology](#️-physical-network-topology-rj45)
+3. [Router / Gateway Configuration](#router-gateway)
+4. [DHCP Allocation Table](#dhcp-server-ip-allocation-table)
+5. [Wi-Fi Configuration](#wifi)
+6. [DMZ Policy](#dmz)
+7. [Infrastructure Components](#️-infrastructure-components)
+   - [IPFire — The Shield](#ipfire-customization-the-shield)
+   - [Pi-hole — The Filter](#pi-hole-configuration-the-filter)
+8. [DNS Forwarder List](#dns-forwarder--ipfire-tls-dns-list)
+9. [Why This Setup Works](#️-why-this-setup-works)
+10. [Hardening Checklist](#-hardening-checklist)
+11. [Featured Projects](#featured-projects)
+12. [Support](#-support-the-universalbit-project)
+
+---
 
 ## 📖 Overview
 
-Asymmetric routing occurs when packets follow different paths for outgoing and incoming traffic. This setup centralizes the flow through a stateful firewall (**IPFire**) and a dedicated DNS sinkhole (**Pi-hole**) to improve path consistency, reduce latency, and increase security.
+**Asymmetric routing** occurs when packets follow different paths for outgoing and incoming traffic.  
+This architecture centralises all traffic through a layered security stack:
 
-### 🕸️ Physical Network Topology (RJ45)
+```
+Internet
+   │
+[ZTE ONT]
+   │  (WAN)
+[Router / NAT / DHCP]
+   │  (LAN)
+[Gigabit Switch]
+   ├──[IPFire ThinClient #01]  ← Stateful Firewall · IDS · DoT Recursor
+   ├──[Pi-hole ThinClient #02] ← DNS Sinkhole · Ad/Tracker Filter
+   └──[APs / Extenders / Devices]
+```
 
-### Port Mapping Summary
-### LAN
-1. **ZTE ONT (LAN01)** ➔ **Router (WAN Port)**  
-   This establishes the external Internet connection.
-2. **Router (LAN02)** ➔ **Switch (LAN02)**  
-   This bridges the router's internal network to the Gigabit Switch.
-3. **Switch (LAN03)** ➔ **IPFire (ThinClient #01)**  
-   Dedicated hardware for DMZ and Intrusion Detection.
-4. **Switch (LAN04)** ➔ **Pi-hole (ThinClient #02)**  
-   Dedicated hardware for DNS/URL filtering.
-5. **Switch (LAN01 / LAN05)**  
-   Available for additional hardwired devices or Access Points.
+**Traffic flow — DNS query lifecycle:**
 
-| Device | Port | Connection Target |
-| --- | --- | --- |
-| **ZTE ONT** | LAN01 | Router WAN |
-| **Router** | LAN02 | Switch LAN02 |
-| **Switch** | LAN03 | IPFire (ThinClient #01) |
-| **Switch** | LAN04 | Pi-hole (ThinClient #02) |
-| **Switch** | LAN01/05 | Available / AP / Extenders |
-
-### ROUTER (Gateway)
-
-* **IPv4 DHCP:** Enabled (Auto).
-* **IPv6 DHCPv6:** Enabled (Manual) to reduce overhead/latency.
-* **DNS 1:** `2a01:4f8:1c0c:8274::1` (LibreDNS)
-* **DNS 2:** `2001:4860:4860::8888` (Google)
-* **DNS 3:** `fe80::cc19:6f42:328c:eec8` (Local link-local DNS; interface scope may be required)
-* **MTU:** 1492
-* **Refresh:** 86400s
-* **Prefix Delegate Type:** Disabled
-
-### DHCP Server IP Allocation Table
-
-**Network:** 192.168.1.0/24  
-**Subnet Mask:** 255.255.255.0
-
-| Server | Start IP | End IP | Purpose |
-|---|---:|---:|---|
-| Generic Router | 192.168.1.2 | 192.168.1.120 | General / Guest Devices |
-| IPFire | 192.168.1.121 | 192.168.1.152 | Security / Firewall |
-| Pi-hole | 192.168.1.153 | 192.168.1.253 | Ad-Blocking Table |
-
-> **Note**:
-> - `192.168.1.1` is reserved as the gateway/router IP.
-> - Keep DHCP pools non-overlapping and use reservations where possible.
-> - Avoid running multiple DHCP servers on the same subnet unless they are strictly coordinated.
-
-### Wifi
-* **Centralized SSID:** Unified name for 2.4G/5G for seamless handoff.
-
-| Component | Role | Configuration |
-|---|---|---|
-| Router Wifi | Router | Default Setup |
-| Extender | Extender | Default Setup |
-| Router Wifi Access Point | Access Point | Default Setup |
+1. Client issues a DNS query → routed to **Pi-hole**.
+2. Pi-hole checks its Gravity blocklist; if not blocked → forwards to **IPFire DoT recursor**.
+3. IPFire resolves over **TLS** via a curated upstream forwarder list.
+4. All packets pass through IPFire's **stateful firewall** and **IDS** before reaching the internet.
 
 ---
 
-### DMZ
-* **ORANGE (DMZ):** Reject all unsolicited inbound traffic by default.
-* **Stateful firewall behavior:** Only reply traffic for connections initiated from allowed internal sources should be permitted.
+## 🕸️ Physical Network Topology (RJ45)
 
-| Zone | Host | Firewall (DMZ) |
-|---|---|---|
-| ORANGE (DMZ) | HOST | REJECT all unsolicited inbound traffic |
+### Port Mapping Summary
+
+| # | Device | Port | Connection Target | Purpose |
+|---|--------|------|-------------------|---------|
+| 1 | **ZTE ONT** | LAN01 | Router WAN | External internet uplink |
+| 2 | **Router** | LAN02 | Switch LAN02 | Bridges internal LAN to switch |
+| 3 | **Switch** | LAN03 | IPFire (ThinClient #01) | Firewall / DMZ / IDS |
+| 4 | **Switch** | LAN04 | Pi-hole (ThinClient #02) | DNS / URL filtering |
+| 5 | **Switch** | LAN01/05 | APs / Extenders / Spare | Expansion / wireless backhaul |
+
+---
+
+## Router (Gateway)
+
+| Setting | Value | Notes |
+|---------|-------|-------|
+| **IPv4 DHCP** | Enabled (Auto) | |
+| **IPv6 DHCPv6** | Enabled (Manual) | Reduces overhead / latency |
+| **DNS 1** | `2a01:4f8:1c0c:8274::1` | LibreDNS (IPv6) |
+| **DNS 2** | `2001:4860:4860::8888` | Google (IPv6) |
+| **DNS 3** | `fe80::cc19:6f42:328c:eec8` | Local link-local DNS (interface scope may be required) |
+| **MTU** | 1492 | PPPoE standard |
+| **Refresh** | 86400 s | |
+| **Prefix Delegate Type** | Disabled | |
+
+---
+
+## DHCP Server IP Allocation Table
+
+**Network:** `192.168.1.0/24` · **Subnet Mask:** `255.255.255.0`
+
+| Server | Start IP | End IP | Purpose |
+|--------|:--------:|:------:|---------|
+| Generic Router | 192.168.1.2 | 192.168.1.120 | General / Guest devices |
+| IPFire | 192.168.1.121 | 192.168.1.152 | Security / Firewall hosts |
+| Pi-hole | 192.168.1.153 | 192.168.1.253 | Ad-blocking clients |
+
+> **Notes:**
+> - `192.168.1.1` is reserved as the gateway/router IP.
+> - Keep DHCP pools non-overlapping; use static reservations for infrastructure nodes.
+> - Do **not** run multiple DHCP servers on the same subnet unless strictly coordinated.
+
+---
+
+## Wifi
+
+**Centralized SSID:** single unified name for 2.4 GHz / 5 GHz enables seamless client handoff.
+
+| Component | Role | Recommended Configuration |
+|-----------|------|--------------------------|
+| Router Wi-Fi | Primary AP | Default setup; disable WPS |
+| Extender | Range extender | Same SSID/passphrase as router |
+| Access Point (RJ45 backhaul) | Secondary AP | Same SSID; set to AP mode |
+
+> **Tip:** Use WPA3-Personal where supported. Enable client isolation on guest SSIDs.
+
+---
+
+## DMZ
+
+The **ORANGE** zone in IPFire acts as a DMZ (De-Militarised Zone).
+
+| Zone | Policy | Rationale |
+|------|--------|-----------|
+| ORANGE (DMZ) | **REJECT** all unsolicited inbound traffic | Only stateful reply traffic is permitted |
+| RED (WAN) | Block all inbound by default | Managed via IPFire firewall rules |
+| GREEN (LAN) | Allow outbound; inspect inbound | Trusted internal zone |
+| BLUE (Wi-Fi) | Isolated from GREEN | Limits lateral movement from wireless clients |
+
+> **Stateful firewall rule:** Only return traffic for connections **initiated** from allowed internal sources is permitted through the DMZ.
+
 ---
 
 ## 🛠️ Infrastructure Components
 
-* **ThinClient #01:** [IPFire Linux Distro](https://www.ipfire.org/docs/installation) (Hardened firewall, DoT recursor, IDS)
-  - Zones: RED, GREEN, ORANGE, BLUE
-  - IDS: enabled on all zones
-  - DNS protocol: TLS (recursor mode)
-  - Forwarders: **IPFire TLS DNS** list
-  
-* **ThinClient #02:** [Pi-hole Adblocker](https://docs.pi-hole.net/main/basic-install/) (DNS/URL Filtering)
-  - Upstream: IPFire TLS DNS (local)
-  - Gravity: Steven Black lists (or equivalent curated lists)
-  - Layer 3 inspection: Not applicable to Pi-hole; DNS filtering only
-  - Admin UI: restrict to management VLAN / IP
+### ThinClient #01 — IPFire
 
-### IPFire Customization >>(The Shield)<<
+[📥 Installation Guide](https://www.ipfire.org/docs/installation)
 
-* **ORANGE (DMZ):** Reject all unsolicited inbound traffic by default.
-* **IDS (Intrusion Detection):** Enabled on RED, GREEN, ORANGE, and BLUE zones.
-* **DNS over TLS (DoT):** (Recursor Mode)
-* **DNS Forwarding:** IPFire TLS DNS list
+| Property | Value |
+|----------|-------|
+| Role | Hardened firewall, DoT recursor, IDS |
+| Zones | RED · GREEN · ORANGE · BLUE |
+| IDS | Enabled on **all** zones |
+| DNS Protocol | TLS (Recursor Mode) |
+| DNS Forwarders | IPFire TLS DNS list (see below) |
 
-**Firewall — DMZ Rule**
+### ThinClient #02 — Pi-hole
+
+[📥 Installation Guide](https://docs.pi-hole.net/main/basic-install/)
+
+| Property | Value |
+|----------|-------|
+| Role | DNS sinkhole, ad/tracker/URL filter |
+| Upstream DNS | IPFire DoT recursor (local) |
+| Blocklist | Steven Black lists (curated) |
+| Layer 3 inspection | ❌ Not applicable — DNS filtering only |
+| Admin UI | Restrict to management VLAN / specific IP |
+
+---
+
+## IPFire Customization — The Shield
+
+### Firewall — DMZ Rule
+
 | Setting | Value |
-|---|---|
+|---------|-------|
 | Zone | ORANGE |
-| Rule for incoming traffic | REJECT all unsolicited inbound traffic |
+| Incoming traffic rule | REJECT all unsolicited inbound traffic |
+
 ---
 
-**IDS (Intrusion Detection)**
+### IDS — Intrusion Detection System (Suricata)
+
 | Setting | Value |
-|---|---|
-| Status | Enabled |
-| Applicable zones | RED, GREEN, ORANGE, BLUE |
+|---------|-------|
+| Status | ✅ Enabled |
+| Applicable zones | RED · GREEN · ORANGE · BLUE |
 | Ruleset | Updated Community Rules |
+
+> **Tip:** Regularly update IDS rulesets via the IPFire web UI (`IPS → Update`) to catch emerging threats.
+
 ---
 
-**DNS Configuration (DoT)**
+### DNS Configuration — DoT (Recursor Mode)
+
 | Setting | Value |
-|---|---|
-| Use ISP-assigned DNS servers | Disabled |
+|---------|-------|
+| Use ISP-assigned DNS | ❌ Disabled |
 | Protocol for DNS queries | TLS |
-| Enable Safe Search | Enabled |
-| Include YouTube in Safe Search | Enabled |
+| Safe Search | ✅ Enabled |
+| YouTube in Safe Search | ✅ Enabled |
 | QNAME Minimisation | Standard |
+
 ---
 
 ![Domain Name System Diagram](https://raw.githubusercontent.com/universalbit-dev/universalbit-dev/main/docs/assets/images/Domain_Name_System.png)
 
-
-**DNS Forwarder** IPFire TLS DNS list
-| Zone | Nameserver | Remark |
-|---|---:|---|
-| noads.libredns.gr | 116.202.176.26 | LibreDNS |
-| one.one.one.one | 1.1.1.1 | Cloudflare |
-| dot.ffmuc.net | 5.1.66.255 | Freifunk München e.V. |
-| dns.sb | 185.222.222.222 | dns.sb |
-| open.dns0.eu | 193.110.81.254 | DNS0.EU Open |
-| anycast.uncensoreddns.org | 91.239.100.100 | UncensoredDNS |
-| dot1.applied-privacy.net | 146.255.56.98 | Foundation for Applied Privacy |
-| dns.cmrg.net | 199.58.83.33 | CMRG DNS |
-| dns.digitale-gesellschaft.ch | 185.95.218.42 | Digitale Gesellschaft Schweiz |
-| dns3.digitalcourage.de | 5.9.164.112 | Digitalcourage e.V. |
-| recursor01.dns.lightningwirelabs.com | 81.3.27.54 | Lightning Wire Labs |
-| unicast.uncensoreddns.org | 89.233.43.71 | UncensoredDNS |
-| unfiltered.joindns4.eu | 86.54.11.100 | DNS4EU |
-| public.ns.nwps.fi | 95.217.11.63 | NWPS.fi |
-| kids.ns.nwps.fi | 135.181.103.31 | NWPS.fi |
-| ns0.fdn.fr | 80.67.169.12 | French Data Network (FDN) |
-| ns1.fdn.fr | 80.67.169.40 | French Data Network (FDN) |
-| dns.neutopia.org | 89.234.186.112 | Neutopia |
-| dns.linuxpatch.com | 45.80.1.6 | LinuxPatch.com |
-| kaitain.restena.lu | 158.64.1.29 | Restena Foundation |
-| nl.resolv.flokinet.net | 185.246.188.51 | FlokiNET |
-| getdnsapi.net | 185.49.141.37 | GetDNS |
-| ro.resolv.flokinet.net | 185.247.225.17 | FlokiNET |
-| dns.njal.la | 95.215.19.53 | Njalla |
 ---
 
-### Pi-hole Configuration >>(The Filter)<<
+## DNS Forwarder — IPFire TLS DNS List
 
-* **Upstream DNS:** Configured to use the **IPFire TLS DNS** list.
-* **Gravity:** Steven Black URL List enabled.
-* **Layer 3:** DNS filtering only; no packet inspection role.
+All upstream resolvers use **DNS-over-TLS (DoT)** on port 853.  
+Privacy-focused, censorship-resistant providers are preferred.
+
+| Hostname | IP Address | Provider | Notes |
+|----------|:----------:|----------|-------|
+| noads.libredns.gr | 116.202.176.26 | LibreDNS | Ad-free resolver |
+| one.one.one.one | 1.1.1.1 | Cloudflare | High performance |
+| dot.ffmuc.net | 5.1.66.255 | Freifunk München e.V. | Community / non-profit |
+| dns.sb | 185.222.222.222 | dns.sb | Privacy-focused |
+| open.dns0.eu | 193.110.81.254 | DNS0.EU Open | EU-based |
+| anycast.uncensoreddns.org | 91.239.100.100 | UncensoredDNS | Uncensored / anycast |
+| dot1.applied-privacy.net | 146.255.56.98 | Applied Privacy Foundation | No-log policy |
+| dns.cmrg.net | 199.58.83.33 | CMRG DNS | Research-grade |
+| dns.digitale-gesellschaft.ch | 185.95.218.42 | Digitale Gesellschaft CH | Swiss non-profit |
+| dns3.digitalcourage.de | 5.9.164.112 | Digitalcourage e.V. | German civil rights org |
+| recursor01.dns.lightningwirelabs.com | 81.3.27.54 | Lightning Wire Labs | |
+| unicast.uncensoreddns.org | 89.233.43.71 | UncensoredDNS | Unicast endpoint |
+| unfiltered.joindns4.eu | 86.54.11.100 | DNS4EU | EU initiative |
+| public.ns.nwps.fi | 95.217.11.63 | NWPS.fi | Finnish provider |
+| kids.ns.nwps.fi | 135.181.103.31 | NWPS.fi | Family-safe filter |
+| ns0.fdn.fr | 80.67.169.12 | French Data Network (FDN) | Non-profit |
+| ns1.fdn.fr | 80.67.169.40 | French Data Network (FDN) | Non-profit |
+| dns.neutopia.org | 89.234.186.112 | Neutopia | |
+| dns.linuxpatch.com | 45.80.1.6 | LinuxPatch.com | |
+| kaitain.restena.lu | 158.64.1.29 | Restena Foundation | Luxembourg academic |
+| nl.resolv.flokinet.net | 185.246.188.51 | FlokiNET | Iceland / NL privacy host |
+| getdnsapi.net | 185.49.141.37 | GetDNS | Reference implementation |
+| ro.resolv.flokinet.net | 185.247.225.17 | FlokiNET | Romania endpoint |
+| dns.njal.la | 95.215.19.53 | Njalla | Privacy-first registrar |
+
+> **Tip:** Use at least 3–5 diverse providers to avoid single-provider dependency. Prefer non-profit / European providers for GDPR-aligned privacy guarantees.
+
 ---
 
-### 🛡️ Why This Setup Works
+## Pi-hole Configuration — The Filter
 
-* **Isolation:** By putting the ONT strictly into the Router WAN, the Router's NAT/Firewall handles the initial handshake.
-* **Security Stack:** The Switch allows IPFire and Pi-hole to sit on the same high-speed gigabit backplane, reducing latency for DNS queries and packet inspection.
-* **Scalability:** Since you have LAN01 and LAN05 available on the Switch, you can add more APs for the "Strong Signal" Wifi strategy without rearranging the core security logic.
-* **Access Points** are hardwired via RJ45 to the Gigabit Switch to maintain maximum throughput.
-* **Extenders** use a centralized SSID for seamless 2.4G/5G handoff.
+| Setting | Value |
+|---------|-------|
+| Upstream DNS | IPFire DoT recursor (local, `192.168.1.121`) |
+| Gravity blocklist | Steven Black URL list (ads + malware + social) |
+| Layer 3 inspection | ❌ DNS filtering only — no packet inspection |
+| DHCP role | Optional; defer to router or IPFire if preferred |
 
-> **Note:** This configuration prioritizes **Micro-networking** (low latency for multimedia) and **Macro-networking** (high security via TLS forwarding).
+> **Tip:** Add supplemental blocklists such as [oisd.nl](https://oisd.nl) or [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) in Pi-hole's Gravity to broaden coverage without impacting performance.
 
- 
+---
 
-## 📢 Support the UniversalBit Project
-Help us grow and continue innovating!  
-- [Support the UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)  
-- [Learn about Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)  
-- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/)
+## 🛡️ Why This Setup Works
+
+| Benefit | Detail |
+|---------|--------|
+| **Isolation** | ONT → Router WAN keeps NAT/firewall as the first packet filter, before traffic reaches internal hosts |
+| **Performance** | Gigabit switch backplane keeps IPFire ↔ Pi-hole DNS latency under 1 ms |
+| **Scalability** | LAN01/LAN05 switch ports support additional APs without touching core security topology |
+| **Throughput** | APs hardwired via RJ45 maintain maximum Wi-Fi backhaul speed |
+| **Seamless roaming** | Unified SSID across router, extenders, and APs enables seamless 2.4 G / 5 G handoff |
+| **Encrypted DNS** | All upstream resolution uses DNS-over-TLS — no plaintext DNS leaving the network |
+| **Threat detection** | Suricata IDS covers all four IPFire zones, logging and alerting on known signatures |
+
+> **Design philosophy:** This configuration balances **Micro-networking** (low latency for multimedia / real-time traffic) with **Macro-networking** (high security via TLS forwarding, IDS, and DNS sinkholing).
+
+---
+
+## 🔒 Hardening Checklist
+
+- [ ] Disable WPS on all Wi-Fi access points
+- [ ] Enable WPA3-Personal where hardware supports it
+- [ ] Restrict Pi-hole admin UI to a management IP / VLAN
+- [ ] Set static DHCP leases for IPFire and Pi-hole (prevents IP drift)
+- [ ] Schedule automatic IDS ruleset updates in IPFire (`IPS → Update`)
+- [ ] Review Pi-hole query logs weekly for anomalous domains
+- [ ] Keep IPFire and Pi-hole on the latest stable releases
+- [ ] Disable IPv6 on zones where not needed to reduce attack surface
+- [ ] Enable IPFire location-based blocking for high-risk ASNs (optional)
+- [ ] Enable client isolation on guest / IoT SSIDs
 
 ---
 
 ## Featured Projects
 
 ### 1. [IPFire](https://github.com/universalbit-dev/universalbit-dev/tree/main/ipfire)
-- **Website**: [IPFire Official Website](https://www.ipfire.org/)
-- **Description**:
-  - IPFire is a hardened open-source Linux distribution designed to function as a router and firewall.
-  - It features a web-based management console for ease of configuration and supports the addition of server services via add-ons.
-  - Originally a fork of IPCop, IPFire has been rebuilt using Linux From Scratch since version 2.
-- **Key Features**:
-  - Robust firewall and router capabilities.
-  - Flexible add-on support for extending functionality.
-  - Community-driven project with a strong security focus.
-- **Learn More**:
-  - [IPFire on Wikipedia](https://en.wikipedia.org/wiki/IPFire)
+
+- **Website:** [ipfire.org](https://www.ipfire.org/)
+- **Description:** IPFire is a hardened open-source Linux distribution functioning as a router and firewall. Built using Linux From Scratch (since v2), it offers a web-based management console and an extensive add-on ecosystem.
+- **Key Features:**
+  - Stateful firewall with zone-based policy (RED / GREEN / ORANGE / BLUE)
+  - Integrated Suricata IDS/IPS across all zones
+  - DNS-over-TLS recursor with QNAME minimisation
+  - Web proxy, traffic shaping, VPN (IPsec / OpenVPN / WireGuard)
+  - Add-on packages: Zeek, ClamAV, Asterisk, and more
+- **Learn More:** [IPFire on Wikipedia](https://en.wikipedia.org/wiki/IPFire)
 
 ---
 
 ### 2. [SELKS](https://github.com/StamusNetworks/SELKS/blob/master/README.rst)
-- **Website**: [SELKS Official Website](https://www.stamus-networks.com/selks)
-- **Description**:
-  - SELKS is a Debian-based platform for Intrusion Detection/Prevention Systems (IDS/IPS) and Network Security Monitoring (NSM).
-  - Released under GPLv3 by Stamus Networks, it integrates tools like Suricata, Elasticsearch, Logstash, Kibana, and the Stamus Scirius Community Edition.
-  - SELKS can be deployed via Docker Compose on Linux or Windows or as ISO images for bare-metal or air-gapped environments.
-- **Key Features**:
-  - Comprehensive IDS/IPS and NSM capabilities.
-  - Pre-configured with powerful tools for data analysis and threat detection.
-  - Flexible deployment options (Docker, bare-metal, air-gapped environments).
-- **Learn More**:
-  - [SELKS on GitHub](https://github.com/StamusNetworks/SELKS)
+
+- **Website:** [stamus-networks.com/selks](https://www.stamus-networks.com/selks)
+- **Description:** SELKS is a Debian-based IDS/IPS and Network Security Monitoring (NSM) platform released under GPLv3 by Stamus Networks. It integrates Suricata, Elasticsearch, Logstash, Kibana, and Scirius CE into a single deployable unit.
+- **Key Features:**
+  - Full IDS/IPS + NSM pipeline out of the box
+  - Kibana dashboards for real-time threat visualisation
+  - Docker Compose deployment (Linux / Windows) or bare-metal ISO
+  - Air-gapped environment support
+- **Learn More:** [SELKS on GitHub](https://github.com/StamusNetworks/SELKS)
+
+---
 
 ### 3. [Pi-hole](https://github.com/pi-hole/pi-hole)
-- **Website**: [Pi-hole Official Website](https://pi-hole.net/)
-- **Description**:
-  - Pi-hole is an open‑source network-wide ad, tracker and telemetry blocker that works by acting as a DNS sinkhole for known unwanted domains.
-  - It intercepts DNS queries from clients on your network and blocks requests for domains on configurable blocklists, reducing ads, trackers and some forms of malware at the DNS level.
-  - Lightweight and versatile — commonly run on Raspberry Pi devices, but equally deployable on Debian/Ubuntu, VMs, containers (Docker), or cloud instances.
-  - Includes the FTL (Faster Than Light) engine for fast DNS resolution, statistics and real-time query logging.
-- **Key Features**:
-  - Network-wide ad and tracker blocking via DNS sinkholing.
-  - Web-based admin interface with dashboards, query logs and client/group management.
-  - Customizable blocklists (Gravity), whitelists, blacklists, and regex filtering.
-  - Optional built-in DHCP server or integration with existing DHCP services.
-  - Supports upstream DNS providers and can be paired with DoH/DoT/Unbound/stubby for encrypted/resilient upstream resolution.
-  - Low resource usage; easy Docker deployment and scripting/API access for automation.
-  - Query analytics, per-client stats, and per-group policies.
-- **Learn More**:
-  - [Pi-hole GitHub repository](https://github.com/pi-hole/pi-hole)
+
+- **Website:** [pi-hole.net](https://pi-hole.net/)
+- **Description:** Pi-hole is a network-wide DNS sinkhole that blocks ads, trackers, and telemetry for every device on the network — no client-side software required. It includes the FTL (Faster Than Light) engine for fast DNS resolution, statistics, and real-time query logging.
+- **Key Features:**
+  - Network-wide ad and tracker blocking via DNS sinkholing
+  - Web admin UI with dashboards, query logs, and per-client/group policies
+  - Gravity blocklist engine with regex, whitelist, and blacklist support
+  - Optional built-in DHCP server
+  - Pairs with DoT / DoH / Unbound / stubby for encrypted upstream resolution
+  - Low resource usage; Docker-friendly; REST API for automation
+- **Learn More:**
   - [Pi-hole Documentation](https://docs.pi-hole.net/)
   - [Pi-hole on Wikipedia](https://en.wikipedia.org/wiki/Pi-hole)
+
+---
+
+## 📢 Support the UniversalBit Project
+
+Help us grow and continue innovating!
+
+- [💖 Support the UniversalBit Project](https://github.com/universalbit-dev/universalbit-dev/tree/main/support)
+- [📖 Learn about Disambiguation](https://en.wikipedia.org/wiki/Wikipedia:Disambiguation)
+- [📚 Bash Reference Manual](https://www.gnu.org/software/bash/manual/)
+
 ---
 
 ## Additional Information
-This file serves as a gateway to the UniversalBit. For further details on installation, configuration, or contributions, explore the respective project repositories and official documentation.
+
+This file serves as the entry point for UniversalBit's security stack documentation.  
+For installation, configuration, or contribution details, explore the respective project repositories and their official documentation linked above.
 
 ---
