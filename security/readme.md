@@ -79,23 +79,26 @@ Internet
 | **Prefix Delegate Type** | Disabled | |
 
 ---
-
 ## DHCP Server IP Allocation Table
 
 **Network:** `192.168.1.0/24` · **Subnet Mask:** `255.255.255.0`
 
-| Server | Start IP | End IP | Purpose |
-|--------|:--------:|:------:|---------|
-| Generic Router | 192.168.1.2 | 192.168.1.120 | General / Guest devices |
-| IPFire | 192.168.1.121 | 192.168.1.152 | Security / Firewall hosts |
-| Pi-hole | 192.168.1.153 | 192.168.1.253 | Ad-blocking clients |
+> **Default (recommended):** Enable **only Router DHCP (Auto)** as the active DHCP service for the subnet.
+
+| Server | Start IP | End IP | Purpose | Status |
+|--------|:--------:|:------:|---------|--------|
+| Generic Router | 192.168.1.2 | 192.168.1.253 | All LAN clients (default pool) | ✅ Enabled (Auto) |
+| IPFire | 192.168.1.121 | 192.168.1.152 | Security / Firewall hosts | ⚙️ Optional (disabled unless explicitly used) |
+| Pi-hole | 192.168.1.153 | 192.168.1.253 | Ad-blocking clients | ⚙️ Optional (disabled unless explicitly used) |
 
 > **Notes:**
 > - `192.168.1.1` is reserved as the gateway/router IP.
-> - Keep DHCP pools non-overlapping; use static reservations for infrastructure nodes.
+> - Keep DHCP pools non-overlapping if optional segmented scopes are enabled.
+> - Use static DHCP reservations for infrastructure nodes (IPFire, Pi-hole, APs).
 > - Do **not** run multiple DHCP servers on the same subnet unless strictly coordinated.
-
 ---
+
+
 
 ## Wifi
 
