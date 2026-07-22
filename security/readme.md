@@ -64,20 +64,18 @@ Internet
 | 5 | **Switch** | LAN01/05 | APs / Extenders / Spare | Expansion / wireless backhaul |
 
 ---
-
 ## Router (Gateway)
 
 | Setting | Value | Notes |
 |---------|-------|-------|
-| **IPv4 DHCP** | Enabled (Auto) | |
-| **IPv6 DHCPv6** | Enabled (Manual) | Reduces overhead / latency |
-| **DNS 1** | `2a01:4f8:1c0c:8274::1` | LibreDNS (IPv6) |
-| **DNS 2** | `2001:4860:4860::8888` | Google (IPv6) |
-| **DNS 3** | `fe80::cc19:6f42:328c:eec8` | Local link-local DNS (interface scope may be required) |
-| **MTU** | 1492 | PPPoE standard |
-| **Refresh** | 86400 s | |
-| **Prefix Delegate Type** | Disabled | |
-
+| **IPv4 DHCP** | Enabled (Auto) | Default home router behavior |
+| **IPv6 DHCPv6** | Enabled (Auto) | Use router defaults unless ISP requires manual tuning |
+| **DNS 1** | Auto (ISP/Router Default) | Primary resolver |
+| **DNS 2** | Auto (ISP/Router Default) | Secondary resolver |
+| **DNS 3** | Not set (default) | Optional; omit link-local/custom resolver in public docs |
+| **MTU** | Auto (Default) | Typical default is often PPPoE 1492 or Ethernet 1500 |
+| **Refresh** | Default | Keep vendor default lease/renew timers |
+| **Prefix Delegate Type** | Auto / Default | Depends on ISP IPv6 delegation model |
 ---
 ## DHCP Server IP Allocation Table
 
