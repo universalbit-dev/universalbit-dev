@@ -2,6 +2,7 @@
 
 ![Bitcoin](https://img.shields.io/badge/bitcoin-2F3134?style=for-the-badge&logo=bitcoin&logoColor=white)
 ![Litecoin](https://img.shields.io/badge/Litecoin-A6A9AA?style=for-the-badge&logo=Litecoin&logoColor=white)
+![TestNet](https://img.shields.io/badge/TestNet-enabled-orange?style=for-the-badge)
 
 ## Table of Contents
 1. [Introduction](#introduction)
