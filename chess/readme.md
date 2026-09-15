@@ -1,3 +1,4 @@
+[![Live Application](https://img.shields.io/badge/Live-Application-success?style=for-the-badge&logo=google-chrome&logoColor=white)](https://universalbit-dev.github.io/chess.js/)
 # Chess Game with `chess.js`
 
 This project is a chess game implementation using the `chess.js` library. It is part of the UniversalBit project and provides a straightforward setup process for running and managing the application.
