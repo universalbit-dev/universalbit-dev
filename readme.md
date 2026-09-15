@@ -47,7 +47,7 @@ This repository adopts various software architecture patterns to enhance modular
 
 ## Key Projects
 
-### [HA Cluster](https://github.com/universalbit-dev/HArmadillium/blob/main/readme.md)
+### [HA Cluster](https://github.com/universalbit-dev/HArmadillium)
 **Description**:  
 The **HA Cluster Project** focuses on deploying **High Availability (HA)** Clusters effectively to ensure continuous availability of critical IT resources and services.
 
@@ -63,7 +63,7 @@ The **HA Cluster Project** focuses on deploying **High Availability (HA)** Clust
    git clone https://github.com/universalbit-dev/HArmadillium.git
    cd HArmadillium
    ```
-2. Follow the [documentation](https://github.com/universalbit-dev/HArmadillium/blob/main/readme.md) to set up your HA Cluster environment.
+2. [Documentation](https://github.com/universalbit-dev/HArmadillium/blob/main/HArmadillium.md) setup your HA Cluster environment.
 
 **Use Cases**:
 - **Enterprise IT**: Ensure uninterrupted access to mission-critical applications.
