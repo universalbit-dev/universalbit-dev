@@ -1,3 +1,4 @@
+[![UniversalBit CNC Project](https://img.shields.io/badge/UniversalBit-CNC%20Machines-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/universalbit-dev/cnc-router-machines)
 # CNCjs and Arduino Nano Shield V3 Setup Guide
 This guide provides step-by-step instructions to set up CNCjs with an Arduino Nano Shield V3, including downloading the required software and uploading GRBL firmware for CNC milling.
 ---
