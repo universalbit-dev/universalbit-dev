@@ -15,7 +15,7 @@ The UniversalBit project is dedicated to pushing boundaries and creating innovat
 You can support us directly through Buy Me a Coffee. Every contribution, no matter the size, makes a difference!
 - [Support us on Buy Me a Coffee](https://www.buymeacoffee.com/universalbit)
   
-<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/support/bmc_qr.png" alt="Buy Me a Coffee QR Code" width="30%">
+<img src="https://github.com/universalbit-dev/universalbit-dev/blob/main/support/qr-code.png" alt="Buy Me a Coffee QR Code" width="30%">
 
 ---
 
