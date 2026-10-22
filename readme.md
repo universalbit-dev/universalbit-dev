@@ -22,13 +22,13 @@ The **UniversalBit Dev** repository is a collection of innovative projects explo
 This repository is organized into multiple sub-projects, each focusing on a specific domain or technology:
 - **CityGenerator** [app](https://universalbit-dev.github.io/CityGenerator/)
 - **MicroChess** [app](https://universalbit-dev.github.io/chess.js/)
-
-- **ESP8266**: A Wi-Fi microchip-based NTP server for IoT applications.
-- **ANN**: Implementation of artificial neural networks for Arduino and ESP32 platforms.
-- **Blockchain**: Bitcoin infrastructure and live network mapping tools.
-- **CNC**: Desktop AppImage for CNC milling machines and 3D printers.
-- **HA Cluster**: High Availability clusters for IT resource management.
-- **Gekko M4 Globular Cluster Cryptocurrency**: Sustainable personal finance modeling.
+- **NGC6121** is a cryptocurrency [app]() built on a ConvNet library core
+- **ESP8266**: A Wi-Fi microchip-based [Fibonacci NTP Clock](https://github.com/universalbit-dev/universalbit-dev/blob/main/ESP8266/fibonacci_ntp/readme.md) for IoT applications.
+- **ANN**: [Implementation of artificial neural networks](https://github.com/universalbit-dev/universalbit-dev/blob/main/ann/readme.md) for Arduino and ESP32 platforms.
+- **Blockchain**: [Bitcoin infrastructure](https://github.com/universalbit-dev/universalbit-dev/tree/main/blockchain/bitcoin) and live network mapping tools.
+- **CNC**: Desktop AppImage for [CNC milling machines](https://github.com/universalbit-dev/cnc-router-machines) and 3D printers.
+- **HA Cluster**: [High Availability clusters](https://github.com/universalbit-dev/HArmadillium) for IT resource management.
+- **Gekko M4 Globular Cluster Cryptocurrency**: [Sustainable personal finance modeling](https://github.com/universalbit-dev/gekko-m4-globular-cluster).
 
 ---
 
